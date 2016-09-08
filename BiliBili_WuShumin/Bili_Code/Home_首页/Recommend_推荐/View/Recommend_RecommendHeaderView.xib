@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="r_recommendHeaderView" id="U6b-Vx-4bR" customClass="Recommend_RecommendHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-hO-I8T" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aPy-hO-I8T" secondAttribute="height" multiplier="75:22" id="cZ0-eX-5Yr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-jI-t8u" userLabel="DownView">
+                    <rect key="frame" x="0.0" y="130" width="375" height="20"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_rightArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="dhT-9f-sjT">
+                            <rect key="frame" x="356" y="4" width="7" height="13"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_recommend" translatesAutoresizingMaskIntoConstraints="NO" id="44I-6e-5Rw">
+                            <rect key="frame" x="12" y="0.0" width="20" height="20"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_rank" translatesAutoresizingMaskIntoConstraints="NO" id="JKn-0h-Hjz">
+                            <rect key="frame" x="282" y="0.0" width="20" height="20"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排行榜" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVB-5o-G8J">
+                            <rect key="frame" x="308" y="3" width="42" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.99215686274509807" green="0.71372549019607845" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="热门推荐" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mk-Mo-6MW">
+                            <rect key="frame" x="38" y="3" width="56" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="3mk-Mo-6MW" secondAttribute="bottom" id="1Qg-5w-JjE"/>
+                        <constraint firstAttribute="trailing" secondItem="dhT-9f-sjT" secondAttribute="trailing" constant="12" id="TrS-3C-QYg"/>
+                        <constraint firstAttribute="bottom" secondItem="44I-6e-5Rw" secondAttribute="bottom" id="WOC-ca-Q4c"/>
+                        <constraint firstAttribute="trailing" secondItem="WVB-5o-G8J" secondAttribute="trailing" constant="30" id="bqm-Hj-Z0C"/>
+                        <constraint firstItem="44I-6e-5Rw" firstAttribute="leading" secondItem="tFn-jI-t8u" secondAttribute="leading" constant="12" id="dAQ-Id-S5S"/>
+                        <constraint firstItem="WVB-5o-G8J" firstAttribute="leading" secondItem="JKn-0h-Hjz" secondAttribute="trailing" constant="6" id="e36-FS-YCa"/>
+                        <constraint firstAttribute="bottom" secondItem="WVB-5o-G8J" secondAttribute="bottom" id="eu3-jk-6oo"/>
+                        <constraint firstItem="dhT-9f-sjT" firstAttribute="centerY" secondItem="JKn-0h-Hjz" secondAttribute="centerY" id="iUI-JM-k9M"/>
+                        <constraint firstItem="3mk-Mo-6MW" firstAttribute="leading" secondItem="44I-6e-5Rw" secondAttribute="trailing" constant="6" id="jVa-XL-BNT"/>
+                        <constraint firstAttribute="bottom" secondItem="JKn-0h-Hjz" secondAttribute="bottom" id="mnQ-Il-9vh"/>
+                        <constraint firstItem="dhT-9f-sjT" firstAttribute="leading" secondItem="WVB-5o-G8J" secondAttribute="trailing" constant="6" id="qCw-GA-mIB"/>
+                        <constraint firstItem="dhT-9f-sjT" firstAttribute="bottom" secondItem="JKn-0h-Hjz" secondAttribute="bottom" id="yWK-0G-CRW"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="bqm-Hj-Z0C"/>
+                            <exclude reference="yWK-0G-CRW"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tFn-jI-t8u" secondAttribute="bottom" id="4ns-rE-rg3"/>
+                <constraint firstItem="tFn-jI-t8u" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="Otq-TW-Fui"/>
+                <constraint firstAttribute="trailing" secondItem="aPy-hO-I8T" secondAttribute="trailing" id="QeE-7a-iOB"/>
+                <constraint firstItem="aPy-hO-I8T" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="lCG-Pb-IjB"/>
+                <constraint firstItem="tFn-jI-t8u" firstAttribute="top" secondItem="aPy-hO-I8T" secondAttribute="bottom" constant="20" id="nek-sZ-C24"/>
+                <constraint firstAttribute="trailing" secondItem="tFn-jI-t8u" secondAttribute="trailing" id="uPw-vM-LZx"/>
+                <constraint firstItem="aPy-hO-I8T" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="yRW-ip-h33"/>
+            </constraints>
+            <connections>
+                <outlet property="downView" destination="tFn-jI-t8u" id="GdE-zP-sSF"/>
+                <outlet property="leftImageView" destination="44I-6e-5Rw" id="etv-Ah-IgB"/>
+                <outlet property="leftLabel" destination="3mk-Mo-6MW" id="3AX-2f-VYH"/>
+                <outlet property="rightImageView" destination="JKn-0h-Hjz" id="dGU-Lu-tp6"/>
+                <outlet property="rightLabel" destination="WVB-5o-G8J" id="oUO-wc-JpR"/>
+                <outlet property="topView" destination="aPy-hO-I8T" id="gvz-pE-jca"/>
+            </connections>
+            <point key="canvasLocation" x="595.5" y="350"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="common_rightArrowGray" width="7" height="13"/>
+        <image name="home_rank" width="20" height="20"/>
+        <image name="home_recommend" width="20" height="20"/>
+    </resources>
+</document>

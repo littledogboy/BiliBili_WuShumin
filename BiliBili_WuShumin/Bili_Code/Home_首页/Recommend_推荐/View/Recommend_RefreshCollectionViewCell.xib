@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="r_refreshCell" id="qEU-hE-Aja" userLabel="Recommend Refresh Collection View Cell" customClass="Recommend_RefreshCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="155"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="155"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_Default" translatesAutoresizingMaskIntoConstraints="NO" id="Dlm-cb-hIU">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="106"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Dlm-cb-hIU" secondAttribute="height" multiplier="85:53" id="sa0-q0-abz"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8rV-vh-3MR" userLabel="midView">
+                        <rect key="frame" x="0.0" y="46" width="170" height="60"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="misc_playCount_new" translatesAutoresizingMaskIntoConstraints="NO" id="tuG-TK-s59">
+                                <rect key="frame" x="6" y="44" width="14" height="10"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23.8万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJO-zO-6c5">
+                                <rect key="frame" x="25" y="41" width="40" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="misc_danmakuCount_new" translatesAutoresizingMaskIntoConstraints="NO" id="XKl-QT-Hye">
+                                <rect key="frame" x="85" y="44" width="14" height="10"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.5万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUE-Th-IT7">
+                                <rect key="frame" x="104" y="41" width="32" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iUE-Th-IT7" firstAttribute="leading" secondItem="XKl-QT-Hye" secondAttribute="trailing" constant="5" id="2S1-RS-Hya"/>
+                            <constraint firstItem="XKl-QT-Hye" firstAttribute="centerY" secondItem="tuG-TK-s59" secondAttribute="centerY" id="8q9-kG-kbE"/>
+                            <constraint firstAttribute="height" constant="60" id="G7V-Tc-5fP"/>
+                            <constraint firstItem="iUE-Th-IT7" firstAttribute="baseline" secondItem="XKl-QT-Hye" secondAttribute="baseline" id="MLK-v0-Zbq"/>
+                            <constraint firstItem="vJO-zO-6c5" firstAttribute="baseline" secondItem="tuG-TK-s59" secondAttribute="baseline" id="Pdc-N2-fUf"/>
+                            <constraint firstAttribute="bottom" secondItem="tuG-TK-s59" secondAttribute="bottom" constant="6" id="ZJR-MD-zI7"/>
+                            <constraint firstItem="vJO-zO-6c5" firstAttribute="leading" secondItem="tuG-TK-s59" secondAttribute="trailing" constant="5" id="pLz-t1-D28"/>
+                            <constraint firstItem="tuG-TK-s59" firstAttribute="leading" secondItem="8rV-vh-3MR" secondAttribute="leading" constant="6" id="sbx-5J-zQk"/>
+                            <constraint firstItem="XKl-QT-Hye" firstAttribute="leading" secondItem="8rV-vh-3MR" secondAttribute="centerX" id="xqX-aN-in0"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOw-pN-vtT">
+                        <rect key="frame" x="0.0" y="110" width="24" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p9-oB-a27">
+                        <rect key="frame" x="106" y="87" width="68" height="68"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="68" id="d9v-Ry-gH5"/>
+                            <constraint firstAttribute="width" constant="68" id="iYH-Pd-kCB"/>
+                        </constraints>
+                        <state key="normal" title="Button" image="home_refresh_new"/>
+                        <connections>
+                            <action selector="refreshAction:" destination="qEU-hE-Aja" eventType="touchUpInside" id="arA-ol-0CR"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="4p9-oB-a27" secondAttribute="bottom" id="3kH-ch-RRj"/>
+                <constraint firstItem="4p9-oB-a27" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gOw-pN-vtT" secondAttribute="trailing" constant="17" id="6yX-CC-9cU"/>
+                <constraint firstItem="gOw-pN-vtT" firstAttribute="top" secondItem="Dlm-cb-hIU" secondAttribute="bottom" constant="4" id="DZt-9a-bMC"/>
+                <constraint firstItem="8rV-vh-3MR" firstAttribute="width" secondItem="Dlm-cb-hIU" secondAttribute="width" id="JjT-HJ-1yM"/>
+                <constraint firstItem="Dlm-cb-hIU" firstAttribute="leading" secondItem="qEU-hE-Aja" secondAttribute="leading" id="TJM-cm-18N"/>
+                <constraint firstItem="gOw-pN-vtT" firstAttribute="leading" secondItem="qEU-hE-Aja" secondAttribute="leading" id="Vj8-4v-E7h"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gOw-pN-vtT" secondAttribute="bottom" id="YV4-4s-1tB"/>
+                <constraint firstItem="Dlm-cb-hIU" firstAttribute="bottom" secondItem="8rV-vh-3MR" secondAttribute="bottom" id="c4d-0Y-Lmj"/>
+                <constraint firstItem="Dlm-cb-hIU" firstAttribute="top" secondItem="qEU-hE-Aja" secondAttribute="top" id="d0w-ch-Vej"/>
+                <constraint firstItem="8rV-vh-3MR" firstAttribute="leading" secondItem="Dlm-cb-hIU" secondAttribute="leading" id="ezI-oV-U8l"/>
+                <constraint firstAttribute="trailing" secondItem="Dlm-cb-hIU" secondAttribute="trailing" id="kxE-cw-bdv"/>
+                <constraint firstAttribute="trailing" secondItem="4p9-oB-a27" secondAttribute="trailing" constant="-4" id="ufZ-fg-Zyr"/>
+            </constraints>
+            <connections>
+                <outlet property="coverImageView" destination="Dlm-cb-hIU" id="1vd-qM-4GI"/>
+                <outlet property="danmukuCountLabel" destination="iUE-Th-IT7" id="Auo-q6-Tsa"/>
+                <outlet property="midView" destination="8rV-vh-3MR" id="JZD-fh-0V3"/>
+                <outlet property="playCountLabel" destination="vJO-zO-6c5" id="ynI-wt-pTs"/>
+                <outlet property="refreshBtn" destination="4p9-oB-a27" id="EDi-AC-znh"/>
+                <outlet property="titleLabel" destination="gOw-pN-vtT" id="mhh-MH-YJB"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="224.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cell_Default" width="168" height="106"/>
+        <image name="home_refresh_new" width="68" height="68"/>
+        <image name="misc_danmakuCount_new" width="14" height="10"/>
+        <image name="misc_playCount_new" width="14" height="10"/>
+    </resources>
+</document>

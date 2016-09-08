@@ -19,6 +19,9 @@
 #import "DiscoveryViewController.h"
 #import "MineViewController.h"
 
+// home_childViewControllers
+#import "RecommendViewController.h"
+
 @interface MainTabBarController ()
 
 @property (nonatomic, retain) HomeNavigationController *homeNC;
@@ -41,7 +44,15 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        //
+        UIViewController *VC1 = [[UIViewController alloc] init];
+        VC1.view.backgroundColor = [UIColor redColor];
+        RecommendViewController *recommendVC = [[RecommendViewController alloc] init];
+        recommendVC.view.backgroundColor = [UIColor yellowColor];
+        UIViewController *VC3 = [[UIViewController alloc] init];
+        VC3.view.backgroundColor = [UIColor blueColor];
         self.homeVC = [[HomeViewController alloc] init];
+        _homeVC.viewControllers = @[VC1, recommendVC, VC3];
         self.homeNC = [[HomeNavigationController alloc] initWithRootViewController:_homeVC];
         
         self.categoryVC = [[CategoryViewController alloc] init];
