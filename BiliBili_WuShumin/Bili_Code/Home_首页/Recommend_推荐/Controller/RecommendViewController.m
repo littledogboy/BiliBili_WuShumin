@@ -68,11 +68,11 @@
 
 #pragma mark- 刷新分区数据
 
-- (void)refreshIndexPath:(NSIndexPath *)indexPath body:(id )responseObject {
+- (void)refreshIndexPath:(NSIndexPath *)indexPath body:(id )responseObject  refreshCount:(NSInteger  )count{
     NSInteger section = indexPath.section;
     
+    // 处理数据
     if (responseObject) {
-        // 1. 获取到网络请求的数据
         NSMutableArray *bodyArray = [NSMutableArray array];
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingMutableContainers) error:nil];
         // 根据section 判断 网络数据 类型
@@ -96,20 +96,32 @@
                 sectionData.body[idx].liveModel = live;
             }];
             
-        } else { // subarea
+        } else { // subarea  data.count == 20
             Data *sectionData = self.dataArray[section];
             data = dic[@"list"];
-            // 3. 给 body 的 listModel 赋值
-            [data enumerateObjectsWithOptions:(NSEnumerationConcurrent) usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                if (idx <= 3) {
+            // >3. 给 body 的 listModel 赋值
+//            [data enumerateObjectsWithOptions:(NSEnumerationConcurrent) usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//                if (idx <= 3) {
+//                    List *list = [[List alloc] initWithDictionary:obj];
+//                    sectionData.body[idx].listModel = list;
+//                }
+//            }];
+            NSInteger refreshCount = count % 5; // 0 ~ 4
+            NSInteger loc = refreshCount * 4;
+            NSInteger len = 4;
+            NSIndexSet *enumSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(loc, len)];
+            [data enumerateObjectsAtIndexes:enumSet options:NSEnumerationConcurrent usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+               // idx 0 ~ count -1
+                NSInteger index = idx % 4;
+                if (index <= 3) {
                     List *list = [[List alloc] initWithDictionary:obj];
-                    sectionData.body[idx].listModel = list;
+                    sectionData.body[index].listModel = list;
                 }
             }];
         }
     }
     
-    // 3. 更新数据 这里的刷新按钮所在的单元格，需要手动更新。
+    // 更新数据 这里的刷新按钮所在的单元格，需要手动更新。
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIView performWithoutAnimation:^{
             for (int i = 0; i <= indexPath.item; i++) {
@@ -141,6 +153,11 @@
     
     // collectionView
     self.recommendCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight - 54 - 49) collectionViewLayout:flowLayout];
+    self.recommendCollectionView.alwaysBounceVertical = YES;
+    self.recommendCollectionView.backgroundColor = SAKURACOLOR;
+    self.recommendCollectionView.backgroundView.backgroundColor = SAKURACOLOR;
+    _recommendCollectionView.backgroundView.layer.cornerRadius = 6;
+    _recommendCollectionView.backgroundView.layer.masksToBounds = YES;
     _recommendCollectionView.delegate = self;
     _recommendCollectionView.dataSource = self;
     _recommendCollectionView.backgroundColor = RGBCOLOR(244, 244, 244);
@@ -226,7 +243,6 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    WS(ws);
     Data *data = _dataArray[indexPath.section];
     Body *body = [self bodyOfIndexPath:indexPath];
     UICollectionViewCell *cell = nil;
@@ -236,13 +252,13 @@
     } else {
         if (indexPath.item == data.body.count - 1) {
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:r_refreshCellIdentifier forIndexPath:indexPath];
-            ((Recommend_RefreshCollectionViewCell *)cell).refreshURLString = nil;
             ((Recommend_RefreshCollectionViewCell *)cell).refreshURLString = self.refreshURLStringArray[indexPath.section];
-            // 给刷新block赋值
-            ((Recommend_RefreshCollectionViewCell *)cell).refreshBlock = nil;
-            ((Recommend_RefreshCollectionViewCell *)cell).refreshBlock = ^(id responseObject) {
-                [ws refreshIndexPath:indexPath body:responseObject];
+            WS(ws);
+            ((Recommend_RefreshCollectionViewCell *)cell).refreshBlock = ^(id responseObject, NSInteger refreshCount) {
+                [ws refreshIndexPath:indexPath body:responseObject refreshCount:refreshCount];
             };
+            ((Recommend_RefreshCollectionViewCell *)cell).section = indexPath.section;
+            ((Recommend_RefreshCollectionViewCell *)cell).refreshCount = -1;
         } else {
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:r_recommendCellIdentifier forIndexPath:indexPath];
         }

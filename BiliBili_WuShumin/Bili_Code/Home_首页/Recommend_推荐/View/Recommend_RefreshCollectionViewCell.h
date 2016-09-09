@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class Body;
 
-typedef void (^RefreshBlock)(id reponseObject);
+typedef void (^RefreshBlock)(id reponseObject, NSInteger refreshCount);
 
 @interface Recommend_RefreshCollectionViewCell : UICollectionViewCell
 
@@ -22,6 +22,9 @@ typedef void (^RefreshBlock)(id reponseObject);
 
 @property (nonatomic, copy) NSString *refreshURLString;
 @property (nonatomic, copy) RefreshBlock refreshBlock;
+@property (nonatomic, assign) NSInteger section;
+// 当前点击次数
+@property (nonatomic, assign) NSInteger refreshCount;
 
 @property (nonatomic, assign) BOOL isAnimation;
 

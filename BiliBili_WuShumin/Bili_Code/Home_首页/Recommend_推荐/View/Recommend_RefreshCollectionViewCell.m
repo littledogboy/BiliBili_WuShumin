@@ -14,10 +14,28 @@
 #import "AFNetworking.h"
 
 
+@interface Recommend_RefreshCollectionViewCell ()
+
+
+
+@property (nonatomic, strong) id receiveObject;
+
+@end
+
 @implementation Recommend_RefreshCollectionViewCell
 
 - (void)dealloc {
     self.refreshBlock = nil;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (!self) return self;
+    
+    self.refreshCount = -1; // 初始为-1
+    self.receiveObject = nil;
+    
+    return self;
 }
 
 - (void)awakeFromNib {
@@ -33,6 +51,10 @@
     UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"home_history_item_graual_hd"]];
     bgImageView.frame = _midView.bounds;
     [self.midView insertSubview:bgImageView atIndex:0];
+    //
+    self.refreshCount = -1; // 初始为-1
+    self.receiveObject = nil;
+
 }
 
 - (void)setBody:(Body *)body {
@@ -53,24 +75,50 @@
 
 // refreshAction
 - (IBAction)refreshAction:(id)sender {
-    
+    // 点击次数增加
+    self.refreshCount++;
+    NSLog(@"%ld", _refreshCount);
     // 旋转动画
     CABasicAnimation *ratation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    ratation.delegate = self; // 获取开始和结束事件
+    ratation.delegate = self;
     [ratation setToValue:[NSNumber numberWithFloat:M_PI * 2]];
     [ratation setDuration:0.6f];
     ratation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]; // 设置timeFunction
     [_refreshBtn.layer addAnimation:ratation forKey:@"refreshAnimation"];
-    // 执行block
+    
+    // 推荐规则
+    if (_section == 0) {
+        [self request];
+    }
+    
+    // 直播规则
+    if (_section == 1) {
+        NSInteger rand = self.refreshCount % 6;
+        self.refreshURLString = [NSString stringWithFormat:@"http://app.bilibili.com/x/show/live?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3470&channel=appstore&device=phone&mobi_app=iphone&plat=1&platform=ios&rand=%ld&sign=dff16ce917e98490d899c9d21d2cbc8a&ts=1472736052", rand];
+        [self request];
+    }
+    
+    // 分区规则
+    if (_section > 1) {
+        if (_refreshCount % 5 == 0) { // 进行网络请求
+            [self request];
+        } else { // 返回上一次请求数据
+            self.refreshBlock(self.receiveObject, self.refreshCount);
+        }
+    }
+    
+}
+
+- (void)request {
     WS(ws);
     [AGHTTPURLHandle GET:_refreshURLString success:^(NSURLSessionDataTask *task, id responseObject) {
         if (ws.refreshBlock != nil) {
-            ws.refreshBlock(responseObject);
+            ws.receiveObject = responseObject;
+            ws.refreshBlock(responseObject, _refreshCount);
         }
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
-    
 }
 
 // 动画开始时
