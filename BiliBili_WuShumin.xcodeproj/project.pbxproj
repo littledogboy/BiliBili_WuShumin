@@ -18,6 +18,10 @@
 		6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3063001D6BD48A0043C4CE /* AppDelegate.m */; };
 		6C4AADD01D80547100A656D6 /* Live.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADCF1D80547100A656D6 /* Live.m */; };
 		6C4AADD31D805AAD00A656D6 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD21D805AAD00A656D6 /* List.m */; };
+		6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */; };
+		6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */; };
+		6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADDA1D8388DC00A656D6 /* Recommend_RegionHeaderView.m */; };
+		6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADDC1D83890300A656D6 /* Recommend_RegionHeaderView.xib */; };
 		6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC47C1D6BF58900D760B6 /* CategoryNavigationController.m */; };
 		6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC4821D6BF5C300D760B6 /* AttentionNavigationController.m */; };
 		6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC4851D6BF5D200D760B6 /* MineNavigationController.m */; };
@@ -95,6 +99,12 @@
 		6C4AADCF1D80547100A656D6 /* Live.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live.m; sourceTree = "<group>"; };
 		6C4AADD11D805AAD00A656D6 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		6C4AADD21D805AAD00A656D6 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
+		6C4AADD41D83724300A656D6 /* Recommend_LiveHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_LiveHeaderView.h; sourceTree = "<group>"; };
+		6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend_LiveHeaderView.m; sourceTree = "<group>"; };
+		6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Recommend_LiveHeaderView.xib; sourceTree = "<group>"; };
+		6C4AADD91D8388DC00A656D6 /* Recommend_RegionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_RegionHeaderView.h; sourceTree = "<group>"; };
+		6C4AADDA1D8388DC00A656D6 /* Recommend_RegionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend_RegionHeaderView.m; sourceTree = "<group>"; };
+		6C4AADDC1D83890300A656D6 /* Recommend_RegionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Recommend_RegionHeaderView.xib; sourceTree = "<group>"; };
 		6CAAC47B1D6BF58900D760B6 /* CategoryNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryNavigationController.h; sourceTree = "<group>"; };
 		6CAAC47C1D6BF58900D760B6 /* CategoryNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryNavigationController.m; sourceTree = "<group>"; };
 		6CAAC4811D6BF5C300D760B6 /* AttentionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionNavigationController.h; sourceTree = "<group>"; };
@@ -488,6 +498,12 @@
 				6CAAC4E61D6EED4D00D760B6 /* Recommend_RecommendHeaderView.h */,
 				6CAAC4E71D6EED4D00D760B6 /* Recommend_RecommendHeaderView.m */,
 				6CAAC4E81D6EED4D00D760B6 /* Recommend_RecommendHeaderView.xib */,
+				6C4AADD41D83724300A656D6 /* Recommend_LiveHeaderView.h */,
+				6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */,
+				6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */,
+				6C4AADD91D8388DC00A656D6 /* Recommend_RegionHeaderView.h */,
+				6C4AADDA1D8388DC00A656D6 /* Recommend_RegionHeaderView.m */,
+				6C4AADDC1D83890300A656D6 /* Recommend_RegionHeaderView.xib */,
 				6CAAC4F91D6F965700D760B6 /* RecommendCollectionViewCell.h */,
 				6CAAC4FA1D6F965700D760B6 /* RecommendCollectionViewCell.m */,
 				6CAAC4FB1D6F965700D760B6 /* RecommendCollectionViewCell.xib */,
@@ -661,9 +677,11 @@
 				6CAAC54B1D77ACC900D760B6 /* main_banner@2x.png in Resources */,
 				6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */,
 				6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */,
+				6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */,
 				6CAAC4FD1D6F965700D760B6 /* RecommendCollectionViewCell.xib in Resources */,
 				6CAAC5571D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib in Resources */,
 				6CAAC54A1D77ACC900D760B6 /* main_banner2@2x.png in Resources */,
+				6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */,
 				6CAAC5481D77ACC900D760B6 /* main_banner.png in Resources */,
 				6CAAC5491D77ACC900D760B6 /* main_banner2.png in Resources */,
 				6CAAC4EA1D6EED4D00D760B6 /* Recommend_RecommendHeaderView.xib in Resources */,
@@ -761,6 +779,7 @@
 				6CAAC4981D6BF72100D760B6 /* DiscoveryViewController.m in Sources */,
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
+				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAAC4E91D6EED4D00D760B6 /* Recommend_RecommendHeaderView.m in Sources */,
 				6CAAC4D81D6EB21200D760B6 /* Data.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
@@ -774,6 +793,7 @@
 				6CAAC4F71D6EF93100D760B6 /* BannerImage.m in Sources */,
 				6CAAC4B91D6EA6A300D760B6 /* YYClassInfo.m in Sources */,
 				6CAAC5521D77B52100D760B6 /* NSString+AGAdd.m in Sources */,
+				6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

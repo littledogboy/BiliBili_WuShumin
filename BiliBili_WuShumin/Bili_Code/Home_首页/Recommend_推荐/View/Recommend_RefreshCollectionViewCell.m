@@ -77,7 +77,6 @@
 - (IBAction)refreshAction:(id)sender {
     // 点击次数增加
     self.refreshCount++;
-    NSLog(@"%ld", _refreshCount);
     // 旋转动画
     CABasicAnimation *ratation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     ratation.delegate = self;

@@ -11,16 +11,20 @@
 #import "BiliBiliAPI.h"
 #import "AFNetworking.h"
 #import "Recommend_RecommendHeaderView.h"
+#import "Recommend_LiveHeaderView.h"
+#import "Recommend_RegionHeaderView.h"
 #import "RecommendCollectionViewCell.h"
 #import "Recommend_RefreshCollectionViewCell.h"
 #import "AGHTTPURLHandle.h"
 
 
-#define CollectionEdgeInsets UIEdgeInsetsMake(12, 12, 0, 12)
+#define CollectionEdgeInsets UIEdgeInsetsMake(12, 12, 8, 12)
 #define LineSpacing 0 // 上下间距为 0
 #define RowSpacing 12 // 左右间距为 12
 
 #define r_recommendHeaderViewIdentifier @"r_recommendHeaderView"
+#define r_liveHeaderViewIdentifier @"r_liveHeaderView"
+#define r_regionHeaderViewIdentifier @"r_regionHeaderView"
 #define r_recommendCellIdentifier @"r_recommendCell"
 #define r_refreshCellIdentifier @"r_refreshCell"
 
@@ -53,7 +57,7 @@
         self.recommend = [[Recommend alloc] initWithDictionary:dic];
         self.dataArray = [[_recommend data] mutableCopy];
         for (Data *data in [_recommend data]) {
-            if ([data.title isEqualToString:@"活动中心"]) {
+            if ([data.title isEqualToString:@"活动中心"]) { // 活动中心我给删掉了，新版本补上
                 [_dataArray removeObject:data];
             }
         }
@@ -75,6 +79,7 @@
     if (responseObject) {
         NSMutableArray *bodyArray = [NSMutableArray array];
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingMutableContainers) error:nil];
+        
         // 根据section 判断 网络数据 类型
         NSArray *data = nil;
         if (section == 0) {
@@ -100,13 +105,7 @@
             Data *sectionData = self.dataArray[section];
             data = dic[@"list"];
             // >3. 给 body 的 listModel 赋值
-//            [data enumerateObjectsWithOptions:(NSEnumerationConcurrent) usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//                if (idx <= 3) {
-//                    List *list = [[List alloc] initWithDictionary:obj];
-//                    sectionData.body[idx].listModel = list;
-//                }
-//            }];
-            NSInteger refreshCount = count % 5; // 0 ~ 4
+            NSInteger refreshCount = count % 5;
             NSInteger loc = refreshCount * 4;
             NSInteger len = 4;
             NSIndexSet *enumSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(loc, len)];
@@ -121,7 +120,7 @@
         }
     }
     
-    // 更新数据 这里的刷新按钮所在的单元格，需要手动更新。
+    // 更新数据 刷新按钮所在的单元格，需要手动更新。
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIView performWithoutAnimation:^{
             for (int i = 0; i <= indexPath.item; i++) {
@@ -161,15 +160,29 @@
     _recommendCollectionView.delegate = self;
     _recommendCollectionView.dataSource = self;
     _recommendCollectionView.backgroundColor = RGBCOLOR(244, 244, 244);
+    
     // regist header
     [_recommendCollectionView
-    registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_RecommendHeaderView class])
-         bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:r_recommendHeaderViewIdentifier];
+    registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_RecommendHeaderView class]) bundle:[NSBundle mainBundle]]
+     forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+     withReuseIdentifier:r_recommendHeaderViewIdentifier];
+    [_recommendCollectionView
+     registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_LiveHeaderView class]) bundle:[NSBundle mainBundle]]
+     forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+     withReuseIdentifier:r_liveHeaderViewIdentifier];
+    [_recommendCollectionView
+     registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_LiveHeaderView class]) bundle:[NSBundle mainBundle]]
+     forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+     withReuseIdentifier:r_liveHeaderViewIdentifier];
+    [_recommendCollectionView
+     registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_RegionHeaderView class]) bundle:[NSBundle mainBundle]]
+     forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+     withReuseIdentifier:r_regionHeaderViewIdentifier];
+    
     // regist cell
     [_recommendCollectionView
     registerNib:[UINib nibWithNibName:NSStringFromClass([RecommendCollectionViewCell class])
          bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:r_recommendCellIdentifier];
-    //
     [_recommendCollectionView
      registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_RefreshCollectionViewCell class])
           bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:r_refreshCellIdentifier];
@@ -272,9 +285,18 @@
     Banner *banner = [self bannerOfIndexPath:indexPath];
     UICollectionReusableView *reusableView = nil;
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-        Recommend_RecommendHeaderView *recommendHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:r_recommendHeaderViewIdentifier forIndexPath:indexPath];
-        recommendHeader.bannerImageModel = banner.top;
-        reusableView = recommendHeader;
+        if (indexPath.section == 0) {
+            Recommend_RecommendHeaderView *recommendHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:r_recommendHeaderViewIdentifier forIndexPath:indexPath];
+            recommendHeader.bannerImageModel = banner.top;
+            reusableView = recommendHeader;
+        } else if (indexPath.section == 1) {
+            Recommend_LiveHeaderView *liveHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:r_liveHeaderViewIdentifier forIndexPath:indexPath];
+            reusableView = liveHeader;
+        } else {
+            Recommend_RegionHeaderView *regionHeader = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:r_regionHeaderViewIdentifier forIndexPath:indexPath];
+            regionHeader.data = _dataArray[indexPath.section];
+            reusableView = regionHeader;
+        }
     }
     return reusableView;
 }
@@ -285,8 +307,10 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         return CGSizeMake(screenWidth, [Recommend_RecommendHeaderView heightForCollectionReusableView]);
+    } else if(section == 1){
+        return CGSizeMake(screenWidth, [Recommend_LiveHeaderView heightForCollectionReusableView]);
     } else {
-        return CGSizeZero;
+        return CGSizeMake(screenWidth, [Recommend_RegionHeaderView heightForCollectionReusableView]);
     }
 }
 
