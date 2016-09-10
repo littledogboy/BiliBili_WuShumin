@@ -32,6 +32,15 @@
 
 @implementation HomeViewController
 
+- (void)setViewControllers:(NSArray *)viewControllers {
+    if (viewControllers != nil) {
+        _viewControllers = [viewControllers copy];
+        for (UIViewController *vc in _viewControllers) {
+           [self addChildViewController:vc];
+        }
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;

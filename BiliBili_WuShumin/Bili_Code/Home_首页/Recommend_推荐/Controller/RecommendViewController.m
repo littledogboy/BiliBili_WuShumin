@@ -17,6 +17,8 @@
 #import "Recommend_RefreshCollectionViewCell.h"
 #import "AGHTTPURLHandle.h"
 
+#import "HotPromoteDetailViewController.h"
+
 
 #define CollectionEdgeInsets UIEdgeInsetsMake(12, 12, 8, 12)
 #define LineSpacing 0 // 上下间距为 0
@@ -317,6 +319,23 @@
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
 //    
 //}
+
+
+#pragma mark-
+#pragma mark UICollectionViewDelegate
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // uri
+    // bilibili://video/6185528
+    if (indexPath.section == 0) {
+        HotPromoteDetailViewController *hotPromoteDVC = [[HotPromoteDetailViewController alloc] init];
+        [self.parentViewController.navigationController pushViewController:hotPromoteDVC animated:YES];
+    }
+}
 
 
 
