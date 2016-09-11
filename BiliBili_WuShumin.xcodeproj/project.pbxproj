@@ -28,19 +28,24 @@
 		6CAA7E691D845FEF0012CF56 /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E471D845FEF0012CF56 /* LeftTableViewController.m */; };
 		6CAA7E6A1D845FEF0012CF56 /* 导航返回按钮@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7E491D845FEF0012CF56 /* 导航返回按钮@2x.png */; };
 		6CAA7E6B1D845FEF0012CF56 /* 播放按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7E4A1D845FEF0012CF56 /* 播放按钮.png */; };
-		6CAA7E6C1D845FEF0012CF56 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E4D1D845FEF0012CF56 /* Movie.m */; };
-		6CAA7E6D1D845FEF0012CF56 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E4F1D845FEF0012CF56 /* Owner.m */; };
-		6CAA7E6E1D845FEF0012CF56 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E511D845FEF0012CF56 /* Page.m */; };
-		6CAA7E6F1D845FEF0012CF56 /* Pendant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E531D845FEF0012CF56 /* Pendant.m */; };
-		6CAA7E701D845FEF0012CF56 /* Relate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E551D845FEF0012CF56 /* Relate.m */; };
-		6CAA7E711D845FEF0012CF56 /* ReqUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E571D845FEF0012CF56 /* ReqUser.m */; };
-		6CAA7E721D845FEF0012CF56 /* Right.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E591D845FEF0012CF56 /* Right.m */; };
-		6CAA7E731D845FEF0012CF56 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E5B1D845FEF0012CF56 /* Stat.m */; };
 		6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E5E1D845FEF0012CF56 /* HotPromoteNavigationView.m */; };
 		6CAA7E751D845FEF0012CF56 /* HotPromoteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E601D845FEF0012CF56 /* HotPromoteScrollView.m */; };
 		6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E631D845FEF0012CF56 /* AGMenuView.m */; };
 		6CAA7E771D845FEF0012CF56 /* AGScrollFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E651D845FEF0012CF56 /* AGScrollFrameController.m */; };
 		6CAA7E781D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7E661D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png */; };
+		6CAA7EC21D8551100012CF56 /* Elec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EA71D8551100012CF56 /* Elec.m */; };
+		6CAA7EC41D8551100012CF56 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EAB1D8551100012CF56 /* Movie.m */; };
+		6CAA7EC51D8551100012CF56 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EAD1D8551100012CF56 /* Owner.m */; };
+		6CAA7EC61D8551100012CF56 /* OwnerExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EAF1D8551100012CF56 /* OwnerExt.m */; };
+		6CAA7EC71D8551100012CF56 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EB11D8551100012CF56 /* Page.m */; };
+		6CAA7EC81D8551100012CF56 /* Pendant.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EB31D8551100012CF56 /* Pendant.m */; };
+		6CAA7EC91D8551100012CF56 /* Relate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EB51D8551100012CF56 /* Relate.m */; };
+		6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EB71D8551100012CF56 /* ReqUser.m */; };
+		6CAA7ECB1D8551100012CF56 /* Right.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EB91D8551100012CF56 /* Right.m */; };
+		6CAA7ECD1D8551100012CF56 /* Stat.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EBD1D8551100012CF56 /* Stat.m */; };
+		6CAA7ECE1D8551100012CF56 /* Vip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EBF1D8551100012CF56 /* Vip.m */; };
+		6CAA7ECF1D8551100012CF56 /* VipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EC11D8551100012CF56 /* VipInfo.m */; };
+		6CAA7ED51D8555E50012CF56 /* Eleclist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7ED41D8555E50012CF56 /* Eleclist.m */; };
 		6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC47C1D6BF58900D760B6 /* CategoryNavigationController.m */; };
 		6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC4821D6BF5C300D760B6 /* AttentionNavigationController.m */; };
 		6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC4851D6BF5D200D760B6 /* MineNavigationController.m */; };
@@ -134,22 +139,6 @@
 		6CAA7E471D845FEF0012CF56 /* LeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewController.m; sourceTree = "<group>"; };
 		6CAA7E491D845FEF0012CF56 /* 导航返回按钮@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航返回按钮@2x.png"; sourceTree = "<group>"; };
 		6CAA7E4A1D845FEF0012CF56 /* 播放按钮.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "播放按钮.png"; sourceTree = "<group>"; };
-		6CAA7E4C1D845FEF0012CF56 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		6CAA7E4D1D845FEF0012CF56 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
-		6CAA7E4E1D845FEF0012CF56 /* Owner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
-		6CAA7E4F1D845FEF0012CF56 /* Owner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
-		6CAA7E501D845FEF0012CF56 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
-		6CAA7E511D845FEF0012CF56 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
-		6CAA7E521D845FEF0012CF56 /* Pendant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pendant.h; sourceTree = "<group>"; };
-		6CAA7E531D845FEF0012CF56 /* Pendant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pendant.m; sourceTree = "<group>"; };
-		6CAA7E541D845FEF0012CF56 /* Relate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Relate.h; sourceTree = "<group>"; };
-		6CAA7E551D845FEF0012CF56 /* Relate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Relate.m; sourceTree = "<group>"; };
-		6CAA7E561D845FEF0012CF56 /* ReqUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReqUser.h; sourceTree = "<group>"; };
-		6CAA7E571D845FEF0012CF56 /* ReqUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReqUser.m; sourceTree = "<group>"; };
-		6CAA7E581D845FEF0012CF56 /* Right.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Right.h; sourceTree = "<group>"; };
-		6CAA7E591D845FEF0012CF56 /* Right.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Right.m; sourceTree = "<group>"; };
-		6CAA7E5A1D845FEF0012CF56 /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
-		6CAA7E5B1D845FEF0012CF56 /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
 		6CAA7E5D1D845FEF0012CF56 /* HotPromoteNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPromoteNavigationView.h; sourceTree = "<group>"; };
 		6CAA7E5E1D845FEF0012CF56 /* HotPromoteNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPromoteNavigationView.m; sourceTree = "<group>"; };
 		6CAA7E5F1D845FEF0012CF56 /* HotPromoteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPromoteScrollView.h; sourceTree = "<group>"; };
@@ -159,6 +148,32 @@
 		6CAA7E641D845FEF0012CF56 /* AGScrollFrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGScrollFrameController.h; sourceTree = "<group>"; };
 		6CAA7E651D845FEF0012CF56 /* AGScrollFrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGScrollFrameController.m; sourceTree = "<group>"; };
 		6CAA7E661D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_underline_selected_44pt@2x.png"; sourceTree = "<group>"; };
+		6CAA7EA61D8551100012CF56 /* Elec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elec.h; sourceTree = "<group>"; };
+		6CAA7EA71D8551100012CF56 /* Elec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elec.m; sourceTree = "<group>"; };
+		6CAA7EAA1D8551100012CF56 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		6CAA7EAB1D8551100012CF56 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		6CAA7EAC1D8551100012CF56 /* Owner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Owner.h; sourceTree = "<group>"; };
+		6CAA7EAD1D8551100012CF56 /* Owner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Owner.m; sourceTree = "<group>"; };
+		6CAA7EAE1D8551100012CF56 /* OwnerExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OwnerExt.h; sourceTree = "<group>"; };
+		6CAA7EAF1D8551100012CF56 /* OwnerExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OwnerExt.m; sourceTree = "<group>"; };
+		6CAA7EB01D8551100012CF56 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		6CAA7EB11D8551100012CF56 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		6CAA7EB21D8551100012CF56 /* Pendant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pendant.h; sourceTree = "<group>"; };
+		6CAA7EB31D8551100012CF56 /* Pendant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pendant.m; sourceTree = "<group>"; };
+		6CAA7EB41D8551100012CF56 /* Relate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Relate.h; sourceTree = "<group>"; };
+		6CAA7EB51D8551100012CF56 /* Relate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Relate.m; sourceTree = "<group>"; };
+		6CAA7EB61D8551100012CF56 /* ReqUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReqUser.h; sourceTree = "<group>"; };
+		6CAA7EB71D8551100012CF56 /* ReqUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReqUser.m; sourceTree = "<group>"; };
+		6CAA7EB81D8551100012CF56 /* Right.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Right.h; sourceTree = "<group>"; };
+		6CAA7EB91D8551100012CF56 /* Right.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Right.m; sourceTree = "<group>"; };
+		6CAA7EBC1D8551100012CF56 /* Stat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stat.h; sourceTree = "<group>"; };
+		6CAA7EBD1D8551100012CF56 /* Stat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stat.m; sourceTree = "<group>"; };
+		6CAA7EBE1D8551100012CF56 /* Vip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vip.h; sourceTree = "<group>"; };
+		6CAA7EBF1D8551100012CF56 /* Vip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vip.m; sourceTree = "<group>"; };
+		6CAA7EC01D8551100012CF56 /* VipInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VipInfo.h; sourceTree = "<group>"; };
+		6CAA7EC11D8551100012CF56 /* VipInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipInfo.m; sourceTree = "<group>"; };
+		6CAA7ED31D8555E50012CF56 /* Eleclist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eleclist.h; sourceTree = "<group>"; };
+		6CAA7ED41D8555E50012CF56 /* Eleclist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eleclist.m; sourceTree = "<group>"; };
 		6CAAC47B1D6BF58900D760B6 /* CategoryNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryNavigationController.h; sourceTree = "<group>"; };
 		6CAAC47C1D6BF58900D760B6 /* CategoryNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryNavigationController.m; sourceTree = "<group>"; };
 		6CAAC4811D6BF5C300D760B6 /* AttentionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionNavigationController.h; sourceTree = "<group>"; };
@@ -414,22 +429,32 @@
 		6CAA7E4B1D845FEF0012CF56 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6CAA7E4C1D845FEF0012CF56 /* Movie.h */,
-				6CAA7E4D1D845FEF0012CF56 /* Movie.m */,
-				6CAA7E4E1D845FEF0012CF56 /* Owner.h */,
-				6CAA7E4F1D845FEF0012CF56 /* Owner.m */,
-				6CAA7E501D845FEF0012CF56 /* Page.h */,
-				6CAA7E511D845FEF0012CF56 /* Page.m */,
-				6CAA7E521D845FEF0012CF56 /* Pendant.h */,
-				6CAA7E531D845FEF0012CF56 /* Pendant.m */,
-				6CAA7E541D845FEF0012CF56 /* Relate.h */,
-				6CAA7E551D845FEF0012CF56 /* Relate.m */,
-				6CAA7E561D845FEF0012CF56 /* ReqUser.h */,
-				6CAA7E571D845FEF0012CF56 /* ReqUser.m */,
-				6CAA7E581D845FEF0012CF56 /* Right.h */,
-				6CAA7E591D845FEF0012CF56 /* Right.m */,
-				6CAA7E5A1D845FEF0012CF56 /* Stat.h */,
-				6CAA7E5B1D845FEF0012CF56 /* Stat.m */,
+				6CAA7EA61D8551100012CF56 /* Elec.h */,
+				6CAA7EA71D8551100012CF56 /* Elec.m */,
+				6CAA7ED31D8555E50012CF56 /* Eleclist.h */,
+				6CAA7ED41D8555E50012CF56 /* Eleclist.m */,
+				6CAA7EAA1D8551100012CF56 /* Movie.h */,
+				6CAA7EAB1D8551100012CF56 /* Movie.m */,
+				6CAA7EAC1D8551100012CF56 /* Owner.h */,
+				6CAA7EAD1D8551100012CF56 /* Owner.m */,
+				6CAA7EAE1D8551100012CF56 /* OwnerExt.h */,
+				6CAA7EAF1D8551100012CF56 /* OwnerExt.m */,
+				6CAA7EB01D8551100012CF56 /* Page.h */,
+				6CAA7EB11D8551100012CF56 /* Page.m */,
+				6CAA7EB21D8551100012CF56 /* Pendant.h */,
+				6CAA7EB31D8551100012CF56 /* Pendant.m */,
+				6CAA7EB41D8551100012CF56 /* Relate.h */,
+				6CAA7EB51D8551100012CF56 /* Relate.m */,
+				6CAA7EB61D8551100012CF56 /* ReqUser.h */,
+				6CAA7EB71D8551100012CF56 /* ReqUser.m */,
+				6CAA7EB81D8551100012CF56 /* Right.h */,
+				6CAA7EB91D8551100012CF56 /* Right.m */,
+				6CAA7EBC1D8551100012CF56 /* Stat.h */,
+				6CAA7EBD1D8551100012CF56 /* Stat.m */,
+				6CAA7EBE1D8551100012CF56 /* Vip.h */,
+				6CAA7EBF1D8551100012CF56 /* Vip.m */,
+				6CAA7EC01D8551100012CF56 /* VipInfo.h */,
+				6CAA7EC11D8551100012CF56 /* VipInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -897,58 +922,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CAA7E721D845FEF0012CF56 /* Right.m in Sources */,
-				6CAA7E6D1D845FEF0012CF56 /* Owner.m in Sources */,
+				6CAA7EC91D8551100012CF56 /* Relate.m in Sources */,
 				6C4AADD31D805AAD00A656D6 /* List.m in Sources */,
-				6CAA7E6E1D845FEF0012CF56 /* Page.m in Sources */,
 				6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */,
 				6CAA7E3F1D845F090012CF56 /* UIImage+ImageEffects.m in Sources */,
+				6CAA7EC51D8551100012CF56 /* Owner.m in Sources */,
 				6CAAC4921D6BF70200D760B6 /* AttentionViewController.m in Sources */,
 				6CAAC59A1D7F0AC900D760B6 /* AGHTTPURLHandle.m in Sources */,
 				6CAAC4B81D6EA6A300D760B6 /* NSObject+YYModel.m in Sources */,
 				6CAAC4D61D6EB21200D760B6 /* Body.m in Sources */,
-				6CAA7E731D845FEF0012CF56 /* Stat.m in Sources */,
+				6CAA7EC61D8551100012CF56 /* OwnerExt.m in Sources */,
 				6CAAC5421D70F88900D760B6 /* BaseCollectionReusableView.m in Sources */,
 				6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */,
 				6CAAC4FC1D6F965700D760B6 /* RecommendCollectionViewCell.m in Sources */,
 				6CAAC4B71D6EA6A300D760B6 /* UIView+Frame.m in Sources */,
 				6CAAC4951D6BF70B00D760B6 /* MineViewController.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
+				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
 				6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */,
 				6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */,
 				6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */,
 				6CAAC4C01D6EA75600D760B6 /* HomeViewController.m in Sources */,
+				6CAA7EC41D8551100012CF56 /* Movie.m in Sources */,
 				6CAAC4D71D6EB21200D760B6 /* Bottom.m in Sources */,
-				6CAA7E711D845FEF0012CF56 /* ReqUser.m in Sources */,
 				6CAA7E771D845FEF0012CF56 /* AGScrollFrameController.m in Sources */,
 				6CAA7E751D845FEF0012CF56 /* HotPromoteScrollView.m in Sources */,
 				6C2557101D6BD96F0072F5B0 /* MainTabBarController.m in Sources */,
+				6CAA7ECB1D8551100012CF56 /* Right.m in Sources */,
 				6CAAC48F1D6BF6F600D760B6 /* CategoryViewController.m in Sources */,
+				6CAA7ECF1D8551100012CF56 /* VipInfo.m in Sources */,
 				6CAAC5561D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.m in Sources */,
 				6CAA7E671D845FEF0012CF56 /* HotPromoteDetailViewController.m in Sources */,
 				6CAAC4D91D6EB21200D760B6 /* Ext.m in Sources */,
+				6CAA7ED51D8555E50012CF56 /* Eleclist.m in Sources */,
 				6CAAC4981D6BF72100D760B6 /* DiscoveryViewController.m in Sources */,
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
 				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */,
+				6CAA7EC21D8551100012CF56 /* Elec.m in Sources */,
 				6CAAC4E91D6EED4D00D760B6 /* Recommend_RecommendHeaderView.m in Sources */,
 				6CAAC4D81D6EB21200D760B6 /* Data.m in Sources */,
-				6CAA7E6F1D845FEF0012CF56 /* Pendant.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
 				6CAAC4F81D6EF93100D760B6 /* BannerImageView.m in Sources */,
-				6CAA7E6C1D845FEF0012CF56 /* Movie.m in Sources */,
 				6C4AADD01D80547100A656D6 /* Live.m in Sources */,
 				6CAAC4F51D6EF93100D760B6 /* AGCircularScrollView.m in Sources */,
+				6CAA7ECE1D8551100012CF56 /* Vip.m in Sources */,
 				6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */,
+				6CAA7EC81D8551100012CF56 /* Pendant.m in Sources */,
 				6CAAC4D51D6EB21200D760B6 /* Banner.m in Sources */,
 				6CAAC4F61D6EF93100D760B6 /* AGWebViewController.m in Sources */,
 				6CAAC4DD1D6EB3CA00D760B6 /* RecommendViewController.m in Sources */,
+				6CAA7EC71D8551100012CF56 /* Page.m in Sources */,
 				6CAAC4F71D6EF93100D760B6 /* BannerImage.m in Sources */,
 				6CAAC4B91D6EA6A300D760B6 /* YYClassInfo.m in Sources */,
+				6CAA7ECD1D8551100012CF56 /* Stat.m in Sources */,
 				6CAAC5521D77B52100D760B6 /* NSString+AGAdd.m in Sources */,
 				6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */,
-				6CAA7E701D845FEF0012CF56 /* Relate.m in Sources */,
 				6CAA7E691D845FEF0012CF56 /* LeftTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

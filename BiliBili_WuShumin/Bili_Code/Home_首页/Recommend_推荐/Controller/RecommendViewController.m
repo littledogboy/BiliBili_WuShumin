@@ -333,6 +333,7 @@
     // bilibili://video/6185528
     if (indexPath.section == 0) {
         HotPromoteDetailViewController *hotPromoteDVC = [[HotPromoteDetailViewController alloc] init];
+        hotPromoteDVC.aid = [self bodyOfIndexPath:indexPath].param;
         [self.parentViewController.navigationController pushViewController:hotPromoteDVC animated:YES];
     }
 }

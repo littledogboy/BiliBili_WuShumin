@@ -1,14 +1,14 @@
 //
-//	Movie.m
+//	Data.m
 //	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 
 
-#import "Movie.h"
+#import "Data.h"
 
-@interface Movie ()
+@interface Data ()
 @end
-@implementation Movie
+@implementation Data
 
 
 

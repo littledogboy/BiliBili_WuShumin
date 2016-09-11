@@ -27,8 +27,11 @@
 // rightView
 @property (nonatomic, strong) UIScrollView *rightView;
 
+@property (nonatomic, assign) NSString *aid; // 传递过来的aid
+
 // movie
 @property (nonatomic, strong) Movie *movie;
+
 
 @end
 

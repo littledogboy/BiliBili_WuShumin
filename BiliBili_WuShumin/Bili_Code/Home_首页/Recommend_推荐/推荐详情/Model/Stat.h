@@ -5,6 +5,8 @@
 @property (nonatomic, assign) NSInteger coin;
 @property (nonatomic, assign) NSInteger danmaku;
 @property (nonatomic, assign) NSInteger favorite;
+@property (nonatomic, assign) NSInteger hisRank;
+@property (nonatomic, assign) NSInteger nowRank;
 @property (nonatomic, assign) NSInteger reply;
 @property (nonatomic, assign) NSInteger share;
 @property (nonatomic, assign) NSInteger view;

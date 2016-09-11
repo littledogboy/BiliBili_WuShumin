@@ -1,14 +1,14 @@
 //
-//	Owner.m
+//	RootClass.m
 //	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 
 
-#import "Owner.h"
+#import "RootClass.h"
 
-@interface Owner ()
+@interface RootClass ()
 @end
-@implementation Owner
+@implementation RootClass
 
 
 
@@ -20,15 +20,16 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
-	if(![dictionary[@"face"] isKindOfClass:[NSNull class]]){
-		self.face = dictionary[@"face"];
-	}	
-	if(![dictionary[@"mid"] isKindOfClass:[NSNull class]]){
-		self.mid = [dictionary[@"mid"] integerValue];
+	if(![dictionary[@"code"] isKindOfClass:[NSNull class]]){
+		self.code = [dictionary[@"code"] integerValue];
 	}
 
-	if(![dictionary[@"name"] isKindOfClass:[NSNull class]]){
-		self.name = dictionary[@"name"];
+	if(![dictionary[@"data"] isKindOfClass:[NSNull class]]){
+		self.data = [[Data alloc] initWithDictionary:dictionary[@"data"]];
+	}
+
+	if(![dictionary[@"message"] isKindOfClass:[NSNull class]]){
+		self.message = dictionary[@"message"];
 	}	
 	return self;
 }
@@ -40,12 +41,12 @@
 -(NSDictionary *)toDictionary
 {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.face != nil){
-		dictionary[@"face"] = self.face;
+	dictionary[@"code"] = @(self.code);
+	if(self.data != nil){
+		dictionary[@"data"] = [self.data toDictionary];
 	}
-	dictionary[@"mid"] = @(self.mid);
-	if(self.name != nil){
-		dictionary[@"name"] = self.name;
+	if(self.message != nil){
+		dictionary[@"message"] = self.message;
 	}
 	return dictionary;
 
@@ -59,11 +60,11 @@
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	if(self.face != nil){
-		[aCoder encodeObject:self.face forKey:@"face"];
+	[aCoder encodeObject:@(self.code) forKey:@"code"];	if(self.data != nil){
+		[aCoder encodeObject:self.data forKey:@"data"];
 	}
-	[aCoder encodeObject:@(self.mid) forKey:@"mid"];	if(self.name != nil){
-		[aCoder encodeObject:self.name forKey:@"name"];
+	if(self.message != nil){
+		[aCoder encodeObject:self.message forKey:@"message"];
 	}
 
 }
@@ -74,9 +75,9 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super init];
-	self.face = [aDecoder decodeObjectForKey:@"face"];
-	self.mid = [[aDecoder decodeObjectForKey:@"mid"] integerValue];
-	self.name = [aDecoder decodeObjectForKey:@"name"];
+	self.code = [[aDecoder decodeObjectForKey:@"code"] integerValue];
+	self.data = [aDecoder decodeObjectForKey:@"data"];
+	self.message = [aDecoder decodeObjectForKey:@"message"];
 	return self;
 
 }

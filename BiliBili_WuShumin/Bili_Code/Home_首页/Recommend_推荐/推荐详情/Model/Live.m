@@ -1,14 +1,14 @@
 //
-//	Owner.m
+//	Live.m
 //	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 
 
-#import "Owner.h"
+#import "Live.h"
 
-@interface Owner ()
+@interface Live ()
 @end
-@implementation Owner
+@implementation Live
 
 
 
@@ -20,15 +20,16 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
-	if(![dictionary[@"face"] isKindOfClass:[NSNull class]]){
-		self.face = dictionary[@"face"];
-	}	
 	if(![dictionary[@"mid"] isKindOfClass:[NSNull class]]){
 		self.mid = [dictionary[@"mid"] integerValue];
 	}
 
-	if(![dictionary[@"name"] isKindOfClass:[NSNull class]]){
-		self.name = dictionary[@"name"];
+	if(![dictionary[@"roomid"] isKindOfClass:[NSNull class]]){
+		self.roomid = [dictionary[@"roomid"] integerValue];
+	}
+
+	if(![dictionary[@"title"] isKindOfClass:[NSNull class]]){
+		self.title = dictionary[@"title"];
 	}	
 	return self;
 }
@@ -40,12 +41,10 @@
 -(NSDictionary *)toDictionary
 {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.face != nil){
-		dictionary[@"face"] = self.face;
-	}
 	dictionary[@"mid"] = @(self.mid);
-	if(self.name != nil){
-		dictionary[@"name"] = self.name;
+	dictionary[@"roomid"] = @(self.roomid);
+	if(self.title != nil){
+		dictionary[@"title"] = self.title;
 	}
 	return dictionary;
 
@@ -59,11 +58,8 @@
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	if(self.face != nil){
-		[aCoder encodeObject:self.face forKey:@"face"];
-	}
-	[aCoder encodeObject:@(self.mid) forKey:@"mid"];	if(self.name != nil){
-		[aCoder encodeObject:self.name forKey:@"name"];
+	[aCoder encodeObject:@(self.mid) forKey:@"mid"];	[aCoder encodeObject:@(self.roomid) forKey:@"roomid"];	if(self.title != nil){
+		[aCoder encodeObject:self.title forKey:@"title"];
 	}
 
 }
@@ -74,9 +70,9 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super init];
-	self.face = [aDecoder decodeObjectForKey:@"face"];
 	self.mid = [[aDecoder decodeObjectForKey:@"mid"] integerValue];
-	self.name = [aDecoder decodeObjectForKey:@"name"];
+	self.roomid = [[aDecoder decodeObjectForKey:@"roomid"] integerValue];
+	self.title = [aDecoder decodeObjectForKey:@"title"];
 	return self;
 
 }

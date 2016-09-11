@@ -112,8 +112,16 @@
         make.left.width.height.equalTo(self.view);
     }];
     
-    // setData
-    [self setData];
+    
+}
+
+- (void)setAid:(NSString *)aid {
+    if (aid != nil) {
+        _aid = aid;
+        // setData
+        [self request];
+    }
+    
 }
 
 
@@ -124,10 +132,11 @@
 {
     CGFloat blurImageHeight = _blurImageView.frame.size.height;
     
-    if (contentOffset > 0 && contentOffset < blurImageHeight - 64.0) {
+    // contentOffset 范围， 64 为自定义导航栏高度
+    if (contentOffset > 0.0 && contentOffset < blurImageHeight - 64.0) {
         
         [_blurImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(@(-contentOffset));
+            make.top.equalTo(@(-contentOffset)); // 高斯模糊.top 与 偏移量为负数关系
         }];
         // 高斯模糊 radius 与 offset 是一个线性方程。
         // y = kx + c
@@ -139,15 +148,19 @@
         CGFloat end = 20.0;
         CGFloat radius = contentOffset * (end  - start) / (blurImageHeight - 64) + start;
         [self blurImageUseImageEffects:[UIImage imageWithContentsOfFile:[self filePathInSDWebImageForURLString:self.movie.pic]] withRadius:radius];
-    } else if (contentOffset <= 0) {
+        return;
+    } else if (contentOffset <= 0.0) {
         [_blurImageView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(@(0));
         }];
+        return;
     } else if (contentOffset >= blurImageHeight - 64.0) {
         [_blurImageView mas_updateConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(@(-(blurImageHeight - 64.0)));
         }];
+        return;
     }
+    
 }
 
 
@@ -156,8 +169,10 @@
 
 - (void)scrollAnimation:(NSNotification *)notification
 {
-    CGFloat offstar = 0;
-    CGFloat offend  = 210 - 64;
+#warning "滑动太快的时候 contentOffset 不连续"
+
+    CGFloat offstar = 0.0;
+    CGFloat offend  = 210 - 64.0;
     
     // 1. get the offSet
     NSNumber *contentOffsetY = [[notification userInfo] valueForKey:@"contentOffsetY"];
@@ -166,26 +181,42 @@
     // 2. get the equation about size
     // playButton : width 50 height 44 right 24 bottom 20
     // scale = (6.0/11.0 - 1) / offend * offsetY + 1.0
-    CGFloat scale = (6.0f / 11.0f - 1.0f) / offend * offsetY + 1;
+    CGFloat scale = (6.0f / 11.0f - 1.0f) / offend * offsetY + 1.0;
     
-    //
-    CGFloat startX = _blurImageView.frame.size.width - 24 - 50;
+    CGFloat startX = _blurImageView.frame.size.width - 24 - 50.0;
     CGFloat endX   = _blurImageView.frame.size.width / 2.0 - 70 * 6.0 / 11.0;
-    CGFloat startY = 20;
-    CGFloat endY   = 11;
+    CGFloat startY = 20.0;
+    CGFloat endY   = 11.0;
     //
     CGFloat timeX = (endX - startX) / offend * offsetY + startX;
     CGFloat timeY = (endY - startY) / offend * offsetY + startY;
-    if ( offsetY > offstar && offsetY < offend) {
-        [_playButton mas_updateConstraints:^(MASConstraintMaker *make) {
+    if ( offsetY >= offstar && offsetY <= offend) {
+        [_playButton mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self.blurImageView.mas_left).offset(timeX);
             make.bottom.equalTo(self.blurImageView.mas_bottom).offset(-timeY);
             make.width.equalTo(@(50 * scale)); // require
             make.height.equalTo(@(44 * scale)); // require
         }];
-        
+        return;
+    } else if (offsetY < offstar) { // button 初始位置
+        [_playButton mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.bottom.lessThanOrEqualTo(self.blurImageView.mas_bottom).offset(-20); // option
+            make.right.lessThanOrEqualTo(self.blurImageView.mas_right).offset(-24); // option
+            make.width.lessThanOrEqualTo(@(50)); // option
+            make.height.lessThanOrEqualTo(@(44)); // option
+
+        }];
+        return;
+    } else if (offsetY > offend) {
+        scale = (6.0f / 11.0f - 1.0f) + 1.0;
+        [_playButton mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.blurImageView.mas_left).offset(endX);
+            make.bottom.equalTo(self.blurImageView.mas_bottom).offset(-endY);
+            make.width.equalTo(@(50 * scale)); // require
+            make.height.equalTo(@(44 * scale)); // require
+        }];
+        return;
     }
-    
     
 }
 
@@ -194,24 +225,32 @@
 
 
 #pragma mark-
-#pragma mark setData
+#pragma mark request
 
 - (void)reloadData
 {
     [self.blurImageView sd_setImageWithURL:[NSURL URLWithString:self.movie.pic] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
-        [self blurImageUseImageEffects:[UIImage imageWithContentsOfFile:[self filePathInSDWebImageForURLString:self.movie.pic]] withRadius:4.0];
+        [self blurImageUseImageEffects:image withRadius:4.0];
     }];
 }
 
-- (void)setData
+- (void)request
 {
+#pragma mark- fuck 搞了半天 v2 请求要签名
+//    NSString *urlString = [NSString stringWithFormat:@"http://app.bilibili.com/x/v2/view?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&aid=%@&appkey=27eb53fc9058f8c3&build=3710&device=phone&from=1&mobi_app=iphone&platform=ios&sign=3875c4675552ddbe1f7b93c3e076eef9&ts=1473586164", @"6207375"];
+    NSLog(@"%@", self.aid);
+    NSString *urlString = [NSString stringWithFormat:@"http://app.bilibili.com/x/view?actionKey=appkey&aid=%@&appkey=27eb53fc9058f8c3&build=3380", self.aid];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:kAVURL parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
+    [manager GET:urlString parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
         
         NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingMutableContainers) error:nil];
         NSDictionary *data = [rootDic valueForKeyPath:@"data"];
+        if (!data) {
+            NSLog(@"%s %d url错误", __FUNCTION__, __LINE__);
+        }
         self.movie = [[Movie alloc] initWithDictionary:data];
         [self reloadData];
         
@@ -243,7 +282,7 @@
 #pragma mark 高斯模糊
 - (void)addBlurEffect
 {
-    // 方式1：
+    // 方式1： visulEffectView 只能调整aplha 不能调整模糊程度
 //    // create blurEffect
 //    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
 //    // visrulEffectView
@@ -256,32 +295,8 @@
 //    // add
 //    [self.blueImageView addSubview:visulEffectView];
     
-    // 方式2：
-//    // 1.
-//    NSString *filePath = [self filePathInSDWebImageForURLString:self.movie.pic];
-//    NSURL *fileURL = [NSURL fileURLWithPath:filePath];
-//    // 2.
-//    CIImage *beginImage = [CIImage imageWithContentsOfURL:fileURL];
-//    // 3.
-//    CIFilter *filter = [CIFilter filterWithName:@"CIGaussianBlur"];
-//    [filter setDefaults];
-//    [filter setValue:beginImage forKey:kCIInputImageKey];
-//    [filter setValue:@10.0f forKey:kCIInputRadiusKey];
-//    CIImage *outputImage = [filter outputImage];
-//    // 4.
-//    CIContext *context = [CIContext contextWithOptions:nil];
-//    CGImageRef cgimg = [context createCGImage:outputImage fromRect:[beginImage extent]]; // extent
-//    // 5.
-//    UIImage *blurImage = [UIImage imageWithCGImage:cgimg];
-//    self.blueImageView.image = blurImage;
-//    CGImageRelease(cgimg);
-    
-    // CIImage
-    // CIFilter
-    // CIImage
-    // CIContext
-    // CGImageRef
-    // UIImage
+    // 方式2：CIImage 实现复杂比较难写
+
 }
 
 #pragma mark- 苹果分类高斯模糊

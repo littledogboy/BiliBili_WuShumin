@@ -1,14 +1,14 @@
 //
-//	Owner.m
+//	OwnerExt.m
 //	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 
 
-#import "Owner.h"
+#import "OwnerExt.h"
 
-@interface Owner ()
+@interface OwnerExt ()
 @end
-@implementation Owner
+@implementation OwnerExt
 
 
 
@@ -20,16 +20,14 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
-	if(![dictionary[@"face"] isKindOfClass:[NSNull class]]){
-		self.face = dictionary[@"face"];
-	}	
-	if(![dictionary[@"mid"] isKindOfClass:[NSNull class]]){
-		self.mid = [dictionary[@"mid"] integerValue];
+	if(![dictionary[@"live"] isKindOfClass:[NSNull class]]){
+		self.live = [[Live alloc] initWithDictionary:dictionary[@"live"]];
 	}
 
-	if(![dictionary[@"name"] isKindOfClass:[NSNull class]]){
-		self.name = dictionary[@"name"];
-	}	
+	if(![dictionary[@"vip"] isKindOfClass:[NSNull class]]){
+		self.vip = [[Vip alloc] initWithDictionary:dictionary[@"vip"]];
+	}
+
 	return self;
 }
 
@@ -40,12 +38,11 @@
 -(NSDictionary *)toDictionary
 {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.face != nil){
-		dictionary[@"face"] = self.face;
+	if(self.live != nil){
+		dictionary[@"live"] = [self.live toDictionary];
 	}
-	dictionary[@"mid"] = @(self.mid);
-	if(self.name != nil){
-		dictionary[@"name"] = self.name;
+	if(self.vip != nil){
+		dictionary[@"vip"] = [self.vip toDictionary];
 	}
 	return dictionary;
 
@@ -59,11 +56,11 @@
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	if(self.face != nil){
-		[aCoder encodeObject:self.face forKey:@"face"];
+	if(self.live != nil){
+		[aCoder encodeObject:self.live forKey:@"live"];
 	}
-	[aCoder encodeObject:@(self.mid) forKey:@"mid"];	if(self.name != nil){
-		[aCoder encodeObject:self.name forKey:@"name"];
+	if(self.vip != nil){
+		[aCoder encodeObject:self.vip forKey:@"vip"];
 	}
 
 }
@@ -74,9 +71,8 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super init];
-	self.face = [aDecoder decodeObjectForKey:@"face"];
-	self.mid = [[aDecoder decodeObjectForKey:@"mid"] integerValue];
-	self.name = [aDecoder decodeObjectForKey:@"name"];
+	self.live = [aDecoder decodeObjectForKey:@"live"];
+	self.vip = [aDecoder decodeObjectForKey:@"vip"];
 	return self;
 
 }

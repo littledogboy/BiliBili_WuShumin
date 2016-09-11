@@ -32,6 +32,14 @@
 		self.favorite = [dictionary[@"favorite"] integerValue];
 	}
 
+	if(![dictionary[@"his_rank"] isKindOfClass:[NSNull class]]){
+		self.hisRank = [dictionary[@"his_rank"] integerValue];
+	}
+
+	if(![dictionary[@"now_rank"] isKindOfClass:[NSNull class]]){
+		self.nowRank = [dictionary[@"now_rank"] integerValue];
+	}
+
 	if(![dictionary[@"reply"] isKindOfClass:[NSNull class]]){
 		self.reply = [dictionary[@"reply"] integerValue];
 	}
@@ -57,6 +65,8 @@
 	dictionary[@"coin"] = @(self.coin);
 	dictionary[@"danmaku"] = @(self.danmaku);
 	dictionary[@"favorite"] = @(self.favorite);
+	dictionary[@"his_rank"] = @(self.hisRank);
+	dictionary[@"now_rank"] = @(self.nowRank);
 	dictionary[@"reply"] = @(self.reply);
 	dictionary[@"share"] = @(self.share);
 	dictionary[@"view"] = @(self.view);
@@ -72,7 +82,7 @@
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	[aCoder encodeObject:@(self.coin) forKey:@"coin"];	[aCoder encodeObject:@(self.danmaku) forKey:@"danmaku"];	[aCoder encodeObject:@(self.favorite) forKey:@"favorite"];	[aCoder encodeObject:@(self.reply) forKey:@"reply"];	[aCoder encodeObject:@(self.share) forKey:@"share"];	[aCoder encodeObject:@(self.view) forKey:@"view"];
+	[aCoder encodeObject:@(self.coin) forKey:@"coin"];	[aCoder encodeObject:@(self.danmaku) forKey:@"danmaku"];	[aCoder encodeObject:@(self.favorite) forKey:@"favorite"];	[aCoder encodeObject:@(self.hisRank) forKey:@"his_rank"];	[aCoder encodeObject:@(self.nowRank) forKey:@"now_rank"];	[aCoder encodeObject:@(self.reply) forKey:@"reply"];	[aCoder encodeObject:@(self.share) forKey:@"share"];	[aCoder encodeObject:@(self.view) forKey:@"view"];
 }
 
 /**
@@ -84,6 +94,8 @@
 	self.coin = [[aDecoder decodeObjectForKey:@"coin"] integerValue];
 	self.danmaku = [[aDecoder decodeObjectForKey:@"danmaku"] integerValue];
 	self.favorite = [[aDecoder decodeObjectForKey:@"favorite"] integerValue];
+	self.hisRank = [[aDecoder decodeObjectForKey:@"his_rank"] integerValue];
+	self.nowRank = [[aDecoder decodeObjectForKey:@"now_rank"] integerValue];
 	self.reply = [[aDecoder decodeObjectForKey:@"reply"] integerValue];
 	self.share = [[aDecoder decodeObjectForKey:@"share"] integerValue];
 	self.view = [[aDecoder decodeObjectForKey:@"view"] integerValue];

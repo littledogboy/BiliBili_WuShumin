@@ -1,10 +1,10 @@
 #import <UIKit/UIKit.h>
 
-@interface Owner : NSObject
+@interface Live : NSObject
 
-@property (nonatomic, strong) NSString * face;
 @property (nonatomic, assign) NSInteger mid;
-@property (nonatomic, strong) NSString * name;
+@property (nonatomic, assign) NSInteger roomid;
+@property (nonatomic, strong) NSString * title;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

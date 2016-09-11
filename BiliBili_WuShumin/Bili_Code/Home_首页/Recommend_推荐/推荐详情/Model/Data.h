@@ -8,7 +8,7 @@
 #import "Right.h"
 #import "Stat.h"
 
-@interface Movie : NSObject
+@interface Data : NSObject
 
 @property (nonatomic, assign) NSInteger aid;
 @property (nonatomic, assign) NSInteger attribute;

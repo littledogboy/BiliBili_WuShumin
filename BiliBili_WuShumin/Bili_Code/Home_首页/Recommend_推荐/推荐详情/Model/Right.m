@@ -32,8 +32,16 @@
 		self.elec = [dictionary[@"elec"] integerValue];
 	}
 
+	if(![dictionary[@"hd5"] isKindOfClass:[NSNull class]]){
+		self.hd5 = [dictionary[@"hd5"] integerValue];
+	}
+
 	if(![dictionary[@"movie"] isKindOfClass:[NSNull class]]){
 		self.movie = [dictionary[@"movie"] integerValue];
+	}
+
+	if(![dictionary[@"pay"] isKindOfClass:[NSNull class]]){
+		self.pay = [dictionary[@"pay"] integerValue];
 	}
 
 	return self;
@@ -49,7 +57,9 @@
 	dictionary[@"bp"] = @(self.bp);
 	dictionary[@"download"] = @(self.download);
 	dictionary[@"elec"] = @(self.elec);
+	dictionary[@"hd5"] = @(self.hd5);
 	dictionary[@"movie"] = @(self.movie);
+	dictionary[@"pay"] = @(self.pay);
 	return dictionary;
 
 }
@@ -62,7 +72,7 @@
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	[aCoder encodeObject:@(self.bp) forKey:@"bp"];	[aCoder encodeObject:@(self.download) forKey:@"download"];	[aCoder encodeObject:@(self.elec) forKey:@"elec"];	[aCoder encodeObject:@(self.movie) forKey:@"movie"];
+	[aCoder encodeObject:@(self.bp) forKey:@"bp"];	[aCoder encodeObject:@(self.download) forKey:@"download"];	[aCoder encodeObject:@(self.elec) forKey:@"elec"];	[aCoder encodeObject:@(self.hd5) forKey:@"hd5"];	[aCoder encodeObject:@(self.movie) forKey:@"movie"];	[aCoder encodeObject:@(self.pay) forKey:@"pay"];
 }
 
 /**
@@ -74,7 +84,9 @@
 	self.bp = [[aDecoder decodeObjectForKey:@"bp"] integerValue];
 	self.download = [[aDecoder decodeObjectForKey:@"download"] integerValue];
 	self.elec = [[aDecoder decodeObjectForKey:@"elec"] integerValue];
+	self.hd5 = [[aDecoder decodeObjectForKey:@"hd5"] integerValue];
 	self.movie = [[aDecoder decodeObjectForKey:@"movie"] integerValue];
+	self.pay = [[aDecoder decodeObjectForKey:@"pay"] integerValue];
 	return self;
 
 }

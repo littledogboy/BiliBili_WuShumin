@@ -1,14 +1,14 @@
 //
-//	Owner.m
+//	VipInfo.m
 //	Model file Generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 
 
-#import "Owner.h"
+#import "VipInfo.h"
 
-@interface Owner ()
+@interface VipInfo ()
 @end
-@implementation Owner
+@implementation VipInfo
 
 
 
@@ -20,16 +20,14 @@
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary
 {
 	self = [super init];
-	if(![dictionary[@"face"] isKindOfClass:[NSNull class]]){
-		self.face = dictionary[@"face"];
-	}	
-	if(![dictionary[@"mid"] isKindOfClass:[NSNull class]]){
-		self.mid = [dictionary[@"mid"] integerValue];
+	if(![dictionary[@"vipStatus"] isKindOfClass:[NSNull class]]){
+		self.vipStatus = [dictionary[@"vipStatus"] integerValue];
 	}
 
-	if(![dictionary[@"name"] isKindOfClass:[NSNull class]]){
-		self.name = dictionary[@"name"];
-	}	
+	if(![dictionary[@"vipType"] isKindOfClass:[NSNull class]]){
+		self.vipType = [dictionary[@"vipType"] integerValue];
+	}
+
 	return self;
 }
 
@@ -40,13 +38,8 @@
 -(NSDictionary *)toDictionary
 {
 	NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-	if(self.face != nil){
-		dictionary[@"face"] = self.face;
-	}
-	dictionary[@"mid"] = @(self.mid);
-	if(self.name != nil){
-		dictionary[@"name"] = self.name;
-	}
+	dictionary[@"vipStatus"] = @(self.vipStatus);
+	dictionary[@"vipType"] = @(self.vipType);
 	return dictionary;
 
 }
@@ -59,13 +52,7 @@
  */
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
-	if(self.face != nil){
-		[aCoder encodeObject:self.face forKey:@"face"];
-	}
-	[aCoder encodeObject:@(self.mid) forKey:@"mid"];	if(self.name != nil){
-		[aCoder encodeObject:self.name forKey:@"name"];
-	}
-
+	[aCoder encodeObject:@(self.vipStatus) forKey:@"vipStatus"];	[aCoder encodeObject:@(self.vipType) forKey:@"vipType"];
 }
 
 /**
@@ -74,9 +61,8 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super init];
-	self.face = [aDecoder decodeObjectForKey:@"face"];
-	self.mid = [[aDecoder decodeObjectForKey:@"mid"] integerValue];
-	self.name = [aDecoder decodeObjectForKey:@"name"];
+	self.vipStatus = [[aDecoder decodeObjectForKey:@"vipStatus"] integerValue];
+	self.vipType = [[aDecoder decodeObjectForKey:@"vipType"] integerValue];
 	return self;
 
 }
