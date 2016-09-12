@@ -292,10 +292,11 @@
             self.contentOffsetY = _rightView.contentOffset.y;
         }
         
-        // 发布通知
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"KScroll" object:scrollView userInfo:@{ @"contentOffsetY" : @(_contentOffsetY)}];
         
         if (self.delegate != nil && [_delegate respondsToSelector:@selector(scrollViewDidScrollConentOffset:)]) {
+            // 发布通知
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"KScroll" object:scrollView userInfo:@{ @"contentOffsetY" : @(_contentOffsetY)}];
+            // 代理执行
             [_delegate scrollViewDidScrollConentOffset:self.contentOffsetY];
         }
     }

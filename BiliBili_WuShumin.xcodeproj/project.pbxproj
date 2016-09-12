@@ -46,6 +46,24 @@
 		6CAA7ECE1D8551100012CF56 /* Vip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EBF1D8551100012CF56 /* Vip.m */; };
 		6CAA7ECF1D8551100012CF56 /* VipInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EC11D8551100012CF56 /* VipInfo.m */; };
 		6CAA7ED51D8555E50012CF56 /* Eleclist.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7ED41D8555E50012CF56 /* Eleclist.m */; };
+		6CAA7EEE1D86A8760012CF56 /* AGPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7ED81D86A8760012CF56 /* AGPlayerView.m */; };
+		6CAA7EEF1D86A8760012CF56 /* AGPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7ED91D86A8760012CF56 /* AGPlayerView.xib */; };
+		6CAA7EF01D86A8760012CF56 /* H5_AVInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EDB1D86A8760012CF56 /* H5_AVInfo.m */; };
+		6CAA7EF11D86A8760012CF56 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EDD1D86A8760012CF56 /* back@2x.png */; };
+		6CAA7EF21D86A8760012CF56 /* icmpv_thumb_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EDE1D86A8760012CF56 /* icmpv_thumb_light@2x.png */; };
+		6CAA7EF31D86A8760012CF56 /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EDF1D86A8760012CF56 /* Play@2x.png */; };
+		6CAA7EF41D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE01D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png */; };
+		6CAA7EF51D86A8760012CF56 /* player_pause_iphone_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE11D86A8760012CF56 /* player_pause_iphone_window@3x.png */; };
+		6CAA7EF61D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE21D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png */; };
+		6CAA7EF71D86A8760012CF56 /* player_start_iphone_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE31D86A8760012CF56 /* player_start_iphone_window@3x.png */; };
+		6CAA7EF81D86A8760012CF56 /* report@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE41D86A8760012CF56 /* report@2x.png */; };
+		6CAA7EF91D86A8760012CF56 /* Rotation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE51D86A8760012CF56 /* Rotation@2x.png */; };
+		6CAA7EFA1D86A8760012CF56 /* Slider_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE61D86A8760012CF56 /* Slider_thumb@2x.png */; };
+		6CAA7EFB1D86A8760012CF56 /* Stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE71D86A8760012CF56 /* Stop@2x.png */; };
+		6CAA7EFC1D86A8760012CF56 /* NSString+time.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EE91D86A8760012CF56 /* NSString+time.m */; };
+		6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EEB1D86A8760012CF56 /* RotationScreen.m */; };
+		6CAA7EFE1D86A8760012CF56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EED1D86A8760012CF56 /* ViewController.m */; };
+		6CAA7F001D86AE3E0012CF56 /* AGPlayerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7EFF1D86AE3E0012CF56 /* AGPlayerViewController.storyboard */; };
 		6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC47C1D6BF58900D760B6 /* CategoryNavigationController.m */; };
 		6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC4821D6BF5C300D760B6 /* AttentionNavigationController.m */; };
 		6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC4851D6BF5D200D760B6 /* MineNavigationController.m */; };
@@ -174,6 +192,29 @@
 		6CAA7EC11D8551100012CF56 /* VipInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VipInfo.m; sourceTree = "<group>"; };
 		6CAA7ED31D8555E50012CF56 /* Eleclist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eleclist.h; sourceTree = "<group>"; };
 		6CAA7ED41D8555E50012CF56 /* Eleclist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eleclist.m; sourceTree = "<group>"; };
+		6CAA7ED71D86A8760012CF56 /* AGPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPlayerView.h; sourceTree = "<group>"; };
+		6CAA7ED81D86A8760012CF56 /* AGPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPlayerView.m; sourceTree = "<group>"; };
+		6CAA7ED91D86A8760012CF56 /* AGPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGPlayerView.xib; sourceTree = "<group>"; };
+		6CAA7EDA1D86A8760012CF56 /* H5_AVInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H5_AVInfo.h; sourceTree = "<group>"; };
+		6CAA7EDB1D86A8760012CF56 /* H5_AVInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H5_AVInfo.m; sourceTree = "<group>"; };
+		6CAA7EDD1D86A8760012CF56 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		6CAA7EDE1D86A8760012CF56 /* icmpv_thumb_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icmpv_thumb_light@2x.png"; sourceTree = "<group>"; };
+		6CAA7EDF1D86A8760012CF56 /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
+		6CAA7EE01D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pause_iphone_fullscreen@3x.png"; sourceTree = "<group>"; };
+		6CAA7EE11D86A8760012CF56 /* player_pause_iphone_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pause_iphone_window@3x.png"; sourceTree = "<group>"; };
+		6CAA7EE21D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_start_iphone_fullscreen@3x.png"; sourceTree = "<group>"; };
+		6CAA7EE31D86A8760012CF56 /* player_start_iphone_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_start_iphone_window@3x.png"; sourceTree = "<group>"; };
+		6CAA7EE41D86A8760012CF56 /* report@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "report@2x.png"; sourceTree = "<group>"; };
+		6CAA7EE51D86A8760012CF56 /* Rotation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rotation@2x.png"; sourceTree = "<group>"; };
+		6CAA7EE61D86A8760012CF56 /* Slider_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slider_thumb@2x.png"; sourceTree = "<group>"; };
+		6CAA7EE71D86A8760012CF56 /* Stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop@2x.png"; sourceTree = "<group>"; };
+		6CAA7EE81D86A8760012CF56 /* NSString+time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+time.h"; sourceTree = "<group>"; };
+		6CAA7EE91D86A8760012CF56 /* NSString+time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+time.m"; sourceTree = "<group>"; };
+		6CAA7EEA1D86A8760012CF56 /* RotationScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotationScreen.h; sourceTree = "<group>"; };
+		6CAA7EEB1D86A8760012CF56 /* RotationScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RotationScreen.m; sourceTree = "<group>"; };
+		6CAA7EEC1D86A8760012CF56 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6CAA7EED1D86A8760012CF56 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6CAA7EFF1D86AE3E0012CF56 /* AGPlayerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AGPlayerViewController.storyboard; sourceTree = "<group>"; };
 		6CAAC47B1D6BF58900D760B6 /* CategoryNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryNavigationController.h; sourceTree = "<group>"; };
 		6CAAC47C1D6BF58900D760B6 /* CategoryNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryNavigationController.m; sourceTree = "<group>"; };
 		6CAAC4811D6BF5C300D760B6 /* AttentionNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttentionNavigationController.h; sourceTree = "<group>"; };
@@ -482,6 +523,45 @@
 			path = "滚动框架";
 			sourceTree = "<group>";
 		};
+		6CAA7ED61D86A8760012CF56 /* AGPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA7EDC1D86A8760012CF56 /* Images */,
+				6CAA7ED71D86A8760012CF56 /* AGPlayerView.h */,
+				6CAA7ED81D86A8760012CF56 /* AGPlayerView.m */,
+				6CAA7ED91D86A8760012CF56 /* AGPlayerView.xib */,
+				6CAA7EDA1D86A8760012CF56 /* H5_AVInfo.h */,
+				6CAA7EDB1D86A8760012CF56 /* H5_AVInfo.m */,
+				6CAA7EE81D86A8760012CF56 /* NSString+time.h */,
+				6CAA7EE91D86A8760012CF56 /* NSString+time.m */,
+				6CAA7EEA1D86A8760012CF56 /* RotationScreen.h */,
+				6CAA7EEB1D86A8760012CF56 /* RotationScreen.m */,
+				6CAA7EEC1D86A8760012CF56 /* ViewController.h */,
+				6CAA7EED1D86A8760012CF56 /* ViewController.m */,
+				6CAA7EFF1D86AE3E0012CF56 /* AGPlayerViewController.storyboard */,
+			);
+			name = AGPlayer;
+			path = Banner/AGPlayer;
+			sourceTree = "<group>";
+		};
+		6CAA7EDC1D86A8760012CF56 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6CAA7EDD1D86A8760012CF56 /* back@2x.png */,
+				6CAA7EDE1D86A8760012CF56 /* icmpv_thumb_light@2x.png */,
+				6CAA7EDF1D86A8760012CF56 /* Play@2x.png */,
+				6CAA7EE01D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png */,
+				6CAA7EE11D86A8760012CF56 /* player_pause_iphone_window@3x.png */,
+				6CAA7EE21D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png */,
+				6CAA7EE31D86A8760012CF56 /* player_start_iphone_window@3x.png */,
+				6CAA7EE41D86A8760012CF56 /* report@2x.png */,
+				6CAA7EE51D86A8760012CF56 /* Rotation@2x.png */,
+				6CAA7EE61D86A8760012CF56 /* Slider_thumb@2x.png */,
+				6CAA7EE71D86A8760012CF56 /* Stop@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		6CAAC4771D6BF4DC00D760B6 /* Category_分区 */ = {
 			isa = PBXGroup;
 			children = (
@@ -679,6 +759,7 @@
 		6CAAC4EB1D6EF93100D760B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6CAA7ED61D86A8760012CF56 /* AGPlayer */,
 				6CAAC4EC1D6EF93100D760B6 /* Banner */,
 			);
 			path = Common;
@@ -835,10 +916,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAA7EF71D86A8760012CF56 /* player_start_iphone_window@3x.png in Resources */,
 				6CAA7E6A1D845FEF0012CF56 /* 导航返回按钮@2x.png in Resources */,
+				6CAA7EF41D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png in Resources */,
+				6CAA7EEF1D86A8760012CF56 /* AGPlayerView.xib in Resources */,
+				6CAA7EFA1D86A8760012CF56 /* Slider_thumb@2x.png in Resources */,
+				6CAA7EF61D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png in Resources */,
+				6CAA7EF31D86A8760012CF56 /* Play@2x.png in Resources */,
+				6CAA7F001D86AE3E0012CF56 /* AGPlayerViewController.storyboard in Resources */,
+				6CAA7EF81D86A8760012CF56 /* report@2x.png in Resources */,
 				6CAA7E781D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png in Resources */,
+				6CAA7EF91D86A8760012CF56 /* Rotation@2x.png in Resources */,
+				6CAA7EF11D86A8760012CF56 /* back@2x.png in Resources */,
 				6C3062DA1D6BD0CC0043C4CE /* LaunchScreen.storyboard in Resources */,
 				6CAAC54B1D77ACC900D760B6 /* main_banner@2x.png in Resources */,
+				6CAA7EFB1D86A8760012CF56 /* Stop@2x.png in Resources */,
 				6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */,
 				6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */,
 				6CAA7E6B1D845FEF0012CF56 /* 播放按钮.png in Resources */,
@@ -849,6 +941,8 @@
 				6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */,
 				6CAAC5481D77ACC900D760B6 /* main_banner.png in Resources */,
 				6CAAC5491D77ACC900D760B6 /* main_banner2.png in Resources */,
+				6CAA7EF51D86A8760012CF56 /* player_pause_iphone_window@3x.png in Resources */,
+				6CAA7EF21D86A8760012CF56 /* icmpv_thumb_light@2x.png in Resources */,
 				6CAAC4EA1D6EED4D00D760B6 /* Recommend_RecommendHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -922,9 +1016,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CAA7EFE1D86A8760012CF56 /* ViewController.m in Sources */,
 				6CAA7EC91D8551100012CF56 /* Relate.m in Sources */,
 				6C4AADD31D805AAD00A656D6 /* List.m in Sources */,
 				6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */,
+				6CAA7EEE1D86A8760012CF56 /* AGPlayerView.m in Sources */,
 				6CAA7E3F1D845F090012CF56 /* UIImage+ImageEffects.m in Sources */,
 				6CAA7EC51D8551100012CF56 /* Owner.m in Sources */,
 				6CAAC4921D6BF70200D760B6 /* AttentionViewController.m in Sources */,
@@ -944,6 +1040,7 @@
 				6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */,
 				6CAAC4C01D6EA75600D760B6 /* HomeViewController.m in Sources */,
 				6CAA7EC41D8551100012CF56 /* Movie.m in Sources */,
+				6CAA7EFC1D86A8760012CF56 /* NSString+time.m in Sources */,
 				6CAAC4D71D6EB21200D760B6 /* Bottom.m in Sources */,
 				6CAA7E771D845FEF0012CF56 /* AGScrollFrameController.m in Sources */,
 				6CAA7E751D845FEF0012CF56 /* HotPromoteScrollView.m in Sources */,
@@ -965,7 +1062,9 @@
 				6CAAC4D81D6EB21200D760B6 /* Data.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
 				6CAAC4F81D6EF93100D760B6 /* BannerImageView.m in Sources */,
+				6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */,
 				6C4AADD01D80547100A656D6 /* Live.m in Sources */,
+				6CAA7EF01D86A8760012CF56 /* H5_AVInfo.m in Sources */,
 				6CAAC4F51D6EF93100D760B6 /* AGCircularScrollView.m in Sources */,
 				6CAA7ECE1D8551100012CF56 /* Vip.m in Sources */,
 				6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */,

@@ -35,8 +35,8 @@
 // selectedIndex
 @property (nonatomic, assign) NSInteger selectedIndex; // 从1开始 ： 1 2
 // leftRightView
-@property (nonatomic, assign) UIScrollView *leftView;
-@property (nonatomic, strong) UIScrollView *rightView;
+@property (nonatomic, assign) UIScrollView *leftView; // 左视图
+@property (nonatomic, strong) UIScrollView *rightView; // 右视图
 
 //
 @property (nonatomic, assign) CGFloat contentOffsetY;

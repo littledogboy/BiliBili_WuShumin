@@ -14,6 +14,7 @@
 #import "Masonry.h"
 #import "UIImage+ImageEffects.h" // 苹果的高斯模糊分类
 #import "HotPromoteScrollView.h"
+#import "ViewController.h"
 
 #import "LeftTableViewController.h"
 
@@ -27,6 +28,9 @@
 //
 @property (nonatomic, assign) CGPoint startCenter;
 @property (nonatomic, assign) CGPoint endCenter;
+
+// playerController
+@property (nonatomic, strong) ViewController *agPlayViewController;
 
 
 @end
@@ -82,6 +86,7 @@
     self.playButton.alpha = 0.8;
     [self.playButton setImage:[UIImage imageNamed:@"播放按钮"] forState:(UIControlStateNormal)];
     [self.playButton setImage:[UIImage imageNamed:@"播放按钮"] forState:(UIControlStateHighlighted)];
+    [self.playButton addTarget:self action:@selector(playAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
     [self.view addSubview:_playButton];
     [_playButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -122,6 +127,19 @@
         [self request];
     }
     
+}
+
+#pragma mark- playAction
+
+- (void)playAction:(UIButton *)button {
+    // 1. 取消scrollView的代理， 代理为空时滚动不再发布通知
+    self.scrollView.delegate = nil;
+    // 2. 各控件复位， 发布一通知偏移量为 0
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"KScroll" object:nil userInfo:@{ @"contentOffsetY" : @(0.0)}];
+    // 3. 添加播放控制器 AGPlayer
+    self.agPlayViewController = [[UIStoryboard storyboardWithName:@"AGPlayerViewController" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"AGPlayerViewController"];
+    [self.view addSubview:_agPlayViewController.view];
+    [self addChildViewController:_agPlayViewController];
 }
 
 
@@ -237,7 +255,7 @@
 
 - (void)request
 {
-#pragma mark- fuck 搞了半天 v2 请求要签名
+#pragma mark-  v2 请求要签名
 //    NSString *urlString = [NSString stringWithFormat:@"http://app.bilibili.com/x/v2/view?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&aid=%@&appkey=27eb53fc9058f8c3&build=3710&device=phone&from=1&mobi_app=iphone&platform=ios&sign=3875c4675552ddbe1f7b93c3e076eef9&ts=1473586164", @"6207375"];
     NSLog(@"%@", self.aid);
     NSString *urlString = [NSString stringWithFormat:@"http://app.bilibili.com/x/view?actionKey=appkey&aid=%@&appkey=27eb53fc9058f8c3&build=3380", self.aid];

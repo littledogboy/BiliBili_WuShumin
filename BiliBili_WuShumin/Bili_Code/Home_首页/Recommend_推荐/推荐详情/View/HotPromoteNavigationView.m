@@ -114,13 +114,12 @@
 {
     CGFloat star = 0;
     CGFloat end  = 210 - 64;
-    CGFloat mid  = (end - star) / 2.0;
     
     // 1. get the offSet
     NSNumber *contentOffsetY = [[notification userInfo] valueForKey:@"contentOffsetY"];
     CGFloat offsetY = [contentOffsetY floatValue];
     
-    if ( offsetY > star && offsetY < end) {
+    if ( offsetY >= star && offsetY <= end) {
         // 2. change alpha
         CGFloat radius = 90/73.0 * offsetY * M_PI / 180;
         CGFloat cosValue = cos(radius);
@@ -132,12 +131,25 @@
         CGFloat toX = self.frame.size.width / 2.0 + self.titleLabel.frame.size.width / 2.0;
         
         CGFloat k = (toX - fromX) / end;
-        CGFloat c = fromX;
         CGFloat timeX = offsetY * k;
         [_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(@(timeX));
         }];
-//        NSLog(@"%.2f", timeX);
+        return;
+    } else if (offsetY < star) { // 原始状态
+        self.titleLabel.alpha = 1;
+        [_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(@(0));
+        }];
+        return;
+    } else if (offsetY > end) {
+        self.titleLabel.alpha = 1;
+        CGFloat toX = self.titleLabel.frame.size.width / 2.0;
+        [_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(@(toX));
+        }];
+        return;
+        
     }
     
     
