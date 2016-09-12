@@ -34,4 +34,12 @@
     }
 }
 
++ (BOOL)isOrientationPortrait {
+    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end

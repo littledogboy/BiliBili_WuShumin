@@ -36,8 +36,13 @@ typedef NS_ENUM(NSInteger, TouchPlayerViewMode) {
 // 是否锁屏
 @property (nonatomic, assign) BOOL isLock;
 
+// 所在控制器
+@property (nonatomic, strong) UIViewController *viewController;
+
 // 传入视频地址
 - (void)updatePlayerWithURL:(NSURL *)url;
+
+
 
 // 移除通知
 - (void)removeObserveAndNOtification;
@@ -53,5 +58,8 @@ typedef NS_ENUM(NSInteger, TouchPlayerViewMode) {
 
 // 暂停
 - (void)pause;
+
+
+
 
 @end

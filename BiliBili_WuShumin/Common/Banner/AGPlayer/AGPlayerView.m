@@ -82,8 +82,10 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
+        self.backgroundColor = [UIColor clearColor];
         // set
         self.mainView = [[[NSBundle mainBundle] loadNibNamed:@"AGPlayerView" owner:self options:nil] lastObject];
+        self.mainView.backgroundColor = [UIColor clearColor];
         [self addSubview:self.mainView];
         
         // setAVPlayer
@@ -101,8 +103,6 @@
         [self.playerView sendSubviewToBack:_inspectorView];
         // setPortraintLayout
         [self setPortarintLayout];
-        
-        NSLog(@"%d %.2f %.2f", __LINE__, self.playerView.bounds.size.width, self.playerView.bounds.size.height);
     }
     return self;
 }
@@ -190,6 +190,7 @@
     _playerLayer.frame = self.bounds;
 }
 
+#pragma mark- sizeClass 处理横竖屏切换
 // sizeClass 横竖屏切换时，执行
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     [super traitCollectionDidChange:previousTraitCollection];
@@ -204,9 +205,11 @@
     if (self.traitCollection.verticalSizeClass != UIUserInterfaceSizeClassCompact) { // 竖屏
         self.downView.backgroundColor = self.topView.backgroundColor = [UIColor clearColor];
         [self.rotationButton setImage:[UIImage imageNamed:@"player_fullScreen_iphone"] forState:(UIControlStateNormal)];
+        [self isHiddenTabBar:NO];
     } else { // 横屏
         self.downView.backgroundColor = self.topView.backgroundColor = RGBColor(89, 87, 90);
         [self.rotationButton setImage:[UIImage imageNamed:@"player_window_iphone"] forState:(UIControlStateNormal)];
+        [self isHiddenTabBar:YES];
 
     }
     
@@ -218,15 +221,35 @@
     //    NSLog(@"vertical %ld", (long)self.traitCollection.verticalSizeClass); //
 }
 
+#pragma mark- 导航返回事件
+- (IBAction)returnAction:(id)sender {
+    // 如果是竖屏，执行 pop 操作
+    if ([RotationScreen isOrientationPortrait] && self.viewController != nil) {
+        [self.viewController.parentViewController.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+
+
 
 #pragma mark-
 #pragma mark 横竖屏切换
 - (IBAction)rotationAction:(id)sender {
+   
     if ([RotationScreen isOrientationLandscape]) { // 如果是横屏，
         [RotationScreen forceOrientation:(UIInterfaceOrientationPortrait)]; // 切换为竖屏
+        [self isHiddenTabBar:NO];
     } else {
         [RotationScreen forceOrientation:(UIInterfaceOrientationLandscapeRight)]; // 否则，切换为横屏
+        [self isHiddenTabBar:YES];
     }
+}
+
+- (void)isHiddenTabBar:(BOOL)isHidden {
+    // 横屏状态下，隐藏tabBar
+    UITabBarController *rootTBC = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+    rootTBC.tabBar.hidden = isHidden;
 }
 
 
@@ -435,6 +458,7 @@
 
 #pragma mark-
 #pragma mark 右上下滑动更改声音大小
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

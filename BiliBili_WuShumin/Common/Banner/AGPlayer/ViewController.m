@@ -22,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.frame = CGRectMake(0, 0, screenWidth, screenWidth * 14 / 25);
+    self.view.backgroundColor = [UIColor clearColor];
     // 网络请求
     [self getURLWithAID:@"1025020"];
     //
@@ -41,11 +43,29 @@
         [_avInfo setValuesForKeysWithDictionary:rootDic];
         NSURL *url = [NSURL URLWithString:_avInfo.src];
         [self.playerView updatePlayerWithURL:url]; // 播放视频
+        self.playerView.viewController = self;
     }];
     // 3.
     [getTask resume];
 }
 
+
+#pragma mark- 解决向上传递的响应者链问题
+
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    if (self.traitCollection.verticalSizeClass != UIUserInterfaceSizeClassCompact) { // 竖屏
+        self.view.frame = CGRectMake(0, 0, screenWidth, screenWidth * 14 / 25);
+    } else { // 横屏
+        self.view.frame = [UIScreen mainScreen].bounds;
+    }
+}
+
+
+
+
+
+#pragma mark- status bar 设置
 // iOS 9.0 之后set方法弃用，需要在 controller 中实现
 // 新方法 需要将View controller-based status bar appearance设置为YES,才会有效果,
 // 1. 设置样式
@@ -61,6 +81,15 @@
 - (UIStatusBarAnimation)preferredStatusBarUpdateAnimation {
     return UIStatusBarAnimationNone;
 }
+
+
+#pragma mark- 消失时停止播放
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.playerView pause];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

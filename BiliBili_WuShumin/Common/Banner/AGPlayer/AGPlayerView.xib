@@ -47,6 +47,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkn-1W-YDg" userLabel="backLandscape">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                     <state key="normal" image="icmpv_back_light"/>
+                                    <connections>
+                                        <action selector="rotationAction:" destination="-1" eventType="touchUpInside" id="xbC-Td-UAe"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bx9-bQ-1rN">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -103,6 +106,9 @@
                                             <include reference="bcH-AZ-aEe"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <action selector="returnAction:" destination="-1" eventType="touchUpInside" id="n4C-FL-3Dh"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="这里是标题喵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUr-fq-BEM">
                                     <rect key="frame" x="52" y="13" width="271" height="18"/>
@@ -355,8 +361,7 @@
                                             <exclude reference="ZGv-6j-Cxl"/>
                                         </mask>
                                     </variation>
-                                    <variation key="heightClass=compact" misplaced="YES">
-                                        <rect key="frame" x="495" y="5" width="27" height="29"/>
+                                    <variation key="heightClass=compact">
                                         <mask key="constraints">
                                             <include reference="E1q-Iw-aj3"/>
                                             <include reference="ZGv-6j-Cxl"/>
@@ -746,7 +751,7 @@
                     <include reference="DTD-jW-uBs"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="429" y="-263"/>
+            <point key="canvasLocation" x="475" y="-262"/>
         </view>
     </objects>
     <resources>

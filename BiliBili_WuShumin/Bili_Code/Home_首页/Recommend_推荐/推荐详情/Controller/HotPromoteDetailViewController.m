@@ -239,9 +239,6 @@
 }
 
 
-
-
-
 #pragma mark-
 #pragma mark request
 
@@ -337,10 +334,6 @@
     }
     return filePath;
 }
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

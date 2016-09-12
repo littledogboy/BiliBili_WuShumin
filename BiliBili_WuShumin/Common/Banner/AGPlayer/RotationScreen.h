@@ -25,4 +25,9 @@
  */
 + (BOOL)isOrientationLandscape;
 
+
+/**
+ *  是否是竖屏
+ */
++ (BOOL)isOrientationPortrait;
 @end
