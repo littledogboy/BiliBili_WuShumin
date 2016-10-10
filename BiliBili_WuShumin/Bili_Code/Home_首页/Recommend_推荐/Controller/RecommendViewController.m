@@ -16,6 +16,7 @@
 #import "RecommendCollectionViewCell.h"
 #import "Recommend_RefreshCollectionViewCell.h"
 #import "AGHTTPURLHandle.h"
+#import "URLRouter.h"
 
 #import "HotPromoteDetailViewController.h"
 
@@ -329,12 +330,16 @@
 
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // uri
-    // bilibili://video/6185528
-    if (indexPath.section == 0) {
-        HotPromoteDetailViewController *hotPromoteDVC = [[HotPromoteDetailViewController alloc] init];
-        hotPromoteDVC.aid = [self bodyOfIndexPath:indexPath].param;
-        [self.parentViewController.navigationController pushViewController:hotPromoteDVC animated:YES];
+    
+    // 1. body
+    Body *body = [self bodyOfIndexPath:indexPath];
+    NSString *gotoString = body.gotoField;
+    NSString *url = body.uri;
+    
+    // 2. judge goto
+    // 3. toURL
+    if ([gotoString isEqualToString:@"av"]) {
+        [URLRouter openURL:url];
     }
 }
 

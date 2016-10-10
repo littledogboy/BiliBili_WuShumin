@@ -12,13 +12,17 @@
 #import "Movie.h"
 #import "UIImageView+WebCache.h"
 #import "Masonry.h"
-#import "UIImage+ImageEffects.h" // 苹果的高斯模糊分类
+#import "SABlurImageView.h"
 #import "HotPromoteScrollView.h"
 #import "ViewController.h"
-
 #import "LeftTableViewController.h"
+// 视频播放器
+#import <IJKMediaFramework/IJKMediaFramework.h>
+#import "AGMovieViewController.h"
 
 #define kAVURL  @"http://app.bilibili.com/x/view?access_key=e276ecb0d41bb704b77b863edf6c0fd2&actionKey=appkey&aid=4861593&appkey=27eb53fc9058f8c3&build=3350&device=phone&plat=0&platform=ios&sign=05bea1b4452b729223ff6f37e7d85859&ts=1465117662"
+
+#define kRadiusBegin 0.5
 
 @interface HotPromoteDetailViewController () <HotPromoteScrollViewDelegate>
 
@@ -30,7 +34,7 @@
 @property (nonatomic, assign) CGPoint endCenter;
 
 // playerController
-@property (nonatomic, strong) ViewController *agPlayViewController;
+@property (nonatomic, strong) AGMovieViewController *agMVC;
 
 
 @end
@@ -72,8 +76,7 @@
     self.navigationView.titleLabel.text = @"AV4830130";
     
     // blueImageView
-    self.blurImageView = [[UIImageView alloc] init];
-    [self.blurImageView sd_setImageWithURL:[NSURL URLWithString:self.movie.pic] placeholderImage:nil];
+    self.blurImageView = [[SABlurImageView alloc] init];
     [self.view addSubview:_blurImageView];
     [self.view sendSubviewToBack:_blurImageView];
     [_blurImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -84,8 +87,8 @@
     // playButton
     self.playButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     self.playButton.alpha = 0.8;
-    [self.playButton setImage:[UIImage imageNamed:@"播放按钮"] forState:(UIControlStateNormal)];
-    [self.playButton setImage:[UIImage imageNamed:@"播放按钮"] forState:(UIControlStateHighlighted)];
+    [self.playButton setImage:[UIImage imageNamed:@"player_start_iphone_window"] forState:(UIControlStateNormal)];
+    [self.playButton setImage:[UIImage imageNamed:@"player_start_iphone_window"] forState:(UIControlStateHighlighted)];
     [self.playButton addTarget:self action:@selector(playAction:) forControlEvents:(UIControlEventTouchUpInside)];
     
     [self.view addSubview:_playButton];
@@ -121,7 +124,7 @@
 }
 
 - (void)setAid:(NSString *)aid {
-    if (aid != nil) {
+    if (_aid != aid) {
         _aid = aid;
         // setData
         [self request];
@@ -137,9 +140,11 @@
     // 2. 各控件复位， 发布一通知偏移量为 0
      [[NSNotificationCenter defaultCenter] postNotificationName:@"KScroll" object:nil userInfo:@{ @"contentOffsetY" : @(0.0)}];
     // 3. 添加播放控制器 AGPlayer
-    self.agPlayViewController = [[UIStoryboard storyboardWithName:@"AGPlayerViewController" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"AGPlayerViewController"];
-    [self.view addSubview:_agPlayViewController.view];
-    [self addChildViewController:_agPlayViewController];
+    self.agMVC = [[AGMovieViewController alloc] init];
+    self.agMVC.aid = _aid;
+    self.agMVC.jjCid = [_cid integerValue];
+    [self.view addSubview:_agMVC.view];
+    [self addChildViewController:_agMVC];
 }
 
 
@@ -162,10 +167,10 @@
         // 由： x = blurImageHeight - 64 时，radius 为 10.0 得出 k 为
         //     (10.0 - 4.0 ) / (blurImageHeight - 64)
         // 因此 radius =  x * (10.0 - 4.0) / (blurImageHeight - 64) + 4.0
-        CGFloat start = 4.0;
-        CGFloat end = 20.0;
+        CGFloat start = kRadiusBegin;
+        CGFloat end = 0.99;
         CGFloat radius = contentOffset * (end  - start) / (blurImageHeight - 64) + start;
-        [self blurImageUseImageEffects:[UIImage imageWithContentsOfFile:[self filePathInSDWebImageForURLString:self.movie.pic]] withRadius:radius];
+        [self blurImageViewWithRadius:radius];
         return;
     } else if (contentOffset <= 0.0) {
         [_blurImageView mas_updateConstraints:^(MASConstraintMaker *make) {
@@ -245,8 +250,8 @@
 - (void)reloadData
 {
     [self.blurImageView sd_setImageWithURL:[NSURL URLWithString:self.movie.pic] placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
-        [self blurImageUseImageEffects:image withRadius:4.0];
+        [self.blurImageView configrationForBlurAnimation:100];
+        [self blurImageViewWithRadius:kRadiusBegin];
     }];
 }
 
@@ -267,6 +272,7 @@
             NSLog(@"%s %d url错误", __FUNCTION__, __LINE__);
         }
         self.movie = [[Movie alloc] initWithDictionary:data];
+        self.cid = [self.movie.pages[0] valueForKey:@"cid"]; // 获取cid
         [self reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
@@ -293,33 +299,14 @@
     [self setNeedsStatusBarAppearanceUpdate]; // 更新
 }
 
-#pragma mark-
-#pragma mark 高斯模糊
-- (void)addBlurEffect
-{
-    // 方式1： visulEffectView 只能调整aplha 不能调整模糊程度
-//    // create blurEffect
-//    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
-//    // visrulEffectView
-//    UIVisualEffectView *visulEffectView  = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-//    // set alpha
-////    visulEffectView.alpha = 0.95; // 没有用，并不能调整模糊效果
-//    // frame
-//    [self.view layoutIfNeeded];
-//    visulEffectView.frame = self.blueImageView.bounds;
-//    // add
-//    [self.blueImageView addSubview:visulEffectView];
-    
-    // 方式2：CIImage 实现复杂比较难写
 
-}
-
-#pragma mark- 苹果分类高斯模糊
-- (void)blurImageUseImageEffects:(UIImage *)image withRadius:(CGFloat )radius
+#pragma mark- imageView高斯模糊
+- (void)blurImageViewWithRadius:(CGFloat )radius
 {
-    // 4.0
-    UIImage *blurImage = [image applyBlurWithRadius:radius tintColor:nil saturationDeltaFactor:1.0 maskImage:nil];
-    self.blurImageView.image = blurImage;
+    if (self.blurImageView.image != nil) {
+        // 4.0
+        [self.blurImageView blur:radius];
+    }
 }
 
 - (NSString *)filePathInSDWebImageForURLString:(NSString *)urlString

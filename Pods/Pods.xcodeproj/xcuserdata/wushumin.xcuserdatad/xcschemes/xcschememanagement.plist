@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SABlurImageViewObjc-SABlurImageViewObjc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SABlurImageViewObjc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>008470C1E6F4CB561FA2A61448163325</key>
+		<key>4E32C4BDDA557F7F4E2F8D72E6DDA068</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5CD38876C0249536439E02AF4A6A7F37</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>65A5699A024AD0E0FF0882B63F94359C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A812B9625AF229FA9F2F89EFF64B15A8</key>
+		<key>AD3F9DFD4739CAD990A5813F577D16FB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

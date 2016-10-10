@@ -22,6 +22,38 @@
 		6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */; };
 		6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADDA1D8388DC00A656D6 /* Recommend_RegionHeaderView.m */; };
 		6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADDC1D83890300A656D6 /* Recommend_RegionHeaderView.xib */; };
+		6C523E081DA8BEFB0021CA36 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E071DA8BEFB0021CA36 /* IJKMediaFramework.framework */; };
+		6C523E0A1DA8BF2D0021CA36 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E091DA8BF2D0021CA36 /* AudioToolbox.framework */; };
+		6C523E0C1DA8BF380021CA36 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E0B1DA8BF380021CA36 /* AVFoundation.framework */; };
+		6C523E0E1DA8BF400021CA36 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E0D1DA8BF400021CA36 /* CoreMedia.framework */; };
+		6C523E101DA8BF490021CA36 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E0F1DA8BF490021CA36 /* CoreVideo.framework */; };
+		6C523E121DA8BF500021CA36 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E111DA8BF500021CA36 /* libbz2.tbd */; };
+		6C523E141DA8BF580021CA36 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E131DA8BF580021CA36 /* libz.tbd */; };
+		6C523E161DA8BF670021CA36 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E151DA8BF670021CA36 /* MediaPlayer.framework */; };
+		6C523E181DA8BF7C0021CA36 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E171DA8BF7C0021CA36 /* MobileCoreServices.framework */; };
+		6C523E1A1DA8BF830021CA36 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E191DA8BF830021CA36 /* OpenGLES.framework */; };
+		6C523E1C1DA8BF8F0021CA36 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C523E1B1DA8BF8F0021CA36 /* VideoToolbox.framework */; };
+		6C523E3A1DA8C0B00021CA36 /* NSString+AGMovieTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E201DA8C0B00021CA36 /* NSString+AGMovieTime.m */; };
+		6C523E3B1DA8C0B00021CA36 /* AGMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E231DA8C0B00021CA36 /* AGMovieViewController.m */; };
+		6C523E3C1DA8C0B00021CA36 /* AGMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E241DA8C0B00021CA36 /* AGMovieViewController.xib */; };
+		6C523E3D1DA8C0B00021CA36 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E261DA8C0B00021CA36 /* back@2x.png */; };
+		6C523E3E1DA8C0B00021CA36 /* icmpv_thumb_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E271DA8C0B00021CA36 /* icmpv_thumb_light@2x.png */; };
+		6C523E3F1DA8C0B00021CA36 /* Play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E281DA8C0B00021CA36 /* Play@2x.png */; };
+		6C523E401DA8C0B00021CA36 /* player_pause_iphone_fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E291DA8C0B00021CA36 /* player_pause_iphone_fullscreen@3x.png */; };
+		6C523E411DA8C0B00021CA36 /* player_pause_iphone_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E2A1DA8C0B00021CA36 /* player_pause_iphone_window@3x.png */; };
+		6C523E421DA8C0B00021CA36 /* player_start_iphone_fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E2B1DA8C0B00021CA36 /* player_start_iphone_fullscreen@3x.png */; };
+		6C523E431DA8C0B00021CA36 /* player_start_iphone_window@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E2C1DA8C0B00021CA36 /* player_start_iphone_window@3x.png */; };
+		6C523E441DA8C0B00021CA36 /* report@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E2D1DA8C0B00021CA36 /* report@2x.png */; };
+		6C523E451DA8C0B00021CA36 /* Rotation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E2E1DA8C0B00021CA36 /* Rotation@2x.png */; };
+		6C523E461DA8C0B00021CA36 /* Slider_thumb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E2F1DA8C0B00021CA36 /* Slider_thumb@2x.png */; };
+		6C523E471DA8C0B00021CA36 /* Stop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E301DA8C0B00021CA36 /* Stop@2x.png */; };
+		6C523E481DA8C0B00021CA36 /* DURLXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E331DA8C0B00021CA36 /* DURLXML.m */; };
+		6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E351DA8C0B00021CA36 /* VideoXML.m */; };
+		6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E381DA8C0B00021CA36 /* AGMovieView.m */; };
+		6C523E4B1DA8C0B00021CA36 /* AGMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E391DA8C0B00021CA36 /* AGMovieView.xib */; };
+		6CA5EC9E1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */; };
+		6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA11DAB9CE9007752A0 /* URLRouter.m */; };
+		6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA21DAB9CE9007752A0 /* URLRouterConfig.m */; };
 		6CAA7E3F1D845F090012CF56 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E3E1D845F090012CF56 /* UIImage+ImageEffects.m */; };
 		6CAA7E671D845FEF0012CF56 /* HotPromoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E431D845FEF0012CF56 /* HotPromoteDetailViewController.m */; };
 		6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E451D845FEF0012CF56 /* HotPromoteNavigationController.m */; };
@@ -147,6 +179,45 @@
 		6C4AADD91D8388DC00A656D6 /* Recommend_RegionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_RegionHeaderView.h; sourceTree = "<group>"; };
 		6C4AADDA1D8388DC00A656D6 /* Recommend_RegionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recommend_RegionHeaderView.m; sourceTree = "<group>"; };
 		6C4AADDC1D83890300A656D6 /* Recommend_RegionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Recommend_RegionHeaderView.xib; sourceTree = "<group>"; };
+		6C523E071DA8BEFB0021CA36 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		6C523E091DA8BF2D0021CA36 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6C523E0B1DA8BF380021CA36 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6C523E0D1DA8BF400021CA36 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6C523E0F1DA8BF490021CA36 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6C523E111DA8BF500021CA36 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		6C523E131DA8BF580021CA36 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6C523E151DA8BF670021CA36 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6C523E171DA8BF7C0021CA36 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6C523E191DA8BF830021CA36 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6C523E1B1DA8BF8F0021CA36 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		6C523E1F1DA8C0B00021CA36 /* NSString+AGMovieTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AGMovieTime.h"; sourceTree = "<group>"; };
+		6C523E201DA8C0B00021CA36 /* NSString+AGMovieTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AGMovieTime.m"; sourceTree = "<group>"; };
+		6C523E221DA8C0B00021CA36 /* AGMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovieViewController.h; sourceTree = "<group>"; };
+		6C523E231DA8C0B00021CA36 /* AGMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieViewController.m; sourceTree = "<group>"; };
+		6C523E241DA8C0B00021CA36 /* AGMovieViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGMovieViewController.xib; sourceTree = "<group>"; };
+		6C523E261DA8C0B00021CA36 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		6C523E271DA8C0B00021CA36 /* icmpv_thumb_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icmpv_thumb_light@2x.png"; sourceTree = "<group>"; };
+		6C523E281DA8C0B00021CA36 /* Play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play@2x.png"; sourceTree = "<group>"; };
+		6C523E291DA8C0B00021CA36 /* player_pause_iphone_fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pause_iphone_fullscreen@3x.png"; sourceTree = "<group>"; };
+		6C523E2A1DA8C0B00021CA36 /* player_pause_iphone_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_pause_iphone_window@3x.png"; sourceTree = "<group>"; };
+		6C523E2B1DA8C0B00021CA36 /* player_start_iphone_fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_start_iphone_fullscreen@3x.png"; sourceTree = "<group>"; };
+		6C523E2C1DA8C0B00021CA36 /* player_start_iphone_window@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player_start_iphone_window@3x.png"; sourceTree = "<group>"; };
+		6C523E2D1DA8C0B00021CA36 /* report@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "report@2x.png"; sourceTree = "<group>"; };
+		6C523E2E1DA8C0B00021CA36 /* Rotation@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rotation@2x.png"; sourceTree = "<group>"; };
+		6C523E2F1DA8C0B00021CA36 /* Slider_thumb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Slider_thumb@2x.png"; sourceTree = "<group>"; };
+		6C523E301DA8C0B00021CA36 /* Stop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stop@2x.png"; sourceTree = "<group>"; };
+		6C523E321DA8C0B00021CA36 /* DURLXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DURLXML.h; sourceTree = "<group>"; };
+		6C523E331DA8C0B00021CA36 /* DURLXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DURLXML.m; sourceTree = "<group>"; };
+		6C523E341DA8C0B00021CA36 /* VideoXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoXML.h; sourceTree = "<group>"; };
+		6C523E351DA8C0B00021CA36 /* VideoXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoXML.m; sourceTree = "<group>"; };
+		6C523E371DA8C0B00021CA36 /* AGMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovieView.h; sourceTree = "<group>"; };
+		6C523E381DA8C0B00021CA36 /* AGMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieView.m; sourceTree = "<group>"; };
+		6C523E391DA8C0B00021CA36 /* AGMovieView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGMovieView.xib; sourceTree = "<group>"; };
+		6CA5EC9C1DAB9C2F007752A0 /* UIViewController+AGGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AGGetViewController.h"; sourceTree = "<group>"; };
+		6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AGGetViewController.m"; sourceTree = "<group>"; };
+		6CA5ECA01DAB9CE9007752A0 /* URLRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRouter.h; sourceTree = "<group>"; };
+		6CA5ECA11DAB9CE9007752A0 /* URLRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRouter.m; sourceTree = "<group>"; };
+		6CA5ECA21DAB9CE9007752A0 /* URLRouterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLRouterConfig.m; sourceTree = "<group>"; };
 		6CAA7E3D1D845F090012CF56 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		6CAA7E3E1D845F090012CF56 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		6CAA7E421D845FEF0012CF56 /* HotPromoteDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPromoteDetailViewController.h; sourceTree = "<group>"; };
@@ -295,7 +366,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C523E1C1DA8BF8F0021CA36 /* VideoToolbox.framework in Frameworks */,
+				6C523E1A1DA8BF830021CA36 /* OpenGLES.framework in Frameworks */,
+				6C523E181DA8BF7C0021CA36 /* MobileCoreServices.framework in Frameworks */,
+				6C523E161DA8BF670021CA36 /* MediaPlayer.framework in Frameworks */,
+				6C523E141DA8BF580021CA36 /* libz.tbd in Frameworks */,
+				6C523E121DA8BF500021CA36 /* libbz2.tbd in Frameworks */,
+				6C523E101DA8BF490021CA36 /* CoreVideo.framework in Frameworks */,
+				6C523E0E1DA8BF400021CA36 /* CoreMedia.framework in Frameworks */,
+				6C523E0C1DA8BF380021CA36 /* AVFoundation.framework in Frameworks */,
+				6C523E0A1DA8BF2D0021CA36 /* AudioToolbox.framework in Frameworks */,
 				4ED41E0108E0432F6D085C04 /* libPods-BiliBili_WuShumin.a in Frameworks */,
+				6C523E081DA8BEFB0021CA36 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +401,17 @@
 		0147B476E9F0D92356980F34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6C523E1B1DA8BF8F0021CA36 /* VideoToolbox.framework */,
+				6C523E191DA8BF830021CA36 /* OpenGLES.framework */,
+				6C523E171DA8BF7C0021CA36 /* MobileCoreServices.framework */,
+				6C523E151DA8BF670021CA36 /* MediaPlayer.framework */,
+				6C523E131DA8BF580021CA36 /* libz.tbd */,
+				6C523E111DA8BF500021CA36 /* libbz2.tbd */,
+				6C523E0F1DA8BF490021CA36 /* CoreVideo.framework */,
+				6C523E0D1DA8BF400021CA36 /* CoreMedia.framework */,
+				6C523E0B1DA8BF380021CA36 /* AVFoundation.framework */,
+				6C523E091DA8BF2D0021CA36 /* AudioToolbox.framework */,
+				6C523E071DA8BEFB0021CA36 /* IJKMediaFramework.framework */,
 				9D72D3E6CB5E47C823B35594 /* libPods-BiliBili_WuShumin.a */,
 			);
 			name = Frameworks;
@@ -431,6 +524,86 @@
 				6CAAC49C1D6D84A600D760B6 /* View */,
 			);
 			path = "Home_首页";
+			sourceTree = "<group>";
+		};
+		6C523E1D1DA8C0B00021CA36 /* AGMovieIJKPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6C523E1E1DA8C0B00021CA36 /* Common */,
+				6C523E211DA8C0B00021CA36 /* Controller */,
+				6C523E251DA8C0B00021CA36 /* Images */,
+				6C523E311DA8C0B00021CA36 /* Model */,
+				6C523E361DA8C0B00021CA36 /* View */,
+			);
+			path = AGMovieIJKPlayer;
+			sourceTree = "<group>";
+		};
+		6C523E1E1DA8C0B00021CA36 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6C523E1F1DA8C0B00021CA36 /* NSString+AGMovieTime.h */,
+				6C523E201DA8C0B00021CA36 /* NSString+AGMovieTime.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6C523E211DA8C0B00021CA36 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C523E221DA8C0B00021CA36 /* AGMovieViewController.h */,
+				6C523E231DA8C0B00021CA36 /* AGMovieViewController.m */,
+				6C523E241DA8C0B00021CA36 /* AGMovieViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C523E251DA8C0B00021CA36 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				6C523E261DA8C0B00021CA36 /* back@2x.png */,
+				6C523E271DA8C0B00021CA36 /* icmpv_thumb_light@2x.png */,
+				6C523E281DA8C0B00021CA36 /* Play@2x.png */,
+				6C523E291DA8C0B00021CA36 /* player_pause_iphone_fullscreen@3x.png */,
+				6C523E2A1DA8C0B00021CA36 /* player_pause_iphone_window@3x.png */,
+				6C523E2B1DA8C0B00021CA36 /* player_start_iphone_fullscreen@3x.png */,
+				6C523E2C1DA8C0B00021CA36 /* player_start_iphone_window@3x.png */,
+				6C523E2D1DA8C0B00021CA36 /* report@2x.png */,
+				6C523E2E1DA8C0B00021CA36 /* Rotation@2x.png */,
+				6C523E2F1DA8C0B00021CA36 /* Slider_thumb@2x.png */,
+				6C523E301DA8C0B00021CA36 /* Stop@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		6C523E311DA8C0B00021CA36 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C523E321DA8C0B00021CA36 /* DURLXML.h */,
+				6C523E331DA8C0B00021CA36 /* DURLXML.m */,
+				6C523E341DA8C0B00021CA36 /* VideoXML.h */,
+				6C523E351DA8C0B00021CA36 /* VideoXML.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C523E361DA8C0B00021CA36 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C523E371DA8C0B00021CA36 /* AGMovieView.h */,
+				6C523E381DA8C0B00021CA36 /* AGMovieView.m */,
+				6C523E391DA8C0B00021CA36 /* AGMovieView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6CA5EC9F1DAB9CE9007752A0 /* URLRouter */ = {
+			isa = PBXGroup;
+			children = (
+				6CA5ECA01DAB9CE9007752A0 /* URLRouter.h */,
+				6CA5ECA11DAB9CE9007752A0 /* URLRouter.m */,
+				6CA5ECA21DAB9CE9007752A0 /* URLRouterConfig.m */,
+			);
+			path = URLRouter;
 			sourceTree = "<group>";
 		};
 		6CAA7E401D845FEF0012CF56 /* 推荐详情 */ = {
@@ -639,6 +812,8 @@
 				6CAAC4B01D6EA6A300D760B6 /* UIView+Frame.m */,
 				6CAA7E3D1D845F090012CF56 /* UIImage+ImageEffects.h */,
 				6CAA7E3E1D845F090012CF56 /* UIImage+ImageEffects.m */,
+				6CA5EC9C1DAB9C2F007752A0 /* UIViewController+AGGetViewController.h */,
+				6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -759,6 +934,8 @@
 		6CAAC4EB1D6EF93100D760B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6CA5EC9F1DAB9CE9007752A0 /* URLRouter */,
+				6C523E1D1DA8C0B00021CA36 /* AGMovieIJKPlayer */,
 				6CAA7ED61D86A8760012CF56 /* AGPlayer */,
 				6CAAC4EC1D6EF93100D760B6 /* Banner */,
 			);
@@ -916,24 +1093,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C523E411DA8C0B00021CA36 /* player_pause_iphone_window@3x.png in Resources */,
 				6CAA7EF71D86A8760012CF56 /* player_start_iphone_window@3x.png in Resources */,
+				6C523E421DA8C0B00021CA36 /* player_start_iphone_fullscreen@3x.png in Resources */,
 				6CAA7E6A1D845FEF0012CF56 /* 导航返回按钮@2x.png in Resources */,
+				6C523E461DA8C0B00021CA36 /* Slider_thumb@2x.png in Resources */,
+				6C523E3C1DA8C0B00021CA36 /* AGMovieViewController.xib in Resources */,
 				6CAA7EF41D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png in Resources */,
+				6C523E431DA8C0B00021CA36 /* player_start_iphone_window@3x.png in Resources */,
+				6C523E441DA8C0B00021CA36 /* report@2x.png in Resources */,
 				6CAA7EEF1D86A8760012CF56 /* AGPlayerView.xib in Resources */,
 				6CAA7EFA1D86A8760012CF56 /* Slider_thumb@2x.png in Resources */,
 				6CAA7EF61D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png in Resources */,
 				6CAA7EF31D86A8760012CF56 /* Play@2x.png in Resources */,
 				6CAA7F001D86AE3E0012CF56 /* AGPlayerViewController.storyboard in Resources */,
+				6C523E471DA8C0B00021CA36 /* Stop@2x.png in Resources */,
 				6CAA7EF81D86A8760012CF56 /* report@2x.png in Resources */,
 				6CAA7E781D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png in Resources */,
+				6C523E4B1DA8C0B00021CA36 /* AGMovieView.xib in Resources */,
 				6CAA7EF91D86A8760012CF56 /* Rotation@2x.png in Resources */,
 				6CAA7EF11D86A8760012CF56 /* back@2x.png in Resources */,
 				6C3062DA1D6BD0CC0043C4CE /* LaunchScreen.storyboard in Resources */,
+				6C523E451DA8C0B00021CA36 /* Rotation@2x.png in Resources */,
 				6CAAC54B1D77ACC900D760B6 /* main_banner@2x.png in Resources */,
 				6CAA7EFB1D86A8760012CF56 /* Stop@2x.png in Resources */,
+				6C523E401DA8C0B00021CA36 /* player_pause_iphone_fullscreen@3x.png in Resources */,
 				6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */,
+				6C523E3D1DA8C0B00021CA36 /* back@2x.png in Resources */,
 				6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */,
 				6CAA7E6B1D845FEF0012CF56 /* 播放按钮.png in Resources */,
+				6C523E3E1DA8C0B00021CA36 /* icmpv_thumb_light@2x.png in Resources */,
 				6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */,
 				6CAAC4FD1D6F965700D760B6 /* RecommendCollectionViewCell.xib in Resources */,
 				6CAAC5571D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib in Resources */,
@@ -943,6 +1132,7 @@
 				6CAAC5491D77ACC900D760B6 /* main_banner2.png in Resources */,
 				6CAA7EF51D86A8760012CF56 /* player_pause_iphone_window@3x.png in Resources */,
 				6CAA7EF21D86A8760012CF56 /* icmpv_thumb_light@2x.png in Resources */,
+				6C523E3F1DA8C0B00021CA36 /* Play@2x.png in Resources */,
 				6CAAC4EA1D6EED4D00D760B6 /* Recommend_RecommendHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1027,6 +1217,7 @@
 				6CAAC59A1D7F0AC900D760B6 /* AGHTTPURLHandle.m in Sources */,
 				6CAAC4B81D6EA6A300D760B6 /* NSObject+YYModel.m in Sources */,
 				6CAAC4D61D6EB21200D760B6 /* Body.m in Sources */,
+				6C523E3A1DA8C0B00021CA36 /* NSString+AGMovieTime.m in Sources */,
 				6CAA7EC61D8551100012CF56 /* OwnerExt.m in Sources */,
 				6CAAC5421D70F88900D760B6 /* BaseCollectionReusableView.m in Sources */,
 				6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */,
@@ -1034,11 +1225,14 @@
 				6CAAC4B71D6EA6A300D760B6 /* UIView+Frame.m in Sources */,
 				6CAAC4951D6BF70B00D760B6 /* MineViewController.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
+				6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */,
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
 				6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */,
+				6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */,
 				6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */,
 				6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */,
 				6CAAC4C01D6EA75600D760B6 /* HomeViewController.m in Sources */,
+				6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */,
 				6CAA7EC41D8551100012CF56 /* Movie.m in Sources */,
 				6CAA7EFC1D86A8760012CF56 /* NSString+time.m in Sources */,
 				6CAAC4D71D6EB21200D760B6 /* Bottom.m in Sources */,
@@ -1065,10 +1259,14 @@
 				6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */,
 				6C4AADD01D80547100A656D6 /* Live.m in Sources */,
 				6CAA7EF01D86A8760012CF56 /* H5_AVInfo.m in Sources */,
+				6C523E3B1DA8C0B00021CA36 /* AGMovieViewController.m in Sources */,
+				6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */,
 				6CAAC4F51D6EF93100D760B6 /* AGCircularScrollView.m in Sources */,
 				6CAA7ECE1D8551100012CF56 /* Vip.m in Sources */,
 				6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */,
+				6C523E481DA8C0B00021CA36 /* DURLXML.m in Sources */,
 				6CAA7EC81D8551100012CF56 /* Pendant.m in Sources */,
+				6CA5EC9E1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m in Sources */,
 				6CAAC4D51D6EB21200D760B6 /* Banner.m in Sources */,
 				6CAAC4F61D6EF93100D760B6 /* AGWebViewController.m in Sources */,
 				6CAAC4DD1D6EB3CA00D760B6 /* RecommendViewController.m in Sources */,
@@ -1221,6 +1419,10 @@
 			baseConfigurationReference = 997736196E6DF9DACA012D23 /* Pods-BiliBili_WuShumin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BiliBili_WuShumin/PCH/PrefixHeader.pch";
 				INFOPLIST_FILE = BiliBili_WuShumin/Info.plist;
@@ -1237,6 +1439,10 @@
 			baseConfigurationReference = 7191808DEB1975076781425D /* Pods-BiliBili_WuShumin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/BiliBili_WuShumin/PCH/PrefixHeader.pch";
 				INFOPLIST_FILE = BiliBili_WuShumin/Info.plist;

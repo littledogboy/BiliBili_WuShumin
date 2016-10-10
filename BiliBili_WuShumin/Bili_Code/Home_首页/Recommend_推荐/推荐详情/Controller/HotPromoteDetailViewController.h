@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SABlurImageView;
 @class HotPromoteNavigationView;
 @class Movie;
 
@@ -16,7 +17,7 @@
 @property (nonatomic, strong) HotPromoteNavigationView *navigationView;
 
 // blueImageView
-@property (nonatomic, strong) UIImageView *blurImageView;
+@property (nonatomic, strong) SABlurImageView *blurImageView;
 
 // playButton
 @property (nonatomic, strong) UIButton *playButton;
@@ -27,7 +28,8 @@
 // rightView
 @property (nonatomic, strong) UIScrollView *rightView;
 
-@property (nonatomic, assign) NSString *aid; // 传递过来的aid
+@property (nonatomic, strong) NSString *aid; // 传递过来的aid
+@property (nonatomic, strong) NSString *cid; // 根据aid获取cid
 
 // movie
 @property (nonatomic, strong) Movie *movie;

@@ -10,7 +10,7 @@
 #define BiliBiliKit_h
 
 #import "UIView+Frame.h"
-#import "NSObject+YYModel.h"
-
+#import "NSString+AGAdd.h"
+#import "UIViewController+AGGetViewController.h"
 
 #endif /* BiliBiliKit_h */
