@@ -22,16 +22,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFn-jI-t8u" userLabel="DownView">
                     <rect key="frame" x="0.0" y="130" width="375" height="20"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_rightArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="dhT-9f-sjT">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="common_rightArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="dhT-9f-sjT">
                             <rect key="frame" x="356" y="4" width="7" height="13"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_recommend" translatesAutoresizingMaskIntoConstraints="NO" id="44I-6e-5Rw">
                             <rect key="frame" x="12" y="0.0" width="20" height="20"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_rank" translatesAutoresizingMaskIntoConstraints="NO" id="JKn-0h-Hjz">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_rank" translatesAutoresizingMaskIntoConstraints="NO" id="JKn-0h-Hjz">
                             <rect key="frame" x="282" y="0.0" width="20" height="20"/>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排行榜" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVB-5o-G8J">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="排行榜" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVB-5o-G8J">
                             <rect key="frame" x="308" y="3" width="42" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <color key="textColor" red="0.99215686274509807" green="0.71372549019607845" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>

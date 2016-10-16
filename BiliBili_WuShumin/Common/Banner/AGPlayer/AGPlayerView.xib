@@ -714,7 +714,7 @@
                     </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="h9M-5N-Vne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8Db-Ee-yA6"/>
                 <constraint firstItem="h9M-5N-Vne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="8ad-0x-Rvg"/>

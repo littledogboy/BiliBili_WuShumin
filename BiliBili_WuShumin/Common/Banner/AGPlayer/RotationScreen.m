@@ -7,8 +7,15 @@
 //
 
 #import "RotationScreen.h"
+#import "AppDelegate.h"
 
 @implementation RotationScreen
+
+/**
+ *  旋转有两种方式： 
+ *  1 更改设备方向，设置 currentDevice orientation
+ *  2. 假旋转，不更改设备方向，更改 view的 transform
+ */
 
 //
 + (void)forceOrientation:(UIInterfaceOrientation)orientation {
@@ -24,6 +31,18 @@
         [invocation invoke];
     }
 }
+
+bool isPortrait = true;
++ (void)rotationAnimationOrientation:(UIInterfaceOrientation)orientation withViewController:(UIViewController *)viewController {
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration; // 转90°的时间
+    [UIView animateWithDuration:duration animations:^{
+        [self forceOrientation:orientation];
+    } completion:^(BOOL finished) {
+        ((AppDelegate *)[UIApplication sharedApplication].delegate).allowRotaion = YES;
+    }];
+    
+}
+
 
 //
 + (BOOL)isOrientationLandscape {

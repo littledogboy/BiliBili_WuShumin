@@ -103,6 +103,9 @@
                                             <include reference="tnI-zy-TPG"/>
                                         </mask>
                                     </variation>
+                                    <connections>
+                                        <action selector="popAction:" destination="-1" eventType="touchUpInside" id="18w-y1-vGD"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="这里是标题喵" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyT-dx-LUg">
                                     <rect key="frame" x="52" y="13" width="271" height="18"/>
@@ -320,6 +323,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wV-lB-H9d" userLabel="rotation">
                                     <rect key="frame" x="342" y="0.0" width="20" height="22"/>
                                     <state key="normal" image="Rotation.png"/>
+                                    <connections>
+                                        <action selector="roationAction:" destination="-1" eventType="touchUpInside" id="7gd-4i-P1E"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhn-rR-oUA" userLabel="addDanmu">
                                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -533,17 +539,6 @@
                                 </mask>
                             </variation>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-fY-yyi" userLabel="playerFullScreenButton">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                            <state key="normal" image="player_start_iphone_fullscreen"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtI-Qb-Evr" userLabel="playerButton">
-                            <rect key="frame" x="298" y="106" width="57" height="52"/>
-                            <state key="normal" image="player_pause_iphone_window.png"/>
-                            <connections>
-                                <action selector="playOrStopAction:" destination="-1" eventType="touchUpInside" id="3zp-Q1-PBO"/>
-                            </connections>
-                        </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4i-xA-Q7o" userLabel="inspectorView">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <subviews>
@@ -618,12 +613,6 @@
                                         <constraint firstAttribute="height" constant="16" id="W2a-4I-MyL"/>
                                         <constraint firstAttribute="width" constant="16" id="rwI-iA-88y"/>
                                     </constraints>
-                                    <variation key="default">
-                                        <mask key="constraints">
-                                            <exclude reference="W2a-4I-MyL"/>
-                                            <exclude reference="rwI-iA-88y"/>
-                                        </mask>
-                                    </variation>
                                     <variation key="heightClass=regular-widthClass=compact">
                                         <mask key="constraints">
                                             <include reference="W2a-4I-MyL"/>
@@ -647,16 +636,6 @@
                                 <constraint firstAttribute="height" constant="32" id="j4b-gr-WrW"/>
                                 <constraint firstItem="9an-9o-LEx" firstAttribute="top" secondItem="Fmg-6k-AgY" secondAttribute="top" constant="5" id="xg7-th-FtI"/>
                             </constraints>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="UnZ-63-wfp"/>
-                                    <exclude reference="j4b-gr-WrW"/>
-                                    <exclude reference="Als-Iy-X7i"/>
-                                    <exclude reference="XJl-Ph-8sZ"/>
-                                    <exclude reference="Wkh-aq-po8"/>
-                                    <exclude reference="xg7-th-FtI"/>
-                                </mask>
-                            </variation>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="subviews">
                                     <include reference="tfc-Of-ak6"/>
@@ -672,6 +651,17 @@
                                 </mask>
                             </variation>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Obb-fY-yyi" userLabel="playerFullScreenButton">
+                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <state key="normal" image="player_start_iphone_fullscreen"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtI-Qb-Evr" userLabel="playerButton">
+                            <rect key="frame" x="298" y="106" width="57" height="52"/>
+                            <state key="normal" image="player_pause_iphone_window.png"/>
+                            <connections>
+                                <action selector="playOrStopAction:" destination="-1" eventType="touchUpInside" id="3zp-Q1-PBO"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -697,8 +687,8 @@
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="Obb-fY-yyi"/>
                             <exclude reference="P4i-xA-Q7o"/>
+                            <exclude reference="Obb-fY-yyi"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="bqD-bz-Zd6"/>
@@ -706,8 +696,6 @@
                             <exclude reference="9bv-ky-Bnx"/>
                             <exclude reference="gJ6-9D-zgZ"/>
                             <exclude reference="rMW-tW-VE0"/>
-                            <exclude reference="DwP-FZ-8e7"/>
-                            <exclude reference="Edw-L3-8xp"/>
                             <exclude reference="4dc-t1-Exm"/>
                             <exclude reference="L3l-dk-MS3"/>
                             <exclude reference="me7-Sw-g1w"/>
@@ -724,9 +712,9 @@
                     </variation>
                     <variation key="heightClass=compact">
                         <mask key="subviews">
+                            <include reference="P4i-xA-Q7o"/>
                             <include reference="Obb-fY-yyi"/>
                             <exclude reference="jtI-Qb-Evr"/>
-                            <include reference="P4i-xA-Q7o"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="FbR-x6-ycy"/>
@@ -769,7 +757,7 @@
                     </variation>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="YYu-5s-Y7q" firstAttribute="leading" secondItem="cwi-Vt-14h" secondAttribute="leading" id="9es-66-nc5"/>
                 <constraint firstItem="YYu-5s-Y7q" firstAttribute="top" secondItem="cwi-Vt-14h" secondAttribute="top" id="CLO-F7-Y2a"/>
@@ -806,7 +794,7 @@
                     <include reference="fKn-ti-ro0"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="429" y="-263"/>
+            <point key="canvasLocation" x="379" y="-614"/>
         </view>
     </objects>
     <resources>

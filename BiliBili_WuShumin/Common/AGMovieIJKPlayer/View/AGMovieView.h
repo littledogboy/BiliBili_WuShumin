@@ -16,5 +16,10 @@
 
 @property (nonatomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *ijkPlayer;
 
+- (void)play;
+
+- (void)pause;
+
+- (void)shutDown;
 
 @end

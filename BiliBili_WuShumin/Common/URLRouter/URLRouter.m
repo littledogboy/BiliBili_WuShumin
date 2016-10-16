@@ -98,6 +98,10 @@
     [self registerKey:NSStringFromClass(cls) canOpenURL:canOpenURL toHandler:handler];
 }
 
+// key 标识符
+// canOpenURL 打开规则（是否可以打开）
+// handler    打开URL (跳转操作)
+// 内部操作，创建 URLRoute 存储 key值，是否可打开，跳转操作
 + (void)registerKey:(NSString *)key canOpenURL:(URLRouterCanOpenURL)canOpenURL toHandler:(URLRouterHandler)handler {
     // 如有替换
     // key： pattern cls
@@ -148,9 +152,11 @@
 
 + (BOOL)openURL:(NSString *)URL withUserInfo:(NSDictionary *)userInfo completion:(URLRouterCompletion)completion {
     for (URLRoute *route in [URLRouter sharedInstance].routes) {
+        // 以route.canOpenURL 作为判断条件，遍历的时候 url 匹配对应的 route
+        // 比如： bilibii://video/ 传 bilibii://video/8080 匹配 video对应的 route
+        // 如果是 bilibii://live/8080 则匹配 live 的route
         if (route.canOpenURL) { // canOpenURL 两种，一种Pattern，一种协议方法
             URLRouterParameters *paremeters = [URLRouterParameters parametersWithURL:URL withUserInfo:userInfo completion:completion];
-            
             // handler 两种， 一种外界给定， 一种协议方法
             // block 解耦
             if (route.handler(paremeters)) {

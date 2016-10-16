@@ -36,4 +36,21 @@
 // 恢复滚动
 - (void)resumeTimer;
 
+
+/**
+ *  注意： model 映射 写在 banerImageModel 赋值前面
+ *  img : http://123.png 注册 @"img"
+ *  @param imageKey <#imageKey description#>
+ */
+- (void)registerImageMapKey:(NSString *)imageKey;
+
+
+
+
+
+
+
+
+
+
 @end

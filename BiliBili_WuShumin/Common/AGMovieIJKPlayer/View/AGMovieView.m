@@ -9,6 +9,8 @@
 #import "AGMovieView.h"
 #import "Masonry.h"
 #import "NSString+AGMovieTime.h"
+#import "RotationScreen.h"
+#import "AppDelegate.h"
 #define RGBColor(r, g, b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
 
 @interface AGMovieView ()
@@ -42,6 +44,9 @@
 @property (strong, nonatomic) IBOutlet UIView *playLoadingView;
 @property (strong, nonatomic) IBOutlet UIImageView *loadingImageView;
 
+// ani_loadingView
+@property (nonatomic, strong) UIImageView *ani_loadingView;
+
 // 约束
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *topViewTop;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *downViewBottom;
@@ -52,7 +57,6 @@
 @implementation AGMovieView
 
 - (void)dealloc {
-    _kvoTimer = nil;
 }
 
 
@@ -60,7 +64,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     //
-//    self.backgroundColor = [UIColor clearColor];
+    self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
     // slider
     self.playProgress.value = 0.0;
@@ -72,6 +76,24 @@
     // loadingView
     self.playLoadingView.backgroundColor = [RGBColor(203, 201, 204) colorWithAlphaComponent:0.5];
     [self playLoadViewHide];
+    // 添加ani_loadingView
+    self.ani_loadingView = [[UIImageView alloc] init];
+    NSMutableArray *imagesArray = [NSMutableArray array];
+    for (int i = 1; i < 6; i++) {
+        NSString *imageString = [NSString stringWithFormat:@"ani_loading_%d", i];
+        UIImage *image = [UIImage imageNamed:imageString];
+        [imagesArray addObject:image];
+    }
+    _ani_loadingView.backgroundColor = [UIColor whiteColor];
+    _ani_loadingView.contentMode = UIViewContentModeCenter;
+    _ani_loadingView.animationImages = imagesArray;
+    _ani_loadingView.animationDuration = 0.4;
+    _ani_loadingView.animationRepeatCount = 0;
+    [self.playView addSubview:_ani_loadingView];
+    [_ani_loadingView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(_playView);
+    }];
+    [_ani_loadingView startAnimating];
 }
 
 // loadNib 时调用
@@ -232,6 +254,8 @@
     [self addTimer];
     self.playProgress.maximumValue = _ijkPlayer.duration;
     self.endLabel.text = [NSString convertTime:_ijkPlayer.duration];
+    // 移除加载动画
+    [self.ani_loadingView removeFromSuperview];
 }
 
 // 播放完毕
@@ -246,7 +270,7 @@
     NSLog(@"loadStateDidChange %ld", self.ijkPlayer.loadState);
     if (self.ijkPlayer.loadState == IJKMPMovieLoadStateStalled) { // 停止时
         [self playLoadViewShow];
-    } else { // 播放时 未知时
+    } else { // 播放时 未知时 提示错误，重新加载
         [self playLoadViewHide];
     }
 }
@@ -314,6 +338,11 @@
     [self.playerFullScreenButton setImage:[UIImage imageNamed:@"player_start_iphone_fullscreen"] forState:(UIControlStateNormal)];
 }
 
+- (void)shutDown {
+    [_ijkPlayer shutdown];
+    [_kvoTimer invalidate];
+}
+
 #pragma mark- Slider
 - (IBAction)sliderTouchDown:(id)sender {
     [self pause];
@@ -338,14 +367,33 @@
     }
 }
 
+#pragma mark- rotation
 
-#pragma mark- playBackProgress
+- (UIViewController *)getCurrentViewController {
+    UIResponder *next = [self nextResponder];
+    while (next != nil) {
+        if ([next isKindOfClass:[UIViewController class]]) {
+            return (UIViewController *)next;
+        }
+        next = [next nextResponder];
+    }
+    return nil;
+}
 
-#pragma mark- loadedProgress
+- (IBAction)roationAction:(id)sender {
+    ((AppDelegate *)[UIApplication sharedApplication].delegate).allowRotaion = YES;
+    if ([RotationScreen isOrientationPortrait]) {
+        [RotationScreen rotationAnimationOrientation:(UIInterfaceOrientationLandscapeRight) withViewController:nil];
+    } else if ([RotationScreen isOrientationLandscape]) {
+        [RotationScreen rotationAnimationOrientation:(UIInterfaceOrientationPortrait) withViewController:nil];
+    }
+}
 
+#pragma mark- pop
 
-
-
+- (IBAction)popAction:(id)sender {
+    [[UIViewController currentNavigationViewController] popViewControllerAnimated:YES];
+}
 
 
 

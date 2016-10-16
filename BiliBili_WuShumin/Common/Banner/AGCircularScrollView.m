@@ -22,6 +22,9 @@
 
 @property (nonatomic, strong) NSTimer *timer;
 
+// model 映射
+@property (nonatomic, strong) NSString *imageMapKey;
+
 @end
 
 @implementation AGCircularScrollView
@@ -74,13 +77,24 @@
         if (i == 0) {
             BannerImageView *bannerImageView = [[BannerImageView alloc] initWithFrame:CGRectMake(0, 0, kTotalWidth, kTotalHeight)];
             bannerImageView.delegate = self.delegate; // 添加代理
-            bannerImageView.bannerImage = [self.bannerImageModel lastObject]; // 最后一个元素
+            if (self.imageMapKey == nil) {
+                bannerImageView.bannerImage = [self.bannerImageModel lastObject]; // 最后一个元素
+            } else {
+                [bannerImageView registerImagePropertyName:self.imageMapKey];
+                bannerImageView.bannerImageModel = [self.bannerImageModel lastObject];
+            }
+            
             // target Action
             [self.scrollView addSubview:bannerImageView];
         } else {
             BannerImageView *bannerImageView = [[BannerImageView alloc] initWithFrame:CGRectMake(i * kTotalWidth, 0, kTotalWidth, kTotalHeight)];
             bannerImageView.delegate = self.delegate; // 添加代理
-            bannerImageView.bannerImage = self.bannerImageModel[i - 1];
+            if (self.imageMapKey == nil) {
+                bannerImageView.bannerImage = self.bannerImageModel[i - 1];
+            } else {
+                [bannerImageView registerImagePropertyName:self.imageMapKey];
+                bannerImageView.bannerImageModel = self.bannerImageModel[i - 1];
+            }
             // target action
             [self.scrollView addSubview:bannerImageView];
         }
@@ -106,6 +120,12 @@
     [self addSubview:_pageControl];
 }
 
+
+#pragma mark- registerImageMapKey
+
+- (void)registerImageMapKey:(NSString *)imageKey {
+    self.imageMapKey = imageKey;
+}
 
 #pragma mark-
 #pragma mark 重写model的set方法

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="previousCell" id="ldd-OR-2rm" customClass="Bungumi_PreviousCell">
+            <rect key="frame" x="0.0" y="0.0" width="111" height="190"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="111" height="190"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_Default" translatesAutoresizingMaskIntoConstraints="NO" id="RIS-HL-x1B" userLabel="coverView">
+                        <rect key="frame" x="0.0" y="0.0" width="111" height="152"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="RIS-HL-x1B" secondAttribute="height" multiplier="11:15" id="q2x-UL-pLa"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_history_item_graual_hd" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-Ki-O8R">
+                        <rect key="frame" x="0.0" y="92" width="111" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="N9U-x0-Vlx"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1248人在看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-Yn-KbI" userLabel="lookCount">
+                        <rect key="frame" x="5" y="134" width="59" height="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我太受欢迎了该怎么办" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3c-tq-a4x" userLabel="title">
+                        <rect key="frame" x="2" y="155" width="99" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="DsB-FW-wFj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="r3c-tq-a4x" firstAttribute="leading" secondItem="ldd-OR-2rm" secondAttribute="leading" constant="2" id="1cN-IP-Cyt"/>
+                <constraint firstAttribute="trailing" secondItem="OO1-Ki-O8R" secondAttribute="trailing" id="BWc-rr-gQc"/>
+                <constraint firstItem="OO1-Ki-O8R" firstAttribute="bottom" secondItem="RIS-HL-x1B" secondAttribute="bottom" id="GCb-5S-0KI"/>
+                <constraint firstItem="IJB-Yn-KbI" firstAttribute="bottom" secondItem="OO1-Ki-O8R" secondAttribute="bottom" constant="-5" id="MAf-js-Vca"/>
+                <constraint firstItem="RIS-HL-x1B" firstAttribute="top" secondItem="ldd-OR-2rm" secondAttribute="top" id="REf-eO-ou4"/>
+                <constraint firstItem="IJB-Yn-KbI" firstAttribute="leading" secondItem="ldd-OR-2rm" secondAttribute="leading" constant="5" id="icE-uj-uRw"/>
+                <constraint firstItem="r3c-tq-a4x" firstAttribute="top" secondItem="OO1-Ki-O8R" secondAttribute="bottom" constant="3" id="kXT-Ex-qd8"/>
+                <constraint firstItem="OO1-Ki-O8R" firstAttribute="leading" secondItem="ldd-OR-2rm" secondAttribute="leading" id="pmP-dN-4wo"/>
+                <constraint firstItem="RIS-HL-x1B" firstAttribute="width" secondItem="ldd-OR-2rm" secondAttribute="width" id="uB8-9S-cB1"/>
+                <constraint firstItem="RIS-HL-x1B" firstAttribute="leading" secondItem="ldd-OR-2rm" secondAttribute="leading" id="wlM-0b-C4J"/>
+                <constraint firstAttribute="trailing" secondItem="r3c-tq-a4x" secondAttribute="trailing" constant="10" id="zdd-s3-DKV"/>
+            </constraints>
+            <size key="customSize" width="287" height="33"/>
+            <connections>
+                <outlet property="coverImageView" destination="RIS-HL-x1B" id="JNT-Sv-IeU"/>
+                <outlet property="lookCountLabel" destination="IJB-Yn-KbI" id="o0z-J0-chZ"/>
+                <outlet property="titleLabel" destination="r3c-tq-a4x" id="vXa-w1-1r2"/>
+            </connections>
+            <point key="canvasLocation" x="615.5" y="235.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cell_Default" width="168" height="106"/>
+        <image name="home_history_item_graual_hd" width="8" height="60"/>
+    </resources>
+</document>

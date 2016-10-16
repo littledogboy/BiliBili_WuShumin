@@ -9,7 +9,9 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#include "BiliBiliAPI.h"
+#include "BiliBiliKit.h" // 导入分类
+#include "BiliBiliAPI.h" // api
+#include "AGHTTPURLHandle.h" // 网络请求
 
 #pragma mak- screenWidthHeight
 

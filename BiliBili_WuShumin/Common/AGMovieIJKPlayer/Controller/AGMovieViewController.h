@@ -16,7 +16,7 @@
 @property (nonatomic, assign) NSInteger   jjCid;
 @property (nonatomic, copy  ) NSString    *cidString;
 @property (nonatomic, copy  ) NSString    *h5URLString;
-@property (strong, nonatomic) IBOutlet AGMovieView *agMovieView;
+@property (weak, nonatomic) IBOutlet AGMovieView *agMovieView;
 
 
 @end

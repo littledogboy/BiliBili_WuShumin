@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="previousHeader" id="TfA-s5-piU" customClass="Bungumi_PreviousHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xal-YK-cmI" userLabel="MainView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_rightArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="c8i-ya-kDw">
+                            <rect key="frame" x="356" y="4" width="7" height="13"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="season_summer_icon" translatesAutoresizingMaskIntoConstraints="NO" id="iw3-oW-PEV">
+                            <rect key="frame" x="12" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="GGO-6m-Fx8"/>
+                                <constraint firstAttribute="height" constant="20" id="PGc-Ha-q4T"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分季列表" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjK-eD-Aai">
+                            <rect key="frame" x="294" y="3" width="56" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7月新番" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wja-MH-FJc">
+                            <rect key="frame" x="38" y="3" width="50" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="wja-MH-FJc" firstAttribute="leading" secondItem="iw3-oW-PEV" secondAttribute="trailing" constant="6" id="EyI-UG-RJn"/>
+                        <constraint firstAttribute="trailing" secondItem="c8i-ya-kDw" secondAttribute="trailing" constant="12" id="JMM-Wv-NyV"/>
+                        <constraint firstAttribute="trailing" secondItem="vjK-eD-Aai" secondAttribute="trailing" constant="30" id="Vo1-TU-iso"/>
+                        <constraint firstAttribute="bottom" secondItem="wja-MH-FJc" secondAttribute="bottom" id="dl0-Kc-Bpz"/>
+                        <constraint firstAttribute="bottom" secondItem="c8i-ya-kDw" secondAttribute="bottom" constant="3" id="eDK-sd-wcY"/>
+                        <constraint firstItem="iw3-oW-PEV" firstAttribute="top" secondItem="Xal-YK-cmI" secondAttribute="top" id="evY-qA-dl0"/>
+                        <constraint firstItem="c8i-ya-kDw" firstAttribute="leading" secondItem="vjK-eD-Aai" secondAttribute="trailing" constant="6" id="pcg-lj-GNd"/>
+                        <constraint firstAttribute="bottom" secondItem="vjK-eD-Aai" secondAttribute="bottom" id="tWU-Ia-X3k"/>
+                        <constraint firstItem="iw3-oW-PEV" firstAttribute="leading" secondItem="Xal-YK-cmI" secondAttribute="leading" constant="12" id="vEU-xo-qeN"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Vo1-TU-iso"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Xal-YK-cmI" secondAttribute="bottom" id="5eA-SK-g6f"/>
+                <constraint firstItem="Xal-YK-cmI" firstAttribute="top" secondItem="TfA-s5-piU" secondAttribute="top" id="9Uw-X7-TbK"/>
+                <constraint firstAttribute="trailing" secondItem="Xal-YK-cmI" secondAttribute="trailing" id="aKa-5a-9S3"/>
+                <constraint firstItem="Xal-YK-cmI" firstAttribute="leading" secondItem="TfA-s5-piU" secondAttribute="leading" id="hZr-Tk-gF3"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="iw3-oW-PEV" id="6GO-ih-WWI"/>
+                <outlet property="mainView" destination="Xal-YK-cmI" id="anu-Na-cAg"/>
+                <outlet property="rightTitleLabel" destination="vjK-eD-Aai" id="QY9-ss-uQD"/>
+                <outlet property="titleLabel" destination="wja-MH-FJc" id="FrD-Fm-OGw"/>
+            </connections>
+            <point key="canvasLocation" x="404.5" y="249"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="common_rightArrowGray" width="7" height="13"/>
+        <image name="season_summer_icon" width="20" height="20"/>
+    </resources>
+</document>

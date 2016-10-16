@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		4ED41E0108E0432F6D085C04 /* libPods-BiliBili_WuShumin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D72D3E6CB5E47C823B35594 /* libPods-BiliBili_WuShumin.a */; };
 		6C2557101D6BD96F0072F5B0 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25570F1D6BD96F0072F5B0 /* MainTabBarController.m */; };
+		6C28D0E21DB228A300EA30BD /* Bungumi_UnfinishedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0E01DB228A300EA30BD /* Bungumi_UnfinishedCell.m */; };
+		6C28D0E31DB228A300EA30BD /* Bungumi_UnfinishedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0E11DB228A300EA30BD /* Bungumi_UnfinishedCell.xib */; };
+		6C28D0E61DB364D800EA30BD /* Bungumi_PreviousHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0E51DB364D800EA30BD /* Bungumi_PreviousHeaderView.m */; };
+		6C28D0E91DB366FD00EA30BD /* Bungumi_PreviousCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0E81DB366FD00EA30BD /* Bungumi_PreviousCell.m */; };
+		6C28D0EB1DB370ED00EA30BD /* Bungumi_PreviousHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0EA1DB370ED00EA30BD /* Bungumi_PreviousHeaderView.xib */; };
+		6C28D0ED1DB3755500EA30BD /* Bungumi_PreviousCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0EC1DB3755500EA30BD /* Bungumi_PreviousCell.xib */; };
+		6C28D0F11DB3CCAF00EA30BD /* Bungumi_RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0EF1DB3CCAF00EA30BD /* Bungumi_RecommendCell.m */; };
+		6C28D0F21DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0F01DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib */; };
 		6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3062CB1D6BD0CC0043C4CE /* main.m */; };
 		6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D31D6BD0CC0043C4CE /* Main.storyboard */; };
 		6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D61D6BD0CC0043C4CE /* Assets.xcassets */; };
@@ -51,6 +59,18 @@
 		6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E351DA8C0B00021CA36 /* VideoXML.m */; };
 		6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E381DA8C0B00021CA36 /* AGMovieView.m */; };
 		6C523E4B1DA8C0B00021CA36 /* AGMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E391DA8C0B00021CA36 /* AGMovieView.xib */; };
+		6C6459AA1DAE77F80051A5EC /* BungumiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459A91DAE77F80051A5EC /* BungumiViewController.m */; };
+		6C6459B91DB0D2EB0051A5EC /* BungumiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459AC1DB0D2EB0051A5EC /* BungumiAd.m */; };
+		6C6459BA1DB0D2EB0051A5EC /* BungumiHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459AE1DB0D2EB0051A5EC /* BungumiHead.m */; };
+		6C6459BB1DB0D2EB0051A5EC /* BungumiList.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459B01DB0D2EB0051A5EC /* BungumiList.m */; };
+		6C6459BC1DB0D2EB0051A5EC /* BungumiPreviou.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459B21DB0D2EB0051A5EC /* BungumiPreviou.m */; };
+		6C6459BD1DB0D2EB0051A5EC /* BungumiResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459B41DB0D2EB0051A5EC /* BungumiResult.m */; };
+		6C6459BE1DB0D2EB0051A5EC /* BungumiRootClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459B61DB0D2EB0051A5EC /* BungumiRootClass.m */; };
+		6C6459BF1DB0D2EB0051A5EC /* BungumiSerializing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459B81DB0D2EB0051A5EC /* BungumiSerializing.m */; };
+		6C6459C51DB0D8C70051A5EC /* BungumiHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459C41DB0D8C70051A5EC /* BungumiHeaderView.m */; };
+		6C6459C71DB0D8E00051A5EC /* BungumiHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6459C61DB0D8E00051A5EC /* BungumiHeaderView.xib */; };
+		6C6459CA1DB0E3980051A5EC /* BungumiCaterotyTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459C91DB0E3980051A5EC /* BungumiCaterotyTouchView.m */; };
+		6C6459CE1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6459CD1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib */; };
 		6CA5EC9E1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */; };
 		6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA11DAB9CE9007752A0 /* URLRouter.m */; };
 		6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA21DAB9CE9007752A0 /* URLRouterConfig.m */; };
@@ -155,6 +175,18 @@
 /* Begin PBXFileReference section */
 		6C25570E1D6BD96F0072F5B0 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		6C25570F1D6BD96F0072F5B0 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
+		6C28D0DF1DB228A300EA30BD /* Bungumi_UnfinishedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bungumi_UnfinishedCell.h; sourceTree = "<group>"; };
+		6C28D0E01DB228A300EA30BD /* Bungumi_UnfinishedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bungumi_UnfinishedCell.m; sourceTree = "<group>"; };
+		6C28D0E11DB228A300EA30BD /* Bungumi_UnfinishedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bungumi_UnfinishedCell.xib; sourceTree = "<group>"; };
+		6C28D0E41DB364D800EA30BD /* Bungumi_PreviousHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bungumi_PreviousHeaderView.h; sourceTree = "<group>"; };
+		6C28D0E51DB364D800EA30BD /* Bungumi_PreviousHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bungumi_PreviousHeaderView.m; sourceTree = "<group>"; };
+		6C28D0E71DB366FD00EA30BD /* Bungumi_PreviousCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bungumi_PreviousCell.h; sourceTree = "<group>"; };
+		6C28D0E81DB366FD00EA30BD /* Bungumi_PreviousCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bungumi_PreviousCell.m; sourceTree = "<group>"; };
+		6C28D0EA1DB370ED00EA30BD /* Bungumi_PreviousHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bungumi_PreviousHeaderView.xib; sourceTree = "<group>"; };
+		6C28D0EC1DB3755500EA30BD /* Bungumi_PreviousCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bungumi_PreviousCell.xib; sourceTree = "<group>"; };
+		6C28D0EE1DB3CCAF00EA30BD /* Bungumi_RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bungumi_RecommendCell.h; sourceTree = "<group>"; };
+		6C28D0EF1DB3CCAF00EA30BD /* Bungumi_RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bungumi_RecommendCell.m; sourceTree = "<group>"; };
+		6C28D0F01DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bungumi_RecommendCell.xib; sourceTree = "<group>"; };
 		6C3062C71D6BD0CC0043C4CE /* BiliBili_WuShumin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiliBili_WuShumin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3062CB1D6BD0CC0043C4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3062D41D6BD0CC0043C4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,6 +245,28 @@
 		6C523E371DA8C0B00021CA36 /* AGMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovieView.h; sourceTree = "<group>"; };
 		6C523E381DA8C0B00021CA36 /* AGMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieView.m; sourceTree = "<group>"; };
 		6C523E391DA8C0B00021CA36 /* AGMovieView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGMovieView.xib; sourceTree = "<group>"; };
+		6C6459A81DAE77F80051A5EC /* BungumiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiViewController.h; sourceTree = "<group>"; };
+		6C6459A91DAE77F80051A5EC /* BungumiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiViewController.m; sourceTree = "<group>"; };
+		6C6459AB1DB0D2EB0051A5EC /* BungumiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiAd.h; sourceTree = "<group>"; };
+		6C6459AC1DB0D2EB0051A5EC /* BungumiAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiAd.m; sourceTree = "<group>"; };
+		6C6459AD1DB0D2EB0051A5EC /* BungumiHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiHead.h; sourceTree = "<group>"; };
+		6C6459AE1DB0D2EB0051A5EC /* BungumiHead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiHead.m; sourceTree = "<group>"; };
+		6C6459AF1DB0D2EB0051A5EC /* BungumiList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiList.h; sourceTree = "<group>"; };
+		6C6459B01DB0D2EB0051A5EC /* BungumiList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiList.m; sourceTree = "<group>"; };
+		6C6459B11DB0D2EB0051A5EC /* BungumiPreviou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiPreviou.h; sourceTree = "<group>"; };
+		6C6459B21DB0D2EB0051A5EC /* BungumiPreviou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiPreviou.m; sourceTree = "<group>"; };
+		6C6459B31DB0D2EB0051A5EC /* BungumiResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiResult.h; sourceTree = "<group>"; };
+		6C6459B41DB0D2EB0051A5EC /* BungumiResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiResult.m; sourceTree = "<group>"; };
+		6C6459B51DB0D2EB0051A5EC /* BungumiRootClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiRootClass.h; sourceTree = "<group>"; };
+		6C6459B61DB0D2EB0051A5EC /* BungumiRootClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiRootClass.m; sourceTree = "<group>"; };
+		6C6459B71DB0D2EB0051A5EC /* BungumiSerializing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiSerializing.h; sourceTree = "<group>"; };
+		6C6459B81DB0D2EB0051A5EC /* BungumiSerializing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiSerializing.m; sourceTree = "<group>"; };
+		6C6459C31DB0D8C70051A5EC /* BungumiHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiHeaderView.h; sourceTree = "<group>"; };
+		6C6459C41DB0D8C70051A5EC /* BungumiHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiHeaderView.m; sourceTree = "<group>"; };
+		6C6459C61DB0D8E00051A5EC /* BungumiHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BungumiHeaderView.xib; sourceTree = "<group>"; };
+		6C6459C81DB0E3980051A5EC /* BungumiCaterotyTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiCaterotyTouchView.h; sourceTree = "<group>"; };
+		6C6459C91DB0E3980051A5EC /* BungumiCaterotyTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiCaterotyTouchView.m; sourceTree = "<group>"; };
+		6C6459CD1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BungumiCaterotyTouchView.xib; sourceTree = "<group>"; };
 		6CA5EC9C1DAB9C2F007752A0 /* UIViewController+AGGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AGGetViewController.h"; sourceTree = "<group>"; };
 		6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AGGetViewController.m"; sourceTree = "<group>"; };
 		6CA5ECA01DAB9CE9007752A0 /* URLRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRouter.h; sourceTree = "<group>"; };
@@ -596,6 +650,61 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6C6459A51DAE77E00051A5EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C6459A81DAE77F80051A5EC /* BungumiViewController.h */,
+				6C6459A91DAE77F80051A5EC /* BungumiViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C6459A61DAE77E00051A5EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C6459AB1DB0D2EB0051A5EC /* BungumiAd.h */,
+				6C6459AC1DB0D2EB0051A5EC /* BungumiAd.m */,
+				6C6459AD1DB0D2EB0051A5EC /* BungumiHead.h */,
+				6C6459AE1DB0D2EB0051A5EC /* BungumiHead.m */,
+				6C6459AF1DB0D2EB0051A5EC /* BungumiList.h */,
+				6C6459B01DB0D2EB0051A5EC /* BungumiList.m */,
+				6C6459B11DB0D2EB0051A5EC /* BungumiPreviou.h */,
+				6C6459B21DB0D2EB0051A5EC /* BungumiPreviou.m */,
+				6C6459B31DB0D2EB0051A5EC /* BungumiResult.h */,
+				6C6459B41DB0D2EB0051A5EC /* BungumiResult.m */,
+				6C6459B51DB0D2EB0051A5EC /* BungumiRootClass.h */,
+				6C6459B61DB0D2EB0051A5EC /* BungumiRootClass.m */,
+				6C6459B71DB0D2EB0051A5EC /* BungumiSerializing.h */,
+				6C6459B81DB0D2EB0051A5EC /* BungumiSerializing.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C6459A71DAE77E00051A5EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C6459C31DB0D8C70051A5EC /* BungumiHeaderView.h */,
+				6C6459C41DB0D8C70051A5EC /* BungumiHeaderView.m */,
+				6C6459C61DB0D8E00051A5EC /* BungumiHeaderView.xib */,
+				6C28D0DF1DB228A300EA30BD /* Bungumi_UnfinishedCell.h */,
+				6C28D0E01DB228A300EA30BD /* Bungumi_UnfinishedCell.m */,
+				6C28D0E11DB228A300EA30BD /* Bungumi_UnfinishedCell.xib */,
+				6C6459C81DB0E3980051A5EC /* BungumiCaterotyTouchView.h */,
+				6C6459C91DB0E3980051A5EC /* BungumiCaterotyTouchView.m */,
+				6C6459CD1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib */,
+				6C28D0E41DB364D800EA30BD /* Bungumi_PreviousHeaderView.h */,
+				6C28D0E51DB364D800EA30BD /* Bungumi_PreviousHeaderView.m */,
+				6C28D0EA1DB370ED00EA30BD /* Bungumi_PreviousHeaderView.xib */,
+				6C28D0E71DB366FD00EA30BD /* Bungumi_PreviousCell.h */,
+				6C28D0E81DB366FD00EA30BD /* Bungumi_PreviousCell.m */,
+				6C28D0EC1DB3755500EA30BD /* Bungumi_PreviousCell.xib */,
+				6C28D0EE1DB3CCAF00EA30BD /* Bungumi_RecommendCell.h */,
+				6C28D0EF1DB3CCAF00EA30BD /* Bungumi_RecommendCell.m */,
+				6C28D0F01DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6CA5EC9F1DAB9CE9007752A0 /* URLRouter */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,6 +962,9 @@
 		6CAAC4C21D6EA9C200D760B6 /* Bungumi_番剧 */ = {
 			isa = PBXGroup;
 			children = (
+				6C6459A51DAE77E00051A5EC /* Controller */,
+				6C6459A61DAE77E00051A5EC /* Model */,
+				6C6459A71DAE77E00051A5EC /* View */,
 			);
 			path = "Bungumi_番剧";
 			sourceTree = "<group>";
@@ -1093,13 +1205,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C28D0EB1DB370ED00EA30BD /* Bungumi_PreviousHeaderView.xib in Resources */,
 				6C523E411DA8C0B00021CA36 /* player_pause_iphone_window@3x.png in Resources */,
 				6CAA7EF71D86A8760012CF56 /* player_start_iphone_window@3x.png in Resources */,
+				6C28D0F21DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib in Resources */,
 				6C523E421DA8C0B00021CA36 /* player_start_iphone_fullscreen@3x.png in Resources */,
 				6CAA7E6A1D845FEF0012CF56 /* 导航返回按钮@2x.png in Resources */,
 				6C523E461DA8C0B00021CA36 /* Slider_thumb@2x.png in Resources */,
 				6C523E3C1DA8C0B00021CA36 /* AGMovieViewController.xib in Resources */,
 				6CAA7EF41D86A8760012CF56 /* player_pause_iphone_fullscreen@3x.png in Resources */,
+				6C6459CE1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib in Resources */,
+				6C6459C71DB0D8E00051A5EC /* BungumiHeaderView.xib in Resources */,
+				6C28D0ED1DB3755500EA30BD /* Bungumi_PreviousCell.xib in Resources */,
 				6C523E431DA8C0B00021CA36 /* player_start_iphone_window@3x.png in Resources */,
 				6C523E441DA8C0B00021CA36 /* report@2x.png in Resources */,
 				6CAA7EEF1D86A8760012CF56 /* AGPlayerView.xib in Resources */,
@@ -1121,6 +1238,7 @@
 				6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */,
 				6C523E3D1DA8C0B00021CA36 /* back@2x.png in Resources */,
 				6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */,
+				6C28D0E31DB228A300EA30BD /* Bungumi_UnfinishedCell.xib in Resources */,
 				6CAA7E6B1D845FEF0012CF56 /* 播放按钮.png in Resources */,
 				6C523E3E1DA8C0B00021CA36 /* icmpv_thumb_light@2x.png in Resources */,
 				6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */,
@@ -1210,9 +1328,13 @@
 				6CAA7EC91D8551100012CF56 /* Relate.m in Sources */,
 				6C4AADD31D805AAD00A656D6 /* List.m in Sources */,
 				6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */,
+				6C6459BC1DB0D2EB0051A5EC /* BungumiPreviou.m in Sources */,
 				6CAA7EEE1D86A8760012CF56 /* AGPlayerView.m in Sources */,
 				6CAA7E3F1D845F090012CF56 /* UIImage+ImageEffects.m in Sources */,
 				6CAA7EC51D8551100012CF56 /* Owner.m in Sources */,
+				6C6459BB1DB0D2EB0051A5EC /* BungumiList.m in Sources */,
+				6C6459BA1DB0D2EB0051A5EC /* BungumiHead.m in Sources */,
+				6C6459B91DB0D2EB0051A5EC /* BungumiAd.m in Sources */,
 				6CAAC4921D6BF70200D760B6 /* AttentionViewController.m in Sources */,
 				6CAAC59A1D7F0AC900D760B6 /* AGHTTPURLHandle.m in Sources */,
 				6CAAC4B81D6EA6A300D760B6 /* NSObject+YYModel.m in Sources */,
@@ -1222,13 +1344,16 @@
 				6CAAC5421D70F88900D760B6 /* BaseCollectionReusableView.m in Sources */,
 				6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */,
 				6CAAC4FC1D6F965700D760B6 /* RecommendCollectionViewCell.m in Sources */,
+				6C28D0F11DB3CCAF00EA30BD /* Bungumi_RecommendCell.m in Sources */,
 				6CAAC4B71D6EA6A300D760B6 /* UIView+Frame.m in Sources */,
 				6CAAC4951D6BF70B00D760B6 /* MineViewController.m in Sources */,
+				6C6459BF1DB0D2EB0051A5EC /* BungumiSerializing.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
 				6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */,
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
 				6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */,
 				6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */,
+				6C28D0E21DB228A300EA30BD /* Bungumi_UnfinishedCell.m in Sources */,
 				6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */,
 				6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */,
 				6CAAC4C01D6EA75600D760B6 /* HomeViewController.m in Sources */,
@@ -1251,13 +1376,17 @@
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
 				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */,
+				6C6459CA1DB0E3980051A5EC /* BungumiCaterotyTouchView.m in Sources */,
 				6CAA7EC21D8551100012CF56 /* Elec.m in Sources */,
 				6CAAC4E91D6EED4D00D760B6 /* Recommend_RecommendHeaderView.m in Sources */,
 				6CAAC4D81D6EB21200D760B6 /* Data.m in Sources */,
+				6C28D0E61DB364D800EA30BD /* Bungumi_PreviousHeaderView.m in Sources */,
+				6C28D0E91DB366FD00EA30BD /* Bungumi_PreviousCell.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
 				6CAAC4F81D6EF93100D760B6 /* BannerImageView.m in Sources */,
 				6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */,
 				6C4AADD01D80547100A656D6 /* Live.m in Sources */,
+				6C6459C51DB0D8C70051A5EC /* BungumiHeaderView.m in Sources */,
 				6CAA7EF01D86A8760012CF56 /* H5_AVInfo.m in Sources */,
 				6C523E3B1DA8C0B00021CA36 /* AGMovieViewController.m in Sources */,
 				6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */,
@@ -1270,12 +1399,15 @@
 				6CAAC4D51D6EB21200D760B6 /* Banner.m in Sources */,
 				6CAAC4F61D6EF93100D760B6 /* AGWebViewController.m in Sources */,
 				6CAAC4DD1D6EB3CA00D760B6 /* RecommendViewController.m in Sources */,
+				6C6459AA1DAE77F80051A5EC /* BungumiViewController.m in Sources */,
 				6CAA7EC71D8551100012CF56 /* Page.m in Sources */,
 				6CAAC4F71D6EF93100D760B6 /* BannerImage.m in Sources */,
 				6CAAC4B91D6EA6A300D760B6 /* YYClassInfo.m in Sources */,
+				6C6459BD1DB0D2EB0051A5EC /* BungumiResult.m in Sources */,
 				6CAA7ECD1D8551100012CF56 /* Stat.m in Sources */,
 				6CAAC5521D77B52100D760B6 /* NSString+AGAdd.m in Sources */,
 				6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */,
+				6C6459BE1DB0D2EB0051A5EC /* BungumiRootClass.m in Sources */,
 				6CAA7E691D845FEF0012CF56 /* LeftTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

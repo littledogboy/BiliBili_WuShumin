@@ -293,10 +293,16 @@
     return UIStatusBarStyleLightContent;
 }
 
-// viewWillAppear
+#pragma mark- 生命周期
 - (void)viewWillAppear:(BOOL)animated
 {
     [self setNeedsStatusBarAppearanceUpdate]; // 更新
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.agMVC viewWillDisappear:YES];
+    [self.agMVC.view removeFromSuperview];
+    [self.agMVC removeFromParentViewController];
 }
 
 
@@ -321,6 +327,10 @@
     }
     return filePath;
 }
+
+#pragma mark- 支持旋转的方法
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

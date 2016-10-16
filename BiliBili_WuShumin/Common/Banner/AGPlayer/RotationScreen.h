@@ -18,6 +18,8 @@
  */
 + (void)forceOrientation:(UIInterfaceOrientation)orientation;
 
++ (void)rotationAnimationOrientation:(UIInterfaceOrientation)orientation withViewController:(UIViewController *)viewController;
+
 /**
  *  是否是横屏
  *

@@ -9,6 +9,8 @@
 #import "AGMovieViewController.h"
 #import "VideoXML.h"
 #import <CommonCrypto/CommonCrypto.h>
+#import "UIViewController+AGGetViewController.h"
+#import "AppDelegate.h"
 
 @interface AGMovieViewController () <NSXMLParserDelegate>
 
@@ -21,11 +23,12 @@
 
 @implementation AGMovieViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
+    NSLog(@"%ld", CFGetRetainCount((__bridge CFTypeRef)(self.agMovieView)));
     // Do any additional setup after loading the view from its nib.
-    
 }
 
 
@@ -141,21 +144,16 @@
     }
 }
 
-#pragma mark- 控制视频播放
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-//    if (![self.agMovieView.ijkPlayer isPlaying]) {
-//        [_agMovieView.ijkPlayer prepareToPlay];
-//    }
-}
 
 #pragma mark- 响应者链
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
     [super traitCollectionDidChange:previousTraitCollection];
     if (self.traitCollection.verticalSizeClass != UIUserInterfaceSizeClassCompact) {
         self.view.frame = CGRectMake(0, 0, screenWidth, screenWidth * 14 / 25);
+        ((UITabBarController *)[UIViewController rootViewController]).tabBar.hidden = NO;
     } else {
         self.view.frame = [UIScreen mainScreen].bounds;
+        ((UITabBarController *)[UIViewController rootViewController]).tabBar.hidden = YES;
     }
 }
 
@@ -163,6 +161,18 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark- viewDidApp
+- (void)viewWillAppear:(BOOL)animated {
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.agMovieView shutDown];
+    [_agMovieView removeFromSuperview];
+}
+
+
 
 
 #pragma mark- bilibilijj 获取视频源

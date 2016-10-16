@@ -29,6 +29,7 @@ typedef BOOL(^URLRouterHandler)(URLRouterParameters *routerParameters);
 
 
 
+// 存储的是传递的信息 
 @interface URLRouterParameters : NSObject
 
 @property (nonatomic, strong) NSString *URL; // 跳转URL

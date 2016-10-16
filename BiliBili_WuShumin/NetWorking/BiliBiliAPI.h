@@ -41,6 +41,9 @@
 
 #pragma mark- 推荐详情
 
+#pragma mark- 番剧
+#define BungumiURLString @"http://bangumi.bilibili.com/api/app_index_page_v4?build=3910&device=phone&mobi_app=iphone&platform=ios"
+
 
 
 

@@ -21,6 +21,7 @@
 
 // home_childViewControllers
 #import "RecommendViewController.h"
+#import "BungumiViewController.h"
 
 @interface MainTabBarController ()
 
@@ -49,10 +50,10 @@
         VC1.view.backgroundColor = [UIColor redColor];
         RecommendViewController *recommendVC = [[RecommendViewController alloc] init];
         recommendVC.view.backgroundColor = [UIColor yellowColor];
-        UIViewController *VC3 = [[UIViewController alloc] init];
-        VC3.view.backgroundColor = [UIColor blueColor];
+        BungumiViewController *bungumiVC = [[BungumiViewController alloc] init];
+        bungumiVC.view.backgroundColor = [UIColor blueColor];
         self.homeVC = [[HomeViewController alloc] init];
-        _homeVC.viewControllers = @[VC1, recommendVC, VC3];
+        _homeVC.viewControllers = @[VC1, recommendVC, bungumiVC];
         self.homeNC = [[HomeNavigationController alloc] initWithRootViewController:_homeVC];
         
         self.categoryVC = [[CategoryViewController alloc] init];
@@ -100,6 +101,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation

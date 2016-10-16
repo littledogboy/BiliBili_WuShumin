@@ -35,6 +35,9 @@ static NSString * const KLeftViewReuseIdentifier = @"leftCell";
     // Dispose of any resources that can be recreated.
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return  UIInterfaceOrientationMaskPortrait;
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

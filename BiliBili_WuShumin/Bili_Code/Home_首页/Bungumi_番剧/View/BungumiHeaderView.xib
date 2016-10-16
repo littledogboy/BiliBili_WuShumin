@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BungumiHeaderView" id="vgb-BG-QZ6" userLabel="BungumiHeaderview" customClass="BungumiHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-MC-KSp" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Xdh-MC-KSp" secondAttribute="height" multiplier="75:22" id="Jea-ad-bqh"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fsE-Dd-fJT">
+                    <rect key="frame" x="20" y="130" width="335" height="55"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQP-kD-vuK" userLabel="连载动画" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="1" green="0.32283825630000001" blue="0.28225359259999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="8Hm-3U-NrD"/>
+                                <constraint firstAttribute="width" constant="55" id="WJR-zs-bO9"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maC-tf-6OJ" userLabel="完结动画" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="93" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="1" green="0.33971543552324301" blue="0.83482642604705926" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="FwC-dQ-A4O"/>
+                                <constraint firstAttribute="height" constant="55" id="XBB-Bo-XIR"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19O-Li-drI" userLabel="国产动画" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="186" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="0.52425303438549187" green="1" blue="0.11776956352835211" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="8FU-dy-zCu"/>
+                                <constraint firstAttribute="width" constant="55" id="aeb-8X-s7k"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWi-kL-RXW" userLabel="官方延伸" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="280" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="1" green="0.62355606147320597" blue="0.082593328949026823" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="F6J-OI-5UD"/>
+                                <constraint firstAttribute="height" constant="55" id="RvT-Fe-ZTb"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="JGa-7O-CKL"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UMx-R7-Ht5">
+                    <rect key="frame" x="12" y="205" width="351" height="50"/>
+                    <subviews>
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-FM-bSV" userLabel="追番">
+                            <rect key="frame" x="0.0" y="5" width="110" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="scR-hg-ubI"/>
+                            </constraints>
+                            <state key="normal" image="hd_home_bangumi_recommend_new"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uU-30-xPU" userLabel="放送表">
+                            <rect key="frame" x="121" y="5" width="110" height="40"/>
+                            <state key="normal" image="hd_home_bangumi_timeline_new"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-Z9-j22" userLabel="索引">
+                            <rect key="frame" x="241" y="5" width="110" height="40"/>
+                            <state key="normal" image="hd_home_bangumi_category_new"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1uU-30-xPU" firstAttribute="width" secondItem="zRU-FM-bSV" secondAttribute="width" id="gUs-3M-FMd"/>
+                        <constraint firstItem="Uoy-Z9-j22" firstAttribute="width" secondItem="zRU-FM-bSV" secondAttribute="width" id="kvw-to-E5n"/>
+                        <constraint firstAttribute="height" constant="50" id="ve7-zd-lId"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8da-Q9-Xxy" userLabel="DownView">
+                    <rect key="frame" x="12" y="267" width="351" height="20"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bungumi_unfinished" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-AN-eEx">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="XtI-TI-Nm8"/>
+                                <constraint firstAttribute="width" constant="20" id="nPm-YI-hc0"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_rightArrowGray" translatesAutoresizingMaskIntoConstraints="NO" id="hB2-0y-vTj">
+                            <rect key="frame" x="344" y="4" width="7" height="13"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="7" id="AZa-v8-dgx"/>
+                                <constraint firstAttribute="height" constant="13" id="ITI-4N-Uzw"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新番连载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlR-ad-sAU">
+                            <rect key="frame" x="28" y="2" width="56" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多连载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-E9-t12">
+                            <rect key="frame" x="284" y="3" width="52" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="hB2-0y-vTj" firstAttribute="centerY" secondItem="IhZ-E9-t12" secondAttribute="centerY" id="826-pQ-dQA"/>
+                        <constraint firstItem="hB2-0y-vTj" firstAttribute="centerY" secondItem="8da-Q9-Xxy" secondAttribute="centerY" id="BBg-kK-mzP"/>
+                        <constraint firstAttribute="height" constant="20" id="DJl-DC-pzN"/>
+                        <constraint firstAttribute="trailing" secondItem="hB2-0y-vTj" secondAttribute="trailing" id="PR7-Eg-hsn"/>
+                        <constraint firstItem="VlR-ad-sAU" firstAttribute="leading" secondItem="nvY-AN-eEx" secondAttribute="trailing" constant="8" id="arS-X2-C54"/>
+                        <constraint firstItem="hB2-0y-vTj" firstAttribute="leading" secondItem="IhZ-E9-t12" secondAttribute="trailing" constant="8" id="drg-T6-bfV"/>
+                        <constraint firstItem="nvY-AN-eEx" firstAttribute="leading" secondItem="8da-Q9-Xxy" secondAttribute="leading" id="ibq-aU-sg8"/>
+                        <constraint firstItem="VlR-ad-sAU" firstAttribute="centerY" secondItem="nvY-AN-eEx" secondAttribute="centerY" id="nex-rE-egH"/>
+                        <constraint firstItem="nvY-AN-eEx" firstAttribute="top" secondItem="8da-Q9-Xxy" secondAttribute="top" id="zBU-IG-Gu2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Xdh-MC-KSp" firstAttribute="top" secondItem="vgb-BG-QZ6" secondAttribute="top" id="3xd-rN-V3V"/>
+                <constraint firstAttribute="bottom" secondItem="8da-Q9-Xxy" secondAttribute="bottom" id="Afh-Qb-P70"/>
+                <constraint firstItem="Xdh-MC-KSp" firstAttribute="width" secondItem="vgb-BG-QZ6" secondAttribute="width" id="B5Q-EE-svB"/>
+                <constraint firstAttribute="trailing" secondItem="UMx-R7-Ht5" secondAttribute="trailing" constant="12" id="FIT-fk-UXL"/>
+                <constraint firstItem="fsE-Dd-fJT" firstAttribute="leading" secondItem="vgb-BG-QZ6" secondAttribute="leading" constant="20" id="LXN-qK-fGP"/>
+                <constraint firstItem="Xdh-MC-KSp" firstAttribute="leading" secondItem="vgb-BG-QZ6" secondAttribute="leading" id="j96-Dn-1PJ"/>
+                <constraint firstItem="UMx-R7-Ht5" firstAttribute="top" secondItem="fsE-Dd-fJT" secondAttribute="bottom" constant="20" id="lUy-8C-hyl"/>
+                <constraint firstAttribute="trailing" secondItem="fsE-Dd-fJT" secondAttribute="trailing" constant="20" id="lhk-np-ldJ"/>
+                <constraint firstAttribute="trailing" secondItem="8da-Q9-Xxy" secondAttribute="trailing" constant="12" id="mtv-Bq-54v"/>
+                <constraint firstItem="8da-Q9-Xxy" firstAttribute="leading" secondItem="vgb-BG-QZ6" secondAttribute="leading" constant="12" id="slR-dI-Nhc"/>
+                <constraint firstItem="8da-Q9-Xxy" firstAttribute="top" secondItem="UMx-R7-Ht5" secondAttribute="bottom" constant="12" id="uv8-k5-Nnq"/>
+                <constraint firstItem="UMx-R7-Ht5" firstAttribute="leading" secondItem="vgb-BG-QZ6" secondAttribute="leading" constant="12" id="zxu-6B-6YY"/>
+                <constraint firstItem="fsE-Dd-fJT" firstAttribute="top" secondItem="Xdh-MC-KSp" secondAttribute="bottom" constant="20" id="zyB-XL-ytj"/>
+            </constraints>
+            <connections>
+                <outlet property="categoryButton" destination="Uoy-Z9-j22" id="bZZ-4W-XBO"/>
+                <outlet property="downView" destination="8da-Q9-Xxy" id="ejc-C1-vrX"/>
+                <outlet property="guanfangTouchView" destination="aWi-kL-RXW" id="Vhp-8L-obp"/>
+                <outlet property="guochanTouchView" destination="19O-Li-drI" id="xvy-0z-zTY"/>
+                <outlet property="lianzaiTouchView" destination="RQP-kD-vuK" id="t4p-7k-fgS"/>
+                <outlet property="pursueButton" destination="zRU-FM-bSV" id="dl5-Ia-k5f"/>
+                <outlet property="timelineButton" destination="1uU-30-xPU" id="1cf-Kk-UsB"/>
+                <outlet property="topView" destination="Xdh-MC-KSp" id="pAr-ZX-XLq"/>
+                <outlet property="wanjieTouchView" destination="maC-tf-6OJ" id="I3J-BO-DbY"/>
+            </connections>
+            <point key="canvasLocation" x="221.5" y="250.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="bungumi_unfinished" width="40" height="40"/>
+        <image name="common_rightArrowGray" width="7" height="13"/>
+        <image name="hd_home_bangumi_category_new" width="183" height="40"/>
+        <image name="hd_home_bangumi_recommend_new" width="183" height="40"/>
+        <image name="hd_home_bangumi_timeline_new" width="183" height="40"/>
+    </resources>
+</document>
