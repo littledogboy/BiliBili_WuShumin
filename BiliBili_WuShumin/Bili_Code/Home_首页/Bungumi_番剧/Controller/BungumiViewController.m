@@ -8,10 +8,12 @@
 
 #import "BungumiViewController.h"
 #import "BungumiResult.h"
+#import "BungumiRecommend.h"
 #import "BungumiHeaderView.h"
 #import "Bungumi_UnfinishedCell.h"
 #import "Bungumi_PreviousHeaderView.h"
 #import "Bungumi_PreviousCell.h"
+#import "Bungumi_RecommendCell.h"
 
 #define CollectionEdgeInsets UIEdgeInsetsMake(12, 12, 8, 12)
 #define LineSpacing 12
@@ -21,6 +23,7 @@
 #define KUnfinishedCellIdentifier @"unfinishedCell"
 #define kPreviousHeaderIdentifier @"previousHeader"
 #define kPreviousCell @"previousCell"
+#define kRecommendCell @"bungumiRecommendCell"
 
 @interface BungumiViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
@@ -28,6 +31,9 @@
 @property (nonatomic, strong) BungumiResult *result;
 @property (nonatomic, strong) NSArray *serializingArray;
 @property (nonatomic, strong) NSArray *listArray;
+@property (nonatomic, strong) NSMutableArray *recommendArray;
+
+@property (nonatomic, assign) BOOL isRecommendRequest;
 
 @end
 
@@ -35,6 +41,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isRecommendRequest = NO;
     [self addBungumiCollectionView];
     [self request];
     
@@ -51,8 +58,7 @@
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.sectionInset = CollectionEdgeInsets;
     CGFloat itemWidth = (screenWidth - 2 * 12 - 2 * InteritemSpacing) / 3.0;
-    CGFloat itemHeight = 205;
-//    layout.itemSize = CGSizeMake(itemWidth, itemHeight);
+    CGFloat itemHeight = 100;
     layout.estimatedItemSize = CGSizeMake(itemWidth, itemHeight);
     layout.minimumLineSpacing = LineSpacing;
     layout.minimumInteritemSpacing = InteritemSpacing;
@@ -69,6 +75,7 @@
     // regist cell
     [_bungumiCollectionView registerNib:[self nibWithClass:[Bungumi_UnfinishedCell class]] forCellWithReuseIdentifier:KUnfinishedCellIdentifier];
     [_bungumiCollectionView registerNib:[self nibWithClass:[Bungumi_PreviousCell class]] forCellWithReuseIdentifier:kPreviousCell];
+    [_bungumiCollectionView registerNib:[self nibWithClass:[Bungumi_RecommendCell class]] forCellWithReuseIdentifier:kRecommendCell];
     
     // regist header
     [_bungumiCollectionView registerNib:[self nibWithClass:[BungumiHeaderView class]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kHeaderIdentifier];
@@ -83,7 +90,25 @@
         self.result = [[BungumiResult alloc] initWithDictionary:dic[@"result"]];
         self.serializingArray = self.result.serializing;
         self.listArray = self.result.previous.list;
-        [self.bungumiCollectionView reloadData];
+        [self recommendRequest];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (void)recommendRequest {
+    [AGHTTPURLHandle GET:BungumiRecommendString success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingMutableContainers) error:nil];
+        NSArray *resultArray = rootDic[@"result"];
+        self.recommendArray = [NSMutableArray array];
+        for (NSDictionary *dic in resultArray) {
+            BungumiRecommend *recommend = [[BungumiRecommend alloc] initWithDictionary:dic];
+            [self.recommendArray addObject:recommend];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.bungumiCollectionView reloadData];
+        });
+//        self.isRecommendRequest = YES;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
@@ -104,13 +129,14 @@
     return self.listArray[indexPath.item];
 }
 
-#pragma mark- UICollectionViewDelegate
-
+- (BungumiRecommend *)recommendOfIndexPath:(NSIndexPath *)indexPath {
+    return self.recommendArray[indexPath.item];
+}
 
 #pragma mark- UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -121,6 +147,8 @@
         case 1:
             return _listArray.count;
             break;
+        case 2:
+            return _recommendArray.count;
             
         default:
             break;
@@ -147,6 +175,14 @@
         }
             break;
             
+        case 2:
+        {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:kRecommendCell forIndexPath:indexPath];
+            ((Bungumi_RecommendCell *)cell).recommend = [self recommendOfIndexPath:indexPath];
+        }
+            break;
+            
+            
         default:
             break;
     }
@@ -166,16 +202,20 @@
         } else if (indexPath.section == 1) {
             Bungumi_PreviousHeaderView *previousHeaderView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kPreviousHeaderIdentifier forIndexPath:indexPath];
             reusableView = previousHeaderView;
+        } else if (indexPath.section == 2) {
+            Bungumi_PreviousHeaderView *recommendHeaderView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kPreviousHeaderIdentifier forIndexPath:indexPath];
+            recommendHeaderView.iconImageView.image = [UIImage imageNamed:@"home_bangumi_tableHead_bangumiRecommend"];
+            recommendHeaderView.titleLabel.text = @"番剧推荐";
+            recommendHeaderView.rightTitleLabel.text = nil;
+            recommendHeaderView.arrowImageView.hidden = YES;
+            reusableView = recommendHeaderView;
         }
     }
     
     return reusableView;
 }
 
-
-
 #pragma mark- UICollectionViewDelegateFlowLayout 
-
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     switch (section) {
@@ -185,11 +225,15 @@
         case 1:
             return [Bungumi_PreviousHeaderView sizeOfBungumi_PreviousHeaderView];
             break;
+        case 2:
+            return [Bungumi_PreviousHeaderView sizeOfBungumi_PreviousHeaderView];
+            break;
         default:
             break;
     };
     return CGSizeZero;
 }
+
 
 
 /*
@@ -214,6 +258,7 @@
 */
 
 
+
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     UIEdgeInsets edge ;
     if (section != 2) {
@@ -224,7 +269,8 @@
     
     return edge;
 }
- 
+
+#pragma mark- UICollectionViewDelegate
 
 
 - (void)didReceiveMemoryWarning {

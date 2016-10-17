@@ -42,7 +42,11 @@
 #pragma mark- 推荐详情
 
 #pragma mark- 番剧
+// 番剧首页
 #define BungumiURLString @"http://bangumi.bilibili.com/api/app_index_page_v4?build=3910&device=phone&mobi_app=iphone&platform=ios"
+// 番剧推荐
+#define BungumiRecommendString @"http://bangumi.bilibili.com/api/bangumi_recommend?access_key=a97c86bad48e821156213b9728ba3cec&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3910&cursor=0&device=phone&mobi_app=iphone&pagesize=10&platform=ios&sign=a23ccdd20f2c2d9ae38bc52c5a5a3a5f&ts=1476273037"
+
 
 
 

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BungumiRecommend.h"
 
 @interface Bungumi_RecommendCell : UICollectionViewCell
+@property (strong, nonatomic) IBOutlet UIImageView *coverImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *isNewImageView;
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *descLabel;
 
+// model
+@property (nonatomic, strong) BungumiRecommend *recommend;
 @end

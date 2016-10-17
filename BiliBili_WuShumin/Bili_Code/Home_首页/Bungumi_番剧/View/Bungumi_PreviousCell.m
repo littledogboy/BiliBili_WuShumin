@@ -37,15 +37,12 @@
 }
 
 - (UICollectionViewLayoutAttributes *)preferredLayoutAttributesFittingAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes {
-    //    if (!_isHeightCalculated) {
-    [self setNeedsLayout];
-    [self layoutIfNeeded];
-    CGSize size = [self.contentView systemLayoutSizeFittingSize:layoutAttributes.size];
+    CGFloat itemWidth = (screenWidth - 2 * 12 - 2 * 8) / 3.0;
+    CGFloat itemHeight = 190;
+    CGSize size = CGSizeMake(itemWidth, itemHeight);
     CGRect newFrame = layoutAttributes.frame;
     newFrame.size.height = size.height;
     layoutAttributes.frame = newFrame;
-    //        _isHeightCalculated = true;
-    //    }
     return layoutAttributes;
 }
 

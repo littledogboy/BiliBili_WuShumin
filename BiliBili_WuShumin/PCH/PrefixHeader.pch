@@ -38,4 +38,15 @@
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 
+#pragma mark- Masonry
+#ifdef  __OBJC__
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+//#import "Masonry.h" // 写在宏定义的后面
+
+#endif
+
+
 #endif /* PrefixHeader_pch */

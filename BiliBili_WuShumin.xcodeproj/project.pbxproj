@@ -17,6 +17,7 @@
 		6C28D0ED1DB3755500EA30BD /* Bungumi_PreviousCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0EC1DB3755500EA30BD /* Bungumi_PreviousCell.xib */; };
 		6C28D0F11DB3CCAF00EA30BD /* Bungumi_RecommendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0EF1DB3CCAF00EA30BD /* Bungumi_RecommendCell.m */; };
 		6C28D0F21DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0F01DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib */; };
+		6C28D1471DB4CA8400EA30BD /* BungumiRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D1461DB4CA8400EA30BD /* BungumiRecommend.m */; };
 		6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3062CB1D6BD0CC0043C4CE /* main.m */; };
 		6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D31D6BD0CC0043C4CE /* Main.storyboard */; };
 		6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D61D6BD0CC0043C4CE /* Assets.xcassets */; };
@@ -187,6 +188,8 @@
 		6C28D0EE1DB3CCAF00EA30BD /* Bungumi_RecommendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bungumi_RecommendCell.h; sourceTree = "<group>"; };
 		6C28D0EF1DB3CCAF00EA30BD /* Bungumi_RecommendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bungumi_RecommendCell.m; sourceTree = "<group>"; };
 		6C28D0F01DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Bungumi_RecommendCell.xib; sourceTree = "<group>"; };
+		6C28D1451DB4CA8400EA30BD /* BungumiRecommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiRecommend.h; sourceTree = "<group>"; };
+		6C28D1461DB4CA8400EA30BD /* BungumiRecommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiRecommend.m; sourceTree = "<group>"; };
 		6C3062C71D6BD0CC0043C4CE /* BiliBili_WuShumin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiliBili_WuShumin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3062CB1D6BD0CC0043C4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3062D41D6BD0CC0043C4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -676,6 +679,8 @@
 				6C6459B61DB0D2EB0051A5EC /* BungumiRootClass.m */,
 				6C6459B71DB0D2EB0051A5EC /* BungumiSerializing.h */,
 				6C6459B81DB0D2EB0051A5EC /* BungumiSerializing.m */,
+				6C28D1451DB4CA8400EA30BD /* BungumiRecommend.h */,
+				6C28D1461DB4CA8400EA30BD /* BungumiRecommend.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1348,6 +1353,7 @@
 				6CAAC4B71D6EA6A300D760B6 /* UIView+Frame.m in Sources */,
 				6CAAC4951D6BF70B00D760B6 /* MineViewController.m in Sources */,
 				6C6459BF1DB0D2EB0051A5EC /* BungumiSerializing.m in Sources */,
+				6C28D1471DB4CA8400EA30BD /* BungumiRecommend.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
 				6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */,
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,

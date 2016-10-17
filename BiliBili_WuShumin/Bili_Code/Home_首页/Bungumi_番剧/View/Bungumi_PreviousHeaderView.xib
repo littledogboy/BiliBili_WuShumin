@@ -63,6 +63,7 @@
                 <constraint firstItem="Xal-YK-cmI" firstAttribute="leading" secondItem="TfA-s5-piU" secondAttribute="leading" id="hZr-Tk-gF3"/>
             </constraints>
             <connections>
+                <outlet property="arrowImageView" destination="c8i-ya-kDw" id="TfU-Wf-wWq"/>
                 <outlet property="iconImageView" destination="iw3-oW-PEV" id="6GO-ih-WWI"/>
                 <outlet property="mainView" destination="Xal-YK-cmI" id="anu-Na-cAg"/>
                 <outlet property="rightTitleLabel" destination="vjK-eD-Aai" id="QY9-ss-uQD"/>

@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (strong, nonatomic) IBOutlet UILabel *rightTitleLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *arrowImageView;
 
 + (CGSize )sizeOfBungumi_PreviousHeaderView;
 
