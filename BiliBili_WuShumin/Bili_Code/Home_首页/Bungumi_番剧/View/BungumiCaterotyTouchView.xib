@@ -20,13 +20,13 @@
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5ZR-aC-XVr">
                     <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bungumi_unfinished" translatesAutoresizingMaskIntoConstraints="NO" id="WIr-A1-Ose">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bungumi_unfinished" translatesAutoresizingMaskIntoConstraints="NO" id="WIr-A1-Ose">
                             <rect key="frame" x="8" y="0.0" width="40" height="40"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="连载动画" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7o-Wp-D0C">
-                            <rect key="frame" x="8" y="40" width="40" height="15"/>
+                            <rect key="frame" x="7" y="40" width="40" height="15"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>

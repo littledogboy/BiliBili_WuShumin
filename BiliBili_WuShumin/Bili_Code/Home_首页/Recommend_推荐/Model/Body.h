@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
-#import "Live.h"
+#import "RecommendLive.h"
 #import "List.h"
 
 @interface Body : NSObject
@@ -18,7 +18,7 @@
 @property (nonatomic, assign) NSString *face;
 @property (nonatomic, assign) NSString *name;
 @property (nonatomic, assign) NSInteger online;
-@property (nonatomic, strong) Live *liveModel;
+@property (nonatomic, strong) RecommendLive *liveModel;
 
 // bangumi
 @property (nonatomic, strong) NSString *mtime;

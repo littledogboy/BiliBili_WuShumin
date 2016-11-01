@@ -31,7 +31,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="maC-tf-6OJ" userLabel="完结动画" customClass="BungumiCaterotyTouchView">
-                            <rect key="frame" x="93" y="0.0" width="55" height="55"/>
+                            <rect key="frame" x="94" y="0.0" width="55" height="55"/>
                             <color key="backgroundColor" red="1" green="0.33971543552324301" blue="0.83482642604705926" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="55" id="FwC-dQ-A4O"/>
@@ -39,7 +39,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19O-Li-drI" userLabel="国产动画" customClass="BungumiCaterotyTouchView">
-                            <rect key="frame" x="186" y="0.0" width="55" height="55"/>
+                            <rect key="frame" x="187" y="0.0" width="55" height="55"/>
                             <color key="backgroundColor" red="0.52425303438549187" green="1" blue="0.11776956352835211" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="55" id="8FU-dy-zCu"/>
@@ -62,7 +62,7 @@
                 <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UMx-R7-Ht5">
                     <rect key="frame" x="12" y="205" width="351" height="50"/>
                     <subviews>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-FM-bSV" userLabel="追番">
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-FM-bSV" userLabel="追番">
                             <rect key="frame" x="0.0" y="5" width="110" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="110" id="scR-hg-ubI"/>
@@ -104,7 +104,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新番连载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlR-ad-sAU">
                             <rect key="frame" x="28" y="2" width="56" height="17"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更多连载" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhZ-E9-t12">

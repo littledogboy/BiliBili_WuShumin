@@ -20,6 +20,7 @@
 #import "MineViewController.h"
 
 // home_childViewControllers
+#import "LiveViewController.h"
 #import "RecommendViewController.h"
 #import "BungumiViewController.h"
 
@@ -45,15 +46,15 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        //
-        UIViewController *VC1 = [[UIViewController alloc] init];
-        VC1.view.backgroundColor = [UIColor redColor];
+        // homeVC
+        LiveViewController *liveVC = [[LiveViewController alloc] init];
+        liveVC.view.backgroundColor = [UIColor redColor];
         RecommendViewController *recommendVC = [[RecommendViewController alloc] init];
         recommendVC.view.backgroundColor = [UIColor yellowColor];
         BungumiViewController *bungumiVC = [[BungumiViewController alloc] init];
         bungumiVC.view.backgroundColor = [UIColor blueColor];
         self.homeVC = [[HomeViewController alloc] init];
-        _homeVC.viewControllers = @[VC1, recommendVC, bungumiVC];
+        _homeVC.viewControllers = @[liveVC, recommendVC, bungumiVC];
         self.homeNC = [[HomeNavigationController alloc] initWithRootViewController:_homeVC];
         
         self.categoryVC = [[CategoryViewController alloc] init];

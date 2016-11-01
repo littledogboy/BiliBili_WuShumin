@@ -25,7 +25,6 @@
 		6C3062E51D6BD0CC0043C4CE /* BiliBili_WuShuminTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3062E41D6BD0CC0043C4CE /* BiliBili_WuShuminTests.m */; };
 		6C3062F01D6BD0CC0043C4CE /* BiliBili_WuShuminUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3062EF1D6BD0CC0043C4CE /* BiliBili_WuShuminUITests.m */; };
 		6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3063001D6BD48A0043C4CE /* AppDelegate.m */; };
-		6C4AADD01D80547100A656D6 /* Live.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADCF1D80547100A656D6 /* Live.m */; };
 		6C4AADD31D805AAD00A656D6 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD21D805AAD00A656D6 /* List.m */; };
 		6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */; };
 		6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */; };
@@ -60,6 +59,29 @@
 		6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E351DA8C0B00021CA36 /* VideoXML.m */; };
 		6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C523E381DA8C0B00021CA36 /* AGMovieView.m */; };
 		6C523E4B1DA8C0B00021CA36 /* AGMovieView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C523E391DA8C0B00021CA36 /* AGMovieView.xib */; };
+		6C585E161DC14D140097BE8B /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E151DC14D140097BE8B /* LiveViewController.m */; };
+		6C585E271DC151640097BE8B /* Live.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E181DC151640097BE8B /* Live.m */; };
+		6C585E281DC151640097BE8B /* LiveBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E1A1DC151640097BE8B /* LiveBanner.m */; };
+		6C585E291DC151640097BE8B /* LiveCover.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E1C1DC151640097BE8B /* LiveCover.m */; };
+		6C585E2A1DC151640097BE8B /* LiveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E1E1DC151640097BE8B /* LiveData.m */; };
+		6C585E2B1DC151640097BE8B /* LiveEntranceIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E201DC151640097BE8B /* LiveEntranceIcon.m */; };
+		6C585E2C1DC151640097BE8B /* LiveOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E221DC151640097BE8B /* LiveOwner.m */; };
+		6C585E2D1DC151640097BE8B /* LivePartition_Partition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E241DC151640097BE8B /* LivePartition_Partition.m */; };
+		6C585E2E1DC151640097BE8B /* LiveRootClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E261DC151640097BE8B /* LiveRootClass.m */; };
+		6C585E311DC155E60097BE8B /* EntranceIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E301DC155E60097BE8B /* EntranceIcon.m */; };
+		6C585E441DC159010097BE8B /* LiveRecommendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E371DC159010097BE8B /* LiveRecommendData.m */; };
+		6C585E471DC159010097BE8B /* LiveRecommendRecommendData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E3D1DC159010097BE8B /* LiveRecommendRecommendData.m */; };
+		6C585E481DC159010097BE8B /* LiveRecommendRootClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E3F1DC159010097BE8B /* LiveRecommendRootClass.m */; };
+		6C585E4C1DC208DC0097BE8B /* LiveCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E4B1DC208DC0097BE8B /* LiveCollectionView.m */; };
+		6C585E501DC20C6B0097BE8B /* LiveHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E4E1DC20C6B0097BE8B /* LiveHeaderView.m */; };
+		6C585E511DC20C6B0097BE8B /* LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C585E4F1DC20C6B0097BE8B /* LiveHeaderView.xib */; };
+		6C585E551DC2505C0097BE8B /* LivePartitionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E531DC2505C0097BE8B /* LivePartitionHeaderView.m */; };
+		6C585E561DC2505C0097BE8B /* LivePartitionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C585E541DC2505C0097BE8B /* LivePartitionHeaderView.xib */; };
+		6C585E591DC25FC30097BE8B /* LivePartition.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E581DC25FC30097BE8B /* LivePartition.m */; };
+		6C585E5C1DC268330097BE8B /* LiveSubIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E5B1DC268330097BE8B /* LiveSubIcon.m */; };
+		6C585E5F1DC761D70097BE8B /* RecommendLive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E5E1DC761D70097BE8B /* RecommendLive.m */; };
+		6C585E631DC778590097BE8B /* LiveViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E611DC778590097BE8B /* LiveViewCell.m */; };
+		6C585E641DC778590097BE8B /* LiveViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C585E621DC778590097BE8B /* LiveViewCell.xib */; };
 		6C6459AA1DAE77F80051A5EC /* BungumiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459A91DAE77F80051A5EC /* BungumiViewController.m */; };
 		6C6459B91DB0D2EB0051A5EC /* BungumiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459AC1DB0D2EB0051A5EC /* BungumiAd.m */; };
 		6C6459BA1DB0D2EB0051A5EC /* BungumiHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459AE1DB0D2EB0051A5EC /* BungumiHead.m */; };
@@ -204,8 +226,6 @@
 		6C3062F11D6BD0CC0043C4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C3062FF1D6BD48A0043C4CE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C3063001D6BD48A0043C4CE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C4AADCE1D80547100A656D6 /* Live.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live.h; sourceTree = "<group>"; };
-		6C4AADCF1D80547100A656D6 /* Live.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live.m; sourceTree = "<group>"; };
 		6C4AADD11D805AAD00A656D6 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		6C4AADD21D805AAD00A656D6 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		6C4AADD41D83724300A656D6 /* Recommend_LiveHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_LiveHeaderView.h; sourceTree = "<group>"; };
@@ -248,6 +268,49 @@
 		6C523E371DA8C0B00021CA36 /* AGMovieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMovieView.h; sourceTree = "<group>"; };
 		6C523E381DA8C0B00021CA36 /* AGMovieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMovieView.m; sourceTree = "<group>"; };
 		6C523E391DA8C0B00021CA36 /* AGMovieView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGMovieView.xib; sourceTree = "<group>"; };
+		6C585E141DC14D140097BE8B /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewController.h; sourceTree = "<group>"; };
+		6C585E151DC14D140097BE8B /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewController.m; sourceTree = "<group>"; };
+		6C585E171DC151640097BE8B /* Live.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Live.h; sourceTree = "<group>"; };
+		6C585E181DC151640097BE8B /* Live.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Live.m; sourceTree = "<group>"; };
+		6C585E191DC151640097BE8B /* LiveBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveBanner.h; sourceTree = "<group>"; };
+		6C585E1A1DC151640097BE8B /* LiveBanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveBanner.m; sourceTree = "<group>"; };
+		6C585E1B1DC151640097BE8B /* LiveCover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCover.h; sourceTree = "<group>"; };
+		6C585E1C1DC151640097BE8B /* LiveCover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCover.m; sourceTree = "<group>"; };
+		6C585E1D1DC151640097BE8B /* LiveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveData.h; sourceTree = "<group>"; };
+		6C585E1E1DC151640097BE8B /* LiveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveData.m; sourceTree = "<group>"; };
+		6C585E1F1DC151640097BE8B /* LiveEntranceIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveEntranceIcon.h; sourceTree = "<group>"; };
+		6C585E201DC151640097BE8B /* LiveEntranceIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveEntranceIcon.m; sourceTree = "<group>"; };
+		6C585E211DC151640097BE8B /* LiveOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveOwner.h; sourceTree = "<group>"; };
+		6C585E221DC151640097BE8B /* LiveOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveOwner.m; sourceTree = "<group>"; };
+		6C585E231DC151640097BE8B /* LivePartition_Partition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePartition_Partition.h; sourceTree = "<group>"; };
+		6C585E241DC151640097BE8B /* LivePartition_Partition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePartition_Partition.m; sourceTree = "<group>"; };
+		6C585E251DC151640097BE8B /* LiveRootClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveRootClass.h; sourceTree = "<group>"; };
+		6C585E261DC151640097BE8B /* LiveRootClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveRootClass.m; sourceTree = "<group>"; };
+		6C585E2F1DC155E60097BE8B /* EntranceIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntranceIcon.h; sourceTree = "<group>"; };
+		6C585E301DC155E60097BE8B /* EntranceIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntranceIcon.m; sourceTree = "<group>"; };
+		6C585E361DC159010097BE8B /* LiveRecommendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveRecommendData.h; sourceTree = "<group>"; };
+		6C585E371DC159010097BE8B /* LiveRecommendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveRecommendData.m; sourceTree = "<group>"; };
+		6C585E3C1DC159010097BE8B /* LiveRecommendRecommendData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveRecommendRecommendData.h; sourceTree = "<group>"; };
+		6C585E3D1DC159010097BE8B /* LiveRecommendRecommendData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveRecommendRecommendData.m; sourceTree = "<group>"; };
+		6C585E3E1DC159010097BE8B /* LiveRecommendRootClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveRecommendRootClass.h; sourceTree = "<group>"; };
+		6C585E3F1DC159010097BE8B /* LiveRecommendRootClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveRecommendRootClass.m; sourceTree = "<group>"; };
+		6C585E4A1DC208DC0097BE8B /* LiveCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveCollectionView.h; sourceTree = "<group>"; };
+		6C585E4B1DC208DC0097BE8B /* LiveCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveCollectionView.m; sourceTree = "<group>"; };
+		6C585E4D1DC20C6B0097BE8B /* LiveHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveHeaderView.h; sourceTree = "<group>"; };
+		6C585E4E1DC20C6B0097BE8B /* LiveHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveHeaderView.m; sourceTree = "<group>"; };
+		6C585E4F1DC20C6B0097BE8B /* LiveHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveHeaderView.xib; sourceTree = "<group>"; };
+		6C585E521DC2505C0097BE8B /* LivePartitionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePartitionHeaderView.h; sourceTree = "<group>"; };
+		6C585E531DC2505C0097BE8B /* LivePartitionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePartitionHeaderView.m; sourceTree = "<group>"; };
+		6C585E541DC2505C0097BE8B /* LivePartitionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LivePartitionHeaderView.xib; sourceTree = "<group>"; };
+		6C585E571DC25FC30097BE8B /* LivePartition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePartition.h; sourceTree = "<group>"; };
+		6C585E581DC25FC30097BE8B /* LivePartition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePartition.m; sourceTree = "<group>"; };
+		6C585E5A1DC268330097BE8B /* LiveSubIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveSubIcon.h; sourceTree = "<group>"; };
+		6C585E5B1DC268330097BE8B /* LiveSubIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveSubIcon.m; sourceTree = "<group>"; };
+		6C585E5D1DC761D70097BE8B /* RecommendLive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecommendLive.h; sourceTree = "<group>"; };
+		6C585E5E1DC761D70097BE8B /* RecommendLive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecommendLive.m; sourceTree = "<group>"; };
+		6C585E601DC778590097BE8B /* LiveViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveViewCell.h; sourceTree = "<group>"; };
+		6C585E611DC778590097BE8B /* LiveViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveViewCell.m; sourceTree = "<group>"; };
+		6C585E621DC778590097BE8B /* LiveViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LiveViewCell.xib; sourceTree = "<group>"; };
 		6C6459A81DAE77F80051A5EC /* BungumiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiViewController.h; sourceTree = "<group>"; };
 		6C6459A91DAE77F80051A5EC /* BungumiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiViewController.m; sourceTree = "<group>"; };
 		6C6459AB1DB0D2EB0051A5EC /* BungumiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiAd.h; sourceTree = "<group>"; };
@@ -653,6 +716,68 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6C585E111DC14CF50097BE8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C585E141DC14D140097BE8B /* LiveViewController.h */,
+				6C585E151DC14D140097BE8B /* LiveViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C585E121DC14CF50097BE8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C585E361DC159010097BE8B /* LiveRecommendData.h */,
+				6C585E371DC159010097BE8B /* LiveRecommendData.m */,
+				6C585E3C1DC159010097BE8B /* LiveRecommendRecommendData.h */,
+				6C585E3D1DC159010097BE8B /* LiveRecommendRecommendData.m */,
+				6C585E3E1DC159010097BE8B /* LiveRecommendRootClass.h */,
+				6C585E3F1DC159010097BE8B /* LiveRecommendRootClass.m */,
+				6C585E171DC151640097BE8B /* Live.h */,
+				6C585E181DC151640097BE8B /* Live.m */,
+				6C585E191DC151640097BE8B /* LiveBanner.h */,
+				6C585E1A1DC151640097BE8B /* LiveBanner.m */,
+				6C585E1B1DC151640097BE8B /* LiveCover.h */,
+				6C585E1C1DC151640097BE8B /* LiveCover.m */,
+				6C585E1D1DC151640097BE8B /* LiveData.h */,
+				6C585E1E1DC151640097BE8B /* LiveData.m */,
+				6C585E1F1DC151640097BE8B /* LiveEntranceIcon.h */,
+				6C585E201DC151640097BE8B /* LiveEntranceIcon.m */,
+				6C585E2F1DC155E60097BE8B /* EntranceIcon.h */,
+				6C585E301DC155E60097BE8B /* EntranceIcon.m */,
+				6C585E211DC151640097BE8B /* LiveOwner.h */,
+				6C585E221DC151640097BE8B /* LiveOwner.m */,
+				6C585E571DC25FC30097BE8B /* LivePartition.h */,
+				6C585E581DC25FC30097BE8B /* LivePartition.m */,
+				6C585E231DC151640097BE8B /* LivePartition_Partition.h */,
+				6C585E241DC151640097BE8B /* LivePartition_Partition.m */,
+				6C585E5A1DC268330097BE8B /* LiveSubIcon.h */,
+				6C585E5B1DC268330097BE8B /* LiveSubIcon.m */,
+				6C585E251DC151640097BE8B /* LiveRootClass.h */,
+				6C585E261DC151640097BE8B /* LiveRootClass.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C585E131DC14CF50097BE8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C585E4A1DC208DC0097BE8B /* LiveCollectionView.h */,
+				6C585E4B1DC208DC0097BE8B /* LiveCollectionView.m */,
+				6C585E4D1DC20C6B0097BE8B /* LiveHeaderView.h */,
+				6C585E4E1DC20C6B0097BE8B /* LiveHeaderView.m */,
+				6C585E4F1DC20C6B0097BE8B /* LiveHeaderView.xib */,
+				6C585E521DC2505C0097BE8B /* LivePartitionHeaderView.h */,
+				6C585E531DC2505C0097BE8B /* LivePartitionHeaderView.m */,
+				6C585E541DC2505C0097BE8B /* LivePartitionHeaderView.xib */,
+				6C585E601DC778590097BE8B /* LiveViewCell.h */,
+				6C585E611DC778590097BE8B /* LiveViewCell.m */,
+				6C585E621DC778590097BE8B /* LiveViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6C6459A51DAE77E00051A5EC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -977,6 +1102,9 @@
 		6CAAC4C31D6EA9C200D760B6 /* Live_直播 */ = {
 			isa = PBXGroup;
 			children = (
+				6C585E111DC14CF50097BE8B /* Controller */,
+				6C585E121DC14CF50097BE8B /* Model */,
+				6C585E131DC14CF50097BE8B /* View */,
 			);
 			path = "Live_直播";
 			sourceTree = "<group>";
@@ -1016,8 +1144,8 @@
 				6CAAC4D21D6EB21200D760B6 /* Ext.m */,
 				6CAAC4D31D6EB21200D760B6 /* Recommend.h */,
 				6CAAC4D41D6EB21200D760B6 /* Recommend.m */,
-				6C4AADCE1D80547100A656D6 /* Live.h */,
-				6C4AADCF1D80547100A656D6 /* Live.m */,
+				6C585E5D1DC761D70097BE8B /* RecommendLive.h */,
+				6C585E5E1DC761D70097BE8B /* RecommendLive.m */,
 				6C4AADD11D805AAD00A656D6 /* List.h */,
 				6C4AADD21D805AAD00A656D6 /* List.m */,
 			);
@@ -1211,6 +1339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C28D0EB1DB370ED00EA30BD /* Bungumi_PreviousHeaderView.xib in Resources */,
+				6C585E561DC2505C0097BE8B /* LivePartitionHeaderView.xib in Resources */,
 				6C523E411DA8C0B00021CA36 /* player_pause_iphone_window@3x.png in Resources */,
 				6CAA7EF71D86A8760012CF56 /* player_start_iphone_window@3x.png in Resources */,
 				6C28D0F21DB3CCAF00EA30BD /* Bungumi_RecommendCell.xib in Resources */,
@@ -1227,6 +1356,7 @@
 				6CAA7EEF1D86A8760012CF56 /* AGPlayerView.xib in Resources */,
 				6CAA7EFA1D86A8760012CF56 /* Slider_thumb@2x.png in Resources */,
 				6CAA7EF61D86A8760012CF56 /* player_start_iphone_fullscreen@3x.png in Resources */,
+				6C585E641DC778590097BE8B /* LiveViewCell.xib in Resources */,
 				6CAA7EF31D86A8760012CF56 /* Play@2x.png in Resources */,
 				6CAA7F001D86AE3E0012CF56 /* AGPlayerViewController.storyboard in Resources */,
 				6C523E471DA8C0B00021CA36 /* Stop@2x.png in Resources */,
@@ -1249,6 +1379,7 @@
 				6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */,
 				6CAAC4FD1D6F965700D760B6 /* RecommendCollectionViewCell.xib in Resources */,
 				6CAAC5571D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib in Resources */,
+				6C585E511DC20C6B0097BE8B /* LiveHeaderView.xib in Resources */,
 				6CAAC54A1D77ACC900D760B6 /* main_banner2@2x.png in Resources */,
 				6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */,
 				6CAAC5481D77ACC900D760B6 /* main_banner.png in Resources */,
@@ -1330,6 +1461,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CAA7EFE1D86A8760012CF56 /* ViewController.m in Sources */,
+				6C585E271DC151640097BE8B /* Live.m in Sources */,
+				6C585E311DC155E60097BE8B /* EntranceIcon.m in Sources */,
 				6CAA7EC91D8551100012CF56 /* Relate.m in Sources */,
 				6C4AADD31D805AAD00A656D6 /* List.m in Sources */,
 				6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */,
@@ -1345,6 +1478,7 @@
 				6CAAC4B81D6EA6A300D760B6 /* NSObject+YYModel.m in Sources */,
 				6CAAC4D61D6EB21200D760B6 /* Body.m in Sources */,
 				6C523E3A1DA8C0B00021CA36 /* NSString+AGMovieTime.m in Sources */,
+				6C585E471DC159010097BE8B /* LiveRecommendRecommendData.m in Sources */,
 				6CAA7EC61D8551100012CF56 /* OwnerExt.m in Sources */,
 				6CAAC5421D70F88900D760B6 /* BaseCollectionReusableView.m in Sources */,
 				6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */,
@@ -1352,16 +1486,24 @@
 				6C28D0F11DB3CCAF00EA30BD /* Bungumi_RecommendCell.m in Sources */,
 				6CAAC4B71D6EA6A300D760B6 /* UIView+Frame.m in Sources */,
 				6CAAC4951D6BF70B00D760B6 /* MineViewController.m in Sources */,
+				6C585E501DC20C6B0097BE8B /* LiveHeaderView.m in Sources */,
 				6C6459BF1DB0D2EB0051A5EC /* BungumiSerializing.m in Sources */,
 				6C28D1471DB4CA8400EA30BD /* BungumiRecommend.m in Sources */,
+				6C585E2D1DC151640097BE8B /* LivePartition_Partition.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
 				6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */,
+				6C585E2E1DC151640097BE8B /* LiveRootClass.m in Sources */,
+				6C585E631DC778590097BE8B /* LiveViewCell.m in Sources */,
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
 				6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */,
 				6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */,
 				6C28D0E21DB228A300EA30BD /* Bungumi_UnfinishedCell.m in Sources */,
 				6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */,
+				6C585E2C1DC151640097BE8B /* LiveOwner.m in Sources */,
+				6C585E2A1DC151640097BE8B /* LiveData.m in Sources */,
+				6C585E481DC159010097BE8B /* LiveRecommendRootClass.m in Sources */,
 				6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */,
+				6C585E161DC14D140097BE8B /* LiveViewController.m in Sources */,
 				6CAAC4C01D6EA75600D760B6 /* HomeViewController.m in Sources */,
 				6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */,
 				6CAA7EC41D8551100012CF56 /* Movie.m in Sources */,
@@ -1369,6 +1511,7 @@
 				6CAAC4D71D6EB21200D760B6 /* Bottom.m in Sources */,
 				6CAA7E771D845FEF0012CF56 /* AGScrollFrameController.m in Sources */,
 				6CAA7E751D845FEF0012CF56 /* HotPromoteScrollView.m in Sources */,
+				6C585E4C1DC208DC0097BE8B /* LiveCollectionView.m in Sources */,
 				6C2557101D6BD96F0072F5B0 /* MainTabBarController.m in Sources */,
 				6CAA7ECB1D8551100012CF56 /* Right.m in Sources */,
 				6CAAC48F1D6BF6F600D760B6 /* CategoryViewController.m in Sources */,
@@ -1377,25 +1520,31 @@
 				6CAA7E671D845FEF0012CF56 /* HotPromoteDetailViewController.m in Sources */,
 				6CAAC4D91D6EB21200D760B6 /* Ext.m in Sources */,
 				6CAA7ED51D8555E50012CF56 /* Eleclist.m in Sources */,
+				6C585E281DC151640097BE8B /* LiveBanner.m in Sources */,
 				6CAAC4981D6BF72100D760B6 /* DiscoveryViewController.m in Sources */,
+				6C585E441DC159010097BE8B /* LiveRecommendData.m in Sources */,
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
 				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */,
 				6C6459CA1DB0E3980051A5EC /* BungumiCaterotyTouchView.m in Sources */,
+				6C585E291DC151640097BE8B /* LiveCover.m in Sources */,
 				6CAA7EC21D8551100012CF56 /* Elec.m in Sources */,
 				6CAAC4E91D6EED4D00D760B6 /* Recommend_RecommendHeaderView.m in Sources */,
 				6CAAC4D81D6EB21200D760B6 /* Data.m in Sources */,
+				6C585E2B1DC151640097BE8B /* LiveEntranceIcon.m in Sources */,
 				6C28D0E61DB364D800EA30BD /* Bungumi_PreviousHeaderView.m in Sources */,
+				6C585E5F1DC761D70097BE8B /* RecommendLive.m in Sources */,
 				6C28D0E91DB366FD00EA30BD /* Bungumi_PreviousCell.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
 				6CAAC4F81D6EF93100D760B6 /* BannerImageView.m in Sources */,
 				6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */,
-				6C4AADD01D80547100A656D6 /* Live.m in Sources */,
 				6C6459C51DB0D8C70051A5EC /* BungumiHeaderView.m in Sources */,
+				6C585E5C1DC268330097BE8B /* LiveSubIcon.m in Sources */,
 				6CAA7EF01D86A8760012CF56 /* H5_AVInfo.m in Sources */,
 				6C523E3B1DA8C0B00021CA36 /* AGMovieViewController.m in Sources */,
 				6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */,
+				6C585E591DC25FC30097BE8B /* LivePartition.m in Sources */,
 				6CAAC4F51D6EF93100D760B6 /* AGCircularScrollView.m in Sources */,
 				6CAA7ECE1D8551100012CF56 /* Vip.m in Sources */,
 				6CAAC47D1D6BF58900D760B6 /* CategoryNavigationController.m in Sources */,
@@ -1411,6 +1560,7 @@
 				6CAAC4B91D6EA6A300D760B6 /* YYClassInfo.m in Sources */,
 				6C6459BD1DB0D2EB0051A5EC /* BungumiResult.m in Sources */,
 				6CAA7ECD1D8551100012CF56 /* Stat.m in Sources */,
+				6C585E551DC2505C0097BE8B /* LivePartitionHeaderView.m in Sources */,
 				6CAAC5521D77B52100D760B6 /* NSString+AGAdd.m in Sources */,
 				6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */,
 				6C6459BE1DB0D2EB0051A5EC /* BungumiRootClass.m in Sources */,

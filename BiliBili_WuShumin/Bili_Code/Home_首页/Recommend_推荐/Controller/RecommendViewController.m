@@ -100,7 +100,7 @@
             data = dic[@"data"];
             // >2. 给 body 的 liveModel 赋值
             [data enumerateObjectsWithOptions:(NSEnumerationConcurrent) usingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                Live *live = [[Live alloc] initWithDictionary:obj];
+                RecommendLive *live = [[RecommendLive alloc] initWithDictionary:obj];
                 sectionData.body[idx].liveModel = live;
             }];
             

@@ -10,17 +10,23 @@
 #import "UIImageView+WebCache.h"
 #import "Masonry.h"
 
+@interface Bungumi_RecommendCell ()
+
+@end
+
 @implementation Bungumi_RecommendCell
+
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
     self.contentView.backgroundColor = [UIColor whiteColor];
-    // 禁用 file's owner 的
+    
+    // 注意： 一定要 禁用 file's owner 的 autoLayout
     WS(ws);
     [self.contentView makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.equalTo(@(0));
-        make.width.equalTo(@(351));
+        make.width.equalTo(@(screenWidth - 12 * 2)); // 这里必须给定width的值
         make.bottom.equalTo(ws.descLabel.bottom).offset(10); // content.bottom = ws.desLabel.bottom + 10
     }];
     
@@ -42,6 +48,7 @@
         make.width.equalTo(ws.titleLabel);
         make.height.greaterThanOrEqualTo(@(14)).priority(1000); // 这里给1000 优先级
     }];
+     
 }
 
 - (void)setRecommend:(BungumiRecommend *)recommend {
@@ -62,9 +69,10 @@
     CGSize size = [self.contentView systemLayoutSizeFittingSize:layoutAttributes.size];
     CGRect newFrame = layoutAttributes.frame;
     newFrame.size.height = size.height;
-    newFrame.size.width = screenWidth - 12 * 2;
+    newFrame.size.width = screenWidth - 12 * 2; // 不同屏幕适配
     layoutAttributes.frame = newFrame;
     return layoutAttributes;
+
 }
 
 @end

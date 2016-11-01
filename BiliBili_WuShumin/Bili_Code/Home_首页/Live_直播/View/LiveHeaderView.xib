@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LiveHeaderView" id="Qx4-n4-2FC" userLabel="LiveHeaderView" customClass="LiveHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFr-gJ-SJ1" userLabel="TopView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="110"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="hFr-gJ-SJ1" secondAttribute="height" multiplier="75:22" id="6Zb-97-PJz"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hf1-QO-izN">
+                    <rect key="frame" x="20" y="130" width="335" height="55"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myg-jg-TEP" userLabel="关注主播" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="1" green="0.32283825630000001" blue="0.28225359259999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="feJ-ui-sGj"/>
+                                <constraint firstAttribute="height" constant="55" id="sHM-A8-nbM"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qla-9V-4Lj" userLabel="直播中心" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="93" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="1" green="0.3397154355" blue="0.83482642600000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="55" id="LcQ-jf-VVY"/>
+                                <constraint firstAttribute="height" constant="55" id="o7N-6e-Oux"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-Hx-xDW" userLabel="搜索房间" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="186" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="0.52425303440000004" green="1" blue="0.11776956349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="GJA-wd-icW"/>
+                                <constraint firstAttribute="width" constant="55" id="VWQ-Eb-BmY"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMK-2F-qAS" userLabel="全部分类" customClass="BungumiCaterotyTouchView">
+                            <rect key="frame" x="280" y="0.0" width="55" height="55"/>
+                            <color key="backgroundColor" red="1" green="0.62355606149999998" blue="0.082593328950000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="LWO-6I-RSx"/>
+                                <constraint firstAttribute="width" constant="55" id="yQG-wa-aR7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="PTB-qp-Qnz"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXQ-C6-3U0" userLabel="DownView">
+                    <rect key="frame" x="12" y="203" width="351" height="20"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_region_icon_live_v2" translatesAutoresizingMaskIntoConstraints="NO" id="JlK-kV-shS">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="2wr-Y9-yZC"/>
+                                <constraint firstAttribute="height" constant="20" id="sWa-zq-AFw"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_rightArrowShadow" translatesAutoresizingMaskIntoConstraints="NO" id="IN7-hQ-ETw">
+                            <rect key="frame" x="331" y="0.0" width="20" height="20"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐主播" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFx-ra-7or">
+                            <rect key="frame" x="28" y="2" width="56" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个主播，进去看看" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tap-UX-ndM">
+                            <rect key="frame" x="219" y="2" width="104" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1080" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MR3-Cq-feQ">
+                            <rect key="frame" x="188" y="2" width="31" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="1" green="0.56011969269999995" blue="0.73446201119999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Vo-YY-I4z">
+                            <rect key="frame" x="161" y="2" width="26" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="MR3-Cq-feQ" secondAttribute="bottom" id="1xB-tR-yxm"/>
+                        <constraint firstItem="MR3-Cq-feQ" firstAttribute="centerY" secondItem="Tap-UX-ndM" secondAttribute="centerY" id="5Mo-VX-bNY"/>
+                        <constraint firstItem="IFx-ra-7or" firstAttribute="centerY" secondItem="JlK-kV-shS" secondAttribute="centerY" id="CYP-SG-n9C"/>
+                        <constraint firstItem="MR3-Cq-feQ" firstAttribute="leading" secondItem="6Vo-YY-I4z" secondAttribute="trailing" constant="1" id="DLL-aA-fdp"/>
+                        <constraint firstItem="IN7-hQ-ETw" firstAttribute="centerY" secondItem="Tap-UX-ndM" secondAttribute="centerY" id="Frr-Xc-6N0"/>
+                        <constraint firstItem="IN7-hQ-ETw" firstAttribute="leading" secondItem="Tap-UX-ndM" secondAttribute="trailing" constant="8" id="GCZ-Il-EJ0"/>
+                        <constraint firstItem="Tap-UX-ndM" firstAttribute="leading" secondItem="MR3-Cq-feQ" secondAttribute="trailing" id="Psn-Rh-kD1"/>
+                        <constraint firstItem="IFx-ra-7or" firstAttribute="leading" secondItem="JlK-kV-shS" secondAttribute="trailing" constant="8" id="YMs-71-yp1"/>
+                        <constraint firstAttribute="trailing" secondItem="IN7-hQ-ETw" secondAttribute="trailing" id="cQ3-zf-mGs"/>
+                        <constraint firstItem="IN7-hQ-ETw" firstAttribute="centerY" secondItem="qXQ-C6-3U0" secondAttribute="centerY" id="gnO-xx-BWN"/>
+                        <constraint firstItem="JlK-kV-shS" firstAttribute="top" secondItem="qXQ-C6-3U0" secondAttribute="top" id="qEe-Sj-7Pi"/>
+                        <constraint firstItem="6Vo-YY-I4z" firstAttribute="centerY" secondItem="MR3-Cq-feQ" secondAttribute="centerY" id="qTQ-dn-ZOk"/>
+                        <constraint firstAttribute="height" constant="20" id="vrd-xi-FfX"/>
+                        <constraint firstItem="JlK-kV-shS" firstAttribute="leading" secondItem="qXQ-C6-3U0" secondAttribute="leading" id="yEk-71-ZtR"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="1xB-tR-yxm"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Hf1-QO-izN" secondAttribute="trailing" constant="20" id="61f-AN-syw"/>
+                <constraint firstItem="hFr-gJ-SJ1" firstAttribute="top" secondItem="Qx4-n4-2FC" secondAttribute="top" id="7yX-sq-BmL"/>
+                <constraint firstAttribute="trailing" secondItem="qXQ-C6-3U0" secondAttribute="trailing" constant="12" id="Iq0-hi-XI9"/>
+                <constraint firstItem="Hf1-QO-izN" firstAttribute="top" secondItem="hFr-gJ-SJ1" secondAttribute="bottom" constant="20" id="aRr-9P-BH2"/>
+                <constraint firstItem="hFr-gJ-SJ1" firstAttribute="leading" secondItem="Qx4-n4-2FC" secondAttribute="leading" id="c8n-zo-o8N"/>
+                <constraint firstAttribute="bottom" secondItem="qXQ-C6-3U0" secondAttribute="bottom" id="iU5-Fk-AIx"/>
+                <constraint firstItem="Hf1-QO-izN" firstAttribute="leading" secondItem="Qx4-n4-2FC" secondAttribute="leading" constant="20" id="lzO-fw-ucH"/>
+                <constraint firstItem="qXQ-C6-3U0" firstAttribute="leading" secondItem="Qx4-n4-2FC" secondAttribute="leading" constant="12" id="nCt-tz-GDP"/>
+                <constraint firstItem="hFr-gJ-SJ1" firstAttribute="width" secondItem="Qx4-n4-2FC" secondAttribute="width" id="vuz-Ce-6ke"/>
+            </constraints>
+            <connections>
+                <outlet property="allCategoryTouchView" destination="QMK-2F-qAS" id="IYz-au-pKV"/>
+                <outlet property="archorCountLabel" destination="MR3-Cq-feQ" id="ieZ-td-qqU"/>
+                <outlet property="attentionArchorTouchView" destination="myg-jg-TEP" id="JEt-Un-UGk"/>
+                <outlet property="downView" destination="qXQ-C6-3U0" id="ON1-5Q-9fh"/>
+                <outlet property="liveCenterTouchView" destination="qla-9V-4Lj" id="5T1-Uf-uIE"/>
+                <outlet property="searchRoomTouchView" destination="T9Z-Hx-xDW" id="RAN-MD-pPv"/>
+                <outlet property="topView" destination="hFr-gJ-SJ1" id="NrE-OB-E2l"/>
+            </connections>
+            <point key="canvasLocation" x="221.5" y="220.5"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="common_rightArrowShadow" width="20" height="20"/>
+        <image name="home_region_icon_live_v2" width="20" height="20"/>
+    </resources>
+</document>

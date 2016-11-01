@@ -10,6 +10,14 @@
 #define BiliBiliAPI_h
 
 //首页
+#pragma mark- 直播页面
+// 直播页面
+#define Home_LiveURLString @"http://live.bilibili.com/AppNewIndex/common?scale=2&device=phone&platform=ios"
+// 直播推荐
+#define Live_RecommendURLString @"http://live.bilibili.com/AppNewIndex/recommend?access_key=a97c86bad48e821156213b9728ba3cec&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3910&buvid=f6f22b968fe7729b6af9d7e3a8dd3359&device=phone&mobi_app=iphone&platform=ios&scale=2&sign=1792d55eab8630d25b69fecb27da49c8&ts=1476954237"
+
+
+#pragma mark- - 推荐页面
 // 推荐页面
 #define Home_RecommendURLString @"http://app.bilibili.com/x/v2/show?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3470&channel=appstore&device=phone&mobi_app=iphone&plat=1&platform=ios&sign=dc6f3842d84163f3ad71727fc75c3ba7&ts=1472185514&warm=1"
 // 热门推荐

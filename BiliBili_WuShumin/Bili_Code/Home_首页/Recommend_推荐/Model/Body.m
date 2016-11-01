@@ -143,7 +143,7 @@
 
 #pragma mark- setLive
 
-- (void)setLiveModel:(Live *)liveModel {
+- (void)setLiveModel:(RecommendLive *)liveModel {
     if (liveModel != nil) {
         _liveModel = liveModel;
         
