@@ -24,6 +24,9 @@
 #import "RecommendViewController.h"
 #import "BungumiViewController.h"
 
+// category_childViewController
+#import "CategoryIndexViewController.h"
+
 @interface MainTabBarController ()
 
 @property (nonatomic, retain) HomeNavigationController *homeNC;
@@ -55,17 +58,29 @@
         bungumiVC.view.backgroundColor = [UIColor blueColor];
         self.homeVC = [[HomeViewController alloc] init];
         _homeVC.viewControllers = @[liveVC, recommendVC, bungumiVC];
+        _homeVC.menuTitleArray = @[@"直播", @"推荐", @"番剧"];
+        _homeVC.selectedIndex = 1;
         self.homeNC = [[HomeNavigationController alloc] initWithRootViewController:_homeVC];
         
+        // category
+        CategoryIndexViewController *categoryIndexVC = [[CategoryIndexViewController alloc] init];
+        categoryIndexVC.view.backgroundColor = [UIColor redColor];
         self.categoryVC = [[CategoryViewController alloc] init];
+        _categoryVC.viewControllers = @[categoryIndexVC];
+        _categoryVC.menuTitleArray = @[@"分区"];
+        _categoryVC.isHiddrenUnderLine = YES;
+        _categoryVC.selectedIndex = 0;
         self.categoryNC = [[CategoryNavigationController alloc] initWithRootViewController:_categoryVC];
         
+        // attention
         self.attentionVC = [[AttentionViewController alloc] init];
         self.attentionNC = [[AttentionNavigationController alloc] initWithRootViewController:_attentionVC];
         
+        // discovery
         self.discoveryVC = [[DiscoveryViewController alloc] init];
         self.discoveryNC = [[DiscoveryNavigationController alloc] initWithRootViewController:_discoveryVC];
         
+        // mine
         self.mineVC = [[MineViewController alloc] init];
         self.mineNC = [[MineNavigationController alloc] initWithRootViewController:_mineVC];
         

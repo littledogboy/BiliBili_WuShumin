@@ -9,11 +9,22 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#include "BiliBiliKit.h" // 导入分类
-#include "BiliBiliAPI.h" // api
-#include "AGHTTPURLHandle.h" // 网络请求
+#import "BiliBiliKit.h" // 导入分类
+#import "BiliBiliAPI.h" // api
+#import "AGHTTPURLHandle.h" // 网络请求
 
-#pragma mak- screenWidthHeight
+
+#pragma mark- Masonry
+#ifdef  __OBJC__
+
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+
+#endif
+#import "Masonry.h" // masonry
+
+
+#pragma mark- screenWidthHeight
 
 #define screenWidth [UIScreen mainScreen].bounds.size.width
 #define screenHeight [UIScreen mainScreen].bounds.size.height
@@ -35,18 +46,11 @@
 
 
 #pragma mark- MACRO
-#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#define WS(weakSelf) __weak __typeof(self)weakSelf = self;
+#define REQUIRES_SUPER NS_REQUIERS_SUPER
 
 
-#pragma mark- Masonry
-#ifdef  __OBJC__
 
-#define MAS_SHORTHAND
-#define MAS_SHORTHAND_GLOBALS
-
-//#import "Masonry.h" // 写在宏定义的后面
-
-#endif
 
 
 #endif /* PrefixHeader_pch */

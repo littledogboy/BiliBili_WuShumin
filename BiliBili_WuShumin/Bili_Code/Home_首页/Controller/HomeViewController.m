@@ -27,10 +27,21 @@
 @interface HomeViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, assign) BOOL isSelected; // button是否选中
+@property (nonatomic, assign) CGFloat menuViewWidth;
 
 @end
 
 @implementation HomeViewController
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        // 默认值
+        self.selectedIndex = 0;
+        self.isHiddrenUnderLine = NO;
+    }
+    return self;
+}
 
 - (void)setViewControllers:(NSArray *)viewControllers {
     if (viewControllers != nil) {
@@ -62,22 +73,27 @@
 }
 
 - (void)addMenuView {
-    CGFloat menuX = (screenWidth - menuWidth) / 2.0;
-    self.menuView = [[UIScrollView alloc] initWithFrame:CGRectMake(menuX, 20, menuWidth, menuHeiht)];
+    self.menuViewWidth = self.menuTitleArray.count * titleWidth + (self.menuTitleArray.count - 1) * titleMargin;
+    CGFloat menuX = (screenWidth - self.menuViewWidth) / 2.0;
+    self.menuView = [[UIScrollView alloc] initWithFrame:CGRectMake(menuX, 20, self.menuViewWidth, menuHeiht)];
     self.menuView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_menuView];
 }
 
+- (void)setMenuTitleArray:(NSArray *)menuTitleArray {
+    if (_menuTitleArray != menuTitleArray) {
+        _menuTitleArray = menuTitleArray;
+    }
+}
+
 - (void)setMenuTitle {
-    self.selectedIndex = 1; //
     _lastSelectedIndex = _selectedIndex;
-    
-    self.menuTitleArray = @[@"直播", @"推荐", @"番剧"]; //
     
     // 设置滚动条
     CGFloat underLineX = _selectedIndex * (titleWidth + titleMargin);
     CGFloat underLineY = menuHeiht - underlineBottom - underlineHeight;
     self.underLineView = [[UIView alloc] initWithFrame:CGRectMake(underLineX, underLineY, titleWidth, underlineHeight)];
+    self.underLineView.hidden = self.isHiddrenUnderLine;
     self.underLineView.backgroundColor = sukura_selectedColor;
     [self.menuView addSubview:_underLineView];
     
@@ -98,7 +114,9 @@
         [button setTitleColor:sukura_selectedColor forState:(UIControlStateHighlighted)];
         
         // action
-        [button addTarget:self action:@selector(menuButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        if (self.childViewControllers.count > 1) {
+            [button addTarget:self action:@selector(menuButtonAction:) forControlEvents:(UIControlEventTouchUpInside)];
+        }
         
         // add
         [self.menuView addSubview:button];
@@ -240,6 +258,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark- 状态条颜色
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 
 /*
 #pragma mark - Navigation

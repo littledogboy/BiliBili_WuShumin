@@ -121,9 +121,10 @@ forCellWithReuseIdentifier:kLiveViewCell];
 
 #pragma mark- UICollectionViewDataSource
 
-- (NSInteger)numberOfSections {
-    return 1;
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return self.livePartitionList.count;
 }
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -136,6 +137,8 @@ forCellWithReuseIdentifier:kLiveViewCell];
     liveViewCell.live = [self liveOfIndexPath:indexPath];
     if (indexPath.section == 0) {
         liveViewCell.isHiddrenAreaButton = NO;
+    } else {
+        liveViewCell.isHiddrenAreaButton = YES;
     }
     cell = liveViewCell;
     return cell;

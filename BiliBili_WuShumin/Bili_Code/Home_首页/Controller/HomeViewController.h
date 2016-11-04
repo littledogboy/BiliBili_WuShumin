@@ -28,6 +28,7 @@
 // 滚动条underLineView
 @property (nonatomic, strong) UIView *underLineView;
 @property (nonatomic, strong) UIColor *underLineColor; // 滚动条颜色
+@property (nonatomic, assign) BOOL isHiddrenUnderLine; // 是否显示滚动条
 
 // 子视图控制器
 @property (nonatomic, copy) NSArray *viewControllers; // 子视图控制器

@@ -84,6 +84,7 @@
             </constraints>
             <connections>
                 <outlet property="countLabel" destination="ZH3-ll-s6i" id="eYX-Ga-d8R"/>
+                <outlet property="downView" destination="lMY-fp-RBu" id="odl-J7-Llt"/>
                 <outlet property="iconImageView" destination="nS3-FX-tuB" id="qcu-8U-Agq"/>
                 <outlet property="title" destination="zeA-Ww-Sbt" id="m9e-O7-LsR"/>
             </connections>

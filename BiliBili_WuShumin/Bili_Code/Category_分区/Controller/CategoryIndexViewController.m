@@ -1,18 +1,18 @@
 //
-//  CategoryNavigationController.m
+//  CategoryIndexViewController.m
 //  BiliBili_WuShumin
 //
-//  Created by 吴书敏 on 16/8/23.
+//  Created by 吴书敏 on 16/11/2.
 //  Copyright © 2016年 littledogboy. All rights reserved.
 //
 
-#import "CategoryNavigationController.h"
+#import "CategoryIndexViewController.h"
 
-@interface CategoryNavigationController ()
+@interface CategoryIndexViewController ()
 
 @end
 
-@implementation CategoryNavigationController
+@implementation CategoryIndexViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -12,6 +12,7 @@
 
 @interface LivePartitionHeaderView ()
 
+@property (strong, nonatomic) IBOutlet UIView *downView;
 @property (strong, nonatomic) IBOutlet UIImageView *iconImageView;
 
 @property (strong, nonatomic) IBOutlet UILabel *title;
@@ -25,6 +26,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.downView.backgroundColor = RecommendGrayColor;
 }
 
 - (void)setPartition:(LivePartition_Partition *)partition {
