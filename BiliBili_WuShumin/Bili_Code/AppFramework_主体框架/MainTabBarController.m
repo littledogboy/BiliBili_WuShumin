@@ -53,7 +53,6 @@
         LiveViewController *liveVC = [[LiveViewController alloc] init];
         liveVC.view.backgroundColor = [UIColor redColor];
         RecommendViewController *recommendVC = [[RecommendViewController alloc] init];
-        recommendVC.view.backgroundColor = [UIColor yellowColor];
         BungumiViewController *bungumiVC = [[BungumiViewController alloc] init];
         bungumiVC.view.backgroundColor = [UIColor blueColor];
         self.homeVC = [[HomeViewController alloc] init];

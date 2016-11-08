@@ -17,13 +17,15 @@
 #import "Recommend_RefreshCollectionViewCell.h"
 #import "AGHTTPURLHandle.h"
 #import "URLRouter.h"
-
+#import "AGRefreshCollectionView.h"
+#import "AGRefreshViewTwo.h"
 #import "HotPromoteDetailViewController.h"
 
 
 #define CollectionEdgeInsets UIEdgeInsetsMake(12, 12, 8, 12)
 #define LineSpacing 0 // 上下间距为 0
 #define RowSpacing 12 // 左右间距为 12
+
 
 #define r_recommendHeaderViewIdentifier @"r_recommendHeaderView"
 #define r_liveHeaderViewIdentifier @"r_liveHeaderView"
@@ -40,8 +42,7 @@
 @property (nonatomic, strong) NSMutableArray *refreshURLStringArray;
 
 // view
-@property (nonatomic, strong) UICollectionView *recommendCollectionView;
-
+@property (nonatomic, strong) AGRefreshCollectionView *recommendCollectionView;
 @property (nonatomic, strong) Recommend_RefreshCollectionViewCell *refreshCell;
 
 @end
@@ -67,6 +68,7 @@
         // 进入主线程刷新数据
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.recommendCollectionView reloadData];
+            [self.recommendCollectionView.refreshView endRefresh];
         });
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
@@ -143,26 +145,19 @@
 }
 
 - (void)addCollectionView {
-    // flowLayout
-    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.sectionInset = CollectionEdgeInsets;
-    CGFloat itemWidth = (screenWidth - 3 * 12) / 2.0;
-    CGFloat itemHeight = itemWidth * 143 / 169.5 + 12;
-    flowLayout.itemSize = CGSizeMake(itemWidth, itemHeight);
-    flowLayout.minimumLineSpacing = LineSpacing;
-    flowLayout.minimumInteritemSpacing = RowSpacing;
-    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    
     // collectionView
-    self.recommendCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight - 54 - 49) collectionViewLayout:flowLayout];
-    self.recommendCollectionView.alwaysBounceVertical = YES;
-    self.recommendCollectionView.backgroundColor = SAKURACOLOR;
-    self.recommendCollectionView.backgroundView.backgroundColor = SAKURACOLOR;
-    _recommendCollectionView.backgroundView.layer.cornerRadius = 6;
-    _recommendCollectionView.backgroundView.layer.masksToBounds = YES;
+    self.recommendCollectionView = [[AGRefreshCollectionView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight - 54 - 49 + 8)];
+//    _recommendCollectionView.backgroundColor = SAKURACOLOR;
+//    _recommendCollectionView.backgroundView.backgroundColor = RecommendGrayColor;
     _recommendCollectionView.delegate = self;
     _recommendCollectionView.dataSource = self;
-    _recommendCollectionView.backgroundColor = RGBCOLOR(244, 244, 244);
+    [self.view addSubview:_recommendCollectionView];
+
+    //
+    WS(weakSelf);
+    [self.recommendCollectionView addRefreshViewWithFrame:self.recommendCollectionView.frame refreshingBlock:^{
+        [weakSelf reloadData];
+    }];
     
     // regist header
     [_recommendCollectionView
@@ -189,7 +184,6 @@
     [_recommendCollectionView
      registerNib:[UINib nibWithNibName:NSStringFromClass([Recommend_RefreshCollectionViewCell class])
           bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:r_refreshCellIdentifier];
-    [self.view addSubview:_recommendCollectionView];
 }
 
 - (void)loadRefreshURLStringArray {
@@ -214,6 +208,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = SAKURACOLOR;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self reloadData];
     [self addCollectionView];
