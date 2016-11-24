@@ -51,9 +51,21 @@
         
         self.backgroundView = [[UIView alloc] init];
         self.backgroundView.backgroundColor = GrayColor;
-       
-        // registCell
-        [self registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"baseCell"];
+    }
+    return self;
+}
+
+
+- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
+    self = [super initWithFrame:frame collectionViewLayout:layout];
+    if (self) {
+        self.alwaysBounceVertical = YES;
+        self.backgroundColor = SAKURACOLOR;
+        self.layer.cornerRadius = 8.0;
+        self.layer.masksToBounds = YES;
+        
+        self.backgroundView = [[UIView alloc] init];
+        self.backgroundView.backgroundColor = GrayColor;
     }
     return self;
 }

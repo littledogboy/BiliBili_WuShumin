@@ -20,6 +20,7 @@ typedef NS_ENUM(NSUInteger, AGScrollFrameControllerType)
 // 菜单滚动条的宽度 高度
 @property (nonatomic, assign) CGFloat menuWidth;
 @property (nonatomic, assign) CGFloat menuHeight;
+@property (nonatomic, strong) UIColor *menuViewBGColor;
 
 @property (nonatomic, copy) NSArray *menuTitleArray; // 菜单标题
 
@@ -34,5 +35,12 @@ typedef NS_ENUM(NSUInteger, AGScrollFrameControllerType)
 @property (nonatomic, copy) NSArray *viewControllers;
 
 // 自定义初始化方法
+- (instancetype)initWithMenuFrame:(CGRect)menuFrame
+                       titleArray:(NSArray *)titleArray
+                   selectedIndex:(NSInteger)selectedIndex
+                  menuViewBGColor:(UIColor *)menuViewBGColor
+               titleSelectedColor:(UIColor *)titleSelectedColor
+             titleUnSelectedColor:(UIColor *)titleUnSelectedColor
+                  viewControllers:(NSArray *)viewControllers;
 
 @end

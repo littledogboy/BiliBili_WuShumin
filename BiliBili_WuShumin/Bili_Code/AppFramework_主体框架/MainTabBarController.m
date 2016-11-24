@@ -51,10 +51,11 @@
     if (self) {
         // homeVC
         LiveViewController *liveVC = [[LiveViewController alloc] init];
-        liveVC.view.backgroundColor = [UIColor redColor];
+        liveVC.view.backgroundColor = SAKURACOLOR;
         RecommendViewController *recommendVC = [[RecommendViewController alloc] init];
+        recommendVC.view.backgroundColor = SAKURACOLOR;
         BungumiViewController *bungumiVC = [[BungumiViewController alloc] init];
-        bungumiVC.view.backgroundColor = [UIColor blueColor];
+        bungumiVC.view.backgroundColor = SAKURACOLOR;
         self.homeVC = [[HomeViewController alloc] init];
         _homeVC.viewControllers = @[liveVC, recommendVC, bungumiVC];
         _homeVC.menuTitleArray = @[@"直播", @"推荐", @"番剧"];
@@ -115,6 +116,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotate {
+    return self.selectedViewController.shouldAutorotate;
 }
 
 

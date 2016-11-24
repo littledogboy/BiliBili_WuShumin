@@ -8,7 +8,6 @@
 
 #import "LiveCollectionView.h"
 #import "LiveRecommendData.h"
-#import "LiveData.h"
 
 #import "LiveHeaderView.h"
 #import "LivePartitionHeaderView.h"
@@ -51,7 +50,7 @@
         self.collectionViewLayout = flowLayout;
         self.delegate = self;
         self.dataSource = self;
-        self.backgroundColor = RecommendGrayColor;
+        self.backgroundColor = SAKURACOLOR;
         
         // register header
         [self registerNib:[UINib nibWithNibName:@"LiveHeaderView" bundle:[NSBundle mainBundle]]
@@ -69,8 +68,7 @@ forCellWithReuseIdentifier:kLiveViewCell];
 }
 
 
-// 重写reloadData
-
+// 重写reloadData ， 重新组合数据
 - (void)reloadData {
     // 重新组合数据
     [self collectData];
@@ -187,6 +185,14 @@ forCellWithReuseIdentifier:kLiveViewCell];
     
     return CGSizeZero;
 }
+
+
+#pragma mark- UICollectionViewDelegate
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.handleDidSelectedItem([self liveOfIndexPath:indexPath]);
+}
+
 
 
 

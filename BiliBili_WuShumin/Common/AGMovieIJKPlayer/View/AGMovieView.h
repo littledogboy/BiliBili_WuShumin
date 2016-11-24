@@ -14,7 +14,7 @@
 
 @property (nonatomic, copy) NSArray<NSURL *> *movieURLArray;
 
-@property (nonatomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *ijkPlayer;
+@property (nonatomic, strong) IJKFFMoviePlayerController<IJKMediaPlayback> *ijkPlayer; 
 
 - (void)play;
 

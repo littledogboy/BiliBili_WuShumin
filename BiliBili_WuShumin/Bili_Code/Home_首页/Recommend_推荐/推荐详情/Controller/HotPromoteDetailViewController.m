@@ -192,7 +192,6 @@
 
 - (void)scrollAnimation:(NSNotification *)notification
 {
-#warning "滑动太快的时候 contentOffset 不连续"
 
     CGFloat offstar = 0.0;
     CGFloat offend  = 210 - 64.0;

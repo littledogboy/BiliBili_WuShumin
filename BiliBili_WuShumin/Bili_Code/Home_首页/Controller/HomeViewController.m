@@ -259,9 +259,13 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark- 状态条颜色
+#pragma mark- 状态条颜色 旋转
 - (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+    return [(UIViewController *)self.viewControllers[self.selectedIndex] preferredStatusBarStyle];
+}
+
+- (BOOL)shouldAutorotate {
+    return [(UIViewController *)self.viewControllers[self.selectedIndex] shouldAutorotate];
 }
 
 

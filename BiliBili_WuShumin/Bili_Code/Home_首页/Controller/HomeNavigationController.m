@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
 }
 
-// barStyle样式
+//barStyle样式
 - (UIViewController *)childViewControllerForStatusBarStyle {
     return self.topViewController;
 }
@@ -29,6 +29,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotate {
+    return self.topViewController.shouldAutorotate;
 }
 
 /*

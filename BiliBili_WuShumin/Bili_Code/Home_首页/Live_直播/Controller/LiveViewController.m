@@ -11,6 +11,10 @@
 #import "LiveRecommendRootClass.h"
 #import "AGHTTPURLHandle.h"
 #import "LiveCollectionView.h"
+#import "AGRefreshViewTwo.h"
+#import "AGRefreshCollectionView.h"
+
+#import "LivePlayViewController.h" // 播放直播
 
 @interface LiveViewController ()
 
@@ -30,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = SAKURACOLOR;
     [self getData];
     [self addCollectionView];
     // Do any additional setup after loading the view.
@@ -56,6 +61,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.liveView reloadData];
+                [self.liveView.refreshView endRefresh];
             });
             
         } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -69,6 +75,30 @@
 - (void)addCollectionView {
     self.liveView = [[LiveCollectionView alloc] initWithFrame:kHomeContentViewFrame];
     [self.view addSubview:self.liveView];
+    
+    WS(ws);
+    [self.liveView addRefreshViewWithFrame:self.liveView.frame refreshingBlock:^{
+        [ws getData];
+    }];
+    
+    // 点击事件
+    [self.liveView setHandleDidSelectedItem:^(Live *live) {
+        [ws handleDidSelectedItem:live];
+    }];
+}
+
+- (void)handleDidSelectedItem:(Live *)live {
+    LivePlayViewController *livePlayVC = [[LivePlayViewController alloc] init];
+    livePlayVC.liveURLString = live.playurl;
+    [self.navigationController pushViewController:livePlayVC animated:YES];
+}
+
+- (BOOL)shouldAutorotate {
+    return NO;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 /*

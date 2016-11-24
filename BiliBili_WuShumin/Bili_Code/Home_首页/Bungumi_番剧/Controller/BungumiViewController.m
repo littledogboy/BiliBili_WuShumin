@@ -14,6 +14,8 @@
 #import "Bungumi_PreviousHeaderView.h"
 #import "Bungumi_PreviousCell.h"
 #import "Bungumi_RecommendCell.h"
+#import "AGRefreshCollectionView.h"
+#import "AGRefreshViewTwo.h"
 
 #define CollectionEdgeInsets UIEdgeInsetsMake(12, 12, 8, 12)
 #define LineSpacing 12
@@ -27,7 +29,7 @@
 
 @interface BungumiViewController () <UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource>
 
-@property (nonatomic, strong) UICollectionView *bungumiCollectionView;
+@property (nonatomic, strong) AGRefreshCollectionView *bungumiCollectionView;
 @property (nonatomic, strong) BungumiResult *result;
 @property (nonatomic, strong) NSArray *serializingArray;
 @property (nonatomic, strong) NSArray *listArray;
@@ -41,6 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = SAKURACOLOR;
     self.isRecommendRequest = NO;
     [self addBungumiCollectionView];
     [self request];
@@ -65,11 +68,9 @@
     layout.scrollDirection = UICollectionViewScrollDirectionVertical;
     
     // collectionView
-    self.bungumiCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight - 54 - 49) collectionViewLayout:layout];
-    _bungumiCollectionView.alwaysBounceVertical = YES;
+    self.bungumiCollectionView = [[AGRefreshCollectionView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight - 54 - 49) collectionViewLayout:layout];
     _bungumiCollectionView.delegate = self;
     _bungumiCollectionView.dataSource = self;
-    _bungumiCollectionView.backgroundColor = RGBCOLOR(244, 244, 244);
     [self.view addSubview:_bungumiCollectionView];
     
     // regist cell
@@ -80,6 +81,12 @@
     // regist header
     [_bungumiCollectionView registerNib:[self nibWithClass:[BungumiHeaderView class]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kHeaderIdentifier];
     [_bungumiCollectionView registerNib:[self nibWithClass:[Bungumi_PreviousHeaderView class]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:kPreviousHeaderIdentifier];
+    
+    // 下拉刷新
+    WS(ws);
+    [self.bungumiCollectionView addRefreshViewWithFrame:self.bungumiCollectionView.frame refreshingBlock:^{
+        [ws request];
+    }];
 }
 
 #pragma mark- Request 
@@ -107,6 +114,7 @@
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.bungumiCollectionView reloadData];
+            [self.bungumiCollectionView.refreshView endRefresh];
         });
 //        self.isRecommendRequest = YES;
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -272,6 +280,11 @@
 
 #pragma mark- UICollectionViewDelegate
 
+
+#pragma mark- statusBar
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

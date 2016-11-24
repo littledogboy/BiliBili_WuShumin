@@ -40,6 +40,12 @@
 		6C40B4211DD163E90036987B /* common_rabbitBar_face3.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C40B4141DD163E90036987B /* common_rabbitBar_face3.png */; };
 		6C40B4221DD163E90036987B /* common_rabbitBar_face3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C40B4151DD163E90036987B /* common_rabbitBar_face3@2x.png */; };
 		6C40B4231DD163E90036987B /* common_rabbitBar_face3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C40B4161DD163E90036987B /* common_rabbitBar_face3@3x.png */; };
+		6C40B4851DDAAA2E0036987B /* LiveIJKPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40B4831DDAAA2E0036987B /* LiveIJKPlayerView.m */; };
+		6C40B4881DDAAA790036987B /* LivePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40B4871DDAAA790036987B /* LivePlayViewController.m */; };
+		6C40B48F1DDAB4F40036987B /* AGMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40B48B1DDAB4F40036987B /* AGMenuView.m */; };
+		6C40B4901DDAB4F40036987B /* AGScrollFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40B48D1DDAB4F40036987B /* AGScrollFrameController.m */; };
+		6C40B4911DDAB4F40036987B /* bg_underline_selected_44pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C40B48E1DDAB4F40036987B /* bg_underline_selected_44pt@2x.png */; };
+		6C40B4941DDAC3CA0036987B /* LivePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40B4931DDAC3CA0036987B /* LivePlayView.m */; };
 		6C4AADD31D805AAD00A656D6 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD21D805AAD00A656D6 /* List.m */; };
 		6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */; };
 		6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */; };
@@ -113,6 +119,9 @@
 		6C6459C71DB0D8E00051A5EC /* BungumiHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6459C61DB0D8E00051A5EC /* BungumiHeaderView.xib */; };
 		6C6459CA1DB0E3980051A5EC /* BungumiCaterotyTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459C91DB0E3980051A5EC /* BungumiCaterotyTouchView.m */; };
 		6C6459CE1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6459CD1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib */; };
+		6C93722A1DE5891E003680E7 /* UIButton+AGFillColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9372291DE5891E003680E7 /* UIButton+AGFillColor.m */; };
+		6C93722D1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C93722C1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m */; };
+		6C9372301DE6DA23003680E7 /* UIView+AGGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C93722F1DE6DA23003680E7 /* UIView+AGGetViewController.m */; };
 		6CA5EC9E1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */; };
 		6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA11DAB9CE9007752A0 /* URLRouter.m */; };
 		6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA21DAB9CE9007752A0 /* URLRouterConfig.m */; };
@@ -124,9 +133,6 @@
 		6CAA7E6B1D845FEF0012CF56 /* 播放按钮.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7E4A1D845FEF0012CF56 /* 播放按钮.png */; };
 		6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E5E1D845FEF0012CF56 /* HotPromoteNavigationView.m */; };
 		6CAA7E751D845FEF0012CF56 /* HotPromoteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E601D845FEF0012CF56 /* HotPromoteScrollView.m */; };
-		6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E631D845FEF0012CF56 /* AGMenuView.m */; };
-		6CAA7E771D845FEF0012CF56 /* AGScrollFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7E651D845FEF0012CF56 /* AGScrollFrameController.m */; };
-		6CAA7E781D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6CAA7E661D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png */; };
 		6CAA7EC21D8551100012CF56 /* Elec.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EA71D8551100012CF56 /* Elec.m */; };
 		6CAA7EC41D8551100012CF56 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EAB1D8551100012CF56 /* Movie.m */; };
 		6CAA7EC51D8551100012CF56 /* Owner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAA7EAD1D8551100012CF56 /* Owner.m */; };
@@ -261,6 +267,17 @@
 		6C40B4141DD163E90036987B /* common_rabbitBar_face3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = common_rabbitBar_face3.png; sourceTree = "<group>"; };
 		6C40B4151DD163E90036987B /* common_rabbitBar_face3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_rabbitBar_face3@2x.png"; sourceTree = "<group>"; };
 		6C40B4161DD163E90036987B /* common_rabbitBar_face3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_rabbitBar_face3@3x.png"; sourceTree = "<group>"; };
+		6C40B4821DDAAA2E0036987B /* LiveIJKPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiveIJKPlayerView.h; sourceTree = "<group>"; };
+		6C40B4831DDAAA2E0036987B /* LiveIJKPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiveIJKPlayerView.m; sourceTree = "<group>"; };
+		6C40B4861DDAAA790036987B /* LivePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePlayViewController.h; sourceTree = "<group>"; };
+		6C40B4871DDAAA790036987B /* LivePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePlayViewController.m; sourceTree = "<group>"; };
+		6C40B48A1DDAB4F40036987B /* AGMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMenuView.h; sourceTree = "<group>"; };
+		6C40B48B1DDAB4F40036987B /* AGMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMenuView.m; sourceTree = "<group>"; };
+		6C40B48C1DDAB4F40036987B /* AGScrollFrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGScrollFrameController.h; sourceTree = "<group>"; };
+		6C40B48D1DDAB4F40036987B /* AGScrollFrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGScrollFrameController.m; sourceTree = "<group>"; };
+		6C40B48E1DDAB4F40036987B /* bg_underline_selected_44pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_underline_selected_44pt@2x.png"; sourceTree = "<group>"; };
+		6C40B4921DDAC3CA0036987B /* LivePlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LivePlayView.h; sourceTree = "<group>"; };
+		6C40B4931DDAC3CA0036987B /* LivePlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LivePlayView.m; sourceTree = "<group>"; };
 		6C4AADD11D805AAD00A656D6 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		6C4AADD21D805AAD00A656D6 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		6C4AADD41D83724300A656D6 /* Recommend_LiveHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_LiveHeaderView.h; sourceTree = "<group>"; };
@@ -376,6 +393,12 @@
 		6C6459C81DB0E3980051A5EC /* BungumiCaterotyTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiCaterotyTouchView.h; sourceTree = "<group>"; };
 		6C6459C91DB0E3980051A5EC /* BungumiCaterotyTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiCaterotyTouchView.m; sourceTree = "<group>"; };
 		6C6459CD1DB0E3E50051A5EC /* BungumiCaterotyTouchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BungumiCaterotyTouchView.xib; sourceTree = "<group>"; };
+		6C9372281DE5891E003680E7 /* UIButton+AGFillColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+AGFillColor.h"; sourceTree = "<group>"; };
+		6C9372291DE5891E003680E7 /* UIButton+AGFillColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+AGFillColor.m"; sourceTree = "<group>"; };
+		6C93722B1DE5DAF1003680E7 /* AGLiveIJKPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGLiveIJKPlayerController.h; sourceTree = "<group>"; };
+		6C93722C1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLiveIJKPlayerController.m; sourceTree = "<group>"; };
+		6C93722E1DE6DA23003680E7 /* UIView+AGGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AGGetViewController.h"; sourceTree = "<group>"; };
+		6C93722F1DE6DA23003680E7 /* UIView+AGGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGGetViewController.m"; sourceTree = "<group>"; };
 		6CA5EC9C1DAB9C2F007752A0 /* UIViewController+AGGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AGGetViewController.h"; sourceTree = "<group>"; };
 		6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AGGetViewController.m"; sourceTree = "<group>"; };
 		6CA5ECA01DAB9CE9007752A0 /* URLRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRouter.h; sourceTree = "<group>"; };
@@ -395,11 +418,6 @@
 		6CAA7E5E1D845FEF0012CF56 /* HotPromoteNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPromoteNavigationView.m; sourceTree = "<group>"; };
 		6CAA7E5F1D845FEF0012CF56 /* HotPromoteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotPromoteScrollView.h; sourceTree = "<group>"; };
 		6CAA7E601D845FEF0012CF56 /* HotPromoteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotPromoteScrollView.m; sourceTree = "<group>"; };
-		6CAA7E621D845FEF0012CF56 /* AGMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMenuView.h; sourceTree = "<group>"; };
-		6CAA7E631D845FEF0012CF56 /* AGMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMenuView.m; sourceTree = "<group>"; };
-		6CAA7E641D845FEF0012CF56 /* AGScrollFrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGScrollFrameController.h; sourceTree = "<group>"; };
-		6CAA7E651D845FEF0012CF56 /* AGScrollFrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGScrollFrameController.m; sourceTree = "<group>"; };
-		6CAA7E661D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_underline_selected_44pt@2x.png"; sourceTree = "<group>"; };
 		6CAA7EA61D8551100012CF56 /* Elec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elec.h; sourceTree = "<group>"; };
 		6CAA7EA71D8551100012CF56 /* Elec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elec.m; sourceTree = "<group>"; };
 		6CAA7EAA1D8551100012CF56 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
@@ -723,6 +741,29 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		6C40B47F1DDAAA2E0036987B /* AGLiveIJKPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				6C93722B1DE5DAF1003680E7 /* AGLiveIJKPlayerController.h */,
+				6C93722C1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m */,
+				6C40B4821DDAAA2E0036987B /* LiveIJKPlayerView.h */,
+				6C40B4831DDAAA2E0036987B /* LiveIJKPlayerView.m */,
+			);
+			path = AGLiveIJKPlayer;
+			sourceTree = "<group>";
+		};
+		6C40B4891DDAB4F40036987B /* AGSCrollFrame */ = {
+			isa = PBXGroup;
+			children = (
+				6C40B48A1DDAB4F40036987B /* AGMenuView.h */,
+				6C40B48B1DDAB4F40036987B /* AGMenuView.m */,
+				6C40B48C1DDAB4F40036987B /* AGScrollFrameController.h */,
+				6C40B48D1DDAB4F40036987B /* AGScrollFrameController.m */,
+				6C40B48E1DDAB4F40036987B /* bg_underline_selected_44pt@2x.png */,
+			);
+			path = AGSCrollFrame;
+			sourceTree = "<group>";
+		};
 		6C523E1D1DA8C0B00021CA36 /* AGMovieIJKPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +839,8 @@
 			children = (
 				6C585E141DC14D140097BE8B /* LiveViewController.h */,
 				6C585E151DC14D140097BE8B /* LiveViewController.m */,
+				6C40B4861DDAAA790036987B /* LivePlayViewController.h */,
+				6C40B4871DDAAA790036987B /* LivePlayViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -851,6 +894,8 @@
 				6C585E601DC778590097BE8B /* LiveViewCell.h */,
 				6C585E611DC778590097BE8B /* LiveViewCell.m */,
 				6C585E621DC778590097BE8B /* LiveViewCell.xib */,
+				6C40B4921DDAC3CA0036987B /* LivePlayView.h */,
+				6C40B4931DDAC3CA0036987B /* LivePlayView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -958,7 +1003,6 @@
 				6CAA7E481D845FEF0012CF56 /* Images */,
 				6CAA7E4B1D845FEF0012CF56 /* Model */,
 				6CAA7E5C1D845FEF0012CF56 /* View */,
-				6CAA7E611D845FEF0012CF56 /* 滚动框架 */,
 			);
 			path = "推荐详情";
 			sourceTree = "<group>";
@@ -1027,18 +1071,6 @@
 				6CAA7E601D845FEF0012CF56 /* HotPromoteScrollView.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		6CAA7E611D845FEF0012CF56 /* 滚动框架 */ = {
-			isa = PBXGroup;
-			children = (
-				6CAA7E621D845FEF0012CF56 /* AGMenuView.h */,
-				6CAA7E631D845FEF0012CF56 /* AGMenuView.m */,
-				6CAA7E641D845FEF0012CF56 /* AGScrollFrameController.h */,
-				6CAA7E651D845FEF0012CF56 /* AGScrollFrameController.m */,
-				6CAA7E661D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png */,
-			);
-			path = "滚动框架";
 			sourceTree = "<group>";
 		};
 		6CAA7ED61D86A8760012CF56 /* AGPlayer */ = {
@@ -1158,8 +1190,12 @@
 				6CAA7E3E1D845F090012CF56 /* UIImage+ImageEffects.m */,
 				6CA5EC9C1DAB9C2F007752A0 /* UIViewController+AGGetViewController.h */,
 				6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */,
+				6C93722E1DE6DA23003680E7 /* UIView+AGGetViewController.h */,
+				6C93722F1DE6DA23003680E7 /* UIView+AGGetViewController.m */,
 				6C40B4001DD163C90036987B /* UIView+CornerRadius.h */,
 				6C40B4011DD163C90036987B /* UIView+CornerRadius.m */,
+				6C9372281DE5891E003680E7 /* UIButton+AGFillColor.h */,
+				6C9372291DE5891E003680E7 /* UIButton+AGFillColor.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -1286,6 +1322,8 @@
 		6CAAC4EB1D6EF93100D760B6 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6C40B4891DDAB4F40036987B /* AGSCrollFrame */,
+				6C40B47F1DDAAA2E0036987B /* AGLiveIJKPlayer */,
 				6C40B4071DD163E90036987B /* AGRefreshViewTwo */,
 				6C40B4031DD163E10036987B /* AGRefreshCollectionView */,
 				6CA5EC9F1DAB9CE9007752A0 /* URLRouter */,
@@ -1477,7 +1515,6 @@
 				6CAA7F001D86AE3E0012CF56 /* AGPlayerViewController.storyboard in Resources */,
 				6C523E471DA8C0B00021CA36 /* Stop@2x.png in Resources */,
 				6CAA7EF81D86A8760012CF56 /* report@2x.png in Resources */,
-				6CAA7E781D845FEF0012CF56 /* bg_underline_selected_44pt@2x.png in Resources */,
 				6C523E4B1DA8C0B00021CA36 /* AGMovieView.xib in Resources */,
 				6CAA7EF91D86A8760012CF56 /* Rotation@2x.png in Resources */,
 				6CAA7EF11D86A8760012CF56 /* back@2x.png in Resources */,
@@ -1499,6 +1536,7 @@
 				6C40B4231DD163E90036987B /* common_rabbitBar_face3@3x.png in Resources */,
 				6CAAC4FD1D6F965700D760B6 /* RecommendCollectionViewCell.xib in Resources */,
 				6CAAC5571D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib in Resources */,
+				6C40B4911DDAB4F40036987B /* bg_underline_selected_44pt@2x.png in Resources */,
 				6C585E511DC20C6B0097BE8B /* LiveHeaderView.xib in Resources */,
 				6CAAC54A1D77ACC900D760B6 /* main_banner2@2x.png in Resources */,
 				6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */,
@@ -1587,6 +1625,7 @@
 				6CAA7EC91D8551100012CF56 /* Relate.m in Sources */,
 				6C4AADD31D805AAD00A656D6 /* List.m in Sources */,
 				6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */,
+				6C9372301DE6DA23003680E7 /* UIView+AGGetViewController.m in Sources */,
 				6C6459BC1DB0D2EB0051A5EC /* BungumiPreviou.m in Sources */,
 				6CAA7EEE1D86A8760012CF56 /* AGPlayerView.m in Sources */,
 				6CAA7E3F1D845F090012CF56 /* UIImage+ImageEffects.m in Sources */,
@@ -1611,6 +1650,7 @@
 				6C585E701DC8F91E0097BE8B /* CategoryViewController.m in Sources */,
 				6C6459BF1DB0D2EB0051A5EC /* BungumiSerializing.m in Sources */,
 				6C28D1471DB4CA8400EA30BD /* BungumiRecommend.m in Sources */,
+				6C40B48F1DDAB4F40036987B /* AGMenuView.m in Sources */,
 				6C585E2D1DC151640097BE8B /* LivePartition_Partition.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
 				6C585E761DC900B70097BE8B /* CategoryIndexView.m in Sources */,
@@ -1618,6 +1658,7 @@
 				6C585E2E1DC151640097BE8B /* LiveRootClass.m in Sources */,
 				6C585E631DC778590097BE8B /* LiveViewCell.m in Sources */,
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
+				6C93722A1DE5891E003680E7 /* UIButton+AGFillColor.m in Sources */,
 				6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */,
 				6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */,
 				6C40B4061DD163E10036987B /* AGRefreshCollectionView.m in Sources */,
@@ -1626,14 +1667,13 @@
 				6C585E2C1DC151640097BE8B /* LiveOwner.m in Sources */,
 				6C585E2A1DC151640097BE8B /* LiveData.m in Sources */,
 				6C585E481DC159010097BE8B /* LiveRecommendRootClass.m in Sources */,
-				6CAA7E761D845FEF0012CF56 /* AGMenuView.m in Sources */,
 				6C585E161DC14D140097BE8B /* LiveViewController.m in Sources */,
 				6CAAC4C01D6EA75600D760B6 /* HomeViewController.m in Sources */,
 				6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */,
 				6CAA7EC41D8551100012CF56 /* Movie.m in Sources */,
 				6CAA7EFC1D86A8760012CF56 /* NSString+time.m in Sources */,
+				6C40B4851DDAAA2E0036987B /* LiveIJKPlayerView.m in Sources */,
 				6CAAC4D71D6EB21200D760B6 /* Bottom.m in Sources */,
-				6CAA7E771D845FEF0012CF56 /* AGScrollFrameController.m in Sources */,
 				6CAA7E751D845FEF0012CF56 /* HotPromoteScrollView.m in Sources */,
 				6C585E4C1DC208DC0097BE8B /* LiveCollectionView.m in Sources */,
 				6C2557101D6BD96F0072F5B0 /* MainTabBarController.m in Sources */,
@@ -1645,12 +1685,14 @@
 				6CAA7ED51D8555E50012CF56 /* Eleclist.m in Sources */,
 				6C40B4021DD163C90036987B /* UIView+CornerRadius.m in Sources */,
 				6C585E281DC151640097BE8B /* LiveBanner.m in Sources */,
+				6C40B4901DDAB4F40036987B /* AGScrollFrameController.m in Sources */,
 				6CAAC4981D6BF72100D760B6 /* DiscoveryViewController.m in Sources */,
 				6C585E441DC159010097BE8B /* LiveRecommendData.m in Sources */,
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
 				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */,
+				6C93722D1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m in Sources */,
 				6C6459CA1DB0E3980051A5EC /* BungumiCaterotyTouchView.m in Sources */,
 				6C585E291DC151640097BE8B /* LiveCover.m in Sources */,
 				6CAA7EC21D8551100012CF56 /* Elec.m in Sources */,
@@ -1675,10 +1717,12 @@
 				6C523E481DA8C0B00021CA36 /* DURLXML.m in Sources */,
 				6CAA7EC81D8551100012CF56 /* Pendant.m in Sources */,
 				6CA5EC9E1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m in Sources */,
+				6C40B4941DDAC3CA0036987B /* LivePlayView.m in Sources */,
 				6C585E6F1DC8F91E0097BE8B /* CategoryNavigationController.m in Sources */,
 				6C585E731DC8F94D0097BE8B /* CategoryIndexViewController.m in Sources */,
 				6CAAC4D51D6EB21200D760B6 /* Banner.m in Sources */,
 				6CAAC4F61D6EF93100D760B6 /* AGWebViewController.m in Sources */,
+				6C40B4881DDAAA790036987B /* LivePlayViewController.m in Sources */,
 				6CAAC4DD1D6EB3CA00D760B6 /* RecommendViewController.m in Sources */,
 				6C6459AA1DAE77F80051A5EC /* BungumiViewController.m in Sources */,
 				6CAA7EC71D8551100012CF56 /* Page.m in Sources */,

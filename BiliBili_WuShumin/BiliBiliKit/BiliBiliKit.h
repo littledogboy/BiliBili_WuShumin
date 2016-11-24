@@ -12,5 +12,7 @@
 #import "UIView+Frame.h"
 #import "NSString+AGAdd.h"
 #import "UIViewController+AGGetViewController.h"
+#import "UIView+AGGetViewController.h"
+#import "UIButton+AGFillColor.h"
 
 #endif /* BiliBiliKit_h */

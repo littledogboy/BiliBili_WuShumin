@@ -18,6 +18,9 @@
 #import "AGMenuView.h" // 导入滚动时忽视点击视图
 
 @interface AGScrollFrameController () <UIScrollViewDelegate>
+{
+    CGRect _menuViewFrame;
+}
 
 @property (nonatomic, strong) AGMenuView *menuView; // 菜单滚动视图
 
@@ -36,17 +39,37 @@
 
 @implementation AGScrollFrameController
 
+- (instancetype)initWithMenuFrame:(CGRect)menuFrame
+                       titleArray:(NSArray *)titleArray
+                   selectedIndex:(NSInteger)selectedIndex
+                  menuViewBGColor:(UIColor *)menuViewBGColor
+               titleSelectedColor:(UIColor *)titleSelectedColor
+             titleUnSelectedColor:(UIColor *)titleUnSelectedColor
+                  viewControllers:(NSArray *)viewControllers
+{
+    self = [super init];
+    if (self) {
+        _menuViewFrame = menuFrame;
+        _menuWidth = _menuViewFrame.size.width;
+        _menuHeight = _menuViewFrame.size.height;
+        self.menuTitleArray = titleArray;
+        self.selectedIndex = selectedIndex;
+        self.menuViewBGColor = menuViewBGColor;
+        self.titleSelectedColor = titleSelectedColor;
+        self.titleUnSelectedColor = titleUnSelectedColor;
+        self.viewControllers = viewControllers;
+    }
+    return self;
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO; //
-    
-    // menuView
-    CGFloat width = 375;
-    CGFloat height = 44;
-    self.menuView = [[AGMenuView alloc] initWithFrame:(CGRectMake(0, 20, width, height))];
-    _menuView.backgroundColor = [UIColor whiteColor];
+    self.menuView = [[AGMenuView alloc] initWithFrame:_menuViewFrame];
+    _menuView.backgroundColor = self.menuViewBGColor;
     [self.view addSubview:_menuView];
 
     // 画线 使用形状图层
@@ -55,8 +78,9 @@
     [bottomLine setFillColor:[UIColor clearColor].CGColor]; // 填充颜色
     [bottomLine setStrokeColor:[UIColor grayColor].CGColor]; // 画线颜色
     bottomLine.lineWidth = 1.0f; // 线宽
-    CGPathMoveToPoint(path, NULL, 0, 64); // 把画笔移到(0, 64)的位置
-    CGPathAddLineToPoint(path, NULL, 375, 64); // 把画笔移到(375,64)的位置
+    CGFloat pathY = self.menuView.frame.origin.y + self.menuView.frame.size.height;
+    CGPathMoveToPoint(path, NULL, 0, pathY); // 把画笔移到(0, 64)的位置
+    CGPathAddLineToPoint(path, NULL, kTotalWidth, pathY); // 把画笔移到(375,64)的位置
     [bottomLine setPath:path]; // 添加画线
     CGPathRelease(path); // 释放画线
     [self.view.layer addSublayer:bottomLine]; // 添加形状图层
@@ -66,8 +90,6 @@
     
     // 添加 contentView
     [self setContentView];
-    
-    // Do any additional setup after loading the view.
 }
 
 #pragma mark-
@@ -84,11 +106,9 @@
     
     self.menuTitleArray = self.menuTitleArray; // menu标题
     
-    self.menuWidth = kTotalWidth; // 375
-    self.menuHeight = kMenuHeight; // 44
-    CGFloat buttonWidth = kTotalWidth / _menuTitleArray.count; // 375 / 4
-    CGFloat buttonHeight = kMenuHeight;
-    self.menuView.contentSize = CGSizeMake(_menuWidth, 44); // 设置可滑动大小
+    CGFloat buttonWidth = _menuWidth / _menuTitleArray.count; // 375 / 4
+    CGFloat buttonHeight = _menuHeight;
+    self.menuView.contentSize = CGSizeMake(_menuWidth, _menuHeight); // 设置可滑动大小
     
     // 设置滚动条
     self.underLine = [[UIImageView alloc] initWithFrame:(CGRectMake(_selectedIndex * buttonWidth, 0, buttonWidth, buttonHeight))];
@@ -167,21 +187,20 @@
 
 - (void)setContentView
 {
-   
     CGFloat contentViewY = self.menuView.frame.origin.y + kMenuHeight;
-    self.contentView = [[UIScrollView alloc] initWithFrame:(CGRectMake(0, contentViewY, kTotalWidth, kTotalHeight - contentViewY))];
+    self.contentView = [[UIScrollView alloc] initWithFrame:(CGRectMake(0, contentViewY, self.view.bounds.size.width, self.view.bounds.size.height - contentViewY))];
     [self.view addSubview:_contentView];
     // 滚动属性
     _contentView.pagingEnabled = YES;
     _contentView.bounces = NO; // 不允许滚动回弹
     _contentView.delegate = self; // 代理
-    _contentView.contentSize = CGSizeMake(kTotalWidth * _menuTitleArray.count, kTotalHeight - contentViewY); // contentSize
+    _contentView.contentSize = CGSizeMake(self.view.bounds.size.width * _menuTitleArray.count, self.view.bounds.size.height - contentViewY); // contentSize
     _contentView.showsHorizontalScrollIndicator = NO; // 隐藏水平滚动条
     // 添加子视图    
     for (int i = 0; i < self.viewControllers.count; i++) {
         UIView *view = ((UIViewController *)self.viewControllers[i]).view;
         view.tag = i + 1; // 设置tag值
-        CGPoint origin = CGPointMake(kTotalWidth * i, 0);
+        CGPoint origin = CGPointMake(self.view.bounds.size.width * i, 0);
         CGRect frame = view.frame;
         frame.origin = origin;
         view.frame = frame;
