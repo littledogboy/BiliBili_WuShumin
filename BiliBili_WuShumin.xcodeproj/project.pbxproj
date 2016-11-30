@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4ED41E0108E0432F6D085C04 /* libPods-BiliBili_WuShumin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D72D3E6CB5E47C823B35594 /* libPods-BiliBili_WuShumin.a */; };
+		6C10F6681DEEF9230080F5B1 /* CategoryIndexViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10F6671DEEF9230080F5B1 /* CategoryIndexViewCell.m */; };
+		6C10F66B1DEEFE210080F5B1 /* CategoryIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C10F66A1DEEFE210080F5B1 /* CategoryIndexModel.m */; };
+		6C10F66D1DEEFF160080F5B1 /* CategoryIndexList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C10F66C1DEEFF160080F5B1 /* CategoryIndexList.plist */; };
 		6C2557101D6BD96F0072F5B0 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C25570F1D6BD96F0072F5B0 /* MainTabBarController.m */; };
 		6C28D0E21DB228A300EA30BD /* Bungumi_UnfinishedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C28D0E01DB228A300EA30BD /* Bungumi_UnfinishedCell.m */; };
 		6C28D0E31DB228A300EA30BD /* Bungumi_UnfinishedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C28D0E11DB228A300EA30BD /* Bungumi_UnfinishedCell.xib */; };
@@ -122,6 +125,7 @@
 		6C93722A1DE5891E003680E7 /* UIButton+AGFillColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9372291DE5891E003680E7 /* UIButton+AGFillColor.m */; };
 		6C93722D1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C93722C1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m */; };
 		6C9372301DE6DA23003680E7 /* UIView+AGGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C93722F1DE6DA23003680E7 /* UIView+AGGetViewController.m */; };
+		6C9372331DE84E44003680E7 /* RegionIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9372321DE84E44003680E7 /* RegionIconView.m */; };
 		6CA5EC9E1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */; };
 		6CA5ECA31DAB9CE9007752A0 /* URLRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA11DAB9CE9007752A0 /* URLRouter.m */; };
 		6CA5ECA41DAB9CE9007752A0 /* URLRouterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5ECA21DAB9CE9007752A0 /* URLRouterConfig.m */; };
@@ -219,6 +223,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C10F6661DEEF9230080F5B1 /* CategoryIndexViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryIndexViewCell.h; sourceTree = "<group>"; };
+		6C10F6671DEEF9230080F5B1 /* CategoryIndexViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryIndexViewCell.m; sourceTree = "<group>"; };
+		6C10F6691DEEFE210080F5B1 /* CategoryIndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryIndexModel.h; sourceTree = "<group>"; };
+		6C10F66A1DEEFE210080F5B1 /* CategoryIndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryIndexModel.m; sourceTree = "<group>"; };
+		6C10F66C1DEEFF160080F5B1 /* CategoryIndexList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CategoryIndexList.plist; sourceTree = "<group>"; };
 		6C25570E1D6BD96F0072F5B0 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		6C25570F1D6BD96F0072F5B0 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		6C28D0DF1DB228A300EA30BD /* Bungumi_UnfinishedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bungumi_UnfinishedCell.h; sourceTree = "<group>"; };
@@ -399,6 +408,8 @@
 		6C93722C1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGLiveIJKPlayerController.m; sourceTree = "<group>"; };
 		6C93722E1DE6DA23003680E7 /* UIView+AGGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AGGetViewController.h"; sourceTree = "<group>"; };
 		6C93722F1DE6DA23003680E7 /* UIView+AGGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AGGetViewController.m"; sourceTree = "<group>"; };
+		6C9372311DE84E44003680E7 /* RegionIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionIconView.h; sourceTree = "<group>"; };
+		6C9372321DE84E44003680E7 /* RegionIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionIconView.m; sourceTree = "<group>"; };
 		6CA5EC9C1DAB9C2F007752A0 /* UIViewController+AGGetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AGGetViewController.h"; sourceTree = "<group>"; };
 		6CA5EC9D1DAB9C2F007752A0 /* UIViewController+AGGetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AGGetViewController.m"; sourceTree = "<group>"; };
 		6CA5ECA01DAB9CE9007752A0 /* URLRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLRouter.h; sourceTree = "<group>"; };
@@ -916,6 +927,9 @@
 		6C585E6D1DC8F91E0097BE8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C10F6691DEEFE210080F5B1 /* CategoryIndexModel.h */,
+				6C10F66A1DEEFE210080F5B1 /* CategoryIndexModel.m */,
+				6C10F66C1DEEFF160080F5B1 /* CategoryIndexList.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -925,6 +939,10 @@
 			children = (
 				6C585E741DC900B70097BE8B /* CategoryIndexView.h */,
 				6C585E751DC900B70097BE8B /* CategoryIndexView.m */,
+				6C9372311DE84E44003680E7 /* RegionIconView.h */,
+				6C9372321DE84E44003680E7 /* RegionIconView.m */,
+				6C10F6661DEEF9230080F5B1 /* CategoryIndexViewCell.h */,
+				6C10F6671DEEF9230080F5B1 /* CategoryIndexViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1529,6 +1547,7 @@
 				6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */,
 				6C28D0E31DB228A300EA30BD /* Bungumi_UnfinishedCell.xib in Resources */,
 				6CAA7E6B1D845FEF0012CF56 /* 播放按钮.png in Resources */,
+				6C10F66D1DEEFF160080F5B1 /* CategoryIndexList.plist in Resources */,
 				6C523E3E1DA8C0B00021CA36 /* icmpv_thumb_light@2x.png in Resources */,
 				6C4AADDD1D83890300A656D6 /* Recommend_RegionHeaderView.xib in Resources */,
 				6C40B41D1DD163E90036987B /* common_rabbitBar_face1@3x.png in Resources */,
@@ -1656,6 +1675,8 @@
 				6C585E761DC900B70097BE8B /* CategoryIndexView.m in Sources */,
 				6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */,
 				6C585E2E1DC151640097BE8B /* LiveRootClass.m in Sources */,
+				6C10F66B1DEEFE210080F5B1 /* CategoryIndexModel.m in Sources */,
+				6C10F6681DEEF9230080F5B1 /* CategoryIndexViewCell.m in Sources */,
 				6C585E631DC778590097BE8B /* LiveViewCell.m in Sources */,
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
 				6C93722A1DE5891E003680E7 /* UIButton+AGFillColor.m in Sources */,
@@ -1690,6 +1711,7 @@
 				6C585E441DC159010097BE8B /* LiveRecommendData.m in Sources */,
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
+				6C9372331DE84E44003680E7 /* RegionIconView.m in Sources */,
 				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */,
 				6C93722D1DE5DAF1003680E7 /* AGLiveIJKPlayerController.m in Sources */,

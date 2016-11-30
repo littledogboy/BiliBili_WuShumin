@@ -7,26 +7,12 @@
 //
 
 #import "CategoryViewController.h"
-#import "CategoryIndexViewController.h"
 
 @interface CategoryViewController ()
-
-//@property (nonatomic, strong) CategoryIndexViewController *categoryIndexVC;
 
 @end
 
 @implementation CategoryViewController
-
-//- (instancetype)init {
-//    self = [super init];
-//    if (self) {
-//        self.categoryIndexVC = [[CategoryIndexViewController alloc] init];
-//        self.viewControllers = @[_categoryIndexVC];
-//        self.menuTitleArray = @[@"分类"];
-//        self.isHiddrenUnderLine = YES;
-//    }
-//    return self;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

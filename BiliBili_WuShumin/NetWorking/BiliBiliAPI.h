@@ -19,7 +19,8 @@
 
 #pragma mark- - 推荐页面
 // 推荐页面
-#define Home_RecommendURLString @"http://app.bilibili.com/x/v2/show?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3470&channel=appstore&device=phone&mobi_app=iphone&plat=1&platform=ios&sign=dc6f3842d84163f3ad71727fc75c3ba7&ts=1472185514&warm=1"
+#define Home_RecommendURLString @"http://app.bilibili.com/x/v2/show?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3470&channel=appstore&device=phone&mobi_app=iphone&plat=1&platform=ios&sign=dc6f3842d84163f3ad71727fc75c3ba7&ts=%@&warm=1"
+#define New_Home_RecommendURLString @"http://app.bilibili.com/x/v2/show?access_key=037714b58b0d5277b851bfa81fdfe865&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&channel=appstore&device=phone&mobi_app=iphone&plat=1&platform=ios&sign=1c0763dd8eec8d8532070ef83fb74353&ts=%@&warm=1"
 // 热门推荐
 #define Recommend_RecommendURLString @"http://app.bilibili.com/x/v2/show/change?access_key=ccb14baf8320c1c2635011cceffa2b0c&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3470&channel=appstore&device=phone&mobi_app=iphone&plat=1&platform=ios&rand=1&sign=76d5c45c83a5c68ff2541efad661d843&ts=1472735353"
 //  正在直播

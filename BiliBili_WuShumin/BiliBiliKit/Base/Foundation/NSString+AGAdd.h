@@ -14,10 +14,13 @@
 /**
  *  比如： 23333 -> 2.3万 ， 666 -> 666
  *
- *  @param string 原有的字符串
+ *  @param count 数字
  *
  *  @return 转化后的字符串
  */
 + (NSString *)stringOfCount:(NSInteger )count;
+
+// 时间戳
++ (NSString *)tsString;
 
 @end

@@ -20,4 +20,10 @@
     }
 }
 
++ (NSString *)tsString {
+    NSTimeInterval interval = [[NSDate date] timeIntervalSince1970];
+    NSString *tsInterval = [NSString stringWithFormat:@"%10.0f", interval];
+    return tsInterval;
+}
+
 @end

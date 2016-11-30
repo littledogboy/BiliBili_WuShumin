@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CategoryIndexView : UICollectionView
+@interface CategoryIndexView : UICollectionView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) NSArray *categoryArray;
 
 @end

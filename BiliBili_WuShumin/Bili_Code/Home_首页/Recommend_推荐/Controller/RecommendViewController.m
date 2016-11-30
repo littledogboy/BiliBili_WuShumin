@@ -52,9 +52,13 @@
 #pragma mark-
 #pragma mark 加载网络数据
 - (void)reloadData {
+    // ts 时间戳替换
+    NSString *tsURLString = [NSString stringWithFormat:Home_RecommendURLString, [NSString tsString]];
+    NSLog(@"%@", tsURLString);
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:Home_RecommendURLString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    [manager GET:tsURLString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
         //
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:(NSJSONReadingMutableContainers) error:nil];

@@ -7,8 +7,13 @@
 //
 
 #import "CategoryIndexViewController.h"
+#import "CategoryIndexModel.h"
+#import "CategoryIndexView.h"
 
 @interface CategoryIndexViewController ()
+
+@property (nonatomic, strong) NSMutableArray *categoryArray;
+@property (nonatomic, strong) CategoryIndexView *categoryIndeView;
 
 @end
 
@@ -16,8 +21,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self getData];
+    [self addIndexView];
     // Do any additional setup after loading the view.
 }
+
+#pragma mark- data
+
+- (void)getData {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"CategoryIndexList" ofType:@"plist"];
+    NSArray *array = [NSArray arrayWithContentsOfFile:filePath];
+    if (array) {
+        self.categoryArray = [NSMutableArray array];
+        for (NSDictionary *dic in array) {
+            CategoryIndexModel *category = [[CategoryIndexModel alloc] init];
+            [category setValuesForKeysWithDictionary:dic];
+            [self.categoryArray addObject:category];
+        }
+        NSLog(@"%@", self.categoryArray);
+    }
+}
+
+#pragma mark- addCollectionView
+- (void)addIndexView {
+    self.categoryIndeView = [[CategoryIndexView alloc] initWithFrame:CGRectZero];
+    _categoryIndeView.categoryArray = self.categoryArray;
+    [self.view addSubview:_categoryIndeView];
+    WS(ws);
+    [_categoryIndeView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(ws.view);
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
