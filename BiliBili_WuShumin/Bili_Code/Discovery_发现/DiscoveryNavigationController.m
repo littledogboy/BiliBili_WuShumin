@@ -17,6 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationBar.hidden = YES;
+}
+
+// barStyle 由 topVC 决定
+- (UIViewController *)childViewControllerForStatusBarStyle {
+    return self.topViewController;
+}
+
+// 自由旋转 由 topVC 决定
+- (BOOL)shouldAutorotate {
+    return self.topViewController.shouldAutorotate;
 }
 
 - (void)didReceiveMemoryWarning {

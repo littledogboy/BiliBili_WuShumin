@@ -44,6 +44,14 @@ http://live.bilibili.com/AppNewIndex/recommend?access_key=a97c86bad48e821156213b
 **全部分类**
 http://live.bilibili.com/AppIndex/areas?access_key=a97c86bad48e821156213b9728ba3cec&actionKey=appkey&appkey=27eb53fc9058f8c3&build=3910&device=phone&mobi_app=iphone&platform=ios&scale=2&sign=6648644f7b2d2201674263d0f51dd11a&ts=1476955140
 
+## 发现
+### 大家都在搜
+http://s.search.bilibili.com/main/hotword?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&mobi_app=iphone&platform=ios&sign=2381d2eb628321e623d7d329097d30e5&ts=1482413798
+
+### 推荐搜索
+http://api.bilibili.com/suggest?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&main_ver=v3&mobi_app=iphone&platform=ios&sign=7433b136c97f0cbfd04fad61aae2b95a&term=aaa&ts=1482413811
+
+
 
 
 

@@ -19,19 +19,22 @@ PODS:
   - SDWebImage (3.8.1):
     - SDWebImage/Core (= 3.8.1)
   - SDWebImage/Core (3.8.1)
+  - XMLDictionary (1.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - Masonry (~> 1.0.1)
   - SABlurImageViewObjc (~> 0.2.0)
   - SDWebImage (~> 3.8.1)
+  - XMLDictionary (~> 1.4)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
   SABlurImageViewObjc: dd7dccc6b1b437f53aadad645d9aa5dfb2346846
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
+  XMLDictionary: f9f51601ba76678b594ab485f2b00ec1fed23724
 
-PODFILE CHECKSUM: 13af15926db59dfffb175b775fc3326cf580b625
+PODFILE CHECKSUM: 0510008b5dd456dbfbd02a2f394be935c3a74b4b
 
 COCOAPODS: 1.0.1

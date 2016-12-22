@@ -7,8 +7,11 @@
 //
 
 #import "DiscoveryViewController.h"
+#import "SearchBarViewController.h"
 
 @interface DiscoveryViewController ()
+
+@property (nonatomic, strong) SearchBarViewController *searchBarVC;
 
 @end
 
@@ -17,11 +20,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self loadSubVC];
+}
+
+- (void)loadSubVC {
+    self.searchBarVC = [[SearchBarViewController alloc] init];
+    [self.view addSubview:_searchBarVC.view];
+    [self addChildViewController:_searchBarVC];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 /*
