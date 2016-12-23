@@ -10,9 +10,9 @@
 
 @interface FindSearchPromtsModel : NSObject
 
-@property (nonatomic, strong, readonly) NSMutableArray<NSString *> *promptsWordArray;
+@property (nonatomic, strong, readonly) NSMutableArray<NSString *> *promptsWordArray; // 提示
 
-@property (nonatomic, strong, readonly) NSMutableArray<NSString *> *historyWordArray;
+@property (nonatomic, strong, readonly) NSMutableArray<NSString *> *historyWordArray; // 历史
 
 - (void)getPromptsWordArrayWithKeyword:(NSString *)keyword success:(void (^)(void))success failure:(void (^)(NSString *errorMsg))failure;
 

@@ -25,6 +25,7 @@
 
 - (void)loadSubVC {
     self.searchBarVC = [[SearchBarViewController alloc] init];
+    _searchBarVC.keyWord = nil;
     [self.view addSubview:_searchBarVC.view];
     [self addChildViewController:_searchBarVC];
 }

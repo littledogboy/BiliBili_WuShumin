@@ -7,9 +7,11 @@
 //
 
 #import "SearchBarViewController.h"
+#import "FindSearchPromtsTableView.h"
+#import "FindSearchPromtsModel.h"
 #define kTipCellIdentifier @"tipCellIdentifier"
 
-@interface SearchBarViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface SearchBarViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) UIView *topView;
 @property (nonatomic, strong) UIScrollView *topScrollView;
@@ -18,7 +20,8 @@
 @property (nonatomic, strong) UIButton *cancelButton; // 取消按钮
 
 // 搜索提示tableView
-@property (nonatomic, strong) UITableView *searchTipsTableView; // 搜索提示
+@property (nonatomic, strong) FindSearchPromtsTableView *searchPromtsTableView;; // 搜索提示
+@property (nonatomic, strong) FindSearchPromtsModel *searchPromtsModel; // 
 
 @end
 
@@ -31,8 +34,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     [self addTopView];
+}
+
+- (void)setKeyWord:(NSString *)keyWord {
+    _keyWord = keyWord;
+    self.searchPromtsModel = [[FindSearchPromtsModel alloc] init];
 }
 
 - (void)addTopView {
@@ -91,9 +100,11 @@
     _searchTF.layer.masksToBounds = YES;
     _searchTF.font = [UIFont systemFontOfSize:15];
     _searchTF.textColor = [UIColor grayColor];
+    _searchTF.text = _keyWord;
     _searchTF.backgroundColor = [UIColor whiteColor];
     _searchTF.clearButtonMode = UITextFieldViewModeAlways;
     _searchTF.delegate = self;
+    [_searchTF addTarget:self action:@selector(textFieldDidChange:) forControlEvents:(UIControlEventEditingChanged)];
     _searchTF.returnKeyType = UIReturnKeyGoogle;
     // 设置 placeholder 颜色
     _searchTF.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"搜索视频、番剧、up主或AV号"
@@ -126,8 +137,25 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [self.topScrollView setContentOffset:CGPointMake(self.searchTF.frame.origin.x - 10, 0) animated:YES];  // 偏移动画
-    self.view.frame = CGRectMake(0, 0, screenWidth, screenHeight - 49); // 调整 view 大小
-    [self addSearchTipsTableView]; // 添加 tipsTableView
+    self.view.frame = CGRectMake(0, 0, screenWidth, screenHeight); // 调整 view 大小
+    [self addSearchPromtsTableView];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    // 判断是否有内容，如果有：1 . 取消第一响应者 2. 进入搜索结果VC
+    // 没有内容，什么也不做
+    if (textField.text.length) {
+        [textField resignFirstResponder];
+        // addResultVC
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+#pragma mark- textFiledValueChanged
+- (void)textFieldDidChange:(UITextField *)tf {
+    self.searchPromtsTableView.keyWord = tf.text;
 }
 
 - (void)cancelAction:(UIButton *)button {
@@ -135,39 +163,27 @@
     [self.searchTF resignFirstResponder];
     [self.topScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     self.view.frame = CGRectMake(0, 0, screenWidth,63);
-    [self.searchTipsTableView removeFromSuperview]; // 移除tipsTableView
+    [self.searchPromtsTableView removeFromSuperview]; // 移除tipsTableView
 
 }
 
 #pragma mark-
 #pragma mark 搜索提示
 
-- (void)addSearchTipsTableView {
-    self.searchTipsTableView = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
-    _searchTipsTableView.rowHeight = 45;
-    _searchTipsTableView.delegate = self;
-    _searchTipsTableView.dataSource = self;
-    [_searchTipsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kTipCellIdentifier];
-    [self.view addSubview:_searchTipsTableView];
+- (void)addSearchPromtsTableView {
+    // rowHeight 45
+    self.searchPromtsTableView = [[FindSearchPromtsTableView alloc] initWithModel:self.searchPromtsModel];
     WS(ws);
-    [_searchTipsTableView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(ws.topView);
-        make.width.equalTo(ws.view);
-        make.bottom.equalTo(ws.view);
+    _searchPromtsTableView.didSelectCellBlock = ^void(NSString *keyword) {
+        ws.searchTF.text = keyword;
+    };
+    [self.view addSubview:_searchPromtsTableView];
+    [_searchPromtsTableView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(63));
+        make.left.right.bottom.equalTo(ws.view);
     }];
+   
 }
-
-#pragma mark-
-#pragma mark UITableViewDelegete DataSource
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-}
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

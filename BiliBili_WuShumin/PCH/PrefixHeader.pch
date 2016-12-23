@@ -45,8 +45,10 @@
 #define IOS_7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
 
 
-#pragma mark- MACRO
+#pragma mark- weak strong
 #define WS(weakSelf) __weak __typeof(self)weakSelf = self;
+#define SS(strongSelf) __strong __typeof(self)strongSelf = self
+;
 #define REQUIRES_SUPER NS_REQUIERS_SUPER
 
 

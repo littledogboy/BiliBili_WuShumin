@@ -10,4 +10,6 @@
 
 @interface SearchBarViewController : UIViewController
 
+@property (nonatomic, strong) NSString *keyWord;
+
 @end

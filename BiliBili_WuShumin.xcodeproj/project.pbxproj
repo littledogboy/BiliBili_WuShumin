@@ -29,6 +29,7 @@
 		6C2C51671E0513DD00AA3331 /* AGResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51661E0513DD00AA3331 /* AGResponseSerializer.m */; };
 		6C2C516B1E0C121500AA3331 /* FindSearchPromptsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C516A1E0C121500AA3331 /* FindSearchPromptsRequest.m */; };
 		6C2C516E1E0C13D900AA3331 /* FindSearchPromtsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C516D1E0C13D900AA3331 /* FindSearchPromtsModel.m */; };
+		6C2C51741E0D439F00AA3331 /* FindSearchPromtsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51731E0D439F00AA3331 /* FindSearchPromtsTableView.m */; };
 		6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3062CB1D6BD0CC0043C4CE /* main.m */; };
 		6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D31D6BD0CC0043C4CE /* Main.storyboard */; };
 		6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D61D6BD0CC0043C4CE /* Assets.xcassets */; };
@@ -268,6 +269,8 @@
 		6C2C516A1E0C121500AA3331 /* FindSearchPromptsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchPromptsRequest.m; sourceTree = "<group>"; };
 		6C2C516C1E0C13D900AA3331 /* FindSearchPromtsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchPromtsModel.h; sourceTree = "<group>"; };
 		6C2C516D1E0C13D900AA3331 /* FindSearchPromtsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchPromtsModel.m; sourceTree = "<group>"; };
+		6C2C51721E0D439F00AA3331 /* FindSearchPromtsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchPromtsTableView.h; sourceTree = "<group>"; };
+		6C2C51731E0D439F00AA3331 /* FindSearchPromtsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchPromtsTableView.m; sourceTree = "<group>"; };
 		6C3062C71D6BD0CC0043C4CE /* BiliBili_WuShumin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiliBili_WuShumin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3062CB1D6BD0CC0043C4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3062D41D6BD0CC0043C4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -669,6 +672,8 @@
 		6C2C51541DF88C0100AA3331 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C2C51721E0D439F00AA3331 /* FindSearchPromtsTableView.h */,
+				6C2C51731E0D439F00AA3331 /* FindSearchPromtsTableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1747,6 +1752,7 @@
 				6CAAC4D61D6EB21200D760B6 /* Body.m in Sources */,
 				6C523E3A1DA8C0B00021CA36 /* NSString+AGMovieTime.m in Sources */,
 				6C585E471DC159010097BE8B /* LiveRecommendRecommendData.m in Sources */,
+				6C2C51741E0D439F00AA3331 /* FindSearchPromtsTableView.m in Sources */,
 				6CAA7EC61D8551100012CF56 /* OwnerExt.m in Sources */,
 				6CAAC5421D70F88900D760B6 /* BaseCollectionReusableView.m in Sources */,
 				6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */,
