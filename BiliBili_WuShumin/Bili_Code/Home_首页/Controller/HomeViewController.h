@@ -33,4 +33,18 @@
 // 子视图控制器
 @property (nonatomic, copy) NSArray *viewControllers; // 子视图控制器
 
+// 决定外观的数据
+// topView
+@property (nonatomic, assign) CGFloat topViewHeight;
+// menuView
+@property (nonatomic, assign) CGFloat menuViewHeight;
+@property (nonatomic, assign) CGFloat menuViewTop;
+// titleView
+@property (nonatomic, assign) CGFloat titleMargin;
+@property (nonatomic, assign) CGFloat titleWidth;
+@property (nonatomic, assign) CGFloat titleHeight;
+@property (nonatomic, strong) UIFont *titleFont;
+// contentView
+@property (nonatomic, assign) CGFloat contentViewHeight;
+
 @end

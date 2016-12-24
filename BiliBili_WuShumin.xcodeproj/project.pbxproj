@@ -30,6 +30,17 @@
 		6C2C516B1E0C121500AA3331 /* FindSearchPromptsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C516A1E0C121500AA3331 /* FindSearchPromptsRequest.m */; };
 		6C2C516E1E0C13D900AA3331 /* FindSearchPromtsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C516D1E0C13D900AA3331 /* FindSearchPromtsModel.m */; };
 		6C2C51741E0D439F00AA3331 /* FindSearchPromtsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51731E0D439F00AA3331 /* FindSearchPromtsTableView.m */; };
+		6C2C517A1E0EAA9B00AA3331 /* FindSearchResultModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51791E0EAA9B00AA3331 /* FindSearchResultModel.m */; };
+		6C2C51881E0EBABD00AA3331 /* FindSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51811E0EBABD00AA3331 /* FindSearchResultViewController.m */; };
+		6C2C51891E0EBABD00AA3331 /* FindSearchResultRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51861E0EBABD00AA3331 /* FindSearchResultRequest.m */; };
+		6C2C51961E0ECD4900AA3331 /* FindArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C518B1E0ECD4800AA3331 /* FindArchive.m */; };
+		6C2C51971E0ECD4900AA3331 /* FindData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C518D1E0ECD4800AA3331 /* FindData.m */; };
+		6C2C51981E0ECD4900AA3331 /* FindItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C518F1E0ECD4900AA3331 /* FindItem.m */; };
+		6C2C51991E0ECD4900AA3331 /* FindNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51911E0ECD4900AA3331 /* FindNav.m */; };
+		6C2C519A1E0ECD4900AA3331 /* FindOfficialVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51931E0ECD4900AA3331 /* FindOfficialVerify.m */; };
+		6C2C519B1E0ECD4900AA3331 /* FindSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51951E0ECD4900AA3331 /* FindSearchResult.m */; };
+		6C2C519E1E0ECEF700AA3331 /* FindMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C519D1E0ECEF700AA3331 /* FindMovie.m */; };
+		6C2C51A11E0ED4C500AA3331 /* FindSearchResultRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2C51A01E0ED4C500AA3331 /* FindSearchResultRootViewController.m */; };
 		6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3062CB1D6BD0CC0043C4CE /* main.m */; };
 		6C3062D51D6BD0CC0043C4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D31D6BD0CC0043C4CE /* Main.storyboard */; };
 		6C3062D71D6BD0CC0043C4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C3062D61D6BD0CC0043C4CE /* Assets.xcassets */; };
@@ -271,6 +282,28 @@
 		6C2C516D1E0C13D900AA3331 /* FindSearchPromtsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchPromtsModel.m; sourceTree = "<group>"; };
 		6C2C51721E0D439F00AA3331 /* FindSearchPromtsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchPromtsTableView.h; sourceTree = "<group>"; };
 		6C2C51731E0D439F00AA3331 /* FindSearchPromtsTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchPromtsTableView.m; sourceTree = "<group>"; };
+		6C2C51781E0EAA9B00AA3331 /* FindSearchResultModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindSearchResultModel.h; path = ../../Model/FindSearchResultModel.h; sourceTree = "<group>"; };
+		6C2C51791E0EAA9B00AA3331 /* FindSearchResultModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindSearchResultModel.m; path = ../../Model/FindSearchResultModel.m; sourceTree = "<group>"; };
+		6C2C51801E0EBABD00AA3331 /* FindSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResultViewController.h; sourceTree = "<group>"; };
+		6C2C51811E0EBABD00AA3331 /* FindSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResultViewController.m; sourceTree = "<group>"; };
+		6C2C51851E0EBABD00AA3331 /* FindSearchResultRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResultRequest.h; sourceTree = "<group>"; };
+		6C2C51861E0EBABD00AA3331 /* FindSearchResultRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResultRequest.m; sourceTree = "<group>"; };
+		6C2C518A1E0ECD4800AA3331 /* FindArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindArchive.h; sourceTree = "<group>"; };
+		6C2C518B1E0ECD4800AA3331 /* FindArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindArchive.m; sourceTree = "<group>"; };
+		6C2C518C1E0ECD4800AA3331 /* FindData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindData.h; sourceTree = "<group>"; };
+		6C2C518D1E0ECD4800AA3331 /* FindData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindData.m; sourceTree = "<group>"; };
+		6C2C518E1E0ECD4800AA3331 /* FindItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindItem.h; sourceTree = "<group>"; };
+		6C2C518F1E0ECD4900AA3331 /* FindItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindItem.m; sourceTree = "<group>"; };
+		6C2C51901E0ECD4900AA3331 /* FindNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindNav.h; sourceTree = "<group>"; };
+		6C2C51911E0ECD4900AA3331 /* FindNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindNav.m; sourceTree = "<group>"; };
+		6C2C51921E0ECD4900AA3331 /* FindOfficialVerify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindOfficialVerify.h; sourceTree = "<group>"; };
+		6C2C51931E0ECD4900AA3331 /* FindOfficialVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindOfficialVerify.m; sourceTree = "<group>"; };
+		6C2C51941E0ECD4900AA3331 /* FindSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResult.h; sourceTree = "<group>"; };
+		6C2C51951E0ECD4900AA3331 /* FindSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResult.m; sourceTree = "<group>"; };
+		6C2C519C1E0ECEF700AA3331 /* FindMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindMovie.h; sourceTree = "<group>"; };
+		6C2C519D1E0ECEF700AA3331 /* FindMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindMovie.m; sourceTree = "<group>"; };
+		6C2C519F1E0ED4C500AA3331 /* FindSearchResultRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResultRootViewController.h; sourceTree = "<group>"; };
+		6C2C51A01E0ED4C500AA3331 /* FindSearchResultRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResultRootViewController.m; sourceTree = "<group>"; };
 		6C3062C71D6BD0CC0043C4CE /* BiliBili_WuShumin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiliBili_WuShumin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C3062CB1D6BD0CC0043C4CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C3062D41D6BD0CC0043C4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -643,6 +676,7 @@
 		6C2C51511DF88C0100AA3331 /* SearchBar */ = {
 			isa = PBXGroup;
 			children = (
+				6C2C517E1E0EBABD00AA3331 /* FindSearchResult */,
 				6C2C51681E0C109C00AA3331 /* Request */,
 				6C2C51521DF88C0100AA3331 /* Controller */,
 				6C2C51531DF88C0100AA3331 /* Model */,
@@ -702,6 +736,75 @@
 				6C2C516A1E0C121500AA3331 /* FindSearchPromptsRequest.m */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		6C2C517E1E0EBABD00AA3331 /* FindSearchResult */ = {
+			isa = PBXGroup;
+			children = (
+				6C2C517F1E0EBABD00AA3331 /* Controller */,
+				6C2C51821E0EBABD00AA3331 /* Entity */,
+				6C2C51831E0EBABD00AA3331 /* Model */,
+				6C2C51841E0EBABD00AA3331 /* Request */,
+				6C2C51871E0EBABD00AA3331 /* View */,
+			);
+			path = FindSearchResult;
+			sourceTree = "<group>";
+		};
+		6C2C517F1E0EBABD00AA3331 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C2C51801E0EBABD00AA3331 /* FindSearchResultViewController.h */,
+				6C2C51811E0EBABD00AA3331 /* FindSearchResultViewController.m */,
+				6C2C519F1E0ED4C500AA3331 /* FindSearchResultRootViewController.h */,
+				6C2C51A01E0ED4C500AA3331 /* FindSearchResultRootViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6C2C51821E0EBABD00AA3331 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6C2C518A1E0ECD4800AA3331 /* FindArchive.h */,
+				6C2C518B1E0ECD4800AA3331 /* FindArchive.m */,
+				6C2C519C1E0ECEF700AA3331 /* FindMovie.h */,
+				6C2C519D1E0ECEF700AA3331 /* FindMovie.m */,
+				6C2C518C1E0ECD4800AA3331 /* FindData.h */,
+				6C2C518D1E0ECD4800AA3331 /* FindData.m */,
+				6C2C518E1E0ECD4800AA3331 /* FindItem.h */,
+				6C2C518F1E0ECD4900AA3331 /* FindItem.m */,
+				6C2C51901E0ECD4900AA3331 /* FindNav.h */,
+				6C2C51911E0ECD4900AA3331 /* FindNav.m */,
+				6C2C51921E0ECD4900AA3331 /* FindOfficialVerify.h */,
+				6C2C51931E0ECD4900AA3331 /* FindOfficialVerify.m */,
+				6C2C51941E0ECD4900AA3331 /* FindSearchResult.h */,
+				6C2C51951E0ECD4900AA3331 /* FindSearchResult.m */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6C2C51831E0EBABD00AA3331 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C2C51781E0EAA9B00AA3331 /* FindSearchResultModel.h */,
+				6C2C51791E0EAA9B00AA3331 /* FindSearchResultModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C2C51841E0EBABD00AA3331 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				6C2C51851E0EBABD00AA3331 /* FindSearchResultRequest.h */,
+				6C2C51861E0EBABD00AA3331 /* FindSearchResultRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		6C2C51871E0EBABD00AA3331 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6C3062BE1D6BD0CC0043C4CE = {
@@ -1739,6 +1842,7 @@
 				6C3062CC1D6BD0CC0043C4CE /* main.m in Sources */,
 				6C9372301DE6DA23003680E7 /* UIView+AGGetViewController.m in Sources */,
 				6C6459BC1DB0D2EB0051A5EC /* BungumiPreviou.m in Sources */,
+				6C2C51881E0EBABD00AA3331 /* FindSearchResultViewController.m in Sources */,
 				6CAA7EEE1D86A8760012CF56 /* AGPlayerView.m in Sources */,
 				6CAA7E3F1D845F090012CF56 /* UIImage+ImageEffects.m in Sources */,
 				6CAA7EC51D8551100012CF56 /* Owner.m in Sources */,
@@ -1748,11 +1852,13 @@
 				6C6459B91DB0D2EB0051A5EC /* BungumiAd.m in Sources */,
 				6CAAC4921D6BF70200D760B6 /* AttentionViewController.m in Sources */,
 				6CAAC59A1D7F0AC900D760B6 /* AGHTTPURLHandle.m in Sources */,
+				6C2C519B1E0ECD4900AA3331 /* FindSearchResult.m in Sources */,
 				6CAAC4B81D6EA6A300D760B6 /* NSObject+YYModel.m in Sources */,
 				6CAAC4D61D6EB21200D760B6 /* Body.m in Sources */,
 				6C523E3A1DA8C0B00021CA36 /* NSString+AGMovieTime.m in Sources */,
 				6C585E471DC159010097BE8B /* LiveRecommendRecommendData.m in Sources */,
 				6C2C51741E0D439F00AA3331 /* FindSearchPromtsTableView.m in Sources */,
+				6C2C51981E0ECD4900AA3331 /* FindItem.m in Sources */,
 				6CAA7EC61D8551100012CF56 /* OwnerExt.m in Sources */,
 				6CAAC5421D70F88900D760B6 /* BaseCollectionReusableView.m in Sources */,
 				6CAA7E681D845FEF0012CF56 /* HotPromoteNavigationController.m in Sources */,
@@ -1766,10 +1872,12 @@
 				6C28D1471DB4CA8400EA30BD /* BungumiRecommend.m in Sources */,
 				6C40B48F1DDAB4F40036987B /* AGMenuView.m in Sources */,
 				6C2C51671E0513DD00AA3331 /* AGResponseSerializer.m in Sources */,
+				6C2C51991E0ECD4900AA3331 /* FindNav.m in Sources */,
 				6C585E2D1DC151640097BE8B /* LivePartition_Partition.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
 				6C585E761DC900B70097BE8B /* CategoryIndexView.m in Sources */,
 				6C2C515B1E05130400AA3331 /* AGRequest.m in Sources */,
+				6C2C519A1E0ECD4900AA3331 /* FindOfficialVerify.m in Sources */,
 				6C523E4A1DA8C0B00021CA36 /* AGMovieView.m in Sources */,
 				6C585E2E1DC151640097BE8B /* LiveRootClass.m in Sources */,
 				6C10F66B1DEEFE210080F5B1 /* CategoryIndexModel.m in Sources */,
@@ -1778,9 +1886,11 @@
 				6CAA7ECA1D8551100012CF56 /* ReqUser.m in Sources */,
 				6C93722A1DE5891E003680E7 /* UIButton+AGFillColor.m in Sources */,
 				6C3063021D6BD48A0043C4CE /* AppDelegate.m in Sources */,
+				6C2C51A11E0ED4C500AA3331 /* FindSearchResultRootViewController.m in Sources */,
 				6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */,
 				6C40B4061DD163E10036987B /* AGRefreshCollectionView.m in Sources */,
 				6C2C515E1E05134100AA3331 /* AGRequestCache.m in Sources */,
+				6C2C519E1E0ECEF700AA3331 /* FindMovie.m in Sources */,
 				6C28D0E21DB228A300EA30BD /* Bungumi_UnfinishedCell.m in Sources */,
 				6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */,
 				6C585E2C1DC151640097BE8B /* LiveOwner.m in Sources */,
@@ -1844,6 +1954,7 @@
 				6C585E6F1DC8F91E0097BE8B /* CategoryNavigationController.m in Sources */,
 				6C585E731DC8F94D0097BE8B /* CategoryIndexViewController.m in Sources */,
 				6CAAC4D51D6EB21200D760B6 /* Banner.m in Sources */,
+				6C2C51891E0EBABD00AA3331 /* FindSearchResultRequest.m in Sources */,
 				6CAAC4F61D6EF93100D760B6 /* AGWebViewController.m in Sources */,
 				6C2C51641E0513A700AA3331 /* AGBaseRequest.m in Sources */,
 				6C40B4881DDAAA790036987B /* LivePlayViewController.m in Sources */,
@@ -1856,9 +1967,12 @@
 				6CAA7ECD1D8551100012CF56 /* Stat.m in Sources */,
 				6C585E551DC2505C0097BE8B /* LivePartitionHeaderView.m in Sources */,
 				6CAAC5521D77B52100D760B6 /* NSString+AGAdd.m in Sources */,
+				6C2C51961E0ECD4900AA3331 /* FindArchive.m in Sources */,
 				6C4AADDB1D8388DC00A656D6 /* Recommend_RegionHeaderView.m in Sources */,
+				6C2C517A1E0EAA9B00AA3331 /* FindSearchResultModel.m in Sources */,
 				6C6459BE1DB0D2EB0051A5EC /* BungumiRootClass.m in Sources */,
 				6CAA7E691D845FEF0012CF56 /* LeftTableViewController.m in Sources */,
+				6C2C51971E0ECD4900AA3331 /* FindData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

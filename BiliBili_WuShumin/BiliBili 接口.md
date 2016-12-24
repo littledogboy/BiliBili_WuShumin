@@ -51,6 +51,23 @@ http://s.search.bilibili.com/main/hotword?access_key=1c2a81036b4b91243c303aa33d2
 ### 推荐搜索
 http://api.bilibili.com/suggest?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&main_ver=v3&mobi_app=iphone&platform=ios&sign=7433b136c97f0cbfd04fad61aae2b95a&term=aaa&ts=1482413811
 
+### 搜索结果
+
+http://app.bilibili.com/x/v2/search/type?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&keyword=aaa&mobi_app=iphone&platform=ios&pn=1&ps=20&sign=bcc4b1c97f6483d10eef442a36d945a0&ts=1482585793&type=3
+
+http://app.bilibili.com/x/v2/search/type?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&keyword=aaa&mobi_app=iphone&platform=ios&pn=1&ps=20&sign=faff63b6425c3e8272e38e4a06a179f9&ts=1482585793&type=1
+
+http://app.bilibili.com/x/v2/search/type?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&keyword=aaa&mobi_app=iphone&platform=ios&pn=1&ps=20&sign=8769344f9a0feb36e082018987e15ceb&ts=1482585793&type=2
+
+http://app.bilibili.com/x/v2/search/type?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&keyword=aaa&mobi_app=iphone&platform=ios&pn=1&ps=20&sign=dfb978ffe6063f3a8f1929c5a9a13e2c&ts=1482585793&type=4
+
+http://app.bilibili.com/x/v2/search?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=aaa&mobi_app=iphone&order=default&platform=ios&pn=1&ps=20&rid=0&sign=287f77c6baf383bbe1ac6e3877a771b5&ts=1482585793
+
+// request 接口  
+http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=3710&device=phone&duration=0&keyword=%@&mobi_app=iphone&order=0&platform=ios&pn=1&ps=1&rid=0"
+
+http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=aaa&mobi_app=iphone&order=default&platform=ios&pn=1&ps=20&rid=0
+
 
 
 

@@ -9,6 +9,7 @@
 #import "SearchBarViewController.h"
 #import "FindSearchPromtsTableView.h"
 #import "FindSearchPromtsModel.h"
+#import "FindSearchResultViewController.h"
 #define kTipCellIdentifier @"tipCellIdentifier"
 
 @interface SearchBarViewController () <UITextFieldDelegate>
@@ -21,7 +22,10 @@
 
 // 搜索提示tableView
 @property (nonatomic, strong) FindSearchPromtsTableView *searchPromtsTableView;; // 搜索提示
-@property (nonatomic, strong) FindSearchPromtsModel *searchPromtsModel; // 
+@property (nonatomic, strong) FindSearchPromtsModel *searchPromtsModel; //
+
+// 搜索结果
+@property (nonatomic, strong) FindSearchResultViewController *searchResultVC;
 
 @end
 
@@ -147,6 +151,7 @@
     if (textField.text.length) {
         [textField resignFirstResponder];
         // addResultVC
+        [self addSearchResultVC];
         return YES;
     } else {
         return NO;
@@ -164,6 +169,7 @@
     [self.topScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     self.view.frame = CGRectMake(0, 0, screenWidth,63);
     [self.searchPromtsTableView removeFromSuperview]; // 移除tipsTableView
+    [self removeSearchResultVC];
 
 }
 
@@ -183,6 +189,21 @@
         make.left.right.bottom.equalTo(ws.view);
     }];
    
+}
+
+- (void)addSearchResultVC {
+    self.searchResultVC = [[FindSearchResultViewController alloc] init];
+    [self.view addSubview:_searchResultVC.view];
+    [self addChildViewController:_searchResultVC];
+    [_searchResultVC.view makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(63));
+        make.left.right.bottom.equalTo(self.view);
+    }];
+}
+
+- (void)removeSearchResultVC {
+    [self.searchResultVC.view removeFromSuperview];
+    [self.searchResultVC removeFromParentViewController];
 }
 
 - (void)didReceiveMemoryWarning {
