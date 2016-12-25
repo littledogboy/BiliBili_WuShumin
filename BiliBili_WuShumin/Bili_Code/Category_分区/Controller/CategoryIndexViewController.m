@@ -38,7 +38,6 @@
             [category setValuesForKeysWithDictionary:dic];
             [self.categoryArray addObject:category];
         }
-        NSLog(@"%@", self.categoryArray);
     }
 }
 

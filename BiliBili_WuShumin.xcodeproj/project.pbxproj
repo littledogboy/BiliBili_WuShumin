@@ -223,6 +223,7 @@
 		6CAAC5561D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC5541D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.m */; };
 		6CAAC5571D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CAAC5551D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib */; };
 		6CAAC59A1D7F0AC900D760B6 /* AGHTTPURLHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAAC5991D7F0AC900D760B6 /* AGHTTPURLHandle.m */; };
+		6CF561B91E1015C000A07A9E /* FindSearchResultCompositeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF561B81E1015C000A07A9E /* FindSearchResultCompositeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -604,6 +605,8 @@
 		6CAAC5551D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Recommend_RefreshCollectionViewCell.xib; sourceTree = "<group>"; };
 		6CAAC5981D7F0AC900D760B6 /* AGHTTPURLHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGHTTPURLHandle.h; sourceTree = "<group>"; };
 		6CAAC5991D7F0AC900D760B6 /* AGHTTPURLHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGHTTPURLHandle.m; sourceTree = "<group>"; };
+		6CF561B71E1015C000A07A9E /* FindSearchResultCompositeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResultCompositeViewController.h; sourceTree = "<group>"; };
+		6CF561B81E1015C000A07A9E /* FindSearchResultCompositeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResultCompositeViewController.m; sourceTree = "<group>"; };
 		7191808DEB1975076781425D /* Pods-BiliBili_WuShumin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiliBili_WuShumin.release.xcconfig"; path = "Pods/Target Support Files/Pods-BiliBili_WuShumin/Pods-BiliBili_WuShumin.release.xcconfig"; sourceTree = "<group>"; };
 		997736196E6DF9DACA012D23 /* Pods-BiliBili_WuShumin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiliBili_WuShumin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BiliBili_WuShumin/Pods-BiliBili_WuShumin.debug.xcconfig"; sourceTree = "<group>"; };
 		9D72D3E6CB5E47C823B35594 /* libPods-BiliBili_WuShumin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BiliBili_WuShumin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -741,6 +744,7 @@
 		6C2C517E1E0EBABD00AA3331 /* FindSearchResult */ = {
 			isa = PBXGroup;
 			children = (
+				6CF561B11E1014EF00A07A9E /* 其他分区 */,
 				6C2C517F1E0EBABD00AA3331 /* Controller */,
 				6C2C51821E0EBABD00AA3331 /* Entity */,
 				6C2C51831E0EBABD00AA3331 /* Model */,
@@ -757,6 +761,8 @@
 				6C2C51811E0EBABD00AA3331 /* FindSearchResultViewController.m */,
 				6C2C519F1E0ED4C500AA3331 /* FindSearchResultRootViewController.h */,
 				6C2C51A01E0ED4C500AA3331 /* FindSearchResultRootViewController.m */,
+				6CF561B71E1015C000A07A9E /* FindSearchResultCompositeViewController.h */,
+				6CF561B81E1015C000A07A9E /* FindSearchResultCompositeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1584,6 +1590,53 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		6CF561B11E1014EF00A07A9E /* 其他分区 */ = {
+			isa = PBXGroup;
+			children = (
+				6CF561B21E1014EF00A07A9E /* Controller */,
+				6CF561B31E1014EF00A07A9E /* Entity */,
+				6CF561B41E1014EF00A07A9E /* Model */,
+				6CF561B51E1014EF00A07A9E /* Request */,
+				6CF561B61E1014EF00A07A9E /* View */,
+			);
+			path = "其他分区";
+			sourceTree = "<group>";
+		};
+		6CF561B21E1014EF00A07A9E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6CF561B31E1014EF00A07A9E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6CF561B41E1014EF00A07A9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6CF561B51E1014EF00A07A9E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		6CF561B61E1014EF00A07A9E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DAE0E7E3FF8BD9F1977561FC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1890,6 +1943,7 @@
 				6C523E491DA8C0B00021CA36 /* VideoXML.m in Sources */,
 				6C40B4061DD163E10036987B /* AGRefreshCollectionView.m in Sources */,
 				6C2C515E1E05134100AA3331 /* AGRequestCache.m in Sources */,
+				6CF561B91E1015C000A07A9E /* FindSearchResultCompositeViewController.m in Sources */,
 				6C2C519E1E0ECEF700AA3331 /* FindMovie.m in Sources */,
 				6C28D0E21DB228A300EA30BD /* Bungumi_UnfinishedCell.m in Sources */,
 				6CAAC4861D6BF5D200D760B6 /* MineNavigationController.m in Sources */,

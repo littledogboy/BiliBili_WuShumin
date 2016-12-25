@@ -14,7 +14,7 @@
 @interface FindData : NSObject
 
 @property (nonatomic, strong) FindItem * items;
-@property (nonatomic, strong) NSArray * nav;
+@property (nonatomic, strong) NSArray<FindNav *> * nav;
 @property (nonatomic, assign) NSInteger page;
 @property (nonatomic, strong) NSString * trackid;
 

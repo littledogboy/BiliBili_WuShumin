@@ -148,6 +148,8 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     // 判断是否有内容，如果有：1 . 取消第一响应者 2. 进入搜索结果VC
     // 没有内容，什么也不做
+    // 设置keyWord
+    self.keyWord = textField.text;
     if (textField.text.length) {
         [textField resignFirstResponder];
         // addResultVC
@@ -192,7 +194,7 @@
 }
 
 - (void)addSearchResultVC {
-    self.searchResultVC = [[FindSearchResultViewController alloc] init];
+    self.searchResultVC = [[FindSearchResultViewController alloc] initWithKeyword:_keyWord];
     [self.view addSubview:_searchResultVC.view];
     [self addChildViewController:_searchResultVC];
     [_searchResultVC.view makeConstraints:^(MASConstraintMaker *make) {

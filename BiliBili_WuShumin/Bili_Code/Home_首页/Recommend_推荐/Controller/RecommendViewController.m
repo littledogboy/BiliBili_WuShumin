@@ -54,8 +54,6 @@
 - (void)reloadData {
     // ts 时间戳替换
     NSString *tsURLString = [NSString stringWithFormat:Home_RecommendURLString, [NSString tsString]];
-    NSLog(@"%@", tsURLString);
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     [manager GET:tsURLString parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
@@ -326,7 +324,6 @@
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
     return YES;
 }
-
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     

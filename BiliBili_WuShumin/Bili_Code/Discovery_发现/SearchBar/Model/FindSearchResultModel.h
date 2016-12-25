@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class FindData;
+#import "FindData.h"
 
 @interface FindSearchResultModel : NSObject
 

@@ -8,12 +8,13 @@
 
 #import "FindSearchResultViewController.h"
 #import "FindSearchResultRootViewController.h"
+#import "FindSearchResultModel.h"
 
 @interface FindSearchResultViewController ()
 
 @property (nonatomic, strong) NSString *keyword;
 @property (nonatomic, strong) FindSearchResultRootViewController *rootVC;
-
+@property (nonatomic, strong) FindSearchResultModel *resultModel;
 
 @end
 
@@ -23,6 +24,8 @@
     self = [super init];
     if (self) {
         self.keyword = keyword;
+        self.resultModel = [[FindSearchResultModel alloc] init];
+        _resultModel.keyWord = keyword;
     }
     return self;
 }
@@ -31,6 +34,26 @@
     [super viewDidLoad];
     [self addRootVC];
     // Do any additional setup after loading the view.
+    // 重新给 nav title 
+    [_resultModel getSearchResultEntityWithSuccess:^{
+        NSArray *navArray = _resultModel.resultData.nav;
+        NSInteger (^perNavTotal)(id nav) = ^NSInteger (id nav) {
+            NSInteger total = ((FindNav *)(nav)).total;
+            return total > 99 ? 99 : total;
+            
+        };
+        NSArray *titleArray = @[@"综合",
+                                [NSString stringWithFormat:@"番剧(%lu)", perNavTotal(navArray[0])],
+                                [NSString stringWithFormat:@"UP主(%lu)", perNavTotal(navArray[1])],
+                                [NSString stringWithFormat:@"影视(%lu)", perNavTotal(navArray[2])],
+                                [NSString stringWithFormat:@"专题(%lu)", perNavTotal(navArray[3])],
+                                ];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _rootVC.menuTitleArray = titleArray;
+        });
+    } failure:^(NSString *errorMsg) {
+        NSLog(@"%@", errorMsg);
+    }];
 }
 
 - (void)addRootVC {

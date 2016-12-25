@@ -21,8 +21,7 @@
 
 @property (nonatomic, assign) BOOL isSelected; // button是否选中
 @property (nonatomic, assign) CGFloat menuViewWidth;
-
-// topView 间距
+@property (nonatomic, strong) NSMutableArray *buttonArray; // 存放标题button
 
 @end
 
@@ -34,6 +33,7 @@
         // 默认值
         self.selectedIndex = 0;
         self.isHiddrenUnderLine = NO;
+        self.buttonArray = [NSMutableArray array];
     }
     return self;
 }
@@ -111,6 +111,12 @@
 - (void)setMenuTitleArray:(NSArray *)menuTitleArray {
     if (_menuTitleArray != menuTitleArray) {
         _menuTitleArray = menuTitleArray;
+        // 改变 button title
+        if (self.buttonArray.count) {
+            [self.buttonArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [(UIButton *)obj setTitle:_menuTitleArray[idx] forState:(UIControlStateNormal)];
+            }];
+        }
     }
 }
 
@@ -149,6 +155,7 @@
         
         // add
         [self.menuView addSubview:button];
+        [self.buttonArray addObject:button];
     }
 }
 
