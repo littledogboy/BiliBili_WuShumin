@@ -31,6 +31,8 @@
 - (void)setupSubViews {
     // cover
     self.coverImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    _coverImageView.layer.cornerRadius = 3;
+    _coverImageView.layer.masksToBounds = YES;
     _coverImageView.image = CellDefaltImage;
     _coverImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.contentView addSubview:_coverImageView];
@@ -55,6 +57,7 @@
     self.seasonTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _seasonTitleLabel.textAlignment = NSTextAlignmentLeft;
     _seasonTitleLabel.font = [UIFont systemFontOfSize:11];
+    _seasonTitleLabel.textColor = [UIColor grayColor];
     [self.contentView addSubview:_seasonTitleLabel];
     [_seasonTitleLabel makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.titleLabel.bottom).offset(11);
@@ -66,6 +69,7 @@
     self.descLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _descLabel.textAlignment = NSTextAlignmentLeft;
     _descLabel.font = [UIFont systemFontOfSize:11];
+    _descLabel.textColor = [UIColor grayColor];
     [self.contentView addSubview:_descLabel];
     [_descLabel makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.seasonTitleLabel.bottom).offset(11);
