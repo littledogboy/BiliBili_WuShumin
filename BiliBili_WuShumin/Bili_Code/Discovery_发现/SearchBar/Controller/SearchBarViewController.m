@@ -152,7 +152,7 @@
     self.keyWord = textField.text;
     if (textField.text.length) {
         [textField resignFirstResponder];
-        // addResultVC
+        self.keyWord = textField.text;
         [self addSearchResultVC];
         return YES;
     } else {

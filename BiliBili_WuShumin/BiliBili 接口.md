@@ -64,8 +64,6 @@ http://app.bilibili.com/x/v2/search/type?access_key=1c2a81036b4b91243c303aa33d2d
 http://app.bilibili.com/x/v2/search?access_key=1c2a81036b4b91243c303aa33d2d5b48&actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=aaa&mobi_app=iphone&order=default&platform=ios&pn=1&ps=20&rid=0&sign=287f77c6baf383bbe1ac6e3877a771b5&ts=1482585793
 
 // request 接口  
-http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=3710&device=phone&duration=0&keyword=%@&mobi_app=iphone&order=0&platform=ios&pn=1&ps=1&rid=0"
-
 http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=aaa&mobi_app=iphone&order=default&platform=ios&pn=1&ps=20&rid=0
 
 

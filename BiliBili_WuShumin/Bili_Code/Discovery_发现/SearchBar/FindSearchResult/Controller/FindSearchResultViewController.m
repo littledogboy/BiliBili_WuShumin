@@ -8,6 +8,8 @@
 
 #import "FindSearchResultViewController.h"
 #import "FindSearchResultRootViewController.h"
+#import "FindSearchResultCompositeViewController.h" // 综合分区
+#import "FindSearchResultOtherRegionViewController.h" // 其他分区
 #import "FindSearchResultModel.h"
 
 @interface FindSearchResultViewController ()
@@ -60,12 +62,13 @@
     self.rootVC = [[FindSearchResultRootViewController alloc] init];
     UIViewController *vc1 = [[UIViewController alloc] init];
     vc1.view.backgroundColor = RecommendGrayColor;
-    UIViewController *vc2 = [[UIViewController alloc] init];
+    FindSearchResultOtherRegionViewController *seasonVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:1 keyword:_keyword];
+    seasonVC.view.backgroundColor = RecommendGrayColor;
     UIViewController *vc3 = [[UIViewController alloc] init];
     UIViewController *vc4 = [[UIViewController alloc] init];
     UIViewController *vc5 = [[UIViewController alloc] init];
     _rootVC.menuTitleArray = @[@"综合", @"番剧()", @"UP主()", @"影视()", @"专题"];
-    _rootVC.viewControllers = @[vc1, vc2, vc3, vc4, vc5];
+    _rootVC.viewControllers = @[vc1, seasonVC, vc3, vc4, vc5];
     [self.view addSubview:_rootVC.view];
     [self addChildViewController:_rootVC];
 }
