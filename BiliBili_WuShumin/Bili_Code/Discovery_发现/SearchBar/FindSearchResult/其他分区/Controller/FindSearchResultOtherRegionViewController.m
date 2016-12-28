@@ -10,7 +10,11 @@
 #import "FindSearchResultOtherRegionModel.h"
 
 #import "FindResultSeasonCollectionViewCell.h"
+#import "FindResultUPCollectionViewCell.h"
+#import "FindResultMovieCollectionViewCell.h"
 #define CellIdentifierSeason @"season"
+#define CellIdentifierUP @"up"
+#define CellIdentifierMovie @"movie"
 
 @interface FindSearchResultOtherRegionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -58,6 +62,8 @@
     [self.view addSubview:_regionCollectionView];
     // register
     [self.regionCollectionView registerClass:[FindResultSeasonCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierSeason];
+    [self.regionCollectionView  registerClass:[FindResultUPCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierUP];
+    [self.regionCollectionView registerClass:[FindResultMovieCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierMovie];
     // layout
     [_regionCollectionView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -87,6 +93,20 @@
         }
             break;
             
+        case 2:
+        {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierUP forIndexPath:indexPath];
+            ((FindResultUPCollectionViewCell *)cell).up = cellModel;
+        }
+            break;
+            
+        case 3:
+        {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierMovie forIndexPath:indexPath];
+            ((FindResultMovieCollectionViewCell *)cell).movie = cellModel;
+        }
+            break;
+            
         default:
             break;
     }
@@ -100,6 +120,14 @@
     switch (self.regionModel.type) {
         case 1:
             return CGSizeMake(screenWidth - 2 * 12, [FindResultSeasonCollectionViewCell cellHeight]);
+            break;
+            
+        case 2:
+            return CGSizeMake(screenWidth - 2 * 12, [FindResultUPCollectionViewCell cellHeight]);
+            break;
+            
+        case 3:
+            return CGSizeMake(screenWidth - 2 * 12, [FindResultMovieCollectionViewCell cellHeight]);
             break;
             
         default:

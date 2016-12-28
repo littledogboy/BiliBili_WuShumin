@@ -70,6 +70,8 @@
 		6C40B4911DDAB4F40036987B /* bg_underline_selected_44pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C40B48E1DDAB4F40036987B /* bg_underline_selected_44pt@2x.png */; };
 		6C40B4941DDAC3CA0036987B /* LivePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C40B4931DDAC3CA0036987B /* LivePlayView.m */; };
 		6C4316121E12A5B9008ED6E6 /* AGImageMacro.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4316111E12A5B9008ED6E6 /* AGImageMacro.m */; };
+		6C4316151E140A82008ED6E6 /* FindResultUPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4316141E140A82008ED6E6 /* FindResultUPCollectionViewCell.m */; };
+		6C4316181E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4316171E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m */; };
 		6C4AADD31D805AAD00A656D6 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD21D805AAD00A656D6 /* List.m */; };
 		6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */; };
 		6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */; };
@@ -359,6 +361,10 @@
 		6C43160F1E12A53F008ED6E6 /* AGUIKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGUIKitMacro.h; sourceTree = "<group>"; };
 		6C4316101E12A5B9008ED6E6 /* AGImageMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGImageMacro.h; sourceTree = "<group>"; };
 		6C4316111E12A5B9008ED6E6 /* AGImageMacro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGImageMacro.m; sourceTree = "<group>"; };
+		6C4316131E140A82008ED6E6 /* FindResultUPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindResultUPCollectionViewCell.h; sourceTree = "<group>"; };
+		6C4316141E140A82008ED6E6 /* FindResultUPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindResultUPCollectionViewCell.m; sourceTree = "<group>"; };
+		6C4316161E141F26008ED6E6 /* FindResultMovieCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindResultMovieCollectionViewCell.h; sourceTree = "<group>"; };
+		6C4316171E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindResultMovieCollectionViewCell.m; sourceTree = "<group>"; };
 		6C4AADD11D805AAD00A656D6 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		6C4AADD21D805AAD00A656D6 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		6C4AADD41D83724300A656D6 /* Recommend_LiveHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_LiveHeaderView.h; sourceTree = "<group>"; };
@@ -1683,6 +1689,10 @@
 			children = (
 				6CF561CC1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.h */,
 				6CF561CD1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.m */,
+				6C4316131E140A82008ED6E6 /* FindResultUPCollectionViewCell.h */,
+				6C4316141E140A82008ED6E6 /* FindResultUPCollectionViewCell.m */,
+				6C4316161E141F26008ED6E6 /* FindResultMovieCollectionViewCell.h */,
+				6C4316171E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2024,6 +2034,7 @@
 				6C40B4021DD163C90036987B /* UIView+CornerRadius.m in Sources */,
 				6C585E281DC151640097BE8B /* LiveBanner.m in Sources */,
 				6C40B4901DDAB4F40036987B /* AGScrollFrameController.m in Sources */,
+				6C4316181E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m in Sources */,
 				6CAAC4981D6BF72100D760B6 /* DiscoveryViewController.m in Sources */,
 				6C585E441DC159010097BE8B /* LiveRecommendData.m in Sources */,
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
@@ -2068,6 +2079,7 @@
 				6CAAC4F61D6EF93100D760B6 /* AGWebViewController.m in Sources */,
 				6C2C51641E0513A700AA3331 /* AGBaseRequest.m in Sources */,
 				6C40B4881DDAAA790036987B /* LivePlayViewController.m in Sources */,
+				6C4316151E140A82008ED6E6 /* FindResultUPCollectionViewCell.m in Sources */,
 				6CAAC4DD1D6EB3CA00D760B6 /* RecommendViewController.m in Sources */,
 				6C6459AA1DAE77F80051A5EC /* BungumiViewController.m in Sources */,
 				6CF561CE1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.m in Sources */,
