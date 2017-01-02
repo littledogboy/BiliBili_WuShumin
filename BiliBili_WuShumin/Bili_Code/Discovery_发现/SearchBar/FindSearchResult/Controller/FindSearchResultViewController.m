@@ -68,9 +68,10 @@
     upVC.view.backgroundColor = RecommendGrayColor;
     FindSearchResultOtherRegionViewController *movieVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:3 keyword:_keyword];
     movieVC.view.backgroundColor = RecommendGrayColor;
-    UIViewController *vc5 = [[UIViewController alloc] init];
+    FindSearchResultOtherRegionViewController *spVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:4 keyword:_keyword];
+    spVC.view.backgroundColor = RecommendGrayColor;
     _rootVC.menuTitleArray = @[@"综合", @"番剧()", @"UP主()", @"影视()", @"专题"];
-    _rootVC.viewControllers = @[vc1, seasonVC, upVC, movieVC, vc5];
+    _rootVC.viewControllers = @[vc1, seasonVC, upVC, movieVC, spVC];
     [self.view addSubview:_rootVC.view];
     [self addChildViewController:_rootVC];
 }

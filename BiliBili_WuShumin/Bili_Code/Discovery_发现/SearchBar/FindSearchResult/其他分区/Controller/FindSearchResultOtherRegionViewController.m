@@ -12,9 +12,11 @@
 #import "FindResultSeasonCollectionViewCell.h"
 #import "FindResultUPCollectionViewCell.h"
 #import "FindResultMovieCollectionViewCell.h"
+#import "FindResultSPCollectionViewCell.h"
 #define CellIdentifierSeason @"season"
 #define CellIdentifierUP @"up"
 #define CellIdentifierMovie @"movie"
+#define CellIdentifierSP @"sp"
 
 @interface FindSearchResultOtherRegionViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -64,6 +66,7 @@
     [self.regionCollectionView registerClass:[FindResultSeasonCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierSeason];
     [self.regionCollectionView  registerClass:[FindResultUPCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierUP];
     [self.regionCollectionView registerClass:[FindResultMovieCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierMovie];
+    [self.regionCollectionView registerClass:[FindResultSPCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierSP];
     // layout
     [_regionCollectionView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -107,6 +110,15 @@
         }
             break;
             
+        case 4:
+        {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierSP forIndexPath:indexPath];
+            ((FindResultSPCollectionViewCell *)cell).sp = cellModel;
+        }
+            break;
+            
+        
+            
         default:
             break;
     }
@@ -129,6 +141,9 @@
         case 3:
             return CGSizeMake(screenWidth - 2 * 12, [FindResultMovieCollectionViewCell cellHeight]);
             break;
+        
+        case 4:
+            return CGSizeMake(screenWidth - 2 * 12, [FindResultSPCollectionViewCell cellHeight]);
             
         default:
             break;
