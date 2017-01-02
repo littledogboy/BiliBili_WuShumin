@@ -20,7 +20,18 @@
  */
 + (NSString *)stringOfCount:(NSInteger )count;
 
-// 时间戳
+// 格林时间时间戳
 + (NSString *)tsString;
+
+// 视频的持续时间
+/**
+ *  把视频时间转化为 hh：mm：ss
+ *  比如：316:53 --> 05:16:53
+ *
+ *  @param duration 未转化的字符串
+ *
+ *  @return 转化后的字符串
+ */
++ (NSString *)durationOfString:(NSString *)duration;
 
 @end

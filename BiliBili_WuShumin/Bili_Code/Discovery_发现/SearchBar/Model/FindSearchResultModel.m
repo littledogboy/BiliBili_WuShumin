@@ -23,7 +23,6 @@
     self = [super init];
     if (self) {
         _resultRequest = [[FindSearchResultRequest alloc] init];
-        
     }
     return self;
 }

@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *keyword;
 @property (nonatomic, strong) FindSearchResultRootViewController *rootVC;
 @property (nonatomic, strong) FindSearchResultModel *resultModel;
+@property (nonatomic, strong) FindSearchResultCompositeViewController *compositeVC;
 
 @end
 
@@ -52,6 +53,7 @@
                                 ];
         dispatch_async(dispatch_get_main_queue(), ^{
             _rootVC.menuTitleArray = titleArray;
+            _compositeVC.resultModel = _resultModel;
         });
     } failure:^(NSString *errorMsg) {
         NSLog(@"%@", errorMsg);
@@ -60,8 +62,8 @@
 
 - (void)addRootVC {
     self.rootVC = [[FindSearchResultRootViewController alloc] init];
-    UIViewController *vc1 = [[UIViewController alloc] init];
-    vc1.view.backgroundColor = RecommendGrayColor;
+     _compositeVC = [[FindSearchResultCompositeViewController alloc] initWithKeyWord:_keyword model:self.resultModel];
+    _compositeVC.view.backgroundColor = RecommendGrayColor;
     FindSearchResultOtherRegionViewController *seasonVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:1 keyword:_keyword];
     seasonVC.view.backgroundColor = RecommendGrayColor;
     FindSearchResultOtherRegionViewController *upVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:2 keyword:_keyword];
@@ -71,7 +73,7 @@
     FindSearchResultOtherRegionViewController *spVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:4 keyword:_keyword];
     spVC.view.backgroundColor = RecommendGrayColor;
     _rootVC.menuTitleArray = @[@"综合", @"番剧()", @"UP主()", @"影视()", @"专题"];
-    _rootVC.viewControllers = @[vc1, seasonVC, upVC, movieVC, spVC];
+    _rootVC.viewControllers = @[_compositeVC, seasonVC, upVC, movieVC, spVC];
     [self.view addSubview:_rootVC.view];
     [self addChildViewController:_rootVC];
 }

@@ -7,16 +7,45 @@
 //
 
 #import "FindSearchResultCompositeViewController.h"
+#import "FindSearchResultCompositeView.h"
+#import "FindSearchResultModel.h"
 
 @interface FindSearchResultCompositeViewController ()
+
+@property (nonatomic, strong) FindSearchResultCompositeView *compositeView;
 
 @end
 
 @implementation FindSearchResultCompositeViewController
 
+- (void)setResultModel:(FindSearchResultModel *)resultModel {
+        _resultModel = resultModel;
+        self.compositeView.resultModel = _resultModel; // 刷新数据
+}
+
+- (instancetype)initWithKeyWord:(NSString *)keyWord model:(FindSearchResultModel *)resultModel {
+    self = [super init];
+    if (self) {
+        self.keyword = keyWord;
+        self.resultModel = resultModel;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //
+    [self setupSubViews];
+}
+
+- (void)setupSubViews {
+    self.compositeView = [[FindSearchResultCompositeView alloc] initWithFrame:CGRectZero];
+    _compositeView.resultModel = _resultModel;
+    [self.view addSubview:_compositeView];
+    [_compositeView makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

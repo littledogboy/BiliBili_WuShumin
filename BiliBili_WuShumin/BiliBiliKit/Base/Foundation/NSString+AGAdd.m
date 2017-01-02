@@ -26,4 +26,47 @@
     return tsInterval;
 }
 
+// 316:52 ---> 05:16:53
+// 3600:52 ---> 01:00:00:53
++ (NSString *)durationOfString:(NSString *)duration{
+    NSArray *array = [duration componentsSeparatedByString:@":"];
+    NSMutableArray *numberArray = [NSMutableArray array];
+    
+    for (NSString *string in array) {
+        NSInteger count = [string integerValue];
+        NSInteger result = count / 60; // 商
+        NSInteger remainder = count % 60; // 余数
+        NSInteger temp = result; // temp 容器
+        if (result < 60 && result != 0) { // 如果商小于等于 60，添加商
+            [numberArray insertObject:@(result) atIndex:0];
+        }
+        [numberArray addObject:@(remainder)]; // 添加余数
+
+        while ( temp >= 60) {
+            result = temp / 60;
+            remainder = temp % 60;
+            temp = result;
+            if (result < 60 && result != 0) {
+                [numberArray insertObject:@(result) atIndex:0];
+                [numberArray insertObject:@(remainder) atIndex:[numberArray indexOfObject:@(result)] + 1];
+            } else {
+                [numberArray insertObject:@(remainder) atIndex:0];
+            }
+        }
+    }
+    
+    //
+    NSMutableArray *newArray = [NSMutableArray arrayWithCapacity:numberArray.count];
+    [numberArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSInteger number = ((NSNumber *)numberArray[idx]).integerValue;
+        NSString *numberStr = [NSString stringWithFormat:@"%lu", number];
+        if (number < 10) {
+            numberStr = [NSString stringWithFormat:@"0%lu", number];
+        }
+        [newArray addObject:numberStr];
+    }];
+    
+    return [newArray componentsJoinedByString:@":"];
+}
+
 @end

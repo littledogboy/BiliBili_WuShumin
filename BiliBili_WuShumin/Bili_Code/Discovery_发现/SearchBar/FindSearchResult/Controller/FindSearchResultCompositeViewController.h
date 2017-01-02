@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class FindSearchResultModel;
 
 @interface FindSearchResultCompositeViewController : UIViewController
 
+- (instancetype)initWithKeyWord:(NSString *)keyWord model:(FindSearchResultModel *)resultModel;
 
+@property (nonatomic, strong) NSString *keyword;
+@property (nonatomic, strong) FindSearchResultModel *resultModel;
 
 @end

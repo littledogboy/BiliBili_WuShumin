@@ -73,6 +73,8 @@
 		6C4316151E140A82008ED6E6 /* FindResultUPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4316141E140A82008ED6E6 /* FindResultUPCollectionViewCell.m */; };
 		6C4316181E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4316171E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m */; };
 		6C43161B1E1433C1008ED6E6 /* FindResultSPCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43161A1E1433C1008ED6E6 /* FindResultSPCollectionViewCell.m */; };
+		6C43161E1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C43161D1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m */; };
+		6C4316211E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4316201E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m */; };
 		6C4AADD31D805AAD00A656D6 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD21D805AAD00A656D6 /* List.m */; };
 		6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4AADD51D83724300A656D6 /* Recommend_LiveHeaderView.m */; };
 		6C4AADD81D83725A00A656D6 /* Recommend_LiveHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4AADD71D83725A00A656D6 /* Recommend_LiveHeaderView.xib */; };
@@ -368,6 +370,10 @@
 		6C4316171E141F26008ED6E6 /* FindResultMovieCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindResultMovieCollectionViewCell.m; sourceTree = "<group>"; };
 		6C4316191E1433C1008ED6E6 /* FindResultSPCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindResultSPCollectionViewCell.h; sourceTree = "<group>"; };
 		6C43161A1E1433C1008ED6E6 /* FindResultSPCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindResultSPCollectionViewCell.m; sourceTree = "<group>"; };
+		6C43161C1E1AB86E008ED6E6 /* FindSearchResultCompositeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResultCompositeView.h; sourceTree = "<group>"; };
+		6C43161D1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResultCompositeView.m; sourceTree = "<group>"; };
+		6C43161F1E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchResultCompositeCollectionViewCell.h; sourceTree = "<group>"; };
+		6C4316201E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchResultCompositeCollectionViewCell.m; sourceTree = "<group>"; };
 		6C4AADD11D805AAD00A656D6 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
 		6C4AADD21D805AAD00A656D6 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		6C4AADD41D83724300A656D6 /* Recommend_LiveHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recommend_LiveHeaderView.h; sourceTree = "<group>"; };
@@ -850,6 +856,10 @@
 		6C2C51871E0EBABD00AA3331 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C43161C1E1AB86E008ED6E6 /* FindSearchResultCompositeView.h */,
+				6C43161D1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m */,
+				6C43161F1E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.h */,
+				6C4316201E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2046,6 +2056,7 @@
 				6CAAC4831D6BF5C300D760B6 /* AttentionNavigationController.m in Sources */,
 				6C4316121E12A5B9008ED6E6 /* AGImageMacro.m in Sources */,
 				6CAAC4BF1D6EA75600D760B6 /* HomeNavigationController.m in Sources */,
+				6C43161E1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m in Sources */,
 				6C9372331DE84E44003680E7 /* RegionIconView.m in Sources */,
 				6C4AADD61D83724300A656D6 /* Recommend_LiveHeaderView.m in Sources */,
 				6CAA7E741D845FEF0012CF56 /* HotPromoteNavigationView.m in Sources */,
@@ -2062,6 +2073,7 @@
 				6C585E5F1DC761D70097BE8B /* RecommendLive.m in Sources */,
 				6C28D0E91DB366FD00EA30BD /* Bungumi_PreviousCell.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
+				6C4316211E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m in Sources */,
 				6CAAC4F81D6EF93100D760B6 /* BannerImageView.m in Sources */,
 				6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */,
 				6C6459C51DB0D8C70051A5EC /* BungumiHeaderView.m in Sources */,
