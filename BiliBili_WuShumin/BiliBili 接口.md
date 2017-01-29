@@ -66,9 +66,11 @@ http://app.bilibili.com/x/v2/search?access_key=1c2a81036b4b91243c303aa33d2d5b48&
 // request 接口  
 http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=aaa&mobi_app=iphone&order=default&platform=ios&pn=1&ps=20&rid=0
 
+// 综合接口1
+http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=%@&mobi_app=iphone&order=%lu&platform=ios&pn=%lu&ps=%lu&rid=%lu
 
-
-
+// 综合接口2
+http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=3710&device=phone&duration=%lu&keyword=%@&mobi_app=iphone&order=%@&platform=ios&pn=%lu&ps=%lu&rid=%lu
 
 
 

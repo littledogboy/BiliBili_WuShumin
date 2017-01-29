@@ -13,6 +13,9 @@
 
 @property (nonatomic, strong) FindMovie *movie;
 
+@property (nonatomic, assign) BOOL isTagHidden; // 是否隐藏标识，默认为no
+
+
 + (CGFloat)cellHeight;
 
 @end

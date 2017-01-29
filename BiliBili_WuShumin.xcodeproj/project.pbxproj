@@ -136,6 +136,7 @@
 		6C585E701DC8F91E0097BE8B /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E6C1DC8F91E0097BE8B /* CategoryViewController.m */; };
 		6C585E731DC8F94D0097BE8B /* CategoryIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E721DC8F94D0097BE8B /* CategoryIndexViewController.m */; };
 		6C585E761DC900B70097BE8B /* CategoryIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C585E751DC900B70097BE8B /* CategoryIndexView.m */; };
+		6C608D551E3761B30024A7A0 /* FindSearchCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C608D541E3761B30024A7A0 /* FindSearchCollectionReusableView.m */; };
 		6C6459AA1DAE77F80051A5EC /* BungumiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459A91DAE77F80051A5EC /* BungumiViewController.m */; };
 		6C6459B91DB0D2EB0051A5EC /* BungumiAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459AC1DB0D2EB0051A5EC /* BungumiAd.m */; };
 		6C6459BA1DB0D2EB0051A5EC /* BungumiHead.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6459AE1DB0D2EB0051A5EC /* BungumiHead.m */; };
@@ -467,6 +468,8 @@
 		6C585E721DC8F94D0097BE8B /* CategoryIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryIndexViewController.m; sourceTree = "<group>"; };
 		6C585E741DC900B70097BE8B /* CategoryIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryIndexView.h; sourceTree = "<group>"; };
 		6C585E751DC900B70097BE8B /* CategoryIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryIndexView.m; sourceTree = "<group>"; };
+		6C608D531E3761B30024A7A0 /* FindSearchCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindSearchCollectionReusableView.h; sourceTree = "<group>"; };
+		6C608D541E3761B30024A7A0 /* FindSearchCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSearchCollectionReusableView.m; sourceTree = "<group>"; };
 		6C6459A81DAE77F80051A5EC /* BungumiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiViewController.h; sourceTree = "<group>"; };
 		6C6459A91DAE77F80051A5EC /* BungumiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BungumiViewController.m; sourceTree = "<group>"; };
 		6C6459AB1DB0D2EB0051A5EC /* BungumiAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BungumiAd.h; sourceTree = "<group>"; };
@@ -860,6 +863,8 @@
 				6C43161D1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m */,
 				6C43161F1E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.h */,
 				6C4316201E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m */,
+				6C608D531E3761B30024A7A0 /* FindSearchCollectionReusableView.h */,
+				6C608D541E3761B30024A7A0 /* FindSearchCollectionReusableView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1998,6 +2003,7 @@
 				6C585E501DC20C6B0097BE8B /* LiveHeaderView.m in Sources */,
 				6C585E701DC8F91E0097BE8B /* CategoryViewController.m in Sources */,
 				6C6459BF1DB0D2EB0051A5EC /* BungumiSerializing.m in Sources */,
+				6C608D551E3761B30024A7A0 /* FindSearchCollectionReusableView.m in Sources */,
 				6C28D1471DB4CA8400EA30BD /* BungumiRecommend.m in Sources */,
 				6C43161B1E1433C1008ED6E6 /* FindResultSPCollectionViewCell.m in Sources */,
 				6C40B48F1DDAB4F40036987B /* AGMenuView.m in Sources */,

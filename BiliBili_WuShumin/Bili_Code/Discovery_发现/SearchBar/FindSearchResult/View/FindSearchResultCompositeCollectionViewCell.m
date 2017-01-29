@@ -113,7 +113,7 @@
         
         //
         //
-        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:archive.cover]];
+        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:archive.cover] placeholderImage:[UIImage imageNamed:@"cell_Default"]];
         self.titleLabel.text = archive.title;
         self.authorLabel.text = [NSString stringWithFormat:@"UP主：%@", archive.author];
         self.playLabel.text = [NSString stringWithFormat:@"播放：%@", [NSString stringOfCount:archive.play]];

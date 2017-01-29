@@ -22,6 +22,7 @@
 
 @property (nonatomic, strong) FindSearchResultOtherRegionModel *regionModel;
 @property (nonatomic, strong) UICollectionView *regionCollectionView;
+@property (nonatomic, assign) BOOL isLoadingMore; // 是否上拉加载更多
 
 @end
 
@@ -92,6 +93,7 @@
         case 1:
         {
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierSeason forIndexPath:indexPath];
+            ((FindResultSeasonCollectionViewCell *)cell).isTagHidden = YES;
             ((FindResultSeasonCollectionViewCell *)cell).season = cellModel;
         }
             break;
@@ -106,6 +108,7 @@
         case 3:
         {
             cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifierMovie forIndexPath:indexPath];
+            ((FindResultMovieCollectionViewCell *)cell).isTagHidden = YES;
             ((FindResultMovieCollectionViewCell *)cell).movie = cellModel;
         }
             break;
@@ -150,6 +153,21 @@
     }
     
     return CGSizeZero;
+}
+
+#pragma mark- 上拉加载更多
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height && _isLoadingMore == NO) {
+        _isLoadingMore = YES;
+        [self.regionModel getMoreSearchResultWithSuccess:^{
+            [self.regionCollectionView reloadData];
+            _isLoadingMore = NO;
+        } failure:^(NSString *errorMsg) {
+            NSLog(@"%@", errorMsg);
+        }];
+    }
 }
 
 /*

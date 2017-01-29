@@ -183,7 +183,10 @@
     self.searchPromtsTableView = [[FindSearchPromtsTableView alloc] initWithModel:self.searchPromtsModel];
     WS(ws);
     _searchPromtsTableView.didSelectCellBlock = ^void(NSString *keyword) {
-        ws.searchTF.text = keyword;
+        ws.searchTF.text = keyword; // 搜索框为选中关键字
+        [ws.searchTF resignFirstResponder]; // 取消第一响应者
+        [ws addSearchResultVC]; // 显示搜索结果
+        
     };
     [self.view addSubview:_searchPromtsTableView];
     [_searchPromtsTableView makeConstraints:^(MASConstraintMaker *make) {

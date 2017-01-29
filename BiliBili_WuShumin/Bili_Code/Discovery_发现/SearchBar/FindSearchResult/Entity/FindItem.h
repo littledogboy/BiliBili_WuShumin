@@ -9,14 +9,18 @@
 
 #import <UIKit/UIKit.h>
 #import "FindArchive.h"
+#import "FindMovie.h"
+#import "FindSeason.h"
+#import "FindSP.h"
+#import "FindUP.h"
 
 @interface FindItem : NSObject
 
 @property (nonatomic, strong) NSArray<FindArchive *> * archive;
-@property (nonatomic, strong) NSArray * movie;
-@property (nonatomic, strong) NSArray * season;
-@property (nonatomic, strong) NSArray * sp;
-@property (nonatomic, strong) NSArray * upper;
+@property (nonatomic, strong) NSArray<FindMovie *> * movie;
+@property (nonatomic, strong) NSArray<FindSeason *> * season;
+@property (nonatomic, strong) NSArray<FindSP *> * sp;
+@property (nonatomic, strong) NSArray<FindUP *> * upper;
 
 -(instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

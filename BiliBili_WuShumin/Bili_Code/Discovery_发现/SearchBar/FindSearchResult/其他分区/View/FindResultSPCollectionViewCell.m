@@ -98,7 +98,7 @@
     if (_sp != sp) {
         _sp = sp;
         
-        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:sp.cover]];
+        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:sp.cover] placeholderImage:[UIImage imageNamed:@"cell_Default"]];
         self.titleLabel.text = sp.title;
         self.archivesLabel.text = [NSString stringWithFormat:@"视频：%@", [NSString stringOfCount:sp.archives]];
         self.playLabel.text = [NSString stringWithFormat:@"播放：%@", [NSString stringOfCount:sp.play]];

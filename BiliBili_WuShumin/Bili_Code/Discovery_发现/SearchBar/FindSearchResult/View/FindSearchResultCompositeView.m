@@ -20,12 +20,19 @@
 #define CellIdentifierMovie @"movie"
 #define CellIdentifierArchive @"archive"
 
+#import "FindSearchCollectionReusableView.h"
+
+#define ReuableFooterView @"more"
+
 @interface FindSearchResultCompositeView () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) FindItem *items;
 @property (nonatomic, strong) NSArray<FindNav *> *nav;
 @property (nonatomic, strong) NSMutableDictionary *itemsDic;
 @property (nonatomic, strong) NSMutableArray<NSArray *> *itemsArray;
+@property (nonatomic, strong) NSMutableDictionary *footerTitleDic;
+
+@property (nonatomic, assign) BOOL isLoadingMore; // 是否 正 加载更多，默认为no
 
 @end
 
@@ -42,35 +49,54 @@
         self.dataSource = self;
         self.delegate = self;
         // regist
+        // 番剧
         [self registerClass:[FindResultSeasonCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierSeason];
+        // 电影
         [self registerClass:[FindResultMovieCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierMovie];
+        // 综合
         [self registerClass:[FindSearchResultCompositeCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifierArchive];
         
+        // registResuableView
+        [self registerClass:[FindSearchCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ReuableFooterView];
     }
     return self;
 }
 
 - (void)setResultModel:(FindSearchResultModel *)resultModel {
-        _resultModel = resultModel;
-        self.items = resultModel.resultData.items;
-        self.nav = resultModel.resultData.nav;
-        //
-        self.itemsDic = [NSMutableDictionary dictionary];
-        self.itemsArray = [NSMutableArray array];
-        if (self.items.season.count) {
-            [_itemsDic setObject:_items.season forKey:@"season"];
-            [_itemsArray addObject:_items.season];
-        } else if (self.items.movie.count) {
-            [_itemsDic setObject:_items.movie forKey:@"movie"];
-            [_itemsArray addObject:_items.movie];
-        } else if (self.items.archive.count) {
-            [_itemsDic setObject:_items.archive forKey:@"archive"];
-            [_itemsArray addObject:_items.archive];
+    _resultModel = resultModel;
+    self.items = resultModel.resultData.items;
+    self.nav = resultModel.resultData.nav;
+    
+    // itemsArray 数组中嵌套数组
+    self.itemsDic = [NSMutableDictionary dictionary];
+    self.itemsArray = [NSMutableArray array];
+    self.footerTitleDic = [NSMutableDictionary dictionary];
+    
+    if (self.items.season.count) { // 番剧
+        [_itemsDic setObject:_items.season forKey:@"season"];
+        [_itemsArray addObject:_items.season];
+        if (self.nav[0].total > 3) {
+            [_footerTitleDic setObject:[NSString stringWithFormat:@"更多番剧（%lu）", self.nav[0].total] forKey:@"season"];
         }
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self reloadData];
-        });
+    }
+    
+    if (self.items.movie.count) { // 影视
+        [_itemsDic setObject:_items.movie forKey:@"movie"];
+        [_itemsArray addObject:_items.movie];
+        if (self.nav[2].total > 3) {
+            [_footerTitleDic setObject:[NSString stringWithFormat:@"更多影视（%lu）", self.nav[2].total] forKey:@"movie"];
+        }
+    }
+    
+    if (self.items.archive.count) { // 综合
+        [_itemsDic setObject:_items.archive forKey:@"archive"];
+        [_itemsArray addObject:_items.archive];
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self reloadData];
+    });
+    
 }
 
 #pragma mark-  分区数，分区中 items 数
@@ -131,10 +157,60 @@
     }
 }
 
-// 区尾
-//- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
-//    
-//}
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    FindSearchCollectionReusableView *footerView = nil;
+    id cellModel = [self cellModelOfIndexPath:indexPath];
+    if ([kind isEqualToString:UICollectionElementKindSectionFooter] && self.itemsArray.count > 1) {
+        footerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:ReuableFooterView forIndexPath:indexPath];
+        NSString *title = nil;
+        if ([cellModel isKindOfClass:[FindSeason class]]) {
+            title = [self.footerTitleDic objectForKey:@"season"];
+        } else if ([cellModel isKindOfClass:[FindMovie class]]) {
+            title = [self.footerTitleDic objectForKey:@"movie"];
+        }
+        [footerView.titleButton setTitle:title forState:(UIControlStateNormal)];
+    }
+    
+    return footerView;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    BOOL isShowFooter = NO;
+    id cellModel = [self cellModelOfIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
+    if ([cellModel isKindOfClass:[FindSeason class]]) {
+        if (self.nav[0].total > 3) {
+            isShowFooter = YES;
+        }
+    }
+    
+    if ([cellModel isKindOfClass:[FindMovie class]]) {
+        if (self.nav[2].total > 3) {
+            isShowFooter = YES;
+        }
+    }
+    
+    if (self.itemsArray.count > 1 && isShowFooter) {
+        return CGSizeMake(screenWidth, [FindSearchCollectionReusableView resuableViewHeight]);
+    } else {
+        return CGSizeZero;
+    }
+}
+
+#pragma mark- 上拉刷新
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height && _isLoadingMore == NO) {
+        _isLoadingMore = YES; // 加载时 至为yes
+        [self.resultModel getMoreSearchResultEntityWithSuccess:^{
+            [self reloadData];
+            _isLoadingMore = NO; // 加载完成后至为 no
+        } failure:^(NSString *errorMsg) {
+            NSLog(@"%@", errorMsg);
+        }];
+    }
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

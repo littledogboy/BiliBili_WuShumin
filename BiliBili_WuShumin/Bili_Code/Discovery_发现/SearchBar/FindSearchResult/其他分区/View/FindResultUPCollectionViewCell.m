@@ -94,7 +94,7 @@
     if (_up != up) {
         _up = up;
         // setdata
-        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:up.cover]];
+        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:up.cover] placeholderImage:[UIImage imageNamed:@"cell_Default"]];
         self.titleLabel.text = up.title;
         self.fansLabel.text = [NSString stringWithFormat:@"粉丝：%@", [NSString stringOfCount:up.fans]];
         self.archivesLabel.text = [NSString stringWithFormat:@"视频：%@", [NSString stringOfCount:up.archives]];

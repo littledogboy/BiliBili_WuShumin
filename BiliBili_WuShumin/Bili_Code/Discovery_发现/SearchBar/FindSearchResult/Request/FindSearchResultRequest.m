@@ -14,6 +14,8 @@
     self = [super init];
     if (self) {
         self.order = 0;
+        self.duration = 0;
+        self.order = @"default";
         self.pn = 0;
         self.ps = 20;
         self.rid = 0;
@@ -22,7 +24,8 @@
 }
 
 - (NSString *)URLString {
-    return [[NSString stringWithFormat:@"http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=0&keyword=%@&mobi_app=iphone&order=%lu&platform=ios&pn=%lu&ps=%lu&rid=%lu", _keyword, _order, _pn, _ps, _rid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *urlString = [[NSString stringWithFormat:@"http://app.bilibili.com/x/v2/search?actionKey=appkey&appkey=27eb53fc9058f8c3&build=4000&device=phone&duration=%lu&keyword=%@&mobi_app=iphone&order=%@&platform=ios&pn=%lu&ps=%lu&rid=%lu", _duration,_keyword, _order, _pn, _ps, _rid] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    return urlString;
 }
 
 - (HTTPMethod)method {

@@ -32,18 +32,47 @@
 		}
 		self.archive = archiveItems;
 	}
-	if(![dictionary[@"movie"] isKindOfClass:[NSNull class]]){
-		self.movie = dictionary[@"movie"];
-	}	
-	if(![dictionary[@"season"] isKindOfClass:[NSNull class]]){
-		self.season = dictionary[@"season"];
-	}	
-	if(![dictionary[@"sp"] isKindOfClass:[NSNull class]]){
-		self.sp = dictionary[@"sp"];
-	}	
-	if(![dictionary[@"upper"] isKindOfClass:[NSNull class]]){
-		self.upper = dictionary[@"upper"];
-	}	
+    
+	if(![dictionary[@"movie"] isKindOfClass:[NSNull class]] && dictionary[@"movie"] != nil){
+        NSArray * movieDictionaries = dictionary[@"movie"];
+        NSMutableArray * movieItems = [NSMutableArray array];
+        for(NSDictionary * movieDictionary in movieDictionaries){
+            FindMovie * movieItem = [[FindMovie alloc] initWithDictionary:movieDictionary];
+            [movieItems addObject:movieItem];
+        }
+        self.movie = movieItems;
+	}
+    
+	if(![dictionary[@"season"] isKindOfClass:[NSNull class]] && dictionary[@"season"] != nil){
+        NSArray * seasonDictionaries = dictionary[@"season"];
+        NSMutableArray * seasonItems = [NSMutableArray array];
+        for(NSDictionary * seasonDictionary in seasonDictionaries){
+            FindSeason * seasonItem = [[FindSeason alloc] initWithDictionary:seasonDictionary];
+            [seasonItems addObject:seasonItem];
+        }
+        self.season = seasonItems;
+	}
+    
+	if(![dictionary[@"sp"] isKindOfClass:[NSNull class]] && dictionary[@"sp"] != nil){
+        NSArray * spDictionaries = dictionary[@"sp"];
+        NSMutableArray * spItems = [NSMutableArray array];
+        for(NSDictionary * spDictionary in spDictionaries){
+            FindSP * spItem = [[FindSP alloc] initWithDictionary:spDictionary];
+            [spItems addObject:spItem];
+        }
+        self.sp = spItems;
+	}
+    
+	if(![dictionary[@"upper"] isKindOfClass:[NSNull class]] && dictionary[@"upper"] != nil){
+        NSArray * upperDictionaries = dictionary[@"upper"];
+        NSMutableArray * upperItems = [NSMutableArray array];
+        for(NSDictionary * upperDictionary in upperDictionaries){
+            FindUP * upperItem = [[FindUP alloc] initWithDictionary:upperDictionary];
+            [upperItems addObject:upperItem];
+        }
+        self.upper = upperItems;
+	}
+    
 	return self;
 }
 

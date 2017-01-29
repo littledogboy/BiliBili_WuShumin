@@ -19,6 +19,11 @@
 @property (nonatomic, strong) UILabel *staffLabel; // 导演
 @property (nonatomic, strong) UILabel *actorsLabel; // 演员
 
+//
+@property (nonatomic, strong) UIImageView *tagImageView;
+@property (nonatomic, strong) UILabel *tagLabel;
+
+
 @end
 
 @implementation FindResultMovieCollectionViewCell
@@ -36,6 +41,7 @@
 - (void)setupSubViews {
     // cover
     self.coverImageView = [[UIImageView alloc] initWithImage:CellDefaltImage];
+    _coverImageView.contentMode = UIViewContentModeScaleAspectFit;
     _coverImageView.layer.cornerRadius = 3.0;
     _coverImageView.layer.masksToBounds = YES;
     [self.contentView addSubview:_coverImageView];
@@ -44,13 +50,37 @@
         make.size.equalTo(CGSizeMake(91, 122));
     }];
     
+    // tagImageView
+    self.tagImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"region_icon_12_movie_23"]];
+    [self.contentView addSubview:_tagImageView];
+    [_tagImageView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.coverImageView);
+        make.left.equalTo(self.coverImageView.right).offset(12);
+        make.size.equalTo(CGSizeMake(17, 17));
+    }];
+    
+    // tagLabel
+    self.tagLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _tagLabel.text = @"电影";
+    _tagLabel.textAlignment = NSTextAlignmentLeft;
+    _tagLabel.font = [UIFont systemFontOfSize:11];
+    _tagLabel.textColor = [UIColor grayColor];
+    [self.contentView addSubview:_tagLabel];
+    [_tagLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.tagImageView.right).offset(5);
+        make.height.equalTo(@(11));
+        make.centerY.equalTo(self.tagImageView);
+        make.right.equalTo(self.contentView.right).offset(-12);
+    }];
+
+    
     // title
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     _titleLabel.textAlignment = NSTextAlignmentLeft;
     _titleLabel.font = [UIFont systemFontOfSize:13];
     [self.contentView addSubview:_titleLabel];
     [_titleLabel makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.coverImageView.top).offset(15);
+        make.top.equalTo(self.coverImageView.top).offset(22);
         make.left.equalTo(self.coverImageView.right).offset(12);
         make.right.lessThanOrEqualTo(self.contentView.right).offset(-40);
         make.height.equalTo(@(13));
@@ -109,13 +139,19 @@
     if (_movie != movie) {
         _movie = movie;
         
-        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:movie.cover]];
+        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:movie.cover] placeholderImage:[UIImage imageNamed:@"cell_Default"]];
         self.titleLabel.text = movie.title;
         self.dataLabel.text = [movie.screenDate componentsSeparatedByString:@"-"][0];
         self.areaLabel.text = [NSString stringWithFormat:@"地区：%@", movie.area];
         self.staffLabel.text = [NSString stringWithFormat:@"%@", [movie.staff componentsSeparatedByString:@"⏎"][0]];
         self.actorsLabel.text = [NSString stringWithFormat:@"演员：%@", movie.actors];
     }
+}
+
+- (void)setIsTagHidden:(BOOL)isTagHidden {
+    _isTagHidden = isTagHidden;
+    self.tagImageView.hidden = isTagHidden;
+    self.tagLabel.hidden = isTagHidden;
 }
 
 + (CGFloat)cellHeight {

@@ -15,6 +15,10 @@
 
 @property (nonatomic, strong) FindData *resultData;
 
+@property (nonatomic, strong) NSMutableArray *archiveArray;
+
 - (void)getSearchResultEntityWithSuccess:(void (^)(void))success failure:(void (^)(NSString *errorMsg))failure;
+
+- (void)getMoreSearchResultEntityWithSuccess:(void (^)(void))success failure:(void (^)(NSString *eoorMsg))failure;
 
 @end

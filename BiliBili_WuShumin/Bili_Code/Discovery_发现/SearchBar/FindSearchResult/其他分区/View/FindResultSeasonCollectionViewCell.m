@@ -16,6 +16,10 @@
 @property (nonatomic, strong) UILabel *seasonTitleLabel;
 @property (nonatomic, strong) UILabel *descLabel;
 
+//
+@property (nonatomic, strong) UIImageView *tagImageView;
+@property (nonatomic, strong) UILabel *tagLabel;
+
 @end
 
 @implementation FindResultSeasonCollectionViewCell
@@ -39,6 +43,29 @@
     [_coverImageView makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.bottom.equalTo(self.contentView);
         make.width.equalTo(_coverImageView.height).multipliedBy(182 / 244.0);
+    }];
+    
+    // tagImageView
+    self.tagImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"region_icon_1_bangumi_13"]];
+    [self.contentView addSubview:_tagImageView];
+    [_tagImageView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.coverImageView);
+        make.left.equalTo(self.coverImageView.right).offset(14);
+        make.size.equalTo(CGSizeMake(17, 17));
+    }];
+    
+    // tagLabel
+    self.tagLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    _tagLabel.text = @"番剧";
+    _tagLabel.textAlignment = NSTextAlignmentLeft;
+    _tagLabel.font = [UIFont systemFontOfSize:11];
+    _tagLabel.textColor = [UIColor grayColor];
+    [self.contentView addSubview:_tagLabel];
+    [_tagLabel makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.tagImageView.right).offset(5);
+        make.height.equalTo(@(11));
+        make.centerY.equalTo(self.tagImageView);
+        make.right.equalTo(self.contentView.right).offset(-12);
     }];
     
     // title
@@ -82,12 +109,18 @@
     if (_season != season) {
         _season = season;
         // 赋值
-        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:season.cover]];
+        [self.coverImageView sd_setImageWithURL:[NSURL URLWithString:season.cover] placeholderImage:[UIImage imageNamed:@"cell_Default"]];
         self.titleLabel.text = season.title;
         NSString *string = [NSString stringWithFormat:@"%@ %lu话全", season.newestSeason, season.totalCount];
         self.seasonTitleLabel.text = string;
         self.descLabel.text = season.catDesc;
     }
+}
+
+- (void)setIsTagHidden:(BOOL)isTagHidden {
+    _isTagHidden = isTagHidden;
+    self.tagImageView.hidden = isTagHidden;
+    self.tagLabel.hidden = isTagHidden;
 }
 
 + (CGFloat)cellHeight {
