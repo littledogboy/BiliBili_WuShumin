@@ -45,11 +45,11 @@
         if (request.responseCode == 0) {
             // 1. 获取每页的 archive
             NSArray *archivesArray = [request.responseData valueForKeyPath:@"items.archive"];
-            // judge： 如果不是第一次请求 且 综合没有数据则不再执行 success
+            // judge：如果后面的请求没有数据，则不再执行 success，直接return
             if (archivesArray.count == 0 && _resultRequest.pn != 1) {
                 return;
             }
-            // 2. 把 dic： archive -》 archive -》archive，并添加到总数组中
+            // 2. 把 dic:archive -> archive:archive，并添加到总数组中
             for (NSDictionary *archiveItem in archivesArray) {
                 FindArchive *archive = [[FindArchive alloc] initWithDictionary:archiveItem];
                 [self.archiveArray addObject:archive];

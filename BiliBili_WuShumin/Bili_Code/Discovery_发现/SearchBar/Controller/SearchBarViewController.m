@@ -153,6 +153,7 @@
     if (textField.text.length) {
         [textField resignFirstResponder];
         self.keyWord = textField.text;
+        [self.searchPromtsModel addHistoryWord:textField.text]; // 添加历史记录
         [self addSearchResultVC];
         return YES;
     } else {
@@ -176,7 +177,7 @@
 }
 
 #pragma mark-
-#pragma mark 搜索提示
+#pragma mark  添加 搜索提示 tableView
 
 - (void)addSearchPromtsTableView {
     // rowHeight 45
@@ -184,9 +185,9 @@
     WS(ws);
     _searchPromtsTableView.didSelectCellBlock = ^void(NSString *keyword) {
         ws.searchTF.text = keyword; // 搜索框为选中关键字
+        [ws.searchPromtsModel addHistoryWord:keyword]; // 添加历史记录
         [ws.searchTF resignFirstResponder]; // 取消第一响应者
         [ws addSearchResultVC]; // 显示搜索结果
-        
     };
     [self.view addSubview:_searchPromtsTableView];
     [_searchPromtsTableView makeConstraints:^(MASConstraintMaker *make) {

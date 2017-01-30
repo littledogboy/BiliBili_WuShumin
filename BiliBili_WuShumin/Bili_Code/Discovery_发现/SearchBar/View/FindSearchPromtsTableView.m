@@ -23,8 +23,7 @@
         self.rowHeight = 45;
         self.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
         self.searchPromtsModel = model;
-//        self.wordArray = model.historyWordArray;
-        self.wordArray = [@[@"1", @"2", @"3"] mutableCopy];
+        self.wordArray = model.historyWordArray;
         self.dataSource = self;
         self.delegate = self;
         [self setExtraCellLineHidden];
@@ -34,7 +33,7 @@
 
 - (void)setKeyWord:(NSString *)keyWord {
     _keyWord = keyWord;
-    if (_keyWord.length) { // 如果不为空
+    if (_keyWord.length) { // 如果不为空, 进行网络请求
         _wordArray = [[NSMutableArray alloc] init];
         if ([self stringByAVID].length) [_wordArray addObject:[self stringByAVID]];
         
@@ -92,7 +91,7 @@
         cell.textLabel.textColor = RGBCOLOR(100, 100, 100);
     }
     
-    if (_keyWord.length) {
+    if (_keyWord.length) { // 实时搜索
         if ([self stringByAVID].length && indexPath.row == 0) {
             UILabel *label = [[UILabel alloc] init];
             label.text = @"进入";
@@ -128,8 +127,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (_keyWord.length) {
         self.didSelectCellBlock(_wordArray[indexPath.row]);
-    } else if(indexPath.row == _wordArray.count){
+    } else if(indexPath.row == _wordArray.count){ // 移除所有历史记录
         [self.searchPromtsModel removeAllHistoryWord];
+        self.keyWord = nil;
     }
 }
 

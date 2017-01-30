@@ -17,6 +17,7 @@
 @end
 
 @implementation FindSearchPromtsModel
+@synthesize historyWordArray = _historyWordArray;
 
 - (instancetype)init {
     self = [super init];
@@ -61,6 +62,38 @@
     [@[] writeToFile:[self pathOfHistoryWord] atomically:YES]; // 写一个空数组
     _historyWordArray = [[NSMutableArray alloc] initWithContentsOfFile:[self pathOfHistoryWord]];
 }
+
+- (void)addHistoryWord:(NSString *)word { // 添加历史记录
+    // 添加历史记录
+    // 1. 如果 length == 0 返回
+    if (word.length == 0) {
+        return;
+    }
+    
+    // 2. 获取 plist文件
+    NSMutableArray *mutableArray = [NSMutableArray arrayWithContentsOfFile:[self pathOfHistoryWord]];
+    if (mutableArray == nil) {
+        mutableArray = [NSMutableArray array];
+    }
+    // 3. 先移除，然后添加到 0
+    [mutableArray removeObject:word];
+    [mutableArray insertObject:word atIndex:0];
+    
+    // 4. 最多5个
+    if (mutableArray.count == 6) {
+        [mutableArray removeLastObject];
+    }
+    
+    // 5. 写入
+    [mutableArray writeToFile:[self pathOfHistoryWord] atomically:YES];
+}
+
+// get 方法
+- (NSMutableArray<NSString *> *)historyWordArray {
+    return [[NSMutableArray alloc] initWithContentsOfFile:[self pathOfHistoryWord]];
+}
+
+
 
 
 

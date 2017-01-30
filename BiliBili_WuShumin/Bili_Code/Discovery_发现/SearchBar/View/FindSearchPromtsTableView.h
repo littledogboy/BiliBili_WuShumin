@@ -13,7 +13,7 @@
 
 @interface FindSearchPromtsTableView : UITableView
 
-@property (nonatomic, strong) NSMutableArray<NSString *> *wordArray;
+@property (nonatomic, strong) NSMutableArray<NSString *> *wordArray; // 
 @property (nonatomic, strong) NSString *keyWord;
 @property (nonatomic, assign) NSInteger avID;
 

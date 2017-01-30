@@ -16,6 +16,8 @@
 
 - (void)getPromptsWordArrayWithKeyword:(NSString *)keyword success:(void (^)(void))success failure:(void (^)(NSString *errorMsg))failure;
 
+- (void)addHistoryWord:(NSString *)word; // 添加历史记录
+
 - (void)removeAllHistoryWord;
 
 @end
