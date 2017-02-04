@@ -67,7 +67,9 @@
     self.items = resultModel.resultData.items;
     self.nav = resultModel.resultData.nav;
     
-    // itemsArray 数组中嵌套数组
+    // itemsDic @“season” ： array
+    // itemsArray 元素为数组
+    // footerTitleDic 区尾标题 @“season” : @"更多番剧%lu"
     self.itemsDic = [NSMutableDictionary dictionary];
     self.itemsArray = [NSMutableArray array];
     self.footerTitleDic = [NSMutableDictionary dictionary];

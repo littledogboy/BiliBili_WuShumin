@@ -238,6 +238,10 @@
 		6CF561C81E1120B200A07A9E /* FindUP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF561C71E1120B200A07A9E /* FindUP.m */; };
 		6CF561CB1E12940B00A07A9E /* FindSP.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF561CA1E12940A00A07A9E /* FindSP.m */; };
 		6CF561CE1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF561CD1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.m */; };
+		6CF7D7321E459BCE0087C924 /* AGFirstTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7D72B1E459BCE0087C924 /* AGFirstTitleCollectionViewCell.m */; };
+		6CF7D7331E459BCE0087C924 /* AGSecondTitleCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7D72D1E459BCE0087C924 /* AGSecondTitleCollectionView.m */; };
+		6CF7D7341E459BCE0087C924 /* AGSecondTitleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7D72F1E459BCE0087C924 /* AGSecondTitleCollectionViewCell.m */; };
+		6CF7D7351E459BCE0087C924 /* AGSortedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7D7311E459BCE0087C924 /* AGSortedView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -650,6 +654,15 @@
 		6CF561CA1E12940A00A07A9E /* FindSP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindSP.m; sourceTree = "<group>"; };
 		6CF561CC1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindResultSeasonCollectionViewCell.h; sourceTree = "<group>"; };
 		6CF561CD1E129DE100A07A9E /* FindResultSeasonCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindResultSeasonCollectionViewCell.m; sourceTree = "<group>"; };
+		6CF7D72A1E459BCE0087C924 /* AGFirstTitleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGFirstTitleCollectionViewCell.h; sourceTree = "<group>"; };
+		6CF7D72B1E459BCE0087C924 /* AGFirstTitleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGFirstTitleCollectionViewCell.m; sourceTree = "<group>"; };
+		6CF7D72C1E459BCE0087C924 /* AGSecondTitleCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSecondTitleCollectionView.h; sourceTree = "<group>"; };
+		6CF7D72D1E459BCE0087C924 /* AGSecondTitleCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSecondTitleCollectionView.m; sourceTree = "<group>"; };
+		6CF7D72E1E459BCE0087C924 /* AGSecondTitleCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSecondTitleCollectionViewCell.h; sourceTree = "<group>"; };
+		6CF7D72F1E459BCE0087C924 /* AGSecondTitleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSecondTitleCollectionViewCell.m; sourceTree = "<group>"; };
+		6CF7D7301E459BCE0087C924 /* AGSortedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGSortedView.h; sourceTree = "<group>"; };
+		6CF7D7311E459BCE0087C924 /* AGSortedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGSortedView.m; sourceTree = "<group>"; };
+		6CF7D7361E45FFE70087C924 /* FindSearchResultRequestMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindSearchResultRequestMacro.h; sourceTree = "<group>"; };
 		7191808DEB1975076781425D /* Pods-BiliBili_WuShumin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiliBili_WuShumin.release.xcconfig"; path = "Pods/Target Support Files/Pods-BiliBili_WuShumin/Pods-BiliBili_WuShumin.release.xcconfig"; sourceTree = "<group>"; };
 		997736196E6DF9DACA012D23 /* Pods-BiliBili_WuShumin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BiliBili_WuShumin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BiliBili_WuShumin/Pods-BiliBili_WuShumin.debug.xcconfig"; sourceTree = "<group>"; };
 		9D72D3E6CB5E47C823B35594 /* libPods-BiliBili_WuShumin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BiliBili_WuShumin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -852,6 +865,7 @@
 			children = (
 				6C2C51851E0EBABD00AA3331 /* FindSearchResultRequest.h */,
 				6C2C51861E0EBABD00AA3331 /* FindSearchResultRequest.m */,
+				6CF7D7361E45FFE70087C924 /* FindSearchResultRequestMacro.h */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -859,6 +873,7 @@
 		6C2C51871E0EBABD00AA3331 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6CF7D7291E459BCE0087C924 /* AGSortedView */,
 				6C43161C1E1AB86E008ED6E6 /* FindSearchResultCompositeView.h */,
 				6C43161D1E1AB86E008ED6E6 /* FindSearchResultCompositeView.m */,
 				6C43161F1E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.h */,
@@ -1717,6 +1732,21 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6CF7D7291E459BCE0087C924 /* AGSortedView */ = {
+			isa = PBXGroup;
+			children = (
+				6CF7D72A1E459BCE0087C924 /* AGFirstTitleCollectionViewCell.h */,
+				6CF7D72B1E459BCE0087C924 /* AGFirstTitleCollectionViewCell.m */,
+				6CF7D72C1E459BCE0087C924 /* AGSecondTitleCollectionView.h */,
+				6CF7D72D1E459BCE0087C924 /* AGSecondTitleCollectionView.m */,
+				6CF7D72E1E459BCE0087C924 /* AGSecondTitleCollectionViewCell.h */,
+				6CF7D72F1E459BCE0087C924 /* AGSecondTitleCollectionViewCell.m */,
+				6CF7D7301E459BCE0087C924 /* AGSortedView.h */,
+				6CF7D7311E459BCE0087C924 /* AGSortedView.m */,
+			);
+			path = AGSortedView;
+			sourceTree = "<group>";
+		};
 		DAE0E7E3FF8BD9F1977561FC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2008,6 +2038,7 @@
 				6C43161B1E1433C1008ED6E6 /* FindResultSPCollectionViewCell.m in Sources */,
 				6C40B48F1DDAB4F40036987B /* AGMenuView.m in Sources */,
 				6C2C51671E0513DD00AA3331 /* AGResponseSerializer.m in Sources */,
+				6CF7D7341E459BCE0087C924 /* AGSecondTitleCollectionViewCell.m in Sources */,
 				6C2C51991E0ECD4900AA3331 /* FindNav.m in Sources */,
 				6C585E2D1DC151640097BE8B /* LivePartition_Partition.m in Sources */,
 				6CAAC4DA1D6EB21200D760B6 /* Recommend.m in Sources */,
@@ -2049,6 +2080,7 @@
 				6C2557101D6BD96F0072F5B0 /* MainTabBarController.m in Sources */,
 				6CAA7ECB1D8551100012CF56 /* Right.m in Sources */,
 				6CAA7ECF1D8551100012CF56 /* VipInfo.m in Sources */,
+				6CF7D7351E459BCE0087C924 /* AGSortedView.m in Sources */,
 				6CAAC5561D783E8E00D760B6 /* Recommend_RefreshCollectionViewCell.m in Sources */,
 				6CAA7E671D845FEF0012CF56 /* HotPromoteDetailViewController.m in Sources */,
 				6CAAC4D91D6EB21200D760B6 /* Ext.m in Sources */,
@@ -2080,6 +2112,8 @@
 				6C28D0E91DB366FD00EA30BD /* Bungumi_PreviousCell.m in Sources */,
 				6CAAC4891D6BF5E900D760B6 /* DiscoveryNavigationController.m in Sources */,
 				6C4316211E1AD5CF008ED6E6 /* FindSearchResultCompositeCollectionViewCell.m in Sources */,
+				6CF7D7331E459BCE0087C924 /* AGSecondTitleCollectionView.m in Sources */,
+				6CF7D7321E459BCE0087C924 /* AGFirstTitleCollectionViewCell.m in Sources */,
 				6CAAC4F81D6EF93100D760B6 /* BannerImageView.m in Sources */,
 				6CAA7EFD1D86A8760012CF56 /* RotationScreen.m in Sources */,
 				6C6459C51DB0D8C70051A5EC /* BungumiHeaderView.m in Sources */,

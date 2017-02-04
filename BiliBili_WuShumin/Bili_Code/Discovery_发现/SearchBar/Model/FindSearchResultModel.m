@@ -7,7 +7,6 @@
 //
 
 #import "FindSearchResultModel.h"
-#import "FindSearchResultRequest.h"
 #import "FindData.h"
 
 @interface FindSearchResultModel ()
@@ -33,9 +32,29 @@
     _resultRequest.keyword = keyWord;
 }
 
+- (void)setOrder:(NSString *)order {
+    _order = order;
+    _resultRequest.order = order;
+    self.archiveArray = [NSMutableArray array];
+
+}
+
+- (void)setDuration:(NSInteger)duration {
+    _duration = duration;
+    _resultRequest.duration = duration;
+    self.archiveArray = [NSMutableArray array];
+
+}
+
+- (void)setRid:(NSInteger)rid {
+    _rid = rid;
+    _resultRequest.rid = rid;
+    self.archiveArray = [NSMutableArray array];
+}
+
 - (void)getSearchResultEntityWithSuccess:(void (^)(void))success failure:(void (^)(NSString *errorMsg))failure {
     [_resultRequest stop];
-    _resultRequest.pn = 0;
+    _resultRequest.pn = 0; // 每次请求时把 pn 至为 0
     [self getMoreSearchResultEntityWithSuccess:success failure:failure];
 }
 
@@ -54,7 +73,7 @@
                 FindArchive *archive = [[FindArchive alloc] initWithDictionary:archiveItem];
                 [self.archiveArray addObject:archive];
             }
-            // 3. 初始化 resultData 然后，给 archive 重新复制
+            // 3. 初始化 resultData ，给 archive 重新赋值为整合后的 arichiveArray
             self.resultData = [[FindData alloc] initWithDictionary:request.responseData];
             self.resultData.items.archive = self.archiveArray;
             success();

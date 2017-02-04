@@ -10,9 +10,12 @@
 #import "FindSearchResultCompositeView.h"
 #import "FindSearchResultModel.h"
 
+#import "AGSortedView.h" // 导入 分类 视图
+
 @interface FindSearchResultCompositeViewController ()
 
 @property (nonatomic, strong) FindSearchResultCompositeView *compositeView;
+@property (nonatomic, strong) AGSortedView *sortedView;
 
 @end
 
@@ -40,11 +43,31 @@
 }
 
 - (void)setupSubViews {
+    // sortedView
+    self.sortedView = [[AGSortedView alloc] initWithFrame:CGRectZero];
+    WS(ws);
+    _sortedView.didSelectedTitleBlock = ^(NSArray *array) {
+        ws.resultModel.order = [OrderDic objectForKey:array[0]];
+        ws.resultModel.duration = [[DurationDic objectForKey:array[1]] integerValue];
+        ws.resultModel.rid = [[RidDic objectForKey:array[2]] integerValue];
+        [ws.resultModel getSearchResultEntityWithSuccess:^{
+            ws.compositeView.resultModel = ws.resultModel; // reloadData
+            ws.compositeView.contentOffset = CGPointZero; // resetoffSet
+        } failure:^(NSString *errorMsg) {
+            NSLog(@"%@", errorMsg);
+        }];
+    };
+    [self.view addSubview:_sortedView];
+    [_sortedView makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.width.equalTo(self.view);
+    }];
+    
+    // compositeView
     self.compositeView = [[FindSearchResultCompositeView alloc] initWithFrame:CGRectZero];
     _compositeView.resultModel = _resultModel;
-    [self.view addSubview:_compositeView];
+    [self.view insertSubview:_compositeView belowSubview:_sortedView];
     [_compositeView makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+        make.edges.equalTo(UIEdgeInsetsMake(40, 0, 0, 0));
     }];
 }
 

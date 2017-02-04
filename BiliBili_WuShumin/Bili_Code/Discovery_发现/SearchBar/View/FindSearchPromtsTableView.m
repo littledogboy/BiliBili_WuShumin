@@ -130,6 +130,8 @@
     } else if(indexPath.row == _wordArray.count){ // 移除所有历史记录
         [self.searchPromtsModel removeAllHistoryWord];
         self.keyWord = nil;
+    } else {
+        self.didSelectCellBlock(_wordArray[indexPath.row]); // 选中历史记录
     }
 }
 

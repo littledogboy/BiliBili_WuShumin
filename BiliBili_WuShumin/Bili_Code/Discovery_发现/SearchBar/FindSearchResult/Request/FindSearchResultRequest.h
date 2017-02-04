@@ -7,6 +7,7 @@
 //
 
 #import "AGBaseRequest.h"
+#import "FindSearchResultRequestMacro.h"
 
 @interface FindSearchResultRequest : AGBaseRequest
 

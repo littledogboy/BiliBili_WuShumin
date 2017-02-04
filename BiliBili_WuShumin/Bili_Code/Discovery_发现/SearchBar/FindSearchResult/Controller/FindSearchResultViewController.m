@@ -64,6 +64,7 @@
     self.rootVC = [[FindSearchResultRootViewController alloc] init];
      _compositeVC = [[FindSearchResultCompositeViewController alloc] initWithKeyWord:_keyword model:self.resultModel];
     _compositeVC.view.backgroundColor = RecommendGrayColor;
+    
     FindSearchResultOtherRegionViewController *seasonVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:1 keyword:_keyword];
     seasonVC.view.backgroundColor = RecommendGrayColor;
     FindSearchResultOtherRegionViewController *upVC = [[FindSearchResultOtherRegionViewController alloc] initWithType:2 keyword:_keyword];

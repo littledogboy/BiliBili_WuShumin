@@ -184,6 +184,7 @@
     self.searchPromtsTableView = [[FindSearchPromtsTableView alloc] initWithModel:self.searchPromtsModel];
     WS(ws);
     _searchPromtsTableView.didSelectCellBlock = ^void(NSString *keyword) {
+        _keyWord = keyword; // _keyWord 赋值
         ws.searchTF.text = keyword; // 搜索框为选中关键字
         [ws.searchPromtsModel addHistoryWord:keyword]; // 添加历史记录
         [ws.searchTF resignFirstResponder]; // 取消第一响应者
