@@ -15,7 +15,7 @@
 @interface FindSearchResultViewController ()
 
 @property (nonatomic, strong) NSString *keyword;
-@property (nonatomic, strong) FindSearchResultRootViewController *rootVC;
+@property (nonatomic, strong) FindSearchResultRootViewController *rootVC; // 根视图控制器
 @property (nonatomic, strong) FindSearchResultModel *resultModel;
 @property (nonatomic, strong) FindSearchResultCompositeViewController *compositeVC;
 

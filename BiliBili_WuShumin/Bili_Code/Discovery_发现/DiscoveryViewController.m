@@ -8,10 +8,14 @@
 
 #import "DiscoveryViewController.h"
 #import "SearchBarViewController.h"
+#import "HotWordViewController.h"
+
+#define KSearchBarHeight 63 // 搜索条高度
 
 @interface DiscoveryViewController ()
 
 @property (nonatomic, strong) SearchBarViewController *searchBarVC;
+@property (nonatomic, strong) HotWordViewController *hotwordVC;
 
 @end
 
@@ -28,6 +32,17 @@
     _searchBarVC.keyWord = nil;
     [self.view addSubview:_searchBarVC.view];
     [self addChildViewController:_searchBarVC];
+    
+    self.hotwordVC = [[HotWordViewController alloc] init];
+    _hotwordVC.view.backgroundColor = SAKURACOLOR;
+    [self.view insertSubview:_hotwordVC.view belowSubview:_searchBarVC.view];
+    [self addChildViewController:_hotwordVC];
+    
+    [_hotwordVC.view makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(@(KSearchBarHeight));
+        make.left.right.equalTo(self.view);
+        make.height.equalTo(@173);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
