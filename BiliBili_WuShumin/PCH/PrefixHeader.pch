@@ -50,10 +50,21 @@
 
 
 #pragma mark- weak strong
+// 弱引用 强引用
 #define WS(weakSelf) __weak __typeof(self)weakSelf = self;
 #define SS(strongSelf) __strong __typeof(self)strongSelf = self
 ;
 #define REQUIRES_SUPER NS_REQUIERS_SUPER
+
+#pragma mark- NSLog
+//A better version of NSLog
+#define DeBugLog(format, ...) do {                                                                          \
+fprintf(stderr, "<%s : %d> %s\n",                                           \
+[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
+__LINE__, __func__);                                                        \
+(NSLog)((format), ##__VA_ARGS__);                                           \
+fprintf(stderr, "-------\n");                                               \
+} while (0)
 
 
 

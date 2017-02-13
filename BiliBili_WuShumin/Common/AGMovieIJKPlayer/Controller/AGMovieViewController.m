@@ -60,7 +60,9 @@
         } else {
             NSLog(@"获取cid出错，采用bilibilijj获取视频源");
             //
-            NSString *urlString = [NSString stringWithFormat:@"http://www.bilibilijj.com/Files/DownLoad/%ld.mp4/www.bilibilijj.com.mp4?mp3=true", self.jjCid];
+//            NSString *urlString = [NSString stringWithFormat:@"http://www.bilibilijj.com/Files/DownLoad/%ld.mp4/www.bilibilijj.com.mp4?mp3=true", self.jjCid];
+            NSString *urlString = @"http://cn-gdgz3-cmcc-v-08.acgvideo.com/vg6/0/80/1482982-1.mp4?expires=1486750200&ssig=HOZ1veVnSuQyHu4YcB7XeA&oi=2027306844&nfa=BaDS8BUFZDb8iKo4Vfwarw==&dynamic=1";
+            
             NSMutableArray *array = [NSMutableArray arrayWithObject:[NSURL URLWithString:urlString]];
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.agMovieView.movieURLArray = array;

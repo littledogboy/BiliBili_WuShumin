@@ -31,6 +31,7 @@
 
 @implementation BungumiHeaderView
 
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // 循环滚动视图
@@ -53,9 +54,10 @@
     self.downView.backgroundColor = RecommendGrayColor;
 }
 
+
 - (AGCircularScrollView *)agCSV {
     if (_agCSV == nil) {
-        self.agCSV = [[AGCircularScrollView alloc] initWithFrame:_topView.bounds];
+        self.agCSV = [[AGCircularScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenWidth * 22 / 75.0)];;
     }
     return _agCSV;
 }

@@ -14,5 +14,6 @@
 #import "UIViewController+AGGetViewController.h"
 #import "UIView+AGGetViewController.h"
 #import "UIButton+AGFillColor.h"
+#import "UIView+CornerRadius.h" // 设置圆角
 
 #endif /* BiliBiliKit_h */

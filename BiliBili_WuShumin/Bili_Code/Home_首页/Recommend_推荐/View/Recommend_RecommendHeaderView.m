@@ -20,7 +20,7 @@
 
 - (AGCircularScrollView *)agCSView {
     if (_agCSView == nil) {
-        self.agCSView = [[AGCircularScrollView alloc] initWithFrame:_topView.bounds];
+        self.agCSView = [[AGCircularScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenWidth * 22 / 75.0)];;
     }
     return _agCSView;
 }

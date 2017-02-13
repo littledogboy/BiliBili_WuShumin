@@ -62,7 +62,7 @@
                 <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UMx-R7-Ht5">
                     <rect key="frame" x="12" y="205" width="351" height="50"/>
                     <subviews>
-                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-FM-bSV" userLabel="追番">
+                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRU-FM-bSV" userLabel="追番">
                             <rect key="frame" x="0.0" y="5" width="110" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="110" id="scR-hg-ubI"/>

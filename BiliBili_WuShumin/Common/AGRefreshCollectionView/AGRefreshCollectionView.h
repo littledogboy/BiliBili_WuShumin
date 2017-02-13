@@ -10,5 +10,4 @@
 
 @interface AGRefreshCollectionView : UICollectionView
 
-
 @end

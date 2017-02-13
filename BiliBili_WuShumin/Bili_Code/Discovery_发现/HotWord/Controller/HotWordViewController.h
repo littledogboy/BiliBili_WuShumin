@@ -10,4 +10,6 @@
 
 @interface HotWordViewController : UIViewController
 
+@property (nonatomic, copy) void(^didSelectedCellBlock)(NSString *cellTitle);
+
 @end

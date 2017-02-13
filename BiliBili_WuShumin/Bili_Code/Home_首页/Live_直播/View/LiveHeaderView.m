@@ -30,7 +30,7 @@
 
 - (AGCircularScrollView *)agCSV {
     if (_agCSV == nil) {
-        _agCSV = [[AGCircularScrollView alloc] initWithFrame:_topView.bounds];
+        _agCSV = [[AGCircularScrollView alloc] initWithFrame:CGRectMake(0, 0, screenWidth, screenWidth * 22 / 75.0)];
     }
     return _agCSV;
 }

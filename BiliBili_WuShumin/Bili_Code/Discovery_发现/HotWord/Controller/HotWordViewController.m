@@ -51,6 +51,14 @@
     _tagListView.tagBgColor = [UIColor colorWithWhite:1 alpha:0.3];
     _tagListView.backgroundColor = [UIColor colorWithRed:250/255.0 green:114/255.0 blue:152/255.0 alpha:1.0];
     _tagListView.cornerRadius = 5;
+    _tagListView.collectionView.scrollEnabled = NO; //  默认非展开下不允许滚动
+    // block
+    WS(ws);
+    _tagListView.tagDidSelectedBlock = ^(NSString *cellTitle) {
+        if (ws.didSelectedCellBlock) {
+            ws.didSelectedCellBlock(cellTitle);
+        }
+    };
     [self.view addSubview:_tagListView];
     [_tagListView makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_titleLabel.bottom);
@@ -101,18 +109,19 @@
 
 - (void)foldAction:(UIButton *)button {
     [self.view updateConstraints:^(MASConstraintMaker *make) {
-        if (!self.isUnFold) { // 未展开
+        if (!self.isUnFold) { // 未展开， 展开
             UIImage *image = [[UIImage imageNamed:@"search_closeMore"] imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
             [_foldButton setImage:image forState:(UIControlStateNormal)];
             [_foldButton setTitle:@"收起" forState:(UIControlStateNormal)];
             _tagListView.collectionView.scrollEnabled = YES;
             make.height.equalTo(@(kUnfoldHeight));
-        } else { // 已展开
+        } else { // 已展开， 收缩
             UIImage *image = [[UIImage imageNamed:@"search_openMore"] imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
 
             [_foldButton setImage:image forState:(UIControlStateNormal)];
             [_foldButton setTitle:@"查看更多" forState:(UIControlStateNormal)];
             _tagListView.collectionView.scrollEnabled = NO;
+            _tagListView.collectionView.contentOffset = CGPointZero;
             make.height.equalTo(@(kFoldHeight));
         }
         self.isUnFold = !self.isUnFold;

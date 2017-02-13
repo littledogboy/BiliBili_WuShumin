@@ -46,6 +46,15 @@
 - (void)setKeyWord:(NSString *)keyWord {
     _keyWord = keyWord;
     self.searchPromtsModel = [[FindSearchPromtsModel alloc] init];
+    if (keyWord.length) {
+        [self.searchTF becomeFirstResponder];
+        [self.searchTF resignFirstResponder];
+        self.searchTF.text = keyWord; // 1. 设置搜索框文字
+        [self.searchPromtsModel addHistoryWord:_keyWord]; // 2. 添加历史记录
+        [self addSearchResultVC]; // 3. 添加搜索结果
+        self.view.frame = CGRectMake(0, 0, screenWidth, screenHeight); // 4.调整 view 大小触发响应者链
+
+    }
 }
 
 - (void)addTopView {
@@ -139,10 +148,14 @@
 
 #pragma mark- UITextFieleDelegate 
 
+// 光标进来
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     [self.topScrollView setContentOffset:CGPointMake(self.searchTF.frame.origin.x - 10, 0) animated:YES];  // 偏移动画
     self.view.frame = CGRectMake(0, 0, screenWidth, screenHeight); // 调整 view 大小
     [self addSearchPromtsTableView];
+    if (self.searchResultVC) {
+        [self removeSearchResultVC];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -162,6 +175,7 @@
 }
 
 #pragma mark- textFiledValueChanged
+// 内容改变
 - (void)textFieldDidChange:(UITextField *)tf {
     self.searchPromtsTableView.keyWord = tf.text;
 }

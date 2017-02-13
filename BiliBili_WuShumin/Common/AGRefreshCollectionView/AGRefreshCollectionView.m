@@ -31,6 +31,8 @@
 }
 */
 
+#pragma mark- 初始化方法1
+
 - (instancetype)initWithFrame:(CGRect)frame {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     flowLayout.sectionInset = UIEdgeInsetsMake(12, 12, 12, 12);;
@@ -55,7 +57,7 @@
     return self;
 }
 
-
+#pragma mark- 初始化方法2
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout {
     self = [super initWithFrame:frame collectionViewLayout:layout];
     if (self) {
